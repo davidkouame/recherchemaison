@@ -1,0 +1,9 @@
+columns:
+    libelle:
+        label: Libellé
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: true

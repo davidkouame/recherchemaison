@@ -1,0 +1,28 @@
+plugin:
+    name: 'bootnetcrasher.parametre::lang.plugin.name'
+    description: 'bootnetcrasher.parametre::lang.plugin.description'
+    author: Bootnetcrasher
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    parametre:
+        label: Paramètres
+        url: bootnetcrasher/parametre/index
+        icon: icon-mail-forward
+        sideMenu:
+            villes:
+                label: Villes
+                url: bootnetcrasher/parametre/ville
+                icon: icon-arrow-right
+            communes:
+                label: Communes
+                url: bootnetcrasher/parametre/commune
+                icon: icon-arrow-right
+            localisations:
+                label: Localisations
+                url: bootnetcrasher/parametre/ville
+                icon: icon-arrow-right
+            categoriesmaisons:
+                label: 'Catégories maisons'
+                url: bootnetcrasher/parametre/categoriemaison
+                icon: icon-arrow-right

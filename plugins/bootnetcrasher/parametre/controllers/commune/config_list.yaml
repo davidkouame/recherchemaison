@@ -1,0 +1,12 @@
+list: $/bootnetcrasher/parametre/models/communemodel/columns.yaml
+modelClass: bootnetcrasher\Parametre\Models\CommuneModel
+title: Commune
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'bootnetcrasher/parametre/commune/update/:id'

@@ -1,0 +1,19 @@
+plugin:
+    name: 'bootnetcrasher.house::lang.plugin.name'
+    description: 'bootnetcrasher.house::lang.plugin.description'
+    author: Bootnetcrasher
+    icon: oc-icon-adjust
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Publications
+        url: bootnetcrasher/house/publication
+        icon: icon-life-ring
+    main-menu-item2:
+        label: Agences
+        url: bootnetcrasher/house/agence
+        icon: icon-life-ring
+    main-menu-item3:
+        label: Démarcheurs
+        url: bootnetcrasher/house/demarcheur
+        icon: icon-life-ring

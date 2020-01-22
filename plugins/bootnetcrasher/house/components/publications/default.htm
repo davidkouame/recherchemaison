@@ -1,0 +1,5 @@
+{% if view == 'detail' %}
+    {% partial __SELF__ ~ '::detail' %}
+{% else %}
+    {% partial __SELF__ ~ '::list' %}
+{% endif %}

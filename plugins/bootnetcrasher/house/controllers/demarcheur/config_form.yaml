@@ -1,0 +1,10 @@
+name: Demarcheur
+form: $/bootnetcrasher/house/models/demarcheurmodel/fields.yaml
+modelClass: bootnetcrasher\House\Models\DemarcheurModel
+defaultRedirect: bootnetcrasher/house/demarcheur
+create:
+    redirect: 'bootnetcrasher/house/demarcheur/update/:id'
+    redirectClose: bootnetcrasher/house/demarcheur
+update:
+    redirect: bootnetcrasher/house/demarcheur
+    redirectClose: bootnetcrasher/house/demarcheur

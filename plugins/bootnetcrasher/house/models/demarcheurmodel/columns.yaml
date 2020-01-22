@@ -1,0 +1,13 @@
+columns:
+    nom:
+        label: Nom
+        type: text
+        searchable: true
+    prenom:
+        label: Prénom
+        type: text
+        searchable: true
+    email:
+        label: Email
+        type: text
+        searchable: true

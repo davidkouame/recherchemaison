@@ -1,0 +1,48 @@
+fields:
+    libelle:
+        label: Libellé
+        span: auto
+        type: text
+    communes:
+        label: Commune
+        nameFrom: libelle
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionnez une commune'
+    villes:
+        label: Ville
+        nameFrom: libelle
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionner une ville'
+    localisations:
+        label: Localisation
+        nameFrom: libelle
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionner une localisation'
+    nbre_piece:
+        label: 'Nombre de pièce'
+        span: auto
+        type: number
+    cover:
+        label: Cover
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload
+    photos:
+        label: Cover
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

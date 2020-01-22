@@ -1,0 +1,14 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table bootnetcrasher_parametre_ville'
+    - builder_table_create_bootnetcrasher_parametre_ville.php
+1.0.3:
+    - 'Created table bootnetcrasher_parametre_commune'
+    - builder_table_create_bootnetcrasher_parametre_commune.php
+1.0.4:
+    - 'Created table bootnetcrasher_parametre_localisation'
+    - builder_table_create_bootnetcrasher_parametre_localisation.php
+1.0.5:
+    - 'Created table bootnetcrasher_parametre_categorie_maison'
+    - builder_table_create_bootnetcrasher_parametre_categorie_maison.php

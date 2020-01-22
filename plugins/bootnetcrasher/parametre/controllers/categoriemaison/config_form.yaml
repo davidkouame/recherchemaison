@@ -1,0 +1,10 @@
+name: Categoriemaison
+form: $/bootnetcrasher/parametre/models/categoriemaisonmodel/fields.yaml
+modelClass: bootnetcrasher\Parametre\Models\categoriemaisonmodel
+defaultRedirect: bootnetcrasher/parametre/categoriemaison
+create:
+    redirect: 'bootnetcrasher/parametre/categoriemaison/update/:id'
+    redirectClose: bootnetcrasher/parametre/categoriemaison
+update:
+    redirect: bootnetcrasher/parametre/categoriemaison
+    redirectClose: bootnetcrasher/parametre/categoriemaison

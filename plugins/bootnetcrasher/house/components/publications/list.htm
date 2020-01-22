@@ -1,0 +1,93 @@
+
+<h2>Liste des publications</h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Libellé</th>
+        <th scope="col">Date de publication</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for publication in publications %}
+            <tr>
+                <th scope="row">1</th>
+                <td>{{ publication.libelle }}</td>
+                <td>{{ publication.published_at }}</td>
+                <td>
+                    <a href="javascript:void(0)" class="btn btn-danger delete-publication" data-id="{{ publication.id }}">suppression</a>
+                    {% if publication.published_at is null %}
+                        <a href="javascript:void(0)" class="btn btn-warning publisher-publication" data-id="{{ publication.id }}">publiez</a>
+                    {% else %}
+                      <a href="javascript:void(0)" class="btn btn-warning unpublisher-publication" data-id="{{ publication.id }}">dépubliez</a>
+                    {% endif %}
+                    <a href="{{ url(modelUser~'/publications/'~publication.id) }}" class="btn btn-primary">détail</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+<!-- Modal suppression d'une publication-->
+<div class="modal fade" id="deletePublication" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form class="modal-dialog" role="document" role="form">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Suppression d'une publication</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Voulez vous supprimer cette publication ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <a href="{{ url('delete-publication/') }}" class="btn btn-danger" id="link-modal-to-delete-publication">Supprimer</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal dépublication publication-->
+<div class="modal fade" id="UnPublisherPublication" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form class="modal-dialog" role="document" role="form">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Publication d'une publication</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Voulez vous dépublier cette publication ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <a href="{{ url('unpublisher-publication/') }}" class="btn btn-danger" id="link-modal-to-unpublisher-publication">Dépubliez</a>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <!-- Modal Publication-->
+<div class="modal fade" id="PublisherPublication" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <form class="modal-dialog" role="document" role="form">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Publication d'une publication</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Voulez vous publier cette publication ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <a href="{{ url('publisher-publication/') }}" class="btn btn-danger" id="link-modal-to-publisher-publication">Publiez</a>
+      </div>
+    </div>
+  </form>
+</div>

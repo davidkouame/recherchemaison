@@ -1,0 +1,10 @@
+name: Commune
+form: $/bootnetcrasher/parametre/models/communemodel/fields.yaml
+modelClass: bootnetcrasher\Parametre\Models\CommuneModel
+defaultRedirect: bootnetcrasher/parametre/commune
+create:
+    redirect: 'bootnetcrasher/parametre/commune/update/:id'
+    redirectClose: bootnetcrasher/parametre/commune
+update:
+    redirect: bootnetcrasher/parametre/commune
+    redirectClose: bootnetcrasher/parametre/commune

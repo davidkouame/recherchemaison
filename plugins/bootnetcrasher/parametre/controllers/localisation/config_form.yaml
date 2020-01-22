@@ -1,0 +1,10 @@
+name: Localisation
+form: $/bootnetcrasher/parametre/models/localisationmodel/fields.yaml
+modelClass: bootnetcrasher\Parametre\Models\LocalisationModel
+defaultRedirect: bootnetcrasher/parametre/localisation
+create:
+    redirect: 'bootnetcrasher/parametre/localisation/update/:id'
+    redirectClose: bootnetcrasher/parametre/localisation
+update:
+    redirect: bootnetcrasher/parametre/localisation
+    redirectClose: bootnetcrasher/parametre/localisation

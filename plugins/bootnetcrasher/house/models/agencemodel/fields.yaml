@@ -1,0 +1,17 @@
+fields:
+    libelle:
+        label: Libellé
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    tel:
+        label: 'Téléphone 1'
+        span: auto
+        type: number
+    tel2:
+        label: 'Téléphone 2'
+        span: auto
+        type: number

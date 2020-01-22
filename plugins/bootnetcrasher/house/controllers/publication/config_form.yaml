@@ -1,0 +1,10 @@
+name: Publication
+form: $/bootnetcrasher/house/models/publicationmodel/fields.yaml
+modelClass: bootnetcrasher\House\Models\PublicationModel
+defaultRedirect: bootnetcrasher/house/publication
+create:
+    redirect: 'bootnetcrasher/house/publication/update/:id'
+    redirectClose: bootnetcrasher/house/publication
+update:
+    redirect: bootnetcrasher/house/publication
+    redirectClose: bootnetcrasher/house/publication

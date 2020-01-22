@@ -1,0 +1,21 @@
+fields:
+    nom:
+        label: Nom
+        span: auto
+        type: text
+    prenom:
+        label: Prénom
+        span: auto
+        type: text
+    email:
+        label: Email
+        span: auto
+        type: text
+    tel:
+        label: 'Télphone 1'
+        span: auto
+        type: number
+    tel2:
+        label: 'Téléphone 2'
+        span: auto
+        type: number

@@ -1,0 +1,10 @@
+name: Ville
+form: $/bootnetcrasher/parametre/models/villemodel/fields.yaml
+modelClass: bootnetcrasher\Parametre\Models\VilleModel
+defaultRedirect: bootnetcrasher/parametre/ville
+create:
+    redirect: 'bootnetcrasher/parametre/ville/update/:id'
+    redirectClose: bootnetcrasher/parametre/ville
+update:
+    redirect: bootnetcrasher/parametre/ville
+    redirectClose: bootnetcrasher/parametre/ville

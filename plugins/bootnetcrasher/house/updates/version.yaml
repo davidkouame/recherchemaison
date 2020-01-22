@@ -1,0 +1,23 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table bootnetcrasher_house_maison'
+    - builder_table_create_bootnetcrasher_house_maison.php
+1.0.3:
+    - 'Updated table bootnetcrasher_house_maison'
+    - builder_table_update_bootnetcrasher_house_publication.php
+1.0.4:
+    - 'Updated table bootnetcrasher_house_publication'
+    - builder_table_update_bootnetcrasher_house_publication_2.php
+1.0.5:
+    - 'Created table bootnetcrasher_house_agence'
+    - builder_table_create_bootnetcrasher_house_agence.php
+1.0.6:
+    - 'Created table bootnetcrasher_house_demarcheur'
+    - builder_table_create_bootnetcrasher_house_demarcheur.php
+1.0.7:
+    - 'Updated table bootnetcrasher_house_demarcheur'
+    - builder_table_update_bootnetcrasher_house_demarcheur.php
+1.0.8:
+    - 'Updated table bootnetcrasher_house_agence'
+    - builder_table_update_bootnetcrasher_house_agence.php

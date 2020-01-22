@@ -1,0 +1,12 @@
+list: $/bootnetcrasher/parametre/models/villemodel/columns.yaml
+modelClass: bootnetcrasher\Parametre\Models\VilleModel
+title: Ville
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'bootnetcrasher/parametre/ville/update/:id'
