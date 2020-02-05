@@ -25,10 +25,13 @@ class AccountDemarcheur extends Account {
     }
 
     public function onRun() {
+        $this->prepareVars();
         // recuperation du démarcheur
         $user = Auth::getUser();
         if($user){
             $this->page['demarcheur'] = $demarcheur = DemarcheurModel::find($user->demarcheur_id);
+        }else{
+            return Redirect::to('auth/login');
         }
     }
 

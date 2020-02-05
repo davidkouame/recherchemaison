@@ -1,0 +1,92 @@
+1580939277a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:1950:"<style>
+    .navbar-brand, .navbar-nav > li > a{
+        color: #000;
+    }
+
+    .navbar-nav li a{
+        color: #000 !important;   
+    }
+
+    .text-primary {
+        color: #ff8b00 !important;
+        font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .site-logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    .nav.navbar-nav{
+        float: right;
+    }
+</style>
+
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
+                </span>Coka</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="separator hidden-xs"></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('/') }}">Home</a></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('demarcheur/create-publication') }}">Créez une publiation</a></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('demarcheur/publications') }}">Mes publications</a></li>
+                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('demarcheur/account') }}">Mon compte</a></li>
+                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('logout') }}">Se déconnectez</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+";s:5:"mtime";i:1580935848;s:6:"markup";s:1949:"<style>
+    .navbar-brand, .navbar-nav > li > a{
+        color: #000;
+    }
+
+    .navbar-nav li a{
+        color: #000 !important;   
+    }
+
+    .text-primary {
+        color: #ff8b00 !important;
+        font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .site-logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    .nav.navbar-nav{
+        float: right;
+    }
+</style>
+
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
+                </span>Coka</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="separator hidden-xs"></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('/') }}">Home</a></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('demarcheur/create-publication') }}">Créez une publiation</a></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('demarcheur/publications') }}">Mes publications</a></li>
+                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('demarcheur/account') }}">Mon compte</a></li>
+                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('logout') }}">Se déconnectez</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>";s:4:"code";N;}}

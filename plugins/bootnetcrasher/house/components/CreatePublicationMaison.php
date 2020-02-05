@@ -15,10 +15,11 @@ use bootnetcrasher\Parametre\Models\CommuneModel;
 use bootnetcrasher\Parametre\Models\LocalisationModel;
 use bootnetcrasher\House\Models\AgenceModel;
 use bootnetcrasher\House\Models\DemarcheurModel;
+use RainLab\User\Components\Account;
 use Input;
 use System\Models\File;
 
-class CreatePublicationMaison extends  ComponentBase{
+class CreatePublicationMaison extends  Account{
 
     public function componentDetails() {
         return [
@@ -31,6 +32,10 @@ class CreatePublicationMaison extends  ComponentBase{
     }
 
     public function onRun() {
+        $this->prepareVars();
+        if(!$this->user()){
+            return Redirect::to('auth/login');
+        }
         // recuperation de toutes les villes 
         $this->page['villes'] = $villes = VilleModel::all();
         $this->page['communes'] = $communes = CommuneModel::all();

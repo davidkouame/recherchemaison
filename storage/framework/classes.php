@@ -108,4 +108,13 @@
   'bootnetcrasher\\House\\Components\\LoginDemarcheur' => 'plugins/bootnetcrasher/house/components/LoginDemarcheur.php',
   'bootnetcrasher\\House\\Components\\CreateDemarcheur' => 'plugins/bootnetcrasher/house/components/CreateDemarcheur.php',
   'bootnetcrasher\\House\\Components\\AccountDemarcheur' => 'plugins/bootnetcrasher/house/components/AccountDemarcheur.php',
+  'bootnetcrasher\\House\\Components\\Home' => 'plugins/bootnetcrasher/house/components/Home.php',
+  'bootnetcrasher\\Parametre\\Models\\TypePublicationModel' => 'plugins/bootnetcrasher/parametre/models/TypePublicationModel.php',
+  'bootnetcrasher\\House\\Components\\DetailPublication' => 'plugins/bootnetcrasher/house/components/DetailPublication.php',
+  'bootnetcrasher\\House\\Components\\Login' => 'plugins/bootnetcrasher/house/components/Login.php',
+  'rainlab\\user\\Controllers\\users' => 'plugins/rainlab/user/controllers/users.php',
+  'RainLab\\User\\Models\\MailBlocker' => 'plugins/rainlab/user/models/MailBlocker.php',
+  'bootnetcrasher\\House\\Components\\Register' => 'plugins/bootnetcrasher/house/components/Register.php',
+  'RainLab\\User\\Components\\Login' => 'plugins/rainlab/user/components/Login.php',
+  'RainLab\\User\\Classes\\AuthMiddleware' => 'plugins/rainlab/user/classes/AuthMiddleware.php',
 );

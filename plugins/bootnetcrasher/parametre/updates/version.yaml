@@ -12,3 +12,9 @@
 1.0.5:
     - 'Created table bootnetcrasher_parametre_categorie_maison'
     - builder_table_create_bootnetcrasher_parametre_categorie_maison.php
+1.0.6:
+    - 'Created table bootnetcrasher_parametre_type_publication_id'
+    - builder_table_create_bootnetcrasher_parametre_type_publication_id.php
+1.0.7:
+    - 'Updated table bootnetcrasher_parametre_type_publication_id'
+    - builder_table_update_bootnetcrasher_parametre_type_publication.php

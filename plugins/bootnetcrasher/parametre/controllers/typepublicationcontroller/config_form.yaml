@@ -1,0 +1,10 @@
+name: TypePublicationController
+form: $/bootnetcrasher/parametre/models/typepublicationmodel/fields.yaml
+modelClass: Bootnetcrasher\Parametre\Models\TypePublicationModel
+defaultRedirect: bootnetcrasher/parametre/typepublicationcontroller
+create:
+    redirect: 'bootnetcrasher/parametre/typepublicationcontroller/update/:id'
+    redirectClose: bootnetcrasher/parametre/typepublicationcontroller
+update:
+    redirect: bootnetcrasher/parametre/typepublicationcontroller
+    redirectClose: bootnetcrasher/parametre/typepublicationcontroller

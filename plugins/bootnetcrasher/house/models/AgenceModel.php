@@ -28,4 +28,8 @@ class AgenceModel extends Model
     public $hasOne = [
         'user' => ['Rainlab\User\Models\User', 'key' => 'agence_id']
     ];
+
+    public $belongsTo = [
+        "localisation" => ["bootnetcrasher\Parametre\Models\LocalisationModel", "key" => "localisation_id", "otherKey" => "id"],
+    ];
 }

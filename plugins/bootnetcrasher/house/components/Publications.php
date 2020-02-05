@@ -29,6 +29,11 @@ class Publications extends Account {
     }
 
     public function onRun() {
+        $this->prepareVars();
+        if(!$this->user()){
+            return Redirect::to('auth/login');
+        }
+        $this->prepareVars();
         $this->page['view'] = $this->getView();
         // recuperation de l'agence
         $user = Auth::getUser();

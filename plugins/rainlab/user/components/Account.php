@@ -66,6 +66,7 @@ class Account extends ComponentBase
      */
     public function prepareVars()
     {
+        Redirect::to('auth/login');
         $this->page['user'] = $this->user();
         $this->page['canRegister'] = $this->canRegister();
         $this->page['loginAttribute'] = $this->loginAttribute();

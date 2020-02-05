@@ -30,6 +30,9 @@ class PublicationModel extends Model
         "communes" => ["bootnetcrasher\Parametre\Models\CommuneModel", "key" => "commune_id", "otherKey" => "id"],
         "villes" => ["bootnetcrasher\Parametre\Models\VilleModel", "key" => "ville_id", "otherKey" => "id"],
         "localisations" => ["bootnetcrasher\Parametre\Models\LocalisationModel", "key" => "localisation_id", "otherKey" => "id"],
+        "typepublication" => ["bootnetcrasher\Parametre\Models\TypePublicationModel", "key" => "type_publication_id", "otherKey" => "id"],
+        "agence" => ["bootnetcrasher\House\Models\AgenceModel", "key" => "agence_id", "otherKey" => "id"],
+        "demarcheur" => ["bootnetcrasher\House\Models\DemarcheurModel", "key" => "demarcheur_id", "otherKey" => "id"],
     ];
 
     public $attachOne = [
@@ -41,6 +44,14 @@ class PublicationModel extends Model
     ];
 
     public function beforeCreate(){
+        $this->slot = str_replace(' ', '-', $this->libelle);
+        if (BackendAuth::check()) {
+            $this->agence_id = BackendAuth::getUser()->id;
+        }
+    }
+
+    public function beforeSave(){
+        $this->slot = strtolower(str_replace(' ', '-', $this->libelle));
         if (BackendAuth::check()) {
             $this->agence_id = BackendAuth::getUser()->id;
         }

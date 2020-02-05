@@ -1,0 +1,176 @@
+1580942261a:1:{s:20:"first_step_login.htm";a:9:{s:8:"fileName";s:20:"first_step_login.htm";s:7:"content";s:3960:"title = "Connexion"
+url = "/first-step"
+layout = "default"
+[RegisterComponent]
+==
+
+<div class="container">
+    <form class="row" role="form" data-request="onCreateUserTwoStep">
+        <div class="col-md-offset-4 col-md-6">
+            <div class="radio"  style="display: inline-block;">
+            <label><input type="radio" name="typeuser" value="2" checked>Je suis un démarcheur</label>
+            </div>
+            <div class="radio" style="display: inline-block;">
+                <label><input type="radio" name="typeuser" value="1">Je suis une agence</label>
+            </div>
+        </div>
+        <!-- Agence -->
+        <div class="col-md-offset-2 col-md-8" id="agence_first_login" style="display: none;">
+            <h3 style="text-align: center;">Information de l'agence</h3>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="libelle"
+                        placeholder="Entrer un libellé"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <input
+                        type="email"
+                        class="form-control"
+                        name="email_agence"
+                        placeholder="Entrer un email"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="sitenternet"
+                        placeholder="Entrer un siteinternet"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <select name="localisation_id" class="form-control">
+                        <option value="">Choisir une localisation</option>
+                        {% for localisation in localisations %}
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
+        </div>
+        <!-- Démarcheur -->
+        <div class="col-md-offset-2 col-md-8" id="demarcheur_first_login">
+            <h3 style="text-align: center;">Information du démarcheur</h3>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="">Localisation</label>
+                    <select name="localisation_id" id="" class="form-control">
+                        <option value="">Choisir une localisation</option>
+                        {% for localisation in localisations %}
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!--<div class="form-group col-md-6">
+                    <label for="">Téléphone 1</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="tel1"
+                        placeholder="Entrer un tépléphone 1"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Téléphone 2</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="tel2"
+                        placeholder="Entrer un téléphone 2"
+                    />
+                </div>-->
+            </div>
+            <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
+        </div>
+    </form>
+</div>
+";s:5:"mtime";i:1580830670;s:6:"markup";s:3876:"<div class="container">
+    <form class="row" role="form" data-request="onCreateUserTwoStep">
+        <div class="col-md-offset-4 col-md-6">
+            <div class="radio"  style="display: inline-block;">
+            <label><input type="radio" name="typeuser" value="2" checked>Je suis un démarcheur</label>
+            </div>
+            <div class="radio" style="display: inline-block;">
+                <label><input type="radio" name="typeuser" value="1">Je suis une agence</label>
+            </div>
+        </div>
+        <!-- Agence -->
+        <div class="col-md-offset-2 col-md-8" id="agence_first_login" style="display: none;">
+            <h3 style="text-align: center;">Information de l'agence</h3>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="libelle"
+                        placeholder="Entrer un libellé"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <input
+                        type="email"
+                        class="form-control"
+                        name="email_agence"
+                        placeholder="Entrer un email"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="sitenternet"
+                        placeholder="Entrer un siteinternet"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <select name="localisation_id" class="form-control">
+                        <option value="">Choisir une localisation</option>
+                        {% for localisation in localisations %}
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
+        </div>
+        <!-- Démarcheur -->
+        <div class="col-md-offset-2 col-md-8" id="demarcheur_first_login">
+            <h3 style="text-align: center;">Information du démarcheur</h3>
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="">Localisation</label>
+                    <select name="localisation_id" id="" class="form-control">
+                        <option value="">Choisir une localisation</option>
+                        {% for localisation in localisations %}
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!--<div class="form-group col-md-6">
+                    <label for="">Téléphone 1</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="tel1"
+                        placeholder="Entrer un tépléphone 1"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="">Téléphone 2</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="tel2"
+                        placeholder="Entrer un téléphone 2"
+                    />
+                </div>-->
+            </div>
+            <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
+        </div>
+    </form>
+</div>";s:4:"code";N;s:5:"title";s:9:"Connexion";s:3:"url";s:11:"/first-step";s:6:"layout";s:7:"default";s:17:"RegisterComponent";a:0:{}}}

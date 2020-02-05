@@ -44,3 +44,8 @@
         \Auth::logout();
         return Redirect::to('demarcheur/login');;
     });
+
+    /*Route::get('logout', function(){
+        \Auth::logout();
+        return Redirect::to('auth/login');;
+    });*/

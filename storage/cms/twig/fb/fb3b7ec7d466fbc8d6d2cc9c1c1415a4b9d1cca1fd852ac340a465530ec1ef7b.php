@@ -34,64 +34,62 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
     {
         $macros = $this->macros;
         // line 1
-        echo "<!-- Nav -->
-<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\">
+        echo "<style>
+    .navbar-brand, .navbar-nav > li > a{
+        color: #000;
+    }
+
+    .navbar-nav li a{
+        color: #000 !important;   
+    }
+
+    .text-primary {
+        color: #ff8b00 !important;
+        font-family: \"Rubik\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";
+    }
+
+    .site-logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    .nav.navbar-nav{
+        float: right;
+    }
+</style>
+
+<!-- Nav -->
+<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
-            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-main-collapse\">
-                <span class=\"sr-only\">Toggle navigation</span>
-                <span class=\"icon-bar\"></span>
-                <span class=\"icon-bar\"></span>
-                <span class=\"icon-bar\"></span>
-            </button>
-            <a class=\"navbar-brand\" href=\"";
-        // line 11
+            <a class=\"navbar-brand text-primary site-logo\" href=\"";
+        // line 31
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">October Demo</a>
+        echo "\">
+                </span>Coka</span>
+            </a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
                 <li class=\"";
-        // line 16
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 16), "id", [], "any", false, false, false, 16) == "home")) {
+        // line 38
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38) == "demarcheur")) {
             echo "active";
         }
         echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">Basic concepts</a></li>
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
+        echo "\">S'inscrire</a></li>
                 <li class=\"";
-        // line 17
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 17), "id", [], "any", false, false, false, 17) == "ajax")) {
+        // line 39
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39) == "agence")) {
             echo "active";
         }
         echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("ajax");
-        echo "\">AJAX framework</a></li>
-                <li class=\"";
-        // line 18
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 18), "id", [], "any", false, false, false, 18) == "plugins")) {
-            echo "active";
-        }
-        echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("plugins");
-        echo "\">Plugin components</a></li>
-                <li class=\"";
-        // line 19
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 19), "id", [], "any", false, false, false, 19) == "agence")) {
-            echo "active";
-        }
-        echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("agence/login_agence");
-        echo "\">Agence</a></li>
-                <li class=\"";
-        // line 20
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 20), "id", [], "any", false, false, false, 20) == "demarcheur")) {
-            echo "active";
-        }
-        echo "\"><a href=\"";
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("demarcheur/login_demarcheur");
-        echo "\">Démarcheur</a></li>
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("login");
+        echo "\">Se connecter</a></li>
             </ul>
         </div>
     </div>
@@ -110,31 +108,50 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
 
     public function getDebugInfo()
     {
-        return array (  89 => 20,  81 => 19,  73 => 18,  65 => 17,  57 => 16,  49 => 11,  37 => 1,);
+        return array (  87 => 39,  79 => 38,  69 => 31,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<!-- Nav -->
-<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\">
+        return new Source("<style>
+    .navbar-brand, .navbar-nav > li > a{
+        color: #000;
+    }
+
+    .navbar-nav li a{
+        color: #000 !important;   
+    }
+
+    .text-primary {
+        color: #ff8b00 !important;
+        font-family: \"Rubik\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";
+    }
+
+    .site-logo {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    .nav.navbar-nav{
+        float: right;
+    }
+</style>
+
+<!-- Nav -->
+<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
-            <button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-main-collapse\">
-                <span class=\"sr-only\">Toggle navigation</span>
-                <span class=\"icon-bar\"></span>
-                <span class=\"icon-bar\"></span>
-                <span class=\"icon-bar\"></span>
-            </button>
-            <a class=\"navbar-brand\" href=\"{{ 'home'|page }}\">October Demo</a>
+            <a class=\"navbar-brand text-primary site-logo\" href=\"{{ 'home'|page }}\">
+                </span>Coka</span>
+            </a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
-                <li class=\"{% if this.page.id == 'home' %}active{% endif %}\"><a href=\"{{ 'home'|page }}\">Basic concepts</a></li>
-                <li class=\"{% if this.page.id == 'ajax' %}active{% endif %}\"><a href=\"{{ 'ajax'|page }}\">AJAX framework</a></li>
-                <li class=\"{% if this.page.id == 'plugins' %}active{% endif %}\"><a href=\"{{ 'plugins'|page }}\">Plugin components</a></li>
-                <li class=\"{% if this.page.id == 'agence' %}active{% endif %}\"><a href=\"{{ 'agence/login_agence'|page }}\">Agence</a></li>
-                <li class=\"{% if this.page.id == 'demarcheur' %}active{% endif %}\"><a href=\"{{ 'demarcheur/login_demarcheur'|page }}\">Démarcheur</a></li>
+                <li class=\"{% if this.page.id == 'demarcheur' %}active{% endif %}\"><a href=\"{{ 'register'|page }}\">S'inscrire</a></li>
+                <li class=\"{% if this.page.id == 'agence' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Se connecter</a></li>
             </ul>
         </div>
     </div>

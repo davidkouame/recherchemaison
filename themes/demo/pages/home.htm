@@ -1,120 +1,138 @@
-title = "Demonstration"
+title = "Recherche maison"
 url = "/"
 layout = "default"
+[HomeComponent]
 ==
-<div class="jumbotron">
+
+<style>
+
+.ftco-cover-1.overlay {
+    position: relative;
+}
+.ftco-cover-1, .ftco-cover-1 .container > .row {
+    min-height: 400px;
+}
+
+.ftco-cover-1 {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+.ftco-cover-1.overlay h1 {
+    color: 
+    #fff;
+}
+
+.ftco-cover-1.overlay p {
+    color: 
+    #fff;
+}
+
+.mb-5, .my-5 {
+    margin-bottom: 3rem !important;
+}
+
+.ftco-cover-1.overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .95;
+    background: #377aff;
+    background: -moz-linear-gradient(45deg,#377aff 0%,#00d9ff 100%);
+    background: -webkit-gradient(left bottom,right top,color-stop(0%,#377aff),color-stop(100%,#00d9ff));
+    background: -webkit-linear-gradient(45deg,#377aff 0%,#00d9ff 100%);
+    background: -o-linear-gradient(45deg,#377aff 0%,#00d9ff 100%);
+    background: -ms-linear-gradient(45deg,#377aff 0%,#00d9ff 100%);
+    background: linear-gradient(45deg,
+#377aff 0%,
+    #00d9ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#377aff',endColorstr='#00d9ff',GradientType=1);
+}
+
+div.polaroid {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container-p {
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+</style>
+
+<div class="ftco-cover-1 overlay" style="background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')">
     <div class="container">
-        {% content "welcome.htm" %}
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <h1>Choose Your Quality Delivery of Your Cargo</h1>
+                <p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
+                    fugit modi similique, suscipit, deserunt a iure.</h3></p>
+                <form class="row" action="{{ url('/') }}" method="GET">
+                    <div class="col-md-7">
+                        <input name="keys" placeholder="Que recherchez vous ?" type="text" class="form-control" value="{{ keys }}" style="height: 58px;">
+                    </div>
+                    <div class="col-md-3">
+                        <select name="localisation_id" id="" class="form-control" style="height: 58px;">
+                            <option value="">Choisir une localisation </option>
+                            {% for localisation in localisations %}
+                            {% if localisation_id == localisation.id %}
+                            <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
+                            {% else %}
+                            <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="text" class="btn btn-primary" style="height: 58px;">Rechercher</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="container">
 
-    <div class="page-header">
-        <h2>Overview <small>Basic concepts</small></h2>
-    </div>
-    <p>
-        This page demonstrates the basic CMS features.
-        Usually each page built with October is a combination of a layout, page, partials and content blocks,
-        although in simple cases you can just use a page without anything else.
-    </p>
-
-    <!-- Layouts -->
-    <h3>Layouts</h3>
-    <p class="lead">
-        <i class="icon-th-large"></i> &nbsp; Layouts define the page scaffold.
-    </p>
-    <p>
-        The layout file <code>layouts/default.htm</code> defines the page scaffold &mdash;
-        everything that repeats on each page, such as the HTML, HEAD and BODY tags, StyleSheet and JavaScript references.
-    </p>
-    <p>The page menu and footer in the Demo theme are defined in the layout as well.</p>
-
-    <hr />
-
-    <!-- Pages -->
-    <h3>Pages</h3>
-    <p class="lead">
-        <i class="icon-copy"></i> &nbsp; Pages hold the content for each URL.
-    </p>
-    <p>
-        The page file <code>pages/home.htm</code> defines the page URL (<code>/</code> for this page) and the page content.
-        Pages are rendered inside layouts with this function that should be called in the layout code:
-    </p>
-    <pre>{{ "{% page %}" }}</pre>
-    <p>Using a layout for pages is optional &mdash; you can define everything right in the page file.</p>
-
-    <hr />
-
-    <!-- Partials -->
-    <h3>Partials</h3>
-    <p class="lead">
-        <i class="icon-tags"></i> &nbsp; Partials contain reusable chunks of HTML markup.
-    </p>
-    <p>
-        Partials are chunks of HTML defined in separate files that can be included anywhere.
-        Partials are rendered with:
-    </p>
-    <pre>{{ "{% partial \"partial-name\" %}" }}</pre>
-    <p>You may place partials inside folders too. In this example we placed the footer content to the <code>partials/site/footer.htm</code> partial.</p>
-    <pre>{{ "{% partial \"site/footer\" %}" }}</pre>
-    <p>Partials can be used inside pages, layouts or other partials.</p>
-
-    <hr />
-
-    <!-- Content blocks -->
-    <h3>Content blocks</h3>
-    <p class="lead">
-        <i class="icon-font"></i> &nbsp; Content blocks are text or HTML blocks that can be edited separately from the page or layout.
-    </p>
-    <p>
-        The introductory text used on this page is defined in the <code>content/welcome.htm</code> file.
-        Content blocks are defined and rendered with:
-        <pre>{{ "{% content \"content-name.htm\" %}" }}</pre>
-    </p>
-
-    <hr />
-
-    <!-- Placeholders -->
-    <h3>Placeholders</h3>
-    <p class="lead">
-        <i class="icon-bookmark"></i> &nbsp; Placeholders allow pages to inject content to a layout.
-    </p>
-    <p>
-        The common use is injecting page-specific links to StyleSheet or JavaScript files to the HEAD tag defined in the layout.
-        Placeholders are defined in the layout file and they have names so that they can be referred in the page.
-        Example:
-    </p>
-    <div class="row">
-        <div class="col-md-6">
-            <p>Layout file:</p>
-            <pre>{% content "placeholder/layout.txt" %}</pre>
+<div class="container" style="margin-top: 12px">
+    <div class="row" >
+        {% for publication in publications %}
+            <a class="col-md-4" href="{{ url('publications') }}/{{ publication.slot }}">
+                <div class="polaroid">
+                    <img src="https://www.w3schools.com/css/img_5terre.jpg" alt="5 Terre" style="width:100%">
+                    <div class="container-p">
+                        <p>{{ publication.libelle }}</p>
+                        <p><span class="address">{{ publication.typepublication.libelle }},
+                            {{ publication.localisations.libelle}} </span></p>
+                            <div class="price-date">
+                                <span class="price">{{ publication.prix }}</span>
+                                <time datetime="31.1.2020 8:32">{{ publication.published_at }}</time>
+                            </div>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+        <div class="col-md-12" style="text-align: center">
+            {{ publications | raw }}
         </div>
-        <div class="col-md-6">
-            <p>Page file:</p>
-            <pre>{% content "placeholder/page.txt" %}</pre>
-        </div>
+
     </div>
-
-    <hr />
-
-    <!-- Assets -->
-    <h3>Assets</h3>
-    <p class="lead">
-        <i class="icon-picture"></i> &nbsp; Assets are resource files like images and stylesheets.
-    </p>
-    <p>This theme stores its asset files (JavaScript, StyleSheet, images, fonts, etc) in the <code>themes/demo/assets</code> directory. This theme is also packaged with these useful 3rd party tools:</p>
-    <ul class="list-inline">
-        <li><a target="_blank" href="http://getbootstrap.com/">Twitter Bootstrap</a></li>
-        <li><a target="_blank" href="http://fontawesome.io/3.2.1/">Font Awesome</a></li>
-        <li><a target="_blank" href="http://www.google.com/fonts/specimen/Lato">Lato webfont</a></li>
-    </ul>
-    <p>You might prefer to remove them for your website implementation.</p>
-
-    <br />
-
-    <div class="text-center">
-        <p><a href="{{ 'ajax'|page }}" class="btn btn-lg btn-default">Continue to AJAX framework</a></p>
     </div>
-
 </div>

@@ -21,3 +21,6 @@
 1.0.8:
     - 'Updated table bootnetcrasher_house_agence'
     - builder_table_update_bootnetcrasher_house_agence.php
+1.0.9:
+    - 'Updated table bootnetcrasher_house_publication'
+    - builder_table_update_bootnetcrasher_house_publication_3.php

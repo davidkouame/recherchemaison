@@ -1,0 +1,60 @@
+<div class="row" style="margin-top: 40px;">
+    <form class="col-md-offset-2 col-md-8" role="form" data-request="onCreateUserFirstStep">
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input
+                    type="text"
+                    class="form-control"
+                    name="nom"
+                    placeholder="Entrer un nom"
+                />
+            </div>
+            <div class="form-group col-md-6">
+                <input
+                    type="text"
+                    class="form-control"
+                    name="prenom"
+                    placeholder="Entrer un prénom"
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    placeholder="Entrer un email"
+                />
+            </div>
+            <div class="form-group col-md-6">
+                <input
+                    type="number"
+                    class="form-control"
+                    name="tel1"
+                    placeholder="Entrer un tel "
+                />
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Entrer un password"
+                />
+            </div>
+            <div class="form-group col-md-6">
+                <input
+                    type="password"
+                    class="form-control"
+                    name="retype_password"
+                    placeholder="Retaper le password"
+                />
+            </div>
+        </div>
+        <a href="{{ 'login'|page }}">j'ai déja un compte </a> </br>
+        <button type="submit" class="btn btn-primary active" data-attach-loading>Inscrivez vous</button>
+      </form>
+</div>

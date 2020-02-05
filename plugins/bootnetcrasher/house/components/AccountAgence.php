@@ -25,10 +25,13 @@ class AccountAgence extends Account {
     }
 
     public function onRun() {
+        $this->prepareVars();
         // recuperation de l'agence
         $user = Auth::getUser();
         if($user){
             $this->page['agence'] = $agence = AgenceModel::find($user->agence_id);
+        }else{
+            return Redirect::to('auth/login');
         }
     }
 

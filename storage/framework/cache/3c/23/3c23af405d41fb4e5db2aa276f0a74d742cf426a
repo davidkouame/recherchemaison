@@ -1,4 +1,4 @@
-1579706461a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1423:"description = "Default layout"
+1580942262a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2488:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -12,15 +12,28 @@
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
 
         <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
+        {% if user %}
+            {% if user.demarcheur_id == 1%}
+                <header id="layout-header">
+                    {% partial 'site/header_demarcheur' %}
+                </header>
+            {% else %}
+                <header id="layout-header">
+                    {% partial 'site/header_agence' %}
+                </header>
+            {% endif %}
+        {% else %}
+            <header id="layout-header">
+                {% partial 'site/header' %}
+            </header>
+        {% endif %}
 
         <!-- Content -->
         <section id="layout-content">
@@ -39,9 +52,23 @@
         {% framework extras %}
         {% scripts %}
 
+        <script>
+            $(document).ready(function(e){
+                $("input[name='typeuser']").click(function(e){
+                    if(e.target.value == 1){
+                        $("#agence_first_login").css('display', 'block');
+                        $("#demarcheur_first_login").css('display', 'none');
+                    }else{
+                        $("#agence_first_login").css('display', 'none');
+                        $("#demarcheur_first_login").css('display', 'block');
+                    }
+                });
+            });
+        </script>
+
     </body>
 </html>
-";s:5:"mtime";i:1579440477;s:6:"markup";s:1388:"<!DOCTYPE html>
+";s:5:"mtime";i:1580936365;s:6:"markup";s:2453:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -53,15 +80,28 @@
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
 
         <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
+        {% if user %}
+            {% if user.demarcheur_id == 1%}
+                <header id="layout-header">
+                    {% partial 'site/header_demarcheur' %}
+                </header>
+            {% else %}
+                <header id="layout-header">
+                    {% partial 'site/header_agence' %}
+                </header>
+            {% endif %}
+        {% else %}
+            <header id="layout-header">
+                {% partial 'site/header' %}
+            </header>
+        {% endif %}
 
         <!-- Content -->
         <section id="layout-content">
@@ -79,6 +119,20 @@
         <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
         {% framework extras %}
         {% scripts %}
+
+        <script>
+            $(document).ready(function(e){
+                $("input[name='typeuser']").click(function(e){
+                    if(e.target.value == 1){
+                        $("#agence_first_login").css('display', 'block');
+                        $("#demarcheur_first_login").css('display', 'none');
+                    }else{
+                        $("#agence_first_login").css('display', 'none');
+                        $("#demarcheur_first_login").css('display', 'block');
+                    }
+                });
+            });
+        </script>
 
     </body>
 </html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

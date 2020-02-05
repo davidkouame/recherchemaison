@@ -1,0 +1,12 @@
+title = "Connexion"
+url = "/logout"
+layout = "default"
+==
+<?php
+    function onStart(){
+        \Auth::logout();
+        return \Redirect::to("auth/login");
+    }
+?>
+==
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iusto nisi vitae dicta unde illo officiis sit, at quasi dolore, quaerat atque mollitia! Odio ullam officia velit, hic fugiat repellendus.

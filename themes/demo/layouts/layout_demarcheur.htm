@@ -16,22 +16,15 @@ description = "Default layout"
         {% styles %}
     </head>
     <body>
-
+        
         <!-- Header -->
         <header id="layout-header">
-            {% partial 'site/header' %}
+            {% partial 'site/header_demarcheur' %}
         </header>
 
         <!-- Content -->
-        <section id="layout-content">
-            <div class="row">
-                <div class="col-md-3">
-                    {% partial 'site/demarcheur_navbar' %}
-                </div>
-                <div class="col-md-9">
-                    {% page %}
-                </div>
-            </div>
+        <section id="layout-content" class="container">
+            {% page %}
         </section>
 
         <!-- Footer -->

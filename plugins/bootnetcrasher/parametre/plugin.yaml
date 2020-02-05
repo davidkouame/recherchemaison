@@ -20,9 +20,13 @@ navigation:
                 icon: icon-arrow-right
             localisations:
                 label: Localisations
-                url: bootnetcrasher/parametre/ville
+                url: bootnetcrasher/parametre/localisation
                 icon: icon-arrow-right
             categoriesmaisons:
                 label: 'Catégories maisons'
                 url: bootnetcrasher/parametre/categoriemaison
                 icon: icon-arrow-right
+            typepublication:
+                label: 'Type publiation'
+                url: bootnetcrasher/parametre/typepublicationcontroller
+                icon: icon-sitemap

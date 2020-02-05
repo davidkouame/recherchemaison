@@ -27,6 +27,9 @@ class LoginAgence extends Account {
     }
 
     public function onRun() {
+        if(!$this->user()){
+            return Redirect::to('auth/login');
+        }
     }
 
     public function onSigninAgence(){

@@ -24,6 +24,14 @@ fields:
         span: auto
         type: relation
         placeholder: 'Sélectionner une localisation'
+    typepublication:
+        label: 'Type de publication'
+        nameFrom: typepublication
+        descriptionFrom: description
+        span: auto
+        type: relation
+        select: libelle
+        placeholder: 'Sélectionner un type de publication'
     nbre_piece:
         label: 'Nombre de pièce'
         span: auto
@@ -46,3 +54,12 @@ fields:
             extension: auto
         span: auto
         type: fileupload
+    prix:
+        label: Prix
+        span: auto
+        type: text
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: richeditor

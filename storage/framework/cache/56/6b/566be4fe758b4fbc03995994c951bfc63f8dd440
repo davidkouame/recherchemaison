@@ -1,4 +1,4 @@
-1579706867a:1:{s:33:"demarcheur/create_publication.htm";a:9:{s:8:"fileName";s:33:"demarcheur/create_publication.htm";s:7:"content";s:2571:"title = "Espace agence"
+1580942261a:1:{s:33:"demarcheur/create_publication.htm";a:9:{s:8:"fileName";s:33:"demarcheur/create_publication.htm";s:7:"content";s:2571:"title = "Espace agence"
 url = "/demarcheur/create-publication"
 layout = "layout_demarcheur"
 [CreatePublicationMaisonComponent]
@@ -62,7 +62,7 @@ layout = "layout_demarcheur"
         <button type="submit" class="btn btn-primary active" data-attach-loading>Publiez</button>
       </form>
 </div>
-";s:5:"mtime";i:1579647160;s:6:"markup";s:2439:"<div class="row" style="margin-top: 40px;">
+";s:5:"mtime";i:1580937878;s:6:"markup";s:2439:"<div class="row" style="margin-top: 40px;">
     <h2>Publication d'une maison</h2>
     <br>
     <form class="col-md-12" role="form" data-request="onCreatePublicationMaison">

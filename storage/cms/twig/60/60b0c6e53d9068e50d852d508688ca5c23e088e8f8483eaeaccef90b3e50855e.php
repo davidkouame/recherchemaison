@@ -49,7 +49,7 @@ class __TwigTemplate_bf61b7c41dc4f52164ffe10ca2ca3a1fdd662ca596733a91ae3d33408ed
         echo "\">Mon compte</a></li>
     <li><a href=\"";
         // line 5
-        echo url("agence/logout");
+        echo url("logout");
         echo "\">Déconnexion</a></li>
 </ul>";
     }
@@ -75,7 +75,7 @@ class __TwigTemplate_bf61b7c41dc4f52164ffe10ca2ca3a1fdd662ca596733a91ae3d33408ed
     <li><a href=\"{{ 'agence/create_publication'|page }}\">creer une publication</a></li>
     <li><a href=\"{{ 'agence/publications'|page }}\">mes publications</a></li>
     <li><a href=\"{{ 'agence/account'|page }}\">Mon compte</a></li>
-    <li><a href=\"{{ url('agence/logout') }}\">Déconnexion</a></li>
+    <li><a href=\"{{ url('logout') }}\">Déconnexion</a></li>
 </ul>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/partials/site/agence_navbar.htm", "");
     }
 }

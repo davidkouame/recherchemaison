@@ -1,0 +1,11 @@
+1580939277a:1:{s:26:"site/demarcheur_navbar.htm";a:5:{s:8:"fileName";s:26:"site/demarcheur_navbar.htm";s:7:"content";s:313:"<ul>
+    <li><a href="{{ 'demarcheur/create_publication'|page }}">creer une publication</a></li>
+    <li><a href="{{ 'demarcheur/publications'|page }}">mes publications</a></li>
+    <li><a href="{{ 'demarcheur/account'|page }}">Mon compte</a></li>
+    <li><a href="{{ url('logout') }}">Déconnexion</a></li>
+</ul>";s:5:"mtime";i:1580690853;s:6:"markup";s:313:"<ul>
+    <li><a href="{{ 'demarcheur/create_publication'|page }}">creer une publication</a></li>
+    <li><a href="{{ 'demarcheur/publications'|page }}">mes publications</a></li>
+    <li><a href="{{ 'demarcheur/account'|page }}">Mon compte</a></li>
+    <li><a href="{{ url('logout') }}">Déconnexion</a></li>
+</ul>";s:4:"code";N;}}

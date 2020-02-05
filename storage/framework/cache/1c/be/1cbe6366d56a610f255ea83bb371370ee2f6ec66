@@ -1,4 +1,4 @@
-1579706873a:1:{s:17:"layout_agence.htm";a:6:{s:8:"fileName";s:17:"layout_agence.htm";s:7:"content";s:4912:"description = "Default layout"
+1580942692a:1:{s:17:"layout_agence.htm";a:6:{s:8:"fileName";s:17:"layout_agence.htm";s:7:"content";s:4701:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -25,19 +25,12 @@
 
         <!-- Header -->
         <header id="layout-header">
-            {% partial 'site/header' %}
+            {% partial 'site/header_agence' %}
         </header>
 
         <!-- Content -->
-        <section id="layout-content">
-            <div class="row">
-                <div class="col-md-3">
-                    {% partial 'site/agence_navbar' %}
-                </div>
-                <div class="col-md-9">
-                    {% page %}
-                </div>
-            </div>
+        <section id="layout-content" class="container">
+            {% page %}
         </section>
 
         <!-- Footer -->
@@ -121,7 +114,7 @@
 
     </body>
 </html>
-";s:5:"mtime";i:1579704673;s:6:"markup";s:4877:"<!DOCTYPE html>
+";s:5:"mtime";i:1580942090;s:6:"markup";s:4666:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -146,19 +139,12 @@
 
         <!-- Header -->
         <header id="layout-header">
-            {% partial 'site/header' %}
+            {% partial 'site/header_agence' %}
         </header>
 
         <!-- Content -->
-        <section id="layout-content">
-            <div class="row">
-                <div class="col-md-3">
-                    {% partial 'site/agence_navbar' %}
-                </div>
-                <div class="col-md-9">
-                    {% page %}
-                </div>
-            </div>
+        <section id="layout-content" class="container">
+            {% page %}
         </section>
 
         <!-- Footer -->
