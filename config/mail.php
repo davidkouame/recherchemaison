@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'opstech.digital@groupedigital.com', 'name' => 'DIGITAL'],
+    'from' => ['address' => 'opstech.digital@groupedigital.com', 'name' => 'ChapMaison'],
 
     /*
     |--------------------------------------------------------------------------

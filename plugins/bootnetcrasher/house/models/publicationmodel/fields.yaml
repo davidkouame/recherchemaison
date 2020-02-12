@@ -17,6 +17,20 @@ fields:
         span: auto
         type: relation
         placeholder: 'Sélectionner une ville'
+    demarcheur:
+        label: Démarcheur
+        nameFrom: nom
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionner un démarcheur'
+    agence:
+        label: Agence
+        nameFrom: nom
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionner une agence'
     localisations:
         label: Localisation
         nameFrom: libelle

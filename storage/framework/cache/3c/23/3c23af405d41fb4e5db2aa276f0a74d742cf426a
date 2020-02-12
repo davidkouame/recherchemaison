@@ -1,4 +1,4 @@
-1581505105a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4210:"description = "Default layout"
+1581532198a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4180:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -70,12 +70,12 @@
 
                 // afficher les informations (mail, tel) du demarcheur ou de l'agence
                 $("a[href='#contactPhone'").click(function(){
-                    $("#super-form-container").css('display', 'inline-block');
-                    $("#contactPhone").css('display', 'inline-block');
+                    $("#super-form-container").css('display', 'block');
+                    $("#contactPhone").css('display', 'flex');
                 });
                 $(".contactForm").click(function(){
-                    $("#super-form-container").css('display', 'inline-block');
-                    $("#contactForm").css('display', 'inline-block');
+                    $("#super-form-container").css('display', 'block');
+                    $("#contactForm").css('display', 'flex');
                 });
 
                 // chargement des images
@@ -99,7 +99,7 @@
 
     </body>
 </html>
-";s:5:"mtime";i:1581361502;s:6:"markup";s:4175:"<!DOCTYPE html>
+";s:5:"mtime";i:1581530193;s:6:"markup";s:4145:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -169,12 +169,12 @@
 
                 // afficher les informations (mail, tel) du demarcheur ou de l'agence
                 $("a[href='#contactPhone'").click(function(){
-                    $("#super-form-container").css('display', 'inline-block');
-                    $("#contactPhone").css('display', 'inline-block');
+                    $("#super-form-container").css('display', 'block');
+                    $("#contactPhone").css('display', 'flex');
                 });
                 $(".contactForm").click(function(){
-                    $("#super-form-container").css('display', 'inline-block');
-                    $("#contactForm").css('display', 'inline-block');
+                    $("#super-form-container").css('display', 'block');
+                    $("#contactForm").css('display', 'flex');
                 });
 
                 // chargement des images

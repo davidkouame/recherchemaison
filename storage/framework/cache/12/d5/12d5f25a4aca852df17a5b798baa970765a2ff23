@@ -1,159 +1,257 @@
-1581505103a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:18082:"title = "Recherche maison"
+1581532699a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:21859:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
 ==
 
-<div class="container detail-publication" style="margin-top: 20px;">
-    <div class="card" style="margin-left: 8%;margin-right: 8%;">
+<style>
+    @media screen and (max-width: 990px) {
+        .singlepost .post-content {
+            width: 100%;
+        }
+        .singlepost .aside-without-description{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .singlepost .super-form-container .form-area{
+            width: 100%
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .singlepost .super-form-container .form-area .contact-form .column.wide{
+            width: 100%
+        }
+
+        .phoneNumberWide{
+            margin-top: 10px;
+            width: 100%
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        .singlepost .aside-description{
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .warning{
+        margin-bottom: 20px;
+        width: 100% !important;
+        }
+
+        form.contact-form, .contact-form form, .contact-form fieldset {
+            float: left;
+            width: 100%;
+        }
+
+        .contactPhone{
+            width: 100%;
+        }
+
+       
+    }
+
+    @media screen and (min-width: 600px) {
+        .phoneNumberWide{
+            width: 47.864% !important;
+        }
+    }
+
+    
+    
+</style>
+<div class="container-fluid detail-publication" style="margin-top: 20px; padding-left: 80px;padding-right: 80px;">
+    <div class="col-md-12">
+
+    
+    <div class="card">
+        {% flash %}
+            <div class="alert alert-success" style="text-align: center;">
+                {{ message }}
+            </div>
+        {% endflash %}
         <article class="singlepost ">
             <header class="heading-area">
                 <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
             </header>
-            <div class="twocolumn">
-                <div class="post-content">
-                    <!-- slideshow -->
-                    <div class="slideshow gallery-js-ready autorotation-disabled">
-                        <div class="mask">
-                            <div class="slideset" style="height: 420px;">
+            <div class="row">
+                <div class="col-md-12 twocolumn">
+                    <div class="post-content">
+                        <!-- slideshow -->
+                        <div class="slideshow gallery-js-ready autorotation-disabled">
+                            <div class="mask">
+                                <div class="slideset" style="height: 420px;">
+                                    {% for key,photo in publication.photos %}
+                                    {% if key == 0 %}
+                                    <div class="slide active" style="display: block;"><img itemprop="image" class="imggf-1"
+                                            src="{{ publication.photos[0].getPath }}"
+                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    {% else %}
+                                    <div class="slide" style="display: block; opacity: 0;">
+                                        <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
+                                            data-src="https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg"
+                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <span class="loader" style="display: none;"></span>
+                            </div>
+                            <ul class="pagination img-miniature">
                                 {% for key,photo in publication.photos %}
                                 {% if key == 0 %}
-                                <div class="slide active" style="display: block;"><img itemprop="image" class="imggf-1"
-                                        src="{{ publication.photos[0].getPath }}"
-                                        alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                <li class="active">
+                                    <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
+                                            style="width: 100px;height: 66px;"
+                                            src="{{ photo.getPath | resize(100,100)}}"
+                                            alt="{{ publication.libelle }}">
+                                    </a>
+                                </li>
                                 {% else %}
-                                <div class="slide" style="display: block; opacity: 0;">
-                                    <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
-                                        data-src="https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg"
-                                        alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
+                                            style="width: 100px;height: 66px;"
+                                            src="{{ photo.getPath| resize(100,100) }}"
+                                            alt="{{ publication.libelle }}"></a></li>
                                 {% endif %}
                                 {% endfor %}
-                            </div>
-                            <span class="loader" style="display: none;"></span>
+    
+    
+                            </ul>
                         </div>
-                        <ul class="pagination img-miniature">
-                            {% for key,photo in publication.photos %}
-                            {% if key == 0 %}
-                            <li class="active">
-                                <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
-                                        style="width: 100px;height: 66px;"
-                                        src="{{ photo.getPath | resize(100,100)}}"
-                                        alt="{{ publication.libelle }}">
-                                </a>
-                            </li>
-                            {% else %}
-                            <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
-                                        style="width: 100px;height: 66px;"
-                                        src="{{ photo.getPath| resize(100,100) }}"
-                                        alt="{{ publication.libelle }}"></a></li>
-                            {% endif %}
-                            {% endfor %}
-
-
-                        </ul>
-                    </div>
-
-                    <div class="post-attributes">
-                        <div class="new-attr-style">
-                            {% if publication.nbre_piece %} <h3>Nombre de
-                                pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
-                            {% if publication.commune %} <h3>
-                                Commune<span>{{ publication.commune.libelle }}<span></span></span></h3> {% endif %}
-                            {% if publication.ville %} <h3>
-                                Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
-                            {% if publication.Localisation %} <h3>
-                                Localisation<span>{{ publication.Localisation.libelle }}<span></span></span></h3>
-                            {% endif %}
-                            {% if publication.typepublication %} <h3>Type de
-                                publication<span>{{ publication.typepublication.libelle }}<span></span></span></h3>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="post-text-content" style="margin-top: 12px;">
-                        <div class="title">Description :</div>
-                        <p>
-                            {{ publication.description | raw}}
-                        </p>
-                        <p>
-                            <b>Date de publication: {{ publication.created_at }}</b>
-                        </p>
-                    </div>
-
-
-
-                    <div class="btn-holder"  style="margin-bottom: 12px;">
-                        <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
-                            data-lead-type="Phone" class="button button-phone2 transaction-click"
-                            title="Afficher le téléphone">
-                            <span class="icon-phone"></span> Afficher le téléphone </a>
-                        <a href="#contactForm>" data-scroll-to="#contactForm"
-                            class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
-                            <span class="icon-mail"></span> Contacter par email </a>
-                    </div>
-                </div>
-                <div class="aside">
-                    <div class="aside-infos">
-                        <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                            <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
-                            <meta itemprop="availability" content="http://schema.org/InStock">
-                            <span class="price">
-                                <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
-                                <span itemprop="priceCurrency" content="FCFA">FCFA</span>
-                            </span>
-
-                            <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
-                                class="seller-details">
-                                <dl>
-                                    {% if publication.agence %}
-                                    <dt>Agence</dt>
-                                    <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
-                                    </dd>
-                                    <dt>Lieu</dt>
-                                    <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
-                                            itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
-                                    </dd>
-                                    <dt>Publiée</dt>
-                                    <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                    {% else %}
-                                    <dt>Démarcheur</dt>
-                                    <dd><span
-                                            itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
-                                    </dd>
-                                    <dt>Publiée</dt>
-                                    <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                    {% endif %}
-                                </dl>
+    
+                        <div class="post-attributes">
+                            <div class="new-attr-style">
+                                {% if publication.nbre_piece %} <h3>Nombre de
+                                    pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
+                                {% if publication.commune %} <h3>
+                                    Commune<span>{{ publication.commune.libelle }}<span></span></span></h3> {% endif %}
+                                {% if publication.ville %} <h3>
+                                    Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
+                                {% if publication.Localisation %} <h3>
+                                    Localisation<span>{{ publication.Localisation.libelle }}<span></span></span></h3>
+                                {% endif %}
+                                {% if publication.typepublication %} <h3>Type de
+                                    publication<span>{{ publication.typepublication.libelle }}<span></span></span></h3>
+                                {% endif %}
                             </div>
+                        </div>
+                        <div class="post-text-content" style="margin-top: 12px;">
+                            <div class="title">Description :</div>
+                            <p>
+                                {{ publication.description | raw}}
+                            </p>
+                            <p>
+                                <b>Date de publication: {{ publication.created_at }}</b>
+                            </p>
+                        </div>
 
-
-                        </section>
-                        <div class="btn-holder">
-                            <a href="#contactPhone" data-scroll-to="#contactPhone"
-                                data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
-                                data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
-                                class="button transaction-click clicked" title="Afficher le téléphone">
+                        <div class="aside aside-description" style="width: 100%;">
+                            <div class="aside-infos" style="min-height: unset;">
+                                <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
+                                    <meta itemprop="availability" content="http://schema.org/InStock">
+                                    <span class="price">
+                                        <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                        <span itemprop="priceCurrency" content="FCFA">FCFA</span>
+                                    </span>
+        
+                                    <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
+                                        class="seller-details">
+                                        <dl>
+                                            {% if publication.agence %}
+                                            <dt>Agence</dt>
+                                            <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                            </dd>
+                                            <dt>Lieu</dt>
+                                            <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                                                    itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
+                                            </dd>
+                                            <dt>Publiée</dt>
+                                            <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                            {% else %}
+                                            <dt>Démarcheur</dt>
+                                            <dd><span
+                                                    itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                            </dd>
+                                            <dt>Publiée</dt>
+                                            <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                            {% endif %}
+                                        </dl>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+    
+    
+    
+                        <div class="btn-holder"  style="margin-bottom: 12px;">
+                            <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
+                                data-lead-type="Phone" class="button button-phone2 transaction-click"
+                                title="Afficher le téléphone">
                                 <span class="icon-phone"></span> Afficher le téléphone </a>
-
-                            <a href="#contactForm" data-scroll-to="#contactForm"
-                                class="button button-email2 reply-by-email-click contactForm"
-                                title="Contacter par email">
+                            <a href="#contactForm>" data-scroll-to="#contactForm"
+                                class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
                                 <span class="icon-mail"></span> Contacter par email </a>
-
                         </div>
                     </div>
-
-                    <div class="pdv cool-banner-right">
-                        <div id="div-gpt-ad-CI_PDV_Right_RE" style="height: 250px; width: 300px;">
-                            <!-- "div-gpt-ad-[AD UNITS NAME]" for div ID  -->
-                            <div id="google_ads_iframe_/137010309/CI_PDV_Right_RE_0__container__"
-                                style="border: 0pt none; width: 300px; height: 250px;"></div>
+                    <div class="aside aside-without-description">
+                        <div class="aside-infos">
+                            <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
+                                <meta itemprop="availability" content="http://schema.org/InStock">
+                                <span class="price">
+                                    <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                    <span itemprop="priceCurrency" content="FCFA">FCFA</span>
+                                </span>
+    
+                                <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
+                                    class="seller-details">
+                                    <dl>
+                                        {% if publication.agence %}
+                                        <dt>Agence</dt>
+                                        <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                        </dd>
+                                        <dt>Lieu</dt>
+                                        <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                                                itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
+                                        </dd>
+                                        <dt>Publiée</dt>
+                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                        {% else %}
+                                        <dt>Démarcheur</dt>
+                                        <dd><span
+                                                itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                        </dd>
+                                        <dt>Publiée</dt>
+                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                        {% endif %}
+                                    </dl>
+                                </div>
+    
+    
+                            </section>
+                            <div class="btn-holder">
+                                <a href="#contactPhone" data-scroll-to="#contactPhone"
+                                    data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
+                                    data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
+                                    class="button transaction-click clicked" title="Afficher le téléphone">
+                                    <span class="icon-phone"></span> Afficher le téléphone </a>
+    
+                                <a href="#contactForm" data-scroll-to="#contactForm"
+                                    class="button button-email2 reply-by-email-click contactForm"
+                                    title="Contacter par email">
+                                    <span class="icon-mail"></span> Contacter par email </a>
+    
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <section class="super-form-container" id="super-form-container" style="display: none;">
+            <section class="super-form-container" id="super-form-container" style="display: none;width: 100%">
 
 
                 <!-- Mail Contact Form  -->
@@ -174,7 +272,7 @@ layout = "default"
                                         data-parsley-id="6654">
                                     <ul class="parsley-errors-list" id="parsley-id-6654"></ul>
                                 </div>
-                                <div class="column wide" style="width: 47.864%;">
+                                <div class="column wide phoneNumberWide">
                                     <input type="text" id="phoneNumber" name="phoneNumber" class="authentic_phone"
                                         placeholder="Votre numéro de téléphone"
                                         data-js-attr="{&quot;type&quot;:&quot;tel&quot;}" data-parsley-id="2097">
@@ -236,19 +334,12 @@ layout = "default"
                         <div class="phone-mention">
                             Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur Jumia Deals.
                         </div>
-                        <div class="pdv cool-banner-middle">
-                            <div id="div-gpt-ad-CI_PDV_Middle_RE" style="height: 100px; width: 320px;">
-                                <!-- "div-gpt-ad-[AD UNITS NAME]" for div ID  -->
-                                <div id="google_ads_iframe_/137010309/CI_PDV_Middle_RE_0__container__"
-                                    style="border: 0pt none; width: 320px; height: 100px;"></div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
 
                 <!--Warning Message-->
-                <div class="text-area" style="margin-bottom: 20px;">
+                <!--<div class="text-area warning">
                     <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
                     <ul>
                         <li>Vérifiez si l'agent a une Boutique officielle sur Jumia Deals. Si c'est le cas, nous avons
@@ -269,11 +360,11 @@ layout = "default"
                         <li>Ne donnez pas d’informations personnelles avant la visite.</li>
                         <li>Méfiez-vous des offres trop interessantes.</li>
                     </ul>
-                </div>
+                </div>-->
 
             </section>
 
-            <section class="row">
+            <!--<section class="row">
                 {% for publication in publications %}
                 <a class="col-md-4" href="{{ url('publications') }}/{{ publication.slot }}">
                     <div class="polaroid">
@@ -289,161 +380,260 @@ layout = "default"
                     </div>
                 </a>
                 {% endfor %}
-            </section>
+            </section>-->
 
         </article>
 
     </div>
-</div>";s:5:"mtime";i:1581369095;s:6:"markup";s:17963:"<div class="container detail-publication" style="margin-top: 20px;">
-    <div class="card" style="margin-left: 8%;margin-right: 8%;">
+</div>
+</div>";s:5:"mtime";i:1581532097;s:6:"markup";s:21740:"<style>
+    @media screen and (max-width: 990px) {
+        .singlepost .post-content {
+            width: 100%;
+        }
+        .singlepost .aside-without-description{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 950px) {
+        .singlepost .super-form-container .form-area{
+            width: 100%
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .singlepost .super-form-container .form-area .contact-form .column.wide{
+            width: 100%
+        }
+
+        .phoneNumberWide{
+            margin-top: 10px;
+            width: 100%
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        .singlepost .aside-description{
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        .warning{
+        margin-bottom: 20px;
+        width: 100% !important;
+        }
+
+        form.contact-form, .contact-form form, .contact-form fieldset {
+            float: left;
+            width: 100%;
+        }
+
+        .contactPhone{
+            width: 100%;
+        }
+
+       
+    }
+
+    @media screen and (min-width: 600px) {
+        .phoneNumberWide{
+            width: 47.864% !important;
+        }
+    }
+
+    
+    
+</style>
+<div class="container-fluid detail-publication" style="margin-top: 20px; padding-left: 80px;padding-right: 80px;">
+    <div class="col-md-12">
+
+    
+    <div class="card">
+        {% flash %}
+            <div class="alert alert-success" style="text-align: center;">
+                {{ message }}
+            </div>
+        {% endflash %}
         <article class="singlepost ">
             <header class="heading-area">
                 <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
             </header>
-            <div class="twocolumn">
-                <div class="post-content">
-                    <!-- slideshow -->
-                    <div class="slideshow gallery-js-ready autorotation-disabled">
-                        <div class="mask">
-                            <div class="slideset" style="height: 420px;">
+            <div class="row">
+                <div class="col-md-12 twocolumn">
+                    <div class="post-content">
+                        <!-- slideshow -->
+                        <div class="slideshow gallery-js-ready autorotation-disabled">
+                            <div class="mask">
+                                <div class="slideset" style="height: 420px;">
+                                    {% for key,photo in publication.photos %}
+                                    {% if key == 0 %}
+                                    <div class="slide active" style="display: block;"><img itemprop="image" class="imggf-1"
+                                            src="{{ publication.photos[0].getPath }}"
+                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    {% else %}
+                                    <div class="slide" style="display: block; opacity: 0;">
+                                        <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
+                                            data-src="https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg"
+                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                                <span class="loader" style="display: none;"></span>
+                            </div>
+                            <ul class="pagination img-miniature">
                                 {% for key,photo in publication.photos %}
                                 {% if key == 0 %}
-                                <div class="slide active" style="display: block;"><img itemprop="image" class="imggf-1"
-                                        src="{{ publication.photos[0].getPath }}"
-                                        alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                <li class="active">
+                                    <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
+                                            style="width: 100px;height: 66px;"
+                                            src="{{ photo.getPath | resize(100,100)}}"
+                                            alt="{{ publication.libelle }}">
+                                    </a>
+                                </li>
                                 {% else %}
-                                <div class="slide" style="display: block; opacity: 0;">
-                                    <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
-                                        data-src="https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg"
-                                        alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
+                                            style="width: 100px;height: 66px;"
+                                            src="{{ photo.getPath| resize(100,100) }}"
+                                            alt="{{ publication.libelle }}"></a></li>
                                 {% endif %}
                                 {% endfor %}
-                            </div>
-                            <span class="loader" style="display: none;"></span>
+    
+    
+                            </ul>
                         </div>
-                        <ul class="pagination img-miniature">
-                            {% for key,photo in publication.photos %}
-                            {% if key == 0 %}
-                            <li class="active">
-                                <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
-                                        style="width: 100px;height: 66px;"
-                                        src="{{ photo.getPath | resize(100,100)}}"
-                                        alt="{{ publication.libelle }}">
-                                </a>
-                            </li>
-                            {% else %}
-                            <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
-                                        style="width: 100px;height: 66px;"
-                                        src="{{ photo.getPath| resize(100,100) }}"
-                                        alt="{{ publication.libelle }}"></a></li>
-                            {% endif %}
-                            {% endfor %}
-
-
-                        </ul>
-                    </div>
-
-                    <div class="post-attributes">
-                        <div class="new-attr-style">
-                            {% if publication.nbre_piece %} <h3>Nombre de
-                                pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
-                            {% if publication.commune %} <h3>
-                                Commune<span>{{ publication.commune.libelle }}<span></span></span></h3> {% endif %}
-                            {% if publication.ville %} <h3>
-                                Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
-                            {% if publication.Localisation %} <h3>
-                                Localisation<span>{{ publication.Localisation.libelle }}<span></span></span></h3>
-                            {% endif %}
-                            {% if publication.typepublication %} <h3>Type de
-                                publication<span>{{ publication.typepublication.libelle }}<span></span></span></h3>
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="post-text-content" style="margin-top: 12px;">
-                        <div class="title">Description :</div>
-                        <p>
-                            {{ publication.description | raw}}
-                        </p>
-                        <p>
-                            <b>Date de publication: {{ publication.created_at }}</b>
-                        </p>
-                    </div>
-
-
-
-                    <div class="btn-holder"  style="margin-bottom: 12px;">
-                        <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
-                            data-lead-type="Phone" class="button button-phone2 transaction-click"
-                            title="Afficher le téléphone">
-                            <span class="icon-phone"></span> Afficher le téléphone </a>
-                        <a href="#contactForm>" data-scroll-to="#contactForm"
-                            class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
-                            <span class="icon-mail"></span> Contacter par email </a>
-                    </div>
-                </div>
-                <div class="aside">
-                    <div class="aside-infos">
-                        <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                            <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
-                            <meta itemprop="availability" content="http://schema.org/InStock">
-                            <span class="price">
-                                <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
-                                <span itemprop="priceCurrency" content="FCFA">FCFA</span>
-                            </span>
-
-                            <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
-                                class="seller-details">
-                                <dl>
-                                    {% if publication.agence %}
-                                    <dt>Agence</dt>
-                                    <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
-                                    </dd>
-                                    <dt>Lieu</dt>
-                                    <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
-                                            itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
-                                    </dd>
-                                    <dt>Publiée</dt>
-                                    <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                    {% else %}
-                                    <dt>Démarcheur</dt>
-                                    <dd><span
-                                            itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
-                                    </dd>
-                                    <dt>Publiée</dt>
-                                    <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                    {% endif %}
-                                </dl>
+    
+                        <div class="post-attributes">
+                            <div class="new-attr-style">
+                                {% if publication.nbre_piece %} <h3>Nombre de
+                                    pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
+                                {% if publication.commune %} <h3>
+                                    Commune<span>{{ publication.commune.libelle }}<span></span></span></h3> {% endif %}
+                                {% if publication.ville %} <h3>
+                                    Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
+                                {% if publication.Localisation %} <h3>
+                                    Localisation<span>{{ publication.Localisation.libelle }}<span></span></span></h3>
+                                {% endif %}
+                                {% if publication.typepublication %} <h3>Type de
+                                    publication<span>{{ publication.typepublication.libelle }}<span></span></span></h3>
+                                {% endif %}
                             </div>
+                        </div>
+                        <div class="post-text-content" style="margin-top: 12px;">
+                            <div class="title">Description :</div>
+                            <p>
+                                {{ publication.description | raw}}
+                            </p>
+                            <p>
+                                <b>Date de publication: {{ publication.created_at }}</b>
+                            </p>
+                        </div>
 
-
-                        </section>
-                        <div class="btn-holder">
-                            <a href="#contactPhone" data-scroll-to="#contactPhone"
-                                data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
-                                data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
-                                class="button transaction-click clicked" title="Afficher le téléphone">
+                        <div class="aside aside-description" style="width: 100%;">
+                            <div class="aside-infos" style="min-height: unset;">
+                                <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                    <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
+                                    <meta itemprop="availability" content="http://schema.org/InStock">
+                                    <span class="price">
+                                        <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                        <span itemprop="priceCurrency" content="FCFA">FCFA</span>
+                                    </span>
+        
+                                    <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
+                                        class="seller-details">
+                                        <dl>
+                                            {% if publication.agence %}
+                                            <dt>Agence</dt>
+                                            <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                            </dd>
+                                            <dt>Lieu</dt>
+                                            <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                                                    itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
+                                            </dd>
+                                            <dt>Publiée</dt>
+                                            <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                            {% else %}
+                                            <dt>Démarcheur</dt>
+                                            <dd><span
+                                                    itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                            </dd>
+                                            <dt>Publiée</dt>
+                                            <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                            {% endif %}
+                                        </dl>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+    
+    
+    
+                        <div class="btn-holder"  style="margin-bottom: 12px;">
+                            <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
+                                data-lead-type="Phone" class="button button-phone2 transaction-click"
+                                title="Afficher le téléphone">
                                 <span class="icon-phone"></span> Afficher le téléphone </a>
-
-                            <a href="#contactForm" data-scroll-to="#contactForm"
-                                class="button button-email2 reply-by-email-click contactForm"
-                                title="Contacter par email">
+                            <a href="#contactForm>" data-scroll-to="#contactForm"
+                                class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
                                 <span class="icon-mail"></span> Contacter par email </a>
-
                         </div>
                     </div>
-
-                    <div class="pdv cool-banner-right">
-                        <div id="div-gpt-ad-CI_PDV_Right_RE" style="height: 250px; width: 300px;">
-                            <!-- "div-gpt-ad-[AD UNITS NAME]" for div ID  -->
-                            <div id="google_ads_iframe_/137010309/CI_PDV_Right_RE_0__container__"
-                                style="border: 0pt none; width: 300px; height: 250px;"></div>
+                    <div class="aside aside-without-description">
+                        <div class="aside-infos">
+                            <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                                <meta itemprop="url" content="https://deals.jumia.ci/belle-apparemment-vendre--pid5443116">
+                                <meta itemprop="availability" content="http://schema.org/InStock">
+                                <span class="price">
+                                    <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                    <span itemprop="priceCurrency" content="FCFA">FCFA</span>
+                                </span>
+    
+                                <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
+                                    class="seller-details">
+                                    <dl>
+                                        {% if publication.agence %}
+                                        <dt>Agence</dt>
+                                        <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                        </dd>
+                                        <dt>Lieu</dt>
+                                        <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                                                itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
+                                        </dd>
+                                        <dt>Publiée</dt>
+                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                        {% else %}
+                                        <dt>Démarcheur</dt>
+                                        <dd><span
+                                                itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                        </dd>
+                                        <dt>Publiée</dt>
+                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
+                                        {% endif %}
+                                    </dl>
+                                </div>
+    
+    
+                            </section>
+                            <div class="btn-holder">
+                                <a href="#contactPhone" data-scroll-to="#contactPhone"
+                                    data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
+                                    data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
+                                    class="button transaction-click clicked" title="Afficher le téléphone">
+                                    <span class="icon-phone"></span> Afficher le téléphone </a>
+    
+                                <a href="#contactForm" data-scroll-to="#contactForm"
+                                    class="button button-email2 reply-by-email-click contactForm"
+                                    title="Contacter par email">
+                                    <span class="icon-mail"></span> Contacter par email </a>
+    
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
-            <section class="super-form-container" id="super-form-container" style="display: none;">
+            <section class="super-form-container" id="super-form-container" style="display: none;width: 100%">
 
 
                 <!-- Mail Contact Form  -->
@@ -464,7 +654,7 @@ layout = "default"
                                         data-parsley-id="6654">
                                     <ul class="parsley-errors-list" id="parsley-id-6654"></ul>
                                 </div>
-                                <div class="column wide" style="width: 47.864%;">
+                                <div class="column wide phoneNumberWide">
                                     <input type="text" id="phoneNumber" name="phoneNumber" class="authentic_phone"
                                         placeholder="Votre numéro de téléphone"
                                         data-js-attr="{&quot;type&quot;:&quot;tel&quot;}" data-parsley-id="2097">
@@ -526,19 +716,12 @@ layout = "default"
                         <div class="phone-mention">
                             Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur Jumia Deals.
                         </div>
-                        <div class="pdv cool-banner-middle">
-                            <div id="div-gpt-ad-CI_PDV_Middle_RE" style="height: 100px; width: 320px;">
-                                <!-- "div-gpt-ad-[AD UNITS NAME]" for div ID  -->
-                                <div id="google_ads_iframe_/137010309/CI_PDV_Middle_RE_0__container__"
-                                    style="border: 0pt none; width: 320px; height: 100px;"></div>
-                            </div>
-                        </div>
                     </div>
 
                 </div>
 
                 <!--Warning Message-->
-                <div class="text-area" style="margin-bottom: 20px;">
+                <!--<div class="text-area warning">
                     <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
                     <ul>
                         <li>Vérifiez si l'agent a une Boutique officielle sur Jumia Deals. Si c'est le cas, nous avons
@@ -559,11 +742,11 @@ layout = "default"
                         <li>Ne donnez pas d’informations personnelles avant la visite.</li>
                         <li>Méfiez-vous des offres trop interessantes.</li>
                     </ul>
-                </div>
+                </div>-->
 
             </section>
 
-            <section class="row">
+            <!--<section class="row">
                 {% for publication in publications %}
                 <a class="col-md-4" href="{{ url('publications') }}/{{ publication.slot }}">
                     <div class="polaroid">
@@ -579,9 +762,10 @@ layout = "default"
                     </div>
                 </a>
                 {% endfor %}
-            </section>
+            </section>-->
 
         </article>
 
     </div>
+</div>
 </div>";s:4:"code";N;s:5:"title";s:16:"Recherche maison";s:3:"url";s:31:"/publications/:publication_slot";s:6:"layout";s:7:"default";s:26:"DetailPublicationComponent";a:0:{}}}

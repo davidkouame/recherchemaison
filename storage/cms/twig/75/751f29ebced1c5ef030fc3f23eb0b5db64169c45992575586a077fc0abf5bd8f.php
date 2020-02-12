@@ -41,11 +41,11 @@ class __TwigTemplate_97c41de9b9dba8e5c143bec277516590ae31866821dcca08b23383115a4
 </style>
 
 <div class=\"row\" style=\"margin-top: 40px;\">
-    <div class=\"col-md-offset-2 col-md-8\">
+    <div class=\"col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8\">
         <h3 style=\"margin: 0px;font-weight: bold;text-align: center;\">Inscription</h3>
         <hr style=\"margin-top: 10px;\">
     </div>
-    <form class=\"col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
+    <form class=\"col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
         <div class=\"row\">
             <div class=\"form-group col-md-6\">
                 <label for=\"\">Nom <span class=\"required\">*</span></label>
@@ -142,11 +142,11 @@ class __TwigTemplate_97c41de9b9dba8e5c143bec277516590ae31866821dcca08b23383115a4
 </style>
 
 <div class=\"row\" style=\"margin-top: 40px;\">
-    <div class=\"col-md-offset-2 col-md-8\">
+    <div class=\"col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8\">
         <h3 style=\"margin: 0px;font-weight: bold;text-align: center;\">Inscription</h3>
         <hr style=\"margin-top: 10px;\">
     </div>
-    <form class=\"col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
+    <form class=\"col-xs-offset-2 col-xs-8 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
         <div class=\"row\">
             <div class=\"form-group col-md-6\">
                 <label for=\"\">Nom <span class=\"required\">*</span></label>

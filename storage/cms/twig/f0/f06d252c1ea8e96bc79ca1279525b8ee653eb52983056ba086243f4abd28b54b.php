@@ -63,59 +63,63 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         echo "\" rel=\"stylesheet\">
         <link href=\"";
         // line 13
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/home.css");
+        echo "\" rel=\"stylesheet\">
+        <link href=\"";
+        // line 14
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css");
         echo "\" rel=\"stylesheet\">
         ";
-        // line 14
+        // line 15
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 15
+        // line 16
         echo "    </head>
     <body>
         
         <!-- Header -->
         <header id=\"layout-header\">
             ";
-        // line 20
+        // line 21
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 21
+        // line 22
         echo "        </header>
 
         <!-- Content -->
         <section id=\"layout-content\" class=\"container\">
             ";
-        // line 25
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 26
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 27
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 30
+        // line 31
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 31
+        // line 32
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 34
+        // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 35
+        // line 36
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 36
+        // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         ";
-        // line 37
+        // line 38
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -126,11 +130,11 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 38
+        // line 39
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 39
+        // line 40
         echo "
         <script>
             \$(document).ready(function(e){
@@ -172,7 +176,7 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
 
     public function getDebugInfo()
     {
-        return array (  134 => 39,  130 => 38,  119 => 37,  115 => 36,  111 => 35,  107 => 34,  102 => 31,  98 => 30,  92 => 26,  90 => 25,  84 => 21,  80 => 20,  73 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+        return array (  138 => 40,  134 => 39,  123 => 38,  119 => 37,  115 => 36,  111 => 35,  106 => 32,  102 => 31,  96 => 27,  94 => 26,  88 => 22,  84 => 21,  77 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -189,6 +193,7 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
         <link href=\"{{ 'assets/css/vendor.css'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/home.css'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
         {% styles %}
     </head>

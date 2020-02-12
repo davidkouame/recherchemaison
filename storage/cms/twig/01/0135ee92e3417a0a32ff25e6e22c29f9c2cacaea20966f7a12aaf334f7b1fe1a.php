@@ -197,12 +197,12 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
                 // afficher les informations (mail, tel) du demarcheur ou de l'agence
                 \$(\"a[href='#contactPhone'\").click(function(){
-                    \$(\"#super-form-container\").css('display', 'inline-block');
-                    \$(\"#contactPhone\").css('display', 'inline-block');
+                    \$(\"#super-form-container\").css('display', 'block');
+                    \$(\"#contactPhone\").css('display', 'flex');
                 });
                 \$(\".contactForm\").click(function(){
-                    \$(\"#super-form-container\").css('display', 'inline-block');
-                    \$(\"#contactForm\").css('display', 'inline-block');
+                    \$(\"#super-form-container\").css('display', 'block');
+                    \$(\"#contactForm\").css('display', 'flex');
                 });
 
                 // chargement des images
@@ -315,12 +315,12 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
                 // afficher les informations (mail, tel) du demarcheur ou de l'agence
                 \$(\"a[href='#contactPhone'\").click(function(){
-                    \$(\"#super-form-container\").css('display', 'inline-block');
-                    \$(\"#contactPhone\").css('display', 'inline-block');
+                    \$(\"#super-form-container\").css('display', 'block');
+                    \$(\"#contactPhone\").css('display', 'flex');
                 });
                 \$(\".contactForm\").click(function(){
-                    \$(\"#super-form-container\").css('display', 'inline-block');
-                    \$(\"#contactForm\").css('display', 'inline-block');
+                    \$(\"#super-form-container\").css('display', 'block');
+                    \$(\"#contactForm\").css('display', 'flex');
                 });
 
                 // chargement des images

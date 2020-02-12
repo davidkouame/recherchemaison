@@ -36,7 +36,7 @@ class __TwigTemplate_8593a7daba71251c4786ac1a60a218f7308df83c5df575b16b79b51030b
         // line 1
         echo "<div class=\"container\">
     <form class=\"row\" role=\"form\" data-request=\"onCreateUserTwoStep\">
-        <div class=\"col-md-offset-4 col-md-6\">
+        <div class=\"col-xs-offset-4 col-sm-6 col-xs-offset-4 col-sm-6 col-md-offset-4 col-md-6\">
             <div class=\"radio\"  style=\"display: inline-block;\">
             <label><input type=\"radio\" name=\"typeuser\" value=\"2\" checked>Je suis un démarcheur</label>
             </div>
@@ -173,7 +173,7 @@ class __TwigTemplate_8593a7daba71251c4786ac1a60a218f7308df83c5df575b16b79b51030b
     {
         return new Source("<div class=\"container\">
     <form class=\"row\" role=\"form\" data-request=\"onCreateUserTwoStep\">
-        <div class=\"col-md-offset-4 col-md-6\">
+        <div class=\"col-xs-offset-4 col-sm-6 col-xs-offset-4 col-sm-6 col-md-offset-4 col-md-6\">
             <div class=\"radio\"  style=\"display: inline-block;\">
             <label><input type=\"radio\" name=\"typeuser\" value=\"2\" checked>Je suis un démarcheur</label>
             </div>

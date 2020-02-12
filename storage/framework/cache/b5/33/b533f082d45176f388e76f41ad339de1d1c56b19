@@ -1,4 +1,4 @@
-1581505103a:1:{s:9:"login.htm";a:9:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:1174:"title = "Connexion"
+1581532197a:1:{s:9:"login.htm";a:9:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:1274:"title = "Connexion"
 url = "/auth/login"
 layout = "default"
 [LoginComponent]
@@ -10,11 +10,11 @@ layout = "default"
 </style>
 
 <div class="row"  style="margin-top: 40px;">
-  <div class="col-md-offset-4 col-md-4">
+  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-sm-offset-3 col-sm-6 col-md-4">
     <h3 style="margin: 0px;font-weight: bold;text-align: center;">Connexion</h3>
     <hr style="margin-top: 10px;">
 </div>
-  <form class="col-md-offset-4 col-md-4" role="form" data-request="onSignin">
+  <form class="col-md-offset-4 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6 col-md-4" role="form" data-request="onSignin">
       <div class="form-group">
         <input
           type="text"
@@ -40,18 +40,18 @@ layout = "default"
     </form>
 </div>
 
-";s:5:"mtime";i:1581367881;s:6:"markup";s:1093:"<style>
+";s:5:"mtime";i:1581515809;s:6:"markup";s:1193:"<style>
   a:hover{
       text-decoration: none;
   }
 </style>
 
 <div class="row"  style="margin-top: 40px;">
-  <div class="col-md-offset-4 col-md-4">
+  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-sm-offset-3 col-sm-6 col-md-4">
     <h3 style="margin: 0px;font-weight: bold;text-align: center;">Connexion</h3>
     <hr style="margin-top: 10px;">
 </div>
-  <form class="col-md-offset-4 col-md-4" role="form" data-request="onSignin">
+  <form class="col-md-offset-4 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6 col-md-4" role="form" data-request="onSignin">
       <div class="form-group">
         <input
           type="text"

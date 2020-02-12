@@ -1,4 +1,4 @@
-1581368763a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:2029:"<style>
+1581526676a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:2029:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }
@@ -46,7 +46,7 @@
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1581368154;s:6:"markup";s:2028:"<style>
+";s:5:"mtime";i:1581511800;s:6:"markup";s:2028:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }

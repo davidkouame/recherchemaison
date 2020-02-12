@@ -159,12 +159,6 @@ post-holder a.post-link {
     overflow: hidden;
 }
 
-#header .holder, #header .search-form, .market-area, .steps-area .holder, .other-categories, .items .holder, .cashout, .article-area .holder, #footer .holder, .breadcrumbs ul, .singlepost, .related-posts, .form-area, .form-horizontal, .main-holder, .index-index .alert, #twocolumn, .categories-holder .link-holder, .home-latest #posts-list {
-    width: 970px;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-}
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
@@ -220,7 +214,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     margin: 0 0 10px;
     position: relative;
     overflow: hidden;
-    width: 630px;
+    width: 100%;
 }
 
 .singlepost .slideshow .slideset {
@@ -231,14 +225,14 @@ border: 1px solid
     #dddddd;
 }
 
-.singlepost .aside {
+/*.singlepost .aside {
     float: right;
     width: 300px;
     margin: 0;
-}
+}*/
 
 .singlepost .aside .aside-infos {
-    width: 280px;
+    width: 100%;
     min-height: 420px;
     float: right;
     margin-bottom: 20px;
@@ -272,13 +266,15 @@ color:
 
 .singlepost .post-content {
     float: left;
-    width: 630px;
+    width: 70%;
+    /*background: yellow;*/
 }
 
 .singlepost .aside {
     float: right;
-    width: 300px;
+    width: 30%;
     margin: 0;
+    /*background: red;*/
 }
 
 .singlepost .twocolumn {
@@ -537,16 +533,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
     float: left;
 }
 
-.singlepost .super-form-container .form-area {
-    overflow: hidden;
-    padding: 20px 0;
-    width: 48.888889%;
-    box-shadow: none;
-    vertical-align: top;
-    margin: 0;
-        margin-right: 0px;
-}
-
 .form-area, .form-horizontal {
     background: 
     #fff;
@@ -556,7 +542,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 #header .holder, #header .search-form, .market-area, .steps-area .holder, .other-categories, .items .holder, .cashout, .article-area .holder, #footer .holder, .breadcrumbs ul, .singlepost, .related-posts, .form-area, .form-horizontal, .main-holder, .index-index .alert, #twocolumn, .categories-holder .link-holder, .home-latest #posts-list {
-    width: 970px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -564,7 +550,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 
 .singlepost .super-form-container .form-area .contact-form {
     float: left;
-    width: 440px;
+    width: 100%;
 }
 
 form, fieldset {
@@ -676,7 +662,6 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="url"], i
 .singlepost #contactPhone, .singlepost #contactEmail {
     margin-bottom: 15px;
     overflow: visible;
-    float: right;
 }
 
 .singlepost .super-form-container .form-area {
@@ -691,7 +676,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="url"], i
 
 .singlepost #contactPhone .contactPhone, .singlepost #contactEmail .contactPhone {
     float: left;
-    width: 440px;
+    width: 100%;
 }
 
 .singlepost #contactPhone h2, .singlepost #contactEmail h2 {
@@ -914,4 +899,9 @@ div.container-p {
 
 .required{
     color: red;
+}
+
+form.contact-form, .contact-form form, .contact-form fieldset {
+    float: left;
+    width: 100%;
 }
