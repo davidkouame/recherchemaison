@@ -1,4 +1,4 @@
-1580942635a:1:{s:22:"site/header_agence.htm";a:5:{s:8:"fileName";s:22:"site/header_agence.htm";s:7:"content";s:1938:"<style>
+1581505109a:1:{s:22:"site/header_agence.htm";a:5:{s:8:"fileName";s:22:"site/header_agence.htm";s:7:"content";s:2017:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }
@@ -28,8 +28,10 @@
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
-                </span>Coka</span>
+            <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
@@ -44,7 +46,7 @@
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1580942032;s:6:"markup";s:1937:"<style>
+";s:5:"mtime";i:1581368161;s:6:"markup";s:2016:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }
@@ -74,8 +76,10 @@
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
-                </span>Coka</span>
+            <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">

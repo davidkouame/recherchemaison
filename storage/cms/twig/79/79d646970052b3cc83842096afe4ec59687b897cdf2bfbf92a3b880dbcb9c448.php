@@ -34,69 +34,19 @@ class __TwigTemplate_b1a87537eedcd6bf09f649640a377ba4b14e6a543c49e6717b19838a716
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"row\" style=\"margin-top: 40px;\">
-    <form class=\"col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"text\"
-                    class=\"form-control\"
-                    name=\"nom\"
-                    placeholder=\"Entrer un nom\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"text\"
-                    class=\"form-control\"
-                    name=\"prenom\"
-                    placeholder=\"Entrer un prénom\"
-                />
-            </div>
-        </div>
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"email\"
-                    class=\"form-control\"
-                    name=\"email\"
-                    placeholder=\"Entrer un email\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"number\"
-                    class=\"form-control\"
-                    name=\"tel1\"
-                    placeholder=\"Entrer un tel \"
-                />
-            </div>
-        </div>
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"password\"
-                    class=\"form-control\"
-                    name=\"password\"
-                    placeholder=\"Entrer un password\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"password\"
-                    class=\"form-control\"
-                    name=\"retype_password\"
-                    placeholder=\"Retaper le password\"
-                />
-            </div>
-        </div>
-        <a href=\"";
-        // line 57
-        echo $this->extensions['Cms\Twig\Extension']->pageFilter("login");
-        echo "\">j'ai déja un compte </a> </br>
-        <button type=\"submit\" class=\"btn btn-primary active\" data-attach-loading>Inscrivez vous</button>
-      </form>
-</div>";
+        if ((($context["view"] ?? null) == "first_step")) {
+            // line 2
+            echo "    ";
+            $context['__cms_partial_params'] = [];
+            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["__SELF__"] ?? null) . "::first_step")            , $context['__cms_partial_params']            , true            );
+            unset($context['__cms_partial_params']);
+        } else {
+            // line 4
+            echo "    ";
+            $context['__cms_partial_params'] = [];
+            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction((($context["__SELF__"] ?? null) . "::register")            , $context['__cms_partial_params']            , true            );
+            unset($context['__cms_partial_params']);
+        }
     }
 
     public function getTemplateName()
@@ -111,70 +61,15 @@ class __TwigTemplate_b1a87537eedcd6bf09f649640a377ba4b14e6a543c49e6717b19838a716
 
     public function getDebugInfo()
     {
-        return array (  95 => 57,  37 => 1,);
+        return array (  45 => 4,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<div class=\"row\" style=\"margin-top: 40px;\">
-    <form class=\"col-md-offset-2 col-md-8\" role=\"form\" data-request=\"onCreateUserFirstStep\">
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"text\"
-                    class=\"form-control\"
-                    name=\"nom\"
-                    placeholder=\"Entrer un nom\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"text\"
-                    class=\"form-control\"
-                    name=\"prenom\"
-                    placeholder=\"Entrer un prénom\"
-                />
-            </div>
-        </div>
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"email\"
-                    class=\"form-control\"
-                    name=\"email\"
-                    placeholder=\"Entrer un email\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"number\"
-                    class=\"form-control\"
-                    name=\"tel1\"
-                    placeholder=\"Entrer un tel \"
-                />
-            </div>
-        </div>
-        <div class=\"row\">
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"password\"
-                    class=\"form-control\"
-                    name=\"password\"
-                    placeholder=\"Entrer un password\"
-                />
-            </div>
-            <div class=\"form-group col-md-6\">
-                <input
-                    type=\"password\"
-                    class=\"form-control\"
-                    name=\"retype_password\"
-                    placeholder=\"Retaper le password\"
-                />
-            </div>
-        </div>
-        <a href=\"{{ 'login'|page }}\">j'ai déja un compte </a> </br>
-        <button type=\"submit\" class=\"btn btn-primary active\" data-attach-loading>Inscrivez vous</button>
-      </form>
-</div>", "/Applications/MAMP/htdocs/recherchemaison/plugins/bootnetcrasher/house/components/register/default.htm", "");
+        return new Source("{% if view == 'first_step' %}
+    {% partial __SELF__ ~ '::first_step' %}
+{% else %}
+    {% partial __SELF__ ~ '::register' %}
+{% endif %}", "/Applications/MAMP/htdocs/recherchemaison/plugins/bootnetcrasher/house/components/register/default.htm", "");
     }
 }

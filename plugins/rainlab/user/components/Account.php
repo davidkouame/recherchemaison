@@ -113,6 +113,40 @@ class Account extends ComponentBase
     }
 
     /**
+     * Returns null if user is not right
+     */
+    public function isRightUser(){
+        $response = null;
+        $user = Auth::getUser();
+        if($user){
+            if(!$user->agence_id && !$user->demarcheur_id){
+                $response = null;
+            }else{
+                $response = $user;
+            }
+        }else{
+            $response = null;
+        }
+        return $response;
+    }
+
+    /**
+     * Returns the url to redirect if user is not login
+     */
+    public function getUrlStep(){
+        $url = "";
+        $user = Auth::getUser();
+        if($user){
+            if(!$user->agence_id && !$user->demarcheur_id){
+                $url = "/first-step";
+            }
+        }else{
+            $url = "auth/login";
+        }
+        return $url;
+    }
+
+    /**
      * Flag for allowing registration, pulled from UserSettings
      */
     public function canRegister()

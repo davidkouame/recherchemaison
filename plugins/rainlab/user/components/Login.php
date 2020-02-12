@@ -44,7 +44,7 @@ class Login extends Account {
             ];
             //on verifie si l'email est dans la base et que celui est rattaché a un compte agence
             $user = User::where('email', '=', $data['email'])
-                        ->whereNotNull('agence_id')
+                        // ->whereNotNull('agence_id')
                         ->first();
             if(!$user){
                 Flash::error("L'email ou le mot de passe invalide");
@@ -56,11 +56,11 @@ class Login extends Account {
             if($user->agence_id){
                 //recupération du compte agence
                 // $agence = AgenceModel::where('id', '=', $user->agence_id)->first();
-                $redirect = "/agence";
+                $redirect = "/";
             }else{
                 //recupération du compte demarcheur
                 // $demarcheur = DemarcheurModel::where('id', '=', $user->demarcheur_id)->first();
-                $redirect = "/demarcheur";
+                $redirect = "/";
             }
     
             Event::fire('rainlab.user.beforeAuthenticate', [$this, $credentials]);

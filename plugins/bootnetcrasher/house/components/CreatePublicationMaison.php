@@ -44,6 +44,18 @@ class CreatePublicationMaison extends  Account{
 
     // Publication d'une annone 
     public function onCreatePublicationMaison(){
+        $rules = [
+            "libelle" => "required",
+            "ville_id" => "required",
+            "localisation_id" => "required",
+            "commune_id" => "required",
+            "nbre_piece" => "required",
+            "libelle" => "required",
+        ];
+        $validation = Validator::make(post(), $rules);
+        if ($validation->fails()) {
+            throw new ValidationException($validation);
+        }
         $publication = new PublicationModel;
         $publication->commune_id = post('commune_id');
         $publication->ville_id = post('ville_id');

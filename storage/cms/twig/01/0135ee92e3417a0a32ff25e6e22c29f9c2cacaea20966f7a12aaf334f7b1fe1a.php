@@ -83,7 +83,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         if (($context["user"] ?? null)) {
             // line 21
             echo "            ";
-            if ((twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 21) == 1)) {
+            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 21)) {
                 // line 22
                 echo "                <header id=\"layout-header\">
                     ";
@@ -94,7 +94,8 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 // line 24
                 echo "                </header>
             ";
-            } else {
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 25
+($context["user"] ?? null), "agence_id", [], "any", false, false, false, 25)) {
                 // line 26
                 echo "                <header id=\"layout-header\">
                     ";
@@ -105,56 +106,67 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 // line 28
                 echo "                </header>
             ";
+            } else {
+                // line 30
+                echo "                <header id=\"layout-header\">
+                    ";
+                // line 31
+                $context['__cms_partial_params'] = [];
+                echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"                , $context['__cms_partial_params']                , true                );
+                unset($context['__cms_partial_params']);
+                // line 32
+                echo "                </header>
+            ";
             }
-            // line 30
+            // line 34
             echo "        ";
         } else {
-            // line 31
+            // line 35
             echo "            <header id=\"layout-header\">
                 ";
-            // line 32
+            // line 36
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 33
+            // line 37
             echo "            </header>
         ";
         }
-        // line 35
+        // line 39
         echo "
         <!-- Content -->
         <section id=\"layout-content\">
             ";
-        // line 38
+        // line 42
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 39
+        // line 43
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 43
+        // line 47
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 44
+        // line 48
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 47
+        // line 51
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 48
+        // line 52
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 49
+        // line 53
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         ";
-        // line 50
+        // line 54
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -165,11 +177,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 51
+        // line 55
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 52
+        // line 56
         echo "
         <script>
             \$(document).ready(function(e){
@@ -182,6 +194,33 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                         \$(\"#demarcheur_first_login\").css('display', 'block');
                     }
                 });
+
+                // afficher les informations (mail, tel) du demarcheur ou de l'agence
+                \$(\"a[href='#contactPhone'\").click(function(){
+                    \$(\"#super-form-container\").css('display', 'inline-block');
+                    \$(\"#contactPhone\").css('display', 'inline-block');
+                });
+                \$(\".contactForm\").click(function(){
+                    \$(\"#super-form-container\").css('display', 'inline-block');
+                    \$(\"#contactForm\").css('display', 'inline-block');
+                });
+
+                // chargement des images
+                \$(\".imageminia\").click(function(e){
+                    e.preventDefault();
+                    // alert(\"chargement d'image\");
+                    // console.log(e.target.attr('imgptf'));
+                    let indeximg = \$(this).data('imgptf');
+                    // console.log(\$(this).data('imgptf'));
+                    // console.log(\$(\".imggf-\"+indeximg).attr('src'));
+                    // \$(\".slide.active img\").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                    // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
+                    // console.log();
+                    \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);
+                    \$(\".imggf-\"+indeximg).parent().addClass(\"active\").css(\"opacity\", '');
+                    \$(\".img-miniature li.active\").removeClass(\"active\");
+                    \$(this).parent().addClass('active');
+                })
             });
         </script>
 
@@ -201,7 +240,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  173 => 52,  169 => 51,  158 => 50,  154 => 49,  150 => 48,  146 => 47,  141 => 44,  137 => 43,  131 => 39,  129 => 38,  124 => 35,  120 => 33,  116 => 32,  113 => 31,  110 => 30,  106 => 28,  102 => 27,  99 => 26,  95 => 24,  91 => 23,  88 => 22,  85 => 21,  83 => 20,  77 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+        return array (  185 => 56,  181 => 55,  170 => 54,  166 => 53,  162 => 52,  158 => 51,  153 => 48,  149 => 47,  143 => 43,  141 => 42,  136 => 39,  132 => 37,  128 => 36,  125 => 35,  122 => 34,  118 => 32,  114 => 31,  111 => 30,  107 => 28,  103 => 27,  100 => 26,  98 => 25,  95 => 24,  91 => 23,  88 => 22,  85 => 21,  83 => 20,  77 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -226,13 +265,17 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
         <!-- Header -->
         {% if user %}
-            {% if user.demarcheur_id == 1%}
+            {% if user.demarcheur_id %}
                 <header id=\"layout-header\">
                     {% partial 'site/header_demarcheur' %}
                 </header>
-            {% else %}
+            {% elseif user.agence_id %}
                 <header id=\"layout-header\">
                     {% partial 'site/header_agence' %}
+                </header>
+            {% else %}
+                <header id=\"layout-header\">
+                    {% partial 'site/header' %}
                 </header>
             {% endif %}
         {% else %}
@@ -269,6 +312,33 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                         \$(\"#demarcheur_first_login\").css('display', 'block');
                     }
                 });
+
+                // afficher les informations (mail, tel) du demarcheur ou de l'agence
+                \$(\"a[href='#contactPhone'\").click(function(){
+                    \$(\"#super-form-container\").css('display', 'inline-block');
+                    \$(\"#contactPhone\").css('display', 'inline-block');
+                });
+                \$(\".contactForm\").click(function(){
+                    \$(\"#super-form-container\").css('display', 'inline-block');
+                    \$(\"#contactForm\").css('display', 'inline-block');
+                });
+
+                // chargement des images
+                \$(\".imageminia\").click(function(e){
+                    e.preventDefault();
+                    // alert(\"chargement d'image\");
+                    // console.log(e.target.attr('imgptf'));
+                    let indeximg = \$(this).data('imgptf');
+                    // console.log(\$(this).data('imgptf'));
+                    // console.log(\$(\".imggf-\"+indeximg).attr('src'));
+                    // \$(\".slide.active img\").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                    // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
+                    // console.log();
+                    \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);
+                    \$(\".imggf-\"+indeximg).parent().addClass(\"active\").css(\"opacity\", '');
+                    \$(\".img-miniature li.active\").removeClass(\"active\");
+                    \$(this).parent().addClass('active');
+                })
             });
         </script>
 

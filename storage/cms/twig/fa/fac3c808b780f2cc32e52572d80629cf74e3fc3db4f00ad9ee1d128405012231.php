@@ -63,14 +63,18 @@ class __TwigTemplate_23f576f598410bcd1310c7b8a3f803b9a12382bd1cbbc7ad6c0559aaaa4
         echo "\" rel=\"stylesheet\">
         <link href=\"";
         // line 13
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/home.css");
+        echo "\" rel=\"stylesheet\">
+        <link href=\"";
+        // line 14
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css");
         echo "\" rel=\"stylesheet\">
         <!--<script src=\"";
-        // line 14
+        // line 15
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/dropzone.js");
         echo "\"></script>-->
         <link rel=\"stylesheet\" href=\"";
-        // line 15
+        // line 16
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/dropzone.css");
         echo "\">   
 
@@ -78,63 +82,63 @@ class __TwigTemplate_23f576f598410bcd1310c7b8a3f803b9a12382bd1cbbc7ad6c0559aaaa4
         <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.13/css/all.css\" integrity=\"sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp\" crossorigin=\"anonymous\">
 
         ";
-        // line 20
+        // line 21
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 21
+        // line 22
         echo "    </head>
     <body>
 
         <!-- Header -->
         <header id=\"layout-header\">
             ";
-        // line 26
+        // line 27
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_agence"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 27
+        // line 28
         echo "        </header>
 
         <!-- Content -->
         <section id=\"layout-content\" class=\"container\">
             ";
-        // line 31
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 32
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 33
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 36
+        // line 37
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 37
+        // line 38
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 40
+        // line 41
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 41
+        // line 42
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 42
+        // line 43
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         <!--<script src=\"";
-        // line 43
+        // line 44
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.dropzone-master/src/index.js");
         echo "\"></script>-->
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js\"></script>
 
         
         ";
-        // line 47
+        // line 48
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -145,14 +149,14 @@ class __TwigTemplate_23f576f598410bcd1310c7b8a3f803b9a12382bd1cbbc7ad6c0559aaaa4
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 48
+        // line 49
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 49
+        // line 50
         echo "
         <script type=\"text/javascript\" src=\"";
-        // line 50
+        // line 51
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/bower_components/spartan-multi-image-picker/dist/js/spartan-multi-image-picker.js");
         echo "\"></script>
 
@@ -233,7 +237,7 @@ class __TwigTemplate_23f576f598410bcd1310c7b8a3f803b9a12382bd1cbbc7ad6c0559aaaa4
 
     public function getDebugInfo()
     {
-        return array (  156 => 50,  153 => 49,  149 => 48,  138 => 47,  131 => 43,  127 => 42,  123 => 41,  119 => 40,  114 => 37,  110 => 36,  104 => 32,  102 => 31,  96 => 27,  92 => 26,  85 => 21,  82 => 20,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+        return array (  160 => 51,  157 => 50,  153 => 49,  142 => 48,  135 => 44,  131 => 43,  127 => 42,  123 => 41,  118 => 38,  114 => 37,  108 => 33,  106 => 32,  100 => 28,  96 => 27,  89 => 22,  86 => 21,  78 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -250,6 +254,7 @@ class __TwigTemplate_23f576f598410bcd1310c7b8a3f803b9a12382bd1cbbc7ad6c0559aaaa4
         <meta name=\"generator\" content=\"OctoberCMS\">
         <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
         <link href=\"{{ 'assets/css/vendor.css'|theme }}\" rel=\"stylesheet\">
+        <link href=\"{{ 'assets/css/home.css'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
         <!--<script src=\"{{ 'assets/javascript/dropzone.js'|theme }}\"></script>-->
         <link rel=\"stylesheet\" href=\"{{ 'assets/css/dropzone.css'|theme }}\">   

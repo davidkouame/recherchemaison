@@ -27,9 +27,15 @@ class Register extends Account {
     }
 
     public function onRun() {
+        /*dd($this->page->url);
+        if(!$this->isRightUser()){
+            dd($this->getUrlStep());
+            return \Redirect::to($this->getUrlStep());
+        }
+        dd($this->isRightUser());*/
         $user = Auth::getUser();
-        if($user && $this->page->url != "/first-step"){
-            return \Redirect::to('/');
+        if($user){
+            $this->page['view'] = "first_step";
         }
         // Chargement des localisations
         $this->page['localisations'] = LocalisationModel::all();
@@ -74,7 +80,27 @@ class Register extends Account {
     }
 
     public function onCreateUserFirstStep(){
-        // dd(post());
+        
+        $rules = [
+            "nom" => "required",
+            "prenom" => "required",
+            "tel1" => "required",
+            'password' => 'required|between:8,255|confirmed'
+        ];
+        $messages =[
+            "nom.required" => "Le nom est requis",
+            "prenom.required" => "Le prénom est requis",
+            "tel1.required" => "Le téléphone est requis",
+            "password" => [
+                "required" => "Le password est requis",
+                "between" => "Le password doit être supérieur à 8 caractères"
+            ]
+            
+        ];
+        $validation = Validator::make(post(), $rules, $messages);
+        if ($validation->fails()) {
+            throw new ValidationException($validation);
+        }
         // creation d'un compte user
         $this->onRegister();
         $user = Auth::getUser();
@@ -88,9 +114,25 @@ class Register extends Account {
 
     public function onCreateUserTwoStep(){
         if(post('typeuser') == 1){
+            $rules = [
+                "libelle" => "required",
+                "email_agence" => "required",
+                "localisation_agence_id" => "required",
+            ];
+            $validation = Validator::make(post(), $rules);
+            if ($validation->fails()) {
+                throw new ValidationException($validation);
+            }
             if($this->onCreateAgence());
                 return \Redirect::to('auth/login');
         }else{
+            $rules = [
+                "localisation_id" => "required"
+            ];
+            $validation = Validator::make(post(), $rules);
+            if ($validation->fails()) {
+                throw new ValidationException($validation);
+            }
             if($this->onCreateDemarcheur())
                 return \Redirect::to('auth/login'); 
         }

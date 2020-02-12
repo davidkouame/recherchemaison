@@ -65,7 +65,7 @@
         </div>
         <div class="row">
             {% for photo in publication.photos %}
-                <img src="{{ photo.path }}" alt="image" class="img-responsive" width="150px" />
+                <img src="{{ photo.path }}" alt="image" class="img-responsive" width="150px" style="display: inline-block;margin-right: 10px; margin-bottom: 10px"/>
             {% endfor %}
         </div>
         <a href="{{ url(modelUser~'/publications') }}" class="btn btn-primary" >retour</a>

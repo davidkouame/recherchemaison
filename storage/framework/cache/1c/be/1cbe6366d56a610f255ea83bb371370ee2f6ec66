@@ -1,4 +1,4 @@
-1580942692a:1:{s:17:"layout_agence.htm";a:6:{s:8:"fileName";s:17:"layout_agence.htm";s:7:"content";s:4701:"description = "Default layout"
+1581370519a:1:{s:17:"layout_agence.htm";a:6:{s:8:"fileName";s:17:"layout_agence.htm";s:7:"content";s:4774:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -12,6 +12,7 @@
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         <!--<script src="{{ 'assets/javascript/dropzone.js'|theme }}"></script>-->
         <link rel="stylesheet" href="{{ 'assets/css/dropzone.css'|theme }}">   
@@ -114,7 +115,7 @@
 
     </body>
 </html>
-";s:5:"mtime";i:1580942090;s:6:"markup";s:4666:"<!DOCTYPE html>
+";s:5:"mtime";i:1581369315;s:6:"markup";s:4739:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -126,6 +127,7 @@
         <meta name="generator" content="OctoberCMS">
         <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         <!--<script src="{{ 'assets/javascript/dropzone.js'|theme }}"></script>-->
         <link rel="stylesheet" href="{{ 'assets/css/dropzone.css'|theme }}">   

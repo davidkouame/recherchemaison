@@ -134,7 +134,7 @@ class __TwigTemplate_ae66ce4715c4a6dc739dafcfaa0cb814271343af91d9298dd9075399196
             // line 68
             echo "                <img src=\"";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["photo"], "path", [], "any", false, false, false, 68), "html", null, true);
-            echo "\" alt=\"image\" class=\"img-responsive\" width=\"150px\" />
+            echo "\" alt=\"image\" class=\"img-responsive\" width=\"150px\" style=\"display: inline-block;margin-right: 10px; margin-bottom: 10px\"/>
             ";
         }
         $_parent = $context['_parent'];
@@ -235,7 +235,7 @@ class __TwigTemplate_ae66ce4715c4a6dc739dafcfaa0cb814271343af91d9298dd9075399196
         </div>
         <div class=\"row\">
             {% for photo in publication.photos %}
-                <img src=\"{{ photo.path }}\" alt=\"image\" class=\"img-responsive\" width=\"150px\" />
+                <img src=\"{{ photo.path }}\" alt=\"image\" class=\"img-responsive\" width=\"150px\" style=\"display: inline-block;margin-right: 10px; margin-bottom: 10px\"/>
             {% endfor %}
         </div>
         <a href=\"{{ url(modelUser~'/publications') }}\" class=\"btn btn-primary\" >retour</a>

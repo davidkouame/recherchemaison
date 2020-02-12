@@ -64,27 +64,29 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
 <nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
-            <a class=\"navbar-brand text-primary site-logo\" href=\"";
+            <a class=\"navbar-brand text-primary\" href=\"";
         // line 31
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
-        echo "\">
-                </span>Coka</span>
+        echo "\" style=\"font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;\">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
                 <li class=\"";
-        // line 38
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38) == "demarcheur")) {
+        // line 40
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 40), "id", [], "any", false, false, false, 40) == "demarcheur")) {
             echo "active";
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
         echo "\">S'inscrire</a></li>
                 <li class=\"";
-        // line 39
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 39), "id", [], "any", false, false, false, 39) == "agence")) {
+        // line 41
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41) == "agence")) {
             echo "active";
         }
         echo "\"><a href=\"";
@@ -108,7 +110,7 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
 
     public function getDebugInfo()
     {
-        return array (  87 => 39,  79 => 38,  69 => 31,  37 => 1,);
+        return array (  89 => 41,  81 => 40,  69 => 31,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -143,8 +145,10 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
 <nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
-            <a class=\"navbar-brand text-primary site-logo\" href=\"{{ 'home'|page }}\">
-                </span>Coka</span>
+            <a class=\"navbar-brand text-primary\" href=\"{{ 'home'|page }}\" style=\"font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;\">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class=\"collapse navbar-collapse navbar-main-collapse\">

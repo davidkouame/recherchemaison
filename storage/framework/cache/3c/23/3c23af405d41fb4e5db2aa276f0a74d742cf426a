@@ -1,4 +1,4 @@
-1580942262a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2488:"description = "Default layout"
+1581505105a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4210:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -20,13 +20,17 @@
 
         <!-- Header -->
         {% if user %}
-            {% if user.demarcheur_id == 1%}
+            {% if user.demarcheur_id %}
                 <header id="layout-header">
                     {% partial 'site/header_demarcheur' %}
                 </header>
-            {% else %}
+            {% elseif user.agence_id %}
                 <header id="layout-header">
                     {% partial 'site/header_agence' %}
+                </header>
+            {% else %}
+                <header id="layout-header">
+                    {% partial 'site/header' %}
                 </header>
             {% endif %}
         {% else %}
@@ -63,12 +67,39 @@
                         $("#demarcheur_first_login").css('display', 'block');
                     }
                 });
+
+                // afficher les informations (mail, tel) du demarcheur ou de l'agence
+                $("a[href='#contactPhone'").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactPhone").css('display', 'inline-block');
+                });
+                $(".contactForm").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactForm").css('display', 'inline-block');
+                });
+
+                // chargement des images
+                $(".imageminia").click(function(e){
+                    e.preventDefault();
+                    // alert("chargement d'image");
+                    // console.log(e.target.attr('imgptf'));
+                    let indeximg = $(this).data('imgptf');
+                    // console.log($(this).data('imgptf'));
+                    // console.log($(".imggf-"+indeximg).attr('src'));
+                    // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                    // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                    // console.log();
+                    $(".slide.active").removeClass("active").css("opacity", 0);
+                    $(".imggf-"+indeximg).parent().addClass("active").css("opacity", '');
+                    $(".img-miniature li.active").removeClass("active");
+                    $(this).parent().addClass('active');
+                })
             });
         </script>
 
     </body>
 </html>
-";s:5:"mtime";i:1580936365;s:6:"markup";s:2453:"<!DOCTYPE html>
+";s:5:"mtime";i:1581361502;s:6:"markup";s:4175:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -88,13 +119,17 @@
 
         <!-- Header -->
         {% if user %}
-            {% if user.demarcheur_id == 1%}
+            {% if user.demarcheur_id %}
                 <header id="layout-header">
                     {% partial 'site/header_demarcheur' %}
                 </header>
-            {% else %}
+            {% elseif user.agence_id %}
                 <header id="layout-header">
                     {% partial 'site/header_agence' %}
+                </header>
+            {% else %}
+                <header id="layout-header">
+                    {% partial 'site/header' %}
                 </header>
             {% endif %}
         {% else %}
@@ -131,6 +166,33 @@
                         $("#demarcheur_first_login").css('display', 'block');
                     }
                 });
+
+                // afficher les informations (mail, tel) du demarcheur ou de l'agence
+                $("a[href='#contactPhone'").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactPhone").css('display', 'inline-block');
+                });
+                $(".contactForm").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactForm").css('display', 'inline-block');
+                });
+
+                // chargement des images
+                $(".imageminia").click(function(e){
+                    e.preventDefault();
+                    // alert("chargement d'image");
+                    // console.log(e.target.attr('imgptf'));
+                    let indeximg = $(this).data('imgptf');
+                    // console.log($(this).data('imgptf'));
+                    // console.log($(".imggf-"+indeximg).attr('src'));
+                    // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                    // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                    // console.log();
+                    $(".slide.active").removeClass("active").css("opacity", 0);
+                    $(".imggf-"+indeximg).parent().addClass("active").css("opacity", '');
+                    $(".img-miniature li.active").removeClass("active");
+                    $(this).parent().addClass('active');
+                })
             });
         </script>
 

@@ -23,6 +23,10 @@ class Home extends Account {
     }
 
     public function onRun() {
+        if(!$this->isRightUser()){
+            if($this->getUrlStep() != "auth/login")
+                return \Redirect::to($this->getUrlStep());
+        }
         $this->prepareVars();
         // recuperation de toutes les localisations
         $this->page['localisations'] = LocalisationModel::all();

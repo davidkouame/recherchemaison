@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'host' => 'smtp.mailgun.org',
+    'host' => 'mail.infomaniak.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'noreply@domain.tld', 'name' => 'OctoberCMS'],
+    'from' => ['address' => 'opstech.digital@groupedigital.com', 'name' => 'DIGITAL'],
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,7 @@ return [
     |
     */
 
-    'username' => null,
+    'username' => 'opstech.digital@groupedigital.com',
 
     /*
     |--------------------------------------------------------------------------
@@ -94,7 +94,7 @@ return [
     |
     */
 
-    'password' => null,
+    'password' => 'Digiopstech2019',
 
     /*
     |--------------------------------------------------------------------------
@@ -109,4 +109,13 @@ return [
 
     'sendmail' => '/usr/sbin/sendmail -bs',
 
+    'stream' => [
+        'ssl' => [
+            'allow_self_signed' => true,
+            'verify_peer' => false,   
+            'verify_peer_name' => false,
+        ],
+    ],
+	
+	
 ];

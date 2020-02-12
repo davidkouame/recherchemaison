@@ -1,4 +1,4 @@
-1580939277a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:1950:"<style>
+1581368763a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:2029:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }
@@ -28,8 +28,10 @@
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
-                </span>Coka</span>
+            <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
@@ -44,7 +46,7 @@
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1580935848;s:6:"markup";s:1949:"<style>
+";s:5:"mtime";i:1581368154;s:6:"markup";s:2028:"<style>
     .navbar-brand, .navbar-nav > li > a{
         color: #000;
     }
@@ -74,8 +76,10 @@
 <nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
     <div class="container">
         <div class="navbar-header">
-            <a class="navbar-brand text-primary site-logo" href="{{ 'home'|page }}">
-                </span>Coka</span>
+            <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+            font-weight: 900;
+            line-height: 0;">
+                </span>ChapMaison</span>
             </a>
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">

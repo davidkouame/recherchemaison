@@ -1,5 +1,5 @@
 <?php 
-class Cms5e3b403028fec085449905_a50ae830096fcfc5d20f9ebec5596d07Class extends Cms\Classes\PageCode
+class Cms5e41ae597cccc018565143_266c27d48ac01471bd0b48e0263b8e8fClass extends Cms\Classes\PageCode
 {
 public function onStart(){
         \Auth::logout();

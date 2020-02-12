@@ -20,13 +20,17 @@ description = "Default layout"
 
         <!-- Header -->
         {% if user %}
-            {% if user.demarcheur_id == 1%}
+            {% if user.demarcheur_id %}
                 <header id="layout-header">
                     {% partial 'site/header_demarcheur' %}
                 </header>
-            {% else %}
+            {% elseif user.agence_id %}
                 <header id="layout-header">
                     {% partial 'site/header_agence' %}
+                </header>
+            {% else %}
+                <header id="layout-header">
+                    {% partial 'site/header' %}
                 </header>
             {% endif %}
         {% else %}
@@ -63,6 +67,33 @@ description = "Default layout"
                         $("#demarcheur_first_login").css('display', 'block');
                     }
                 });
+
+                // afficher les informations (mail, tel) du demarcheur ou de l'agence
+                $("a[href='#contactPhone'").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactPhone").css('display', 'inline-block');
+                });
+                $(".contactForm").click(function(){
+                    $("#super-form-container").css('display', 'inline-block');
+                    $("#contactForm").css('display', 'inline-block');
+                });
+
+                // chargement des images
+                $(".imageminia").click(function(e){
+                    e.preventDefault();
+                    // alert("chargement d'image");
+                    // console.log(e.target.attr('imgptf'));
+                    let indeximg = $(this).data('imgptf');
+                    // console.log($(this).data('imgptf'));
+                    // console.log($(".imggf-"+indeximg).attr('src'));
+                    // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                    // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                    // console.log();
+                    $(".slide.active").removeClass("active").css("opacity", 0);
+                    $(".imggf-"+indeximg).parent().addClass("active").css("opacity", '');
+                    $(".img-miniature li.active").removeClass("active");
+                    $(this).parent().addClass('active');
+                })
             });
         </script>
 

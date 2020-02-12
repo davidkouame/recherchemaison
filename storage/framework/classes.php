@@ -117,4 +117,8 @@
   'bootnetcrasher\\House\\Components\\Register' => 'plugins/bootnetcrasher/house/components/Register.php',
   'RainLab\\User\\Components\\Login' => 'plugins/rainlab/user/components/Login.php',
   'RainLab\\User\\Classes\\AuthMiddleware' => 'plugins/rainlab/user/classes/AuthMiddleware.php',
+  'system\\Controllers\\mailtemplates' => 'modules/system/controllers/mailtemplates.php',
+  'toughdeveloper\\imageresizer\\Plugin' => 'plugins/toughdeveloper/imageresizer/Plugin.php',
+  'ToughDeveloper\\ImageResizer\\Classes\\Image' => 'plugins/toughdeveloper/imageresizer/classes/Image.php',
+  'ToughDeveloper\\ImageResizer\\Models\\Settings' => 'plugins/toughdeveloper/imageresizer/models/Settings.php',
 );

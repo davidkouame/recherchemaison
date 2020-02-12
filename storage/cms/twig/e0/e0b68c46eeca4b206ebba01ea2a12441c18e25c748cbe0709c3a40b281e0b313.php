@@ -37,10 +37,10 @@ class __TwigTemplate_b0224cbbac62caa0e3130265148070a68e21a6ef4866949f48beb542905
         echo "<div id=\"footer\">
     <div class=\"container\">
         <hr />
-        <p class=\"muted credit\">&copy; 2013 - ";
+        <p class=\"muted credit\">&copy; ";
         // line 4
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, "now", "Y"), "html", null, true);
-        echo " Alexey Bobkov &amp; Samuel Georges.</p>
+        echo " all rights reserved &copy; by ChapMaison.</p>
     </div>
 </div>";
     }
@@ -65,7 +65,7 @@ class __TwigTemplate_b0224cbbac62caa0e3130265148070a68e21a6ef4866949f48beb542905
         return new Source("<div id=\"footer\">
     <div class=\"container\">
         <hr />
-        <p class=\"muted credit\">&copy; 2013 - {{ \"now\"|date(\"Y\") }} Alexey Bobkov &amp; Samuel Georges.</p>
+        <p class=\"muted credit\">&copy; {{ \"now\"|date(\"Y\") }} all rights reserved &copy; by ChapMaison.</p>
     </div>
 </div>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/partials/site/footer.htm", "");
     }
