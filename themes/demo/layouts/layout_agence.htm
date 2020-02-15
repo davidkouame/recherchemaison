@@ -4,13 +4,37 @@ description = "Default layout"
 <html>
     <head>
         <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
+        <title>ChapMaison - {{ this.page.title }}</title>
         <meta name="description" content="{{ this.page.meta_description }}">
         <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
+        <meta name="author" content="ChapMaison">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+        <meta name="generator" content="ChapMaison">
+        
+        <link rel="apple-touch-icon" sizes="57x57" href="{{ 'assets/images/apple-icon-57x57.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ 'assets/images/apple-icon-60x60.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/images/apple-icon-72x72.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/apple-icon-76x76.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/images/apple-icon-114x114.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/apple-icon-120x120.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ 'assets/images/apple-icon-144x144.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/apple-icon-152x152.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/apple-icon-180x180.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{{ 'assets/images/android-icon-192x192.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon-32x32.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ 'assets/images/favicon-96x96.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicon-16x16.png'|theme }}">
+    <link rel="manifest" href="{{ 'assets/images/manifest.json'|theme }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ 'assets/images/ms-icon-144x144.png'|theme }}">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="icon" type="image/png" href="{{ 'assets/images/chapmaison.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+
         <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
@@ -21,10 +45,26 @@ description = "Default layout"
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
         {% styles %}
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
     </head>
     <body>
 
-        {% partial 'site/header_general' %}
 
         <!-- Header -->
         <header id="layout-header">

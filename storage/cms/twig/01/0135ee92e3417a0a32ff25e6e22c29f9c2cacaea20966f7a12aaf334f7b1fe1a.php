@@ -39,7 +39,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
 <head>
     <meta charset=\"utf-8\">
-    <title>October CMS - ";
+    <title>ChapMaison - ";
         // line 6
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 6), "title", [], "any", false, false, false, 6), "html", null, true);
         echo "</title>
@@ -51,30 +51,96 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         // line 8
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 8), "meta_title", [], "any", false, false, false, 8), "html", null, true);
         echo "\">
-    <meta name=\"author\" content=\"OctoberCMS\">
+    <meta name=\"author\" content=\"ChapMaison\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <meta name=\"generator\" content=\"OctoberCMS\">
+    <meta name=\"generator\" content=\"ChapMaison\">
+
+    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"";
+        // line 13
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-57x57.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"";
+        // line 14
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-60x60.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"";
+        // line 15
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-72x72.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"";
+        // line 16
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-76x76.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"";
+        // line 17
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-114x114.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"";
+        // line 18
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-120x120.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"";
+        // line 19
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-144x144.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"";
+        // line 20
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-152x152.png");
+        echo "\">
+    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"";
+        // line 21
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/apple-icon-180x180.png");
+        echo "\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"";
+        // line 22
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/android-icon-192x192.png");
+        echo "\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"";
+        // line 23
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon-32x32.png");
+        echo "\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"";
+        // line 24
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon-96x96.png");
+        echo "\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"";
+        // line 25
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/favicon-16x16.png");
+        echo "\">
+    <link rel=\"manifest\" href=\"";
+        // line 26
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/manifest.json");
+        echo "\">
+    <meta name=\"msapplication-TileColor\" content=\"#ffffff\">
+    <meta name=\"msapplication-TileImage\" content=\"";
+        // line 28
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/ms-icon-144x144.png");
+        echo "\">
+    <meta name=\"theme-color\" content=\"#ffffff\">
+
+
     <link rel=\"icon\" type=\"image/png\" href=\"";
-        // line 12
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/october.png");
+        // line 32
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/chapmaison.png");
         echo "\">
     <link href=\"";
-        // line 13
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/vendor.css");
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 14
+        // line 34
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/home.css");
         echo "\" rel=\"stylesheet\">
     <link href=\"";
-        // line 15
+        // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css");
         echo "\" rel=\"stylesheet\">
+    
     ";
-        // line 16
+        // line 37
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 17
+        // line 38
         echo "
     <style>
         .responsive {
@@ -88,14 +154,6 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         #layout-header {
             margin-top: 0px;
         }
-
-        #layout-content {
-            margin-top: 20px;
-        }
-
-        body {
-            padding-top: 44px;
-        }
     </style>
 </head>
 
@@ -103,94 +161,94 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     <!-- Header -->
     ";
-        // line 44
+        // line 57
         if (($context["user"] ?? null)) {
-            // line 45
-            echo "    ";
-            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 45)) {
-                // line 46
-                echo "    <header id=\"layout-header\">
-        ";
-                // line 47
+            // line 58
+            echo "        ";
+            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 58)) {
+                // line 59
+                echo "        <header id=\"layout-header\">
+            ";
+                // line 60
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 48
-                echo "    </header>
-    ";
-            } elseif (twig_get_attribute($this->env, $this->source,             // line 49
-($context["user"] ?? null), "agence_id", [], "any", false, false, false, 49)) {
-                // line 50
-                echo "    <header id=\"layout-header\">
+                // line 61
+                echo "        </header>
         ";
-                // line 51
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 62
+($context["user"] ?? null), "agence_id", [], "any", false, false, false, 62)) {
+                // line 63
+                echo "            <header id=\"layout-header\">
+                ";
+                // line 64
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_agence"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 52
-                echo "    </header>
-    ";
-            } else {
-                // line 54
-                echo "    <header id=\"layout-header\">
+                // line 65
+                echo "            </header>
         ";
-                // line 55
+            } else {
+                // line 67
+                echo "        <header id=\"layout-header\">
+            ";
+                // line 68
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 56
-                echo "    </header>
-    ";
+                // line 69
+                echo "        </header>
+        ";
             }
-            // line 58
+            // line 71
             echo "    ";
         } else {
-            // line 59
-            echo "    <header id=\"layout-header\">
-        ";
-            // line 60
+            // line 72
+            echo "        <header id=\"layout-header\">
+            ";
+            // line 73
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 61
-            echo "    </header>
+            // line 74
+            echo "        </header>
     ";
         }
-        // line 63
+        // line 76
         echo "
     <!-- Content -->
     <section id=\"layout-content\">
         ";
-        // line 66
+        // line 79
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 67
+        // line 80
         echo "    </section>
 
     <!-- Footer -->
     <footer id=\"layout-footer\">
         ";
-        // line 71
+        // line 84
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 72
+        // line 85
         echo "    </footer>
 
     <!-- Scripts -->
     <script src=\"";
-        // line 75
+        // line 88
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
     <script src=\"";
-        // line 76
+        // line 89
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
     <script src=\"";
-        // line 77
+        // line 90
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
     ";
-        // line 78
+        // line 91
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -201,11 +259,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 79
+        // line 92
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 80
+        // line 93
         echo "
     <script>
         \$(document).ready(function (e) {
@@ -267,11 +325,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     </script>
 
     ";
-        // line 140
+        // line 153
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 141
+        // line 154
         echo "</body>
 
 </html>";
@@ -289,7 +347,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  275 => 141,  271 => 140,  209 => 80,  205 => 79,  194 => 78,  190 => 77,  186 => 76,  182 => 75,  177 => 72,  173 => 71,  167 => 67,  165 => 66,  160 => 63,  156 => 61,  152 => 60,  149 => 59,  146 => 58,  142 => 56,  138 => 55,  135 => 54,  131 => 52,  127 => 51,  124 => 50,  122 => 49,  119 => 48,  115 => 47,  112 => 46,  109 => 45,  107 => 44,  78 => 17,  75 => 16,  71 => 15,  67 => 14,  63 => 13,  59 => 12,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  333 => 154,  329 => 153,  267 => 93,  263 => 92,  252 => 91,  248 => 90,  244 => 89,  240 => 88,  235 => 85,  231 => 84,  225 => 80,  223 => 79,  218 => 76,  214 => 74,  210 => 73,  207 => 72,  204 => 71,  200 => 69,  196 => 68,  193 => 67,  189 => 65,  185 => 64,  182 => 63,  180 => 62,  177 => 61,  173 => 60,  170 => 59,  167 => 58,  165 => 57,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -299,16 +357,37 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
 <head>
     <meta charset=\"utf-8\">
-    <title>October CMS - {{ this.page.title }}</title>
+    <title>ChapMaison - {{ this.page.title }}</title>
     <meta name=\"description\" content=\"{{ this.page.meta_description }}\">
     <meta name=\"title\" content=\"{{ this.page.meta_title }}\">
-    <meta name=\"author\" content=\"OctoberCMS\">
+    <meta name=\"author\" content=\"ChapMaison\">
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-    <meta name=\"generator\" content=\"OctoberCMS\">
-    <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/october.png'|theme }}\">
+    <meta name=\"generator\" content=\"ChapMaison\">
+
+    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"{{ 'assets/images/apple-icon-57x57.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"{{ 'assets/images/apple-icon-60x60.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"{{ 'assets/images/apple-icon-72x72.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"{{ 'assets/images/apple-icon-76x76.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"{{ 'assets/images/apple-icon-114x114.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"{{ 'assets/images/apple-icon-120x120.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"{{ 'assets/images/apple-icon-144x144.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"{{ 'assets/images/apple-icon-152x152.png'|theme }}\">
+    <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"{{ 'assets/images/apple-icon-180x180.png'|theme }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"192x192\"  href=\"{{ 'assets/images/android-icon-192x192.png'|theme }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"{{ 'assets/images/favicon-32x32.png'|theme }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"96x96\" href=\"{{ 'assets/images/favicon-96x96.png'|theme }}\">
+    <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"{{ 'assets/images/favicon-16x16.png'|theme }}\">
+    <link rel=\"manifest\" href=\"{{ 'assets/images/manifest.json'|theme }}\">
+    <meta name=\"msapplication-TileColor\" content=\"#ffffff\">
+    <meta name=\"msapplication-TileImage\" content=\"{{ 'assets/images/ms-icon-144x144.png'|theme }}\">
+    <meta name=\"theme-color\" content=\"#ffffff\">
+
+
+    <link rel=\"icon\" type=\"image/png\" href=\"{{ 'assets/images/chapmaison.png'|theme }}\">
     <link href=\"{{ 'assets/css/vendor.css'|theme }}\" rel=\"stylesheet\">
     <link href=\"{{ 'assets/css/home.css'|theme }}\" rel=\"stylesheet\">
     <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
+    
     {% styles %}
 
     <style>
@@ -323,14 +402,6 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         #layout-header {
             margin-top: 0px;
         }
-
-        #layout-content {
-            margin-top: 20px;
-        }
-
-        body {
-            padding-top: 44px;
-        }
     </style>
 </head>
 
@@ -338,23 +409,23 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     <!-- Header -->
     {% if user %}
-    {% if user.demarcheur_id %}
-    <header id=\"layout-header\">
-        {% partial 'site/header_demarcheur' %}
-    </header>
-    {% elseif user.agence_id %}
-    <header id=\"layout-header\">
-        {% partial 'site/header_agence' %}
-    </header>
+        {% if user.demarcheur_id %}
+        <header id=\"layout-header\">
+            {% partial 'site/header_demarcheur' %}
+        </header>
+        {% elseif user.agence_id %}
+            <header id=\"layout-header\">
+                {% partial 'site/header_agence' %}
+            </header>
+        {% else %}
+        <header id=\"layout-header\">
+            {% partial 'site/header' %}
+        </header>
+        {% endif %}
     {% else %}
-    <header id=\"layout-header\">
-        {% partial 'site/header' %}
-    </header>
-    {% endif %}
-    {% else %}
-    <header id=\"layout-header\">
-        {% partial 'site/header' %}
-    </header>
+        <header id=\"layout-header\">
+            {% partial 'site/header' %}
+        </header>
     {% endif %}
 
     <!-- Content -->

@@ -44,7 +44,9 @@ class AccountAgence extends Account {
         if($agencemodel){
             $agencemodel->libelle = post('libelle');
             $agencemodel->tel = post('tel1');
-            $agencemodel->tel2 = post('tel2');
+            if(post('tel2')){
+                $demarcheurmodel->tel2 = post('tel2');
+            }
             $agencemodel->nom = post('nom');
             $agencemodel->prenom = post('prenom');
             $agencemodel->email_agence = post('email_agence');

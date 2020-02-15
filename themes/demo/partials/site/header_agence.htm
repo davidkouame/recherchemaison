@@ -29,7 +29,6 @@
 
 <div class="collapse navbar-collapse navbar-main-collapse" id="collapse-navbar">
     <ul class="nav navbar-nav">
-        <li class="separator hidden-xs"></li>
         <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('/') }}">Home</a></li>
         <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('agence/create-publication') }}">Créez une publiation</a></li>
         <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('agence/publications') }}">Mes publications</a></li>
