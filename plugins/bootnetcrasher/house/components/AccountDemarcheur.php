@@ -43,11 +43,13 @@ class AccountDemarcheur extends Account {
         $demarcheurmodel = DemarcheurModel::find($user->demarcheur_id);
         if($demarcheurmodel){
             $demarcheurmodel->tel = post('tel1');
-            $demarcheurmodel->tel2 = post('tel2');
+            if(post('tel2')){
+                $demarcheurmodel->tel2 = post('tel2');
+            }
             $demarcheurmodel->nom = post('nom');
             $demarcheurmodel->prenom = post('prenom');
             $demarcheurmodel->save();
-            \Flash::success('Le démarcheur a été modifié avec succèss !');
+            // \Flash::success('Le compte démarcheur a été modifié avec succèss !');
             return \Redirect::to('demarcheur/account');
         }
     }

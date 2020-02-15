@@ -24,6 +24,8 @@ description = "Default layout"
     </head>
     <body>
 
+        {% partial 'site/header_general' %}
+
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header_agence' %}
@@ -73,6 +75,7 @@ description = "Default layout"
                     $("#link-modal-to-publisher-publication").attr("href", link);
                 });
 
+                
               
             })
         </script>
@@ -112,6 +115,7 @@ description = "Default layout"
 
     });
 </script>
+    {% partial 'site/footer_general' %}
 
     </body>
 </html>

@@ -22,15 +22,57 @@
     .nav.navbar-nav{
         float: right;
     }
+
+    @media screen and (max-width: 767px) {
+        .navbar-nav > li {
+            float: left;
+        }
+        .connection-xs{
+            display: block;
+            position: relative;
+            /*top: -59px;*/
+        }
+        .nav > li > a{
+            display: unset;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .connection-xs{
+            display: none;
+        }
+    }
+    
+    .connection-xs{
+        position: relative;
+        top: -59px;
+    }
+
+    @media screen and (max-width: 412px) {
+        #layout-content{
+            margin-top: 40px;
+        }
+
+        .nav.navbar-nav.connection-xs{
+            top: -10%;
+            left: -24%;
+        }
+        
+        .navbar-header{
+            left: 18%
+        }
+    }
 </style>
 
 <!-- Nav -->
-<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;">
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide" role="navigation" style="background-color: #fff;
+border: 0px aliceblue;border: 0px aliceblue;height: 1px;">
     <div class="container">
         <div class="navbar-header">
             <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
             font-weight: 900;
-            line-height: 0;">
+            line-height: 0;
+            padding-top: 33px;">
                 </span>ChapMaison</span>
             </a>
         </div>
@@ -41,5 +83,10 @@
                 <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}">Se connecter</a></li>
             </ul>
         </div>
+        <ul class="nav navbar-nav connection-xs">
+            <li class="separator hidden-xs"></li>
+            <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ 'register'|page }}">S'inscrire</a></li>
+            <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}">Se connecter</a></li>
+        </ul>
     </div>
 </nav>

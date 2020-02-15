@@ -1,4 +1,4 @@
-1581516840a:1:{s:21:"layout_demarcheur.htm";a:6:{s:8:"fileName";s:21:"layout_demarcheur.htm";s:7:"content";s:2716:"description = "Default layout"
+1581774272a:1:{s:21:"layout_demarcheur.htm";a:6:{s:8:"fileName";s:21:"layout_demarcheur.htm";s:7:"content";s:3162:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -15,9 +15,29 @@
         <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
+
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
     </head>
     <body>
         
+        {% partial 'site/header_general' %}
+
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header_demarcheur' %}
@@ -64,9 +84,11 @@
             })
         </script>
 
+        {% partial 'site/footer_general' %}
+
     </body>
 </html>
-";s:5:"mtime";i:1581369306;s:6:"markup";s:2681:"<!DOCTYPE html>
+";s:5:"mtime";i:1581769457;s:6:"markup";s:3127:"<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -81,9 +103,29 @@
         <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
+
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
     </head>
     <body>
         
+        {% partial 'site/header_general' %}
+
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header_demarcheur' %}
@@ -129,6 +171,8 @@
               
             })
         </script>
+
+        {% partial 'site/footer_general' %}
 
     </body>
 </html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

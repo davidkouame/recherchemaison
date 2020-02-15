@@ -74,52 +74,77 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 16
-        echo "    </head>
+        echo "
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
+    </head>
     <body>
         
+        ";
+        // line 37
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_general"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 38
+        echo "
         <!-- Header -->
         <header id=\"layout-header\">
             ";
-        // line 21
+        // line 41
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 22
+        // line 42
         echo "        </header>
 
         <!-- Content -->
         <section id=\"layout-content\" class=\"container\">
             ";
-        // line 26
+        // line 46
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 27
+        // line 47
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
-        // line 31
+        // line 51
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 32
+        // line 52
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
-        // line 35
+        // line 55
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
         <script src=\"";
-        // line 36
+        // line 56
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
         <script src=\"";
-        // line 37
+        // line 57
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         ";
-        // line 38
+        // line 58
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -130,11 +155,11 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 39
+        // line 59
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 40
+        // line 60
         echo "
         <script>
             \$(document).ready(function(e){
@@ -160,6 +185,13 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
             })
         </script>
 
+        ";
+        // line 85
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 86
+        echo "
     </body>
 </html>";
     }
@@ -176,7 +208,7 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
 
     public function getDebugInfo()
     {
-        return array (  138 => 40,  134 => 39,  123 => 38,  119 => 37,  115 => 36,  111 => 35,  106 => 32,  102 => 31,  96 => 27,  94 => 26,  88 => 22,  84 => 21,  77 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+        return array (  194 => 86,  190 => 85,  163 => 60,  159 => 59,  148 => 58,  144 => 57,  140 => 56,  136 => 55,  131 => 52,  127 => 51,  121 => 47,  119 => 46,  113 => 42,  109 => 41,  104 => 38,  100 => 37,  77 => 16,  74 => 15,  70 => 14,  66 => 13,  62 => 12,  58 => 11,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -196,9 +228,29 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         <link href=\"{{ 'assets/css/home.css'|theme }}\" rel=\"stylesheet\">
         <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
         {% styles %}
+
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
     </head>
     <body>
         
+        {% partial 'site/header_general' %}
+
         <!-- Header -->
         <header id=\"layout-header\">
             {% partial 'site/header_demarcheur' %}
@@ -244,6 +296,8 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
               
             })
         </script>
+
+        {% partial 'site/footer_general' %}
 
     </body>
 </html>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/layouts/layout_demarcheur.htm", "");

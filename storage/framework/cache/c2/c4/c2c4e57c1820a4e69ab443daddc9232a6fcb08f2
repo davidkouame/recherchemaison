@@ -1,0 +1,31 @@
+1581769844a:1:{s:24:"site/footer_scriptjs.htm";a:5:{s:8:"fileName";s:24:"site/footer_scriptjs.htm";s:7:"content";s:784:"<script>
+    // $("#collapse-navbar").css({'display' :'none !important'});
+    $("#collapse-navbar .navbar-nav").css('display', 'none');
+            
+            $("#btnResponsive").click(function (e) {
+                if ($("#layout-header").hasClass("responsive")) {
+                    $("#layout-header").removeClass("responsive");
+                    // $("#collapse-navbar").removeClass("responsive-collapse");
+                    $("#collapse-navbar .navbar-nav").css('display', 'none');
+                } else {
+                    $("#layout-header").addClass("responsive");
+                    // $("#collapse-navbar").addClass("responsive-collapse");
+                    $("#collapse-navbar .navbar-nav").css('display', 'block');
+                }
+            });
+</script>";s:5:"mtime";i:1581769234;s:6:"markup";s:784:"<script>
+    // $("#collapse-navbar").css({'display' :'none !important'});
+    $("#collapse-navbar .navbar-nav").css('display', 'none');
+            
+            $("#btnResponsive").click(function (e) {
+                if ($("#layout-header").hasClass("responsive")) {
+                    $("#layout-header").removeClass("responsive");
+                    // $("#collapse-navbar").removeClass("responsive-collapse");
+                    $("#collapse-navbar .navbar-nav").css('display', 'none');
+                } else {
+                    $("#layout-header").addClass("responsive");
+                    // $("#collapse-navbar").addClass("responsive-collapse");
+                    $("#collapse-navbar .navbar-nav").css('display', 'block');
+                }
+            });
+</script>";s:4:"code";N;}}

@@ -38,9 +38,14 @@ layout = "default"
     }
 
     @media screen and (min-width: 950px) {
-        .warning{
-        margin-bottom: 20px;
-        width: 100% !important;
+        .warning-large{
+            margin-bottom: 20px;
+            width: 100% !important;
+        }
+
+        .warning-small{
+            margin-bottom: 20px;
+            width: 48% !important;
         }
 
         form.contact-form, .contact-form form, .contact-form fieldset {
@@ -51,8 +56,6 @@ layout = "default"
         .contactPhone{
             width: 100%;
         }
-
-       
     }
 
     @media screen and (min-width: 600px) {
@@ -61,13 +64,65 @@ layout = "default"
         }
     }
 
-    
-    
-</style>
-<div class="container-fluid detail-publication" style="margin-top: 20px; padding-left: 80px;padding-right: 80px;">
-    <div class="col-md-12">
+    @media screen and (max-width: 1000px) {
+        .detail-publication{
+            padding-left: 15px !important;
+            padding-right: 15px;
+        }
+    }
 
-    
+    @media screen and (min-width: 1000px) {
+        .detail-publication{
+            padding-left: 80px !important;
+            padding-right: 80px !important;
+        }
+    }
+
+    @media screen and (max-width: 453px) {
+        /*.button.button-phone2{
+            margin-bottom: 10px;
+        }
+        .singlepost .btn-holder .button{
+            width: 100%;
+        }*/
+        .button.button-phone2{
+            width: 40% !important;
+            float: left !important;
+        }
+
+        .button.button-email2{
+            width: 40% !important;
+            float: right !important;
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .button.button-phone2{
+            margin-bottom: 10px !important;
+        }
+        .singlepost .btn-holder .button{
+            width: 100% !important;
+        }
+
+        .button.button-email2{
+            float: unset !important;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        #three-publication-recommande{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .col-xs-6{
+            width: 100%
+        }
+    }
+</style>
+<div class="container-fluid detail-publication" style="margin-top: 20px;">
+    <div class="col-md-12">
     <div class="card">
         {% flash %}
             <div class="alert alert-success" style="text-align: center;">
@@ -251,7 +306,7 @@ layout = "default"
                 </div>
             </div>
 
-            <section class="super-form-container" id="super-form-container" style="display: none;width: 100%">
+            <section class="super-form-container row" id="super-form-container">
 
 
                 <!-- Mail Contact Form  -->
@@ -335,11 +390,10 @@ layout = "default"
                             Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur Jumia Deals.
                         </div>
                     </div>
-
                 </div>
 
                 <!--Warning Message-->
-                <!--<div class="text-area warning">
+                <div class="text-area" style="display: none;">
                     <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
                     <ul>
                         <li>Vérifiez si l'agent a une Boutique officielle sur Jumia Deals. Si c'est le cas, nous avons
@@ -360,27 +414,56 @@ layout = "default"
                         <li>Ne donnez pas d’informations personnelles avant la visite.</li>
                         <li>Méfiez-vous des offres trop interessantes.</li>
                     </ul>
-                </div>-->
-
+                </div>
             </section>
 
-            <!--<section class="row">
-                {% for publication in publications %}
-                <a class="col-md-4" href="{{ url('publications') }}/{{ publication.slot }}">
-                    <div class="polaroid">
-                        <img src="{{ publication.photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                        <div class="container-p">
-                            <p>{{ publication.libelle }}</p>
-                            <p><span class="address">{{ publication.typepublication.libelle }},
-                                    {{ publication.localisations.libelle}} </span></p>
-                            <div class="price-date">
-                                <span class="price">{{ publication.prix }}</span>
+            <section class="row" style="margin-top: 20px">
+                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
+                    <a href="{{ url('publications') }}/{{ publications[0].slot }}">
+                        <div class="polaroid">
+                            <img src="{{ publications[0].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
+                            <div class="container-p">
+                                <p>{{ publications[0].libelle }}</p>
+                                <p><span class="address">{{ publications[0].typepublication.libelle }},
+                                        {{ publications[0].localisations.libelle}} </span></p>
+                                <div class="price-date">
+                                    <span class="price">{{ publications[0].prix }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
-                {% endfor %}
-            </section>-->
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="two-publication-recommande">
+                    <a href="{{ url('publications') }}/{{ publications[1].slot }}">
+                        <div class="polaroid">
+                            <img src="{{ publications[1].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
+                            <div class="container-p">
+                                <p>{{ publications[1].libelle }}</p>
+                                <p><span class="address">{{ publications[1].typepublication.libelle }},
+                                        {{ publications[1].localisations.libelle}} </span></p>
+                                <div class="price-date">
+                                    <span class="price">{{ publications[1].prix }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="three-publication-recommande">
+                    <a href="{{ url('publications') }}/{{ publications[2].slot }}">
+                        <div class="polaroid">
+                            <img src="{{ publications[2].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
+                            <div class="container-p">
+                                <p>{{ publications[2].libelle }}</p>
+                                <p><span class="address">{{ publications[2].typepublication.libelle }},
+                                        {{ publications[2].localisations.libelle}} </span></p>
+                                <div class="price-date">
+                                    <span class="price">{{ publications[2].prix }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
 
         </article>
 

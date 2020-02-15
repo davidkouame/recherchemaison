@@ -15,9 +15,29 @@ description = "Default layout"
         <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
         <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
         {% styles %}
+
+        <style>
+            .responsive {
+                height: 160px;
+            }
+    
+            .responsive-collapse {
+                display: block !important;
+            }
+    
+            #layout-header {
+                margin-top: 0px;
+            }
+    
+            body {
+                padding-top: 44px;
+            }
+        </style>
     </head>
     <body>
         
+        {% partial 'site/header_general' %}
+
         <!-- Header -->
         <header id="layout-header">
             {% partial 'site/header_demarcheur' %}
@@ -63,6 +83,8 @@ description = "Default layout"
               
             })
         </script>
+
+        {% partial 'site/footer_general' %}
 
     </body>
 </html>

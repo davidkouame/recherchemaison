@@ -1,200 +1,287 @@
-1581532198a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4180:"description = "Default layout"
+1581782576a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:4718:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        {% styles %}
-    </head>
-    <body>
 
-        <!-- Header -->
-        {% if user %}
-            {% if user.demarcheur_id %}
-                <header id="layout-header">
-                    {% partial 'site/header_demarcheur' %}
-                </header>
-            {% elseif user.agence_id %}
-                <header id="layout-header">
-                    {% partial 'site/header_agence' %}
-                </header>
-            {% else %}
-                <header id="layout-header">
-                    {% partial 'site/header' %}
-                </header>
-            {% endif %}
-        {% else %}
-            <header id="layout-header">
-                {% partial 'site/header' %}
-            </header>
-        {% endif %}
+<head>
+    <meta charset="utf-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    {% styles %}
 
-        <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
+    <style>
+        .responsive {
+            height: 160px;
+        }
 
-        <!-- Footer -->
-        <footer id="layout-footer">
-            {% partial 'site/footer' %}
-        </footer>
+        .responsive-collapse {
+            display: block !important;
+        }
 
-        <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+        #layout-header {
+            margin-top: 0px;
+        }
 
-        <script>
-            $(document).ready(function(e){
-                $("input[name='typeuser']").click(function(e){
-                    if(e.target.value == 1){
-                        $("#agence_first_login").css('display', 'block');
-                        $("#demarcheur_first_login").css('display', 'none');
-                    }else{
-                        $("#agence_first_login").css('display', 'none');
-                        $("#demarcheur_first_login").css('display', 'block');
-                    }
-                });
+        #layout-content {
+            margin-top: 20px;
+        }
 
-                // afficher les informations (mail, tel) du demarcheur ou de l'agence
-                $("a[href='#contactPhone'").click(function(){
-                    $("#super-form-container").css('display', 'block');
-                    $("#contactPhone").css('display', 'flex');
-                });
-                $(".contactForm").click(function(){
-                    $("#super-form-container").css('display', 'block');
-                    $("#contactForm").css('display', 'flex');
-                });
+        body {
+            padding-top: 44px;
+        }
+    </style>
+</head>
 
-                // chargement des images
-                $(".imageminia").click(function(e){
-                    e.preventDefault();
-                    // alert("chargement d'image");
-                    // console.log(e.target.attr('imgptf'));
-                    let indeximg = $(this).data('imgptf');
-                    // console.log($(this).data('imgptf'));
-                    // console.log($(".imggf-"+indeximg).attr('src'));
-                    // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
-                    // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
-                    // console.log();
-                    $(".slide.active").removeClass("active").css("opacity", 0);
-                    $(".imggf-"+indeximg).parent().addClass("active").css("opacity", '');
-                    $(".img-miniature li.active").removeClass("active");
-                    $(this).parent().addClass('active');
-                })
+<body>
+
+    <!-- Header -->
+    {% if user %}
+    {% if user.demarcheur_id %}
+    <header id="layout-header">
+        {% partial 'site/header_demarcheur' %}
+    </header>
+    {% elseif user.agence_id %}
+    <header id="layout-header">
+        {% partial 'site/header_agence' %}
+    </header>
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+
+    <script>
+        $(document).ready(function (e) {
+            $("input[name='typeuser']").click(function (e) {
+                if (e.target.value == 1) {
+                    $("#agence_first_login").css('display', 'block');
+                    $("#demarcheur_first_login").css('display', 'none');
+                } else {
+                    $("#agence_first_login").css('display', 'none');
+                    $("#demarcheur_first_login").css('display', 'block');
+                }
             });
-        </script>
 
-    </body>
-</html>
-";s:5:"mtime";i:1581530193;s:6:"markup";s:4145:"<!DOCTYPE html>
+            // afficher les informations (mail, tel) du demarcheur ou de l'agence
+            let contact = 0;
+            $("a[href='#contactPhone'").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactPhone").css('display', 'flex');
+                contact += 1;
+                displayTextArea(2);
+            });
+            $(".contactForm").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactForm").css('display', 'flex');
+                contact += 1;
+                displayTextArea(1);
+            });
+
+            let displayTextArea = function (form) {
+                if (contact > 1) {
+                    $(".text-area").removeClass('warning-small').addClass('warning-large');
+                } else {
+                    if (form == 2) {
+                        $("#contactPhone").css('float', 'left');
+                    }
+                    $(".text-area").addClass('warning-small');
+                }
+            }
+
+            // chargement des images
+            $(".imageminia").click(function (e) {
+                e.preventDefault();
+                // alert("chargement d'image");
+                // console.log(e.target.attr('imgptf'));
+                let indeximg = $(this).data('imgptf');
+                // console.log($(this).data('imgptf'));
+                // console.log($(".imggf-"+indeximg).attr('src'));
+                // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                // console.log();
+                $(".slide.active").removeClass("active").css("opacity", 0);
+                $(".imggf-" + indeximg).parent().addClass("active").css("opacity", '');
+                $(".img-miniature li.active").removeClass("active");
+                $(this).parent().addClass('active');
+            })
+
+            
+        });
+    </script>
+
+    {% partial 'site/footer_general' %}
+</body>
+
+</html>";s:5:"mtime";i:1581781967;s:6:"markup";s:4684:"<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>October CMS - {{ this.page.title }}</title>
-        <meta name="description" content="{{ this.page.meta_description }}">
-        <meta name="title" content="{{ this.page.meta_title }}">
-        <meta name="author" content="OctoberCMS">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="generator" content="OctoberCMS">
-        <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
-        <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
-        <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
-        {% styles %}
-    </head>
-    <body>
 
-        <!-- Header -->
-        {% if user %}
-            {% if user.demarcheur_id %}
-                <header id="layout-header">
-                    {% partial 'site/header_demarcheur' %}
-                </header>
-            {% elseif user.agence_id %}
-                <header id="layout-header">
-                    {% partial 'site/header_agence' %}
-                </header>
-            {% else %}
-                <header id="layout-header">
-                    {% partial 'site/header' %}
-                </header>
-            {% endif %}
-        {% else %}
-            <header id="layout-header">
-                {% partial 'site/header' %}
-            </header>
-        {% endif %}
+<head>
+    <meta charset="utf-8">
+    <title>October CMS - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="OctoberCMS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="OctoberCMS">
+    <link rel="icon" type="image/png" href="{{ 'assets/images/october.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    {% styles %}
 
-        <!-- Content -->
-        <section id="layout-content">
-            {% page %}
-        </section>
+    <style>
+        .responsive {
+            height: 160px;
+        }
 
-        <!-- Footer -->
-        <footer id="layout-footer">
-            {% partial 'site/footer' %}
-        </footer>
+        .responsive-collapse {
+            display: block !important;
+        }
 
-        <!-- Scripts -->
-        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
-        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
-        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
-        {% framework extras %}
-        {% scripts %}
+        #layout-header {
+            margin-top: 0px;
+        }
 
-        <script>
-            $(document).ready(function(e){
-                $("input[name='typeuser']").click(function(e){
-                    if(e.target.value == 1){
-                        $("#agence_first_login").css('display', 'block');
-                        $("#demarcheur_first_login").css('display', 'none');
-                    }else{
-                        $("#agence_first_login").css('display', 'none');
-                        $("#demarcheur_first_login").css('display', 'block');
-                    }
-                });
+        #layout-content {
+            margin-top: 20px;
+        }
 
-                // afficher les informations (mail, tel) du demarcheur ou de l'agence
-                $("a[href='#contactPhone'").click(function(){
-                    $("#super-form-container").css('display', 'block');
-                    $("#contactPhone").css('display', 'flex');
-                });
-                $(".contactForm").click(function(){
-                    $("#super-form-container").css('display', 'block');
-                    $("#contactForm").css('display', 'flex');
-                });
+        body {
+            padding-top: 44px;
+        }
+    </style>
+</head>
 
-                // chargement des images
-                $(".imageminia").click(function(e){
-                    e.preventDefault();
-                    // alert("chargement d'image");
-                    // console.log(e.target.attr('imgptf'));
-                    let indeximg = $(this).data('imgptf');
-                    // console.log($(this).data('imgptf'));
-                    // console.log($(".imggf-"+indeximg).attr('src'));
-                    // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
-                    // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
-                    // console.log();
-                    $(".slide.active").removeClass("active").css("opacity", 0);
-                    $(".imggf-"+indeximg).parent().addClass("active").css("opacity", '');
-                    $(".img-miniature li.active").removeClass("active");
-                    $(this).parent().addClass('active');
-                })
+<body>
+
+    <!-- Header -->
+    {% if user %}
+    {% if user.demarcheur_id %}
+    <header id="layout-header">
+        {% partial 'site/header_demarcheur' %}
+    </header>
+    {% elseif user.agence_id %}
+    <header id="layout-header">
+        {% partial 'site/header_agence' %}
+    </header>
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+
+    <script>
+        $(document).ready(function (e) {
+            $("input[name='typeuser']").click(function (e) {
+                if (e.target.value == 1) {
+                    $("#agence_first_login").css('display', 'block');
+                    $("#demarcheur_first_login").css('display', 'none');
+                } else {
+                    $("#agence_first_login").css('display', 'none');
+                    $("#demarcheur_first_login").css('display', 'block');
+                }
             });
-        </script>
 
-    </body>
+            // afficher les informations (mail, tel) du demarcheur ou de l'agence
+            let contact = 0;
+            $("a[href='#contactPhone'").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactPhone").css('display', 'flex');
+                contact += 1;
+                displayTextArea(2);
+            });
+            $(".contactForm").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactForm").css('display', 'flex');
+                contact += 1;
+                displayTextArea(1);
+            });
+
+            let displayTextArea = function (form) {
+                if (contact > 1) {
+                    $(".text-area").removeClass('warning-small').addClass('warning-large');
+                } else {
+                    if (form == 2) {
+                        $("#contactPhone").css('float', 'left');
+                    }
+                    $(".text-area").addClass('warning-small');
+                }
+            }
+
+            // chargement des images
+            $(".imageminia").click(function (e) {
+                e.preventDefault();
+                // alert("chargement d'image");
+                // console.log(e.target.attr('imgptf'));
+                let indeximg = $(this).data('imgptf');
+                // console.log($(this).data('imgptf'));
+                // console.log($(".imggf-"+indeximg).attr('src'));
+                // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
+                // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                // console.log();
+                $(".slide.active").removeClass("active").css("opacity", 0);
+                $(".imggf-" + indeximg).parent().addClass("active").css("opacity", '');
+                $(".img-miniature li.active").removeClass("active");
+                $(this).parent().addClass('active');
+            })
+
+            
+        });
+    </script>
+
+    {% partial 'site/footer_general' %}
+</body>
+
 </html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

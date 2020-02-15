@@ -58,18 +58,60 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
     .nav.navbar-nav{
         float: right;
     }
+
+    @media screen and (max-width: 767px) {
+        .navbar-nav > li {
+            float: left;
+        }
+        .connection-xs{
+            display: block;
+            position: relative;
+            /*top: -59px;*/
+        }
+        .nav > li > a{
+            display: unset;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .connection-xs{
+            display: none;
+        }
+    }
+    
+    .connection-xs{
+        position: relative;
+        top: -59px;
+    }
+
+    @media screen and (max-width: 412px) {
+        #layout-content{
+            margin-top: 40px;
+        }
+
+        .nav.navbar-nav.connection-xs{
+            top: -10%;
+            left: -24%;
+        }
+        
+        .navbar-header{
+            left: 18%
+        }
+    }
 </style>
 
 <!-- Nav -->
-<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
+<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;
+border: 0px aliceblue;border: 0px aliceblue;height: 1px;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
             <a class=\"navbar-brand text-primary\" href=\"";
-        // line 31
+        // line 72
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("home");
         echo "\" style=\"font-size: 2rem;
             font-weight: 900;
-            line-height: 0;\">
+            line-height: 0;
+            padding-top: 33px;\">
                 </span>ChapMaison</span>
             </a>
         </div>
@@ -77,16 +119,16 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
             <ul class=\"nav navbar-nav\">
                 <li class=\"separator hidden-xs\"></li>
                 <li class=\"";
-        // line 40
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 40), "id", [], "any", false, false, false, 40) == "demarcheur")) {
+        // line 82
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 82), "id", [], "any", false, false, false, 82) == "demarcheur")) {
             echo "active";
         }
         echo "\"><a href=\"";
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
         echo "\">S'inscrire</a></li>
                 <li class=\"";
-        // line 41
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 41), "id", [], "any", false, false, false, 41) == "agence")) {
+        // line 83
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 83), "id", [], "any", false, false, false, 83) == "agence")) {
             echo "active";
         }
         echo "\"><a href=\"";
@@ -94,6 +136,25 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
         echo "\">Se connecter</a></li>
             </ul>
         </div>
+        <ul class=\"nav navbar-nav connection-xs\">
+            <li class=\"separator hidden-xs\"></li>
+            <li class=\"";
+        // line 88
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 88), "id", [], "any", false, false, false, 88) == "demarcheur")) {
+            echo "active";
+        }
+        echo "\"><a href=\"";
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
+        echo "\">S'inscrire</a></li>
+            <li class=\"";
+        // line 89
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 89), "id", [], "any", false, false, false, 89) == "agence")) {
+            echo "active";
+        }
+        echo "\"><a href=\"";
+        echo $this->extensions['Cms\Twig\Extension']->pageFilter("login");
+        echo "\">Se connecter</a></li>
+        </ul>
     </div>
 </nav>";
     }
@@ -110,7 +171,7 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
 
     public function getDebugInfo()
     {
-        return array (  89 => 41,  81 => 40,  69 => 31,  37 => 1,);
+        return array (  151 => 89,  143 => 88,  131 => 83,  123 => 82,  110 => 72,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -139,15 +200,57 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
     .nav.navbar-nav{
         float: right;
     }
+
+    @media screen and (max-width: 767px) {
+        .navbar-nav > li {
+            float: left;
+        }
+        .connection-xs{
+            display: block;
+            position: relative;
+            /*top: -59px;*/
+        }
+        .nav > li > a{
+            display: unset;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .connection-xs{
+            display: none;
+        }
+    }
+    
+    .connection-xs{
+        position: relative;
+        top: -59px;
+    }
+
+    @media screen and (max-width: 412px) {
+        #layout-content{
+            margin-top: 40px;
+        }
+
+        .nav.navbar-nav.connection-xs{
+            top: -10%;
+            left: -24%;
+        }
+        
+        .navbar-header{
+            left: 18%
+        }
+    }
 </style>
 
 <!-- Nav -->
-<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;\">
+<nav id=\"layout-nav\" class=\"navbar navbar-inverse navbar-fixed-top navbar-autohide\" role=\"navigation\" style=\"background-color: #fff;
+border: 0px aliceblue;border: 0px aliceblue;height: 1px;\">
     <div class=\"container\">
         <div class=\"navbar-header\">
             <a class=\"navbar-brand text-primary\" href=\"{{ 'home'|page }}\" style=\"font-size: 2rem;
             font-weight: 900;
-            line-height: 0;\">
+            line-height: 0;
+            padding-top: 33px;\">
                 </span>ChapMaison</span>
             </a>
         </div>
@@ -158,6 +261,11 @@ class __TwigTemplate_43b3385e995a423d5a3920d3a576e4b585d1d2ed4a502135e4ebf6f7c94
                 <li class=\"{% if this.page.id == 'agence' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Se connecter</a></li>
             </ul>
         </div>
+        <ul class=\"nav navbar-nav connection-xs\">
+            <li class=\"separator hidden-xs\"></li>
+            <li class=\"{% if this.page.id == 'demarcheur' %}active{% endif %}\"><a href=\"{{ 'register'|page }}\">S'inscrire</a></li>
+            <li class=\"{% if this.page.id == 'agence' %}active{% endif %}\"><a href=\"{{ 'login'|page }}\">Se connecter</a></li>
+        </ul>
     </div>
 </nav>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/partials/site/header.htm", "");
     }

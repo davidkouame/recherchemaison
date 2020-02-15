@@ -5,8 +5,13 @@ layout = "layout_demarcheur"
 ==
 
 <div class="row" style="margin-top: 40px;">
+    {% flash %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endflash %}
     <form class="col-md-12" role="form" data-request="onUpdateDemarcheur">
-        <label for="">Information sur le demarcheur</label>
+        <label for="">Information sur le démarcheur</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input

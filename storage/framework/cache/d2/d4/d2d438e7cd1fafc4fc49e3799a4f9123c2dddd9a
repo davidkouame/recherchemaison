@@ -1,0 +1,31 @@
+1581782946a:1:{s:23:"site/footer_general.htm";a:5:{s:8:"fileName";s:23:"site/footer_general.htm";s:7:"content";s:687:"<script>
+    // $("#collapse-navbar").css({'display' :'none !important'});
+    // $("#collapse-navbar .navbar-nav").css('display', 'none');
+
+    $("#btnResponsive").click(function (e) {
+        if ($("#layout-header").hasClass("responsive")) {
+            $("#layout-header").removeClass("responsive");
+            // $("#collapse-navbar").removeClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'none');
+        } else {
+            $("#layout-header").addClass("responsive");
+            // $("#collapse-navbar").addClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'block');
+        }
+    });
+</script>";s:5:"mtime";i:1581770825;s:6:"markup";s:687:"<script>
+    // $("#collapse-navbar").css({'display' :'none !important'});
+    // $("#collapse-navbar .navbar-nav").css('display', 'none');
+
+    $("#btnResponsive").click(function (e) {
+        if ($("#layout-header").hasClass("responsive")) {
+            $("#layout-header").removeClass("responsive");
+            // $("#collapse-navbar").removeClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'none');
+        } else {
+            $("#layout-header").addClass("responsive");
+            // $("#collapse-navbar").addClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'block');
+        }
+    });
+</script>";s:4:"code";N;}}

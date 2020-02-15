@@ -1,0 +1,16 @@
+<script>
+    // $("#collapse-navbar").css({'display' :'none !important'});
+    // $("#collapse-navbar .navbar-nav").css('display', 'none');
+
+    $("#btnResponsive").click(function (e) {
+        if ($("#layout-header").hasClass("responsive")) {
+            $("#layout-header").removeClass("responsive");
+            // $("#collapse-navbar").removeClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'none');
+        } else {
+            $("#layout-header").addClass("responsive");
+            // $("#collapse-navbar").addClass("responsive-collapse");
+            $("#collapse-navbar .navbar-nav").css('display', 'block');
+        }
+    });
+</script>

@@ -1,12 +1,17 @@
-1581532197a:1:{s:22:"demarcheur/account.htm";a:9:{s:8:"fileName";s:22:"demarcheur/account.htm";s:7:"content";s:2814:"title = "Espace démarcheur"
+1581782931a:1:{s:22:"demarcheur/account.htm";a:9:{s:8:"fileName";s:22:"demarcheur/account.htm";s:7:"content";s:2921:"title = "Espace démarcheur"
 url = "/demarcheur/account"
 layout = "layout_demarcheur"
 [AccountDemarcheurComponent]
 ==
 
 <div class="row" style="margin-top: 40px;">
+    {% flash %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endflash %}
     <form class="col-md-12" role="form" data-request="onUpdateDemarcheur">
-        <label for="">Information sur le demarcheur</label>
+        <label for="">Information sur le démarcheur</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input
@@ -80,9 +85,14 @@ layout = "layout_demarcheur"
         </div>
         <button type="submit" class="btn btn-primary active" data-attach-loading>Modifier</button>
       </form>
-</div>";s:5:"mtime";i:1579649903;s:6:"markup";s:2695:"<div class="row" style="margin-top: 40px;">
+</div>";s:5:"mtime";i:1581614610;s:6:"markup";s:2802:"<div class="row" style="margin-top: 40px;">
+    {% flash %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+    {% endflash %}
     <form class="col-md-12" role="form" data-request="onUpdateDemarcheur">
-        <label for="">Information sur le demarcheur</label>
+        <label for="">Information sur le démarcheur</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input
