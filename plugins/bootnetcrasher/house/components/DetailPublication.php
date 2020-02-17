@@ -47,17 +47,18 @@ class DetailPublication extends Account {
         try{
             $email = $this->getUserPublication($publication);
             $body = post('message');
+            $name = post('name');
             $emailUser = post('email');
             $tel = post('phoneNumber');
-            $vars = ["body" => $body, "tel" => $tel, "email" => $emailUser];
+            $vars = ["body" => $body, "tel" => $tel, "email" => $emailUser, "name" => $name];
             Mail::send('bootnetcrasher.sendmessage::sendmessage', $vars, function($message) use($email){
                 $message->to($email, 'Admin');
-                $message->subject('Recherche maison');
+                $message->subject('Recherche de maison');
             });
         }catch(\Exception $ex){
             trace_log($ex->getMessage());
         }
-        \Flash::success('Votre mail a été envoyé avec success !');
+        \Flash::success('Votre mail a été envoyé avec succèss !');
         return Redirect::to("publications/".$publication->slot);
     }
 

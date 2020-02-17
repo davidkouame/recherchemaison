@@ -120,15 +120,27 @@ layout = "default"
             width: 100%
         }
     }
+
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
+    
+    a:hover{
+        text-decoration: none;
+    }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
     <div class="col-md-12">
-    <div class="card">
         {% flash %}
             <div class="alert alert-success" style="text-align: center;">
                 {{ message }}
             </div>
         {% endflash %}
+    <div class="card">
         <article class="singlepost ">
             <header class="heading-area">
                 <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>

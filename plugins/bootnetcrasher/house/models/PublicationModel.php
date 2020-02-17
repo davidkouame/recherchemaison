@@ -45,15 +45,15 @@ class PublicationModel extends Model
 
     public function beforeCreate(){
         $this->slot = str_replace(' ', '-', $this->libelle);
-        if (BackendAuth::check()) {
+        /*if (BackendAuth::check()) {
             $this->agence_id = BackendAuth::getUser()->id;
-        }
+        }*/
     }
 
     public function beforeSave(){
         $this->slot = strtolower(str_replace(' ', '-', $this->libelle));
-        if (BackendAuth::check()) {
+        /*if (BackendAuth::check()) {
             $this->agence_id = BackendAuth::getUser()->id;
-        }
+        }*/
     }
 }

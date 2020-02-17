@@ -31,7 +31,7 @@ class Home extends Account {
         // recuperation de toutes les localisations
         $this->page['localisations'] = LocalisationModel::all();
         // recuperation de toutes les publications
-        $query = PublicationModel::with('typepublication');
+        $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){
             $query->where('libelle', 'like', '%'.Input::get('keys').'%');
         }

@@ -69,8 +69,25 @@ layout = "default"
         }
     }
 
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
     
+    a:hover{
+        text-decoration: none;
+    }
 </style>
+
+{% flash %}
+    <div class="alert alert-success" style="text-align: center;">
+        {{ message }}
+    </div>
+{% endflash %}
+
 <div class="ftco-cover-1 overlay" style="background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')">
     <div class="container">
         <div class="row align-items-center">

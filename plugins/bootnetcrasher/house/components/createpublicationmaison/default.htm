@@ -1,29 +1,48 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<style>
+    .img-responsive {
+        width: 50%;
+        height: 200px;
+        border: 2px dashed #ddd;
+        border-radius: 3px;
+        cursor: pointer;
+        text-align: center;
+        overflow: hidden;
+        padding: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+</style>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 {% flash %}
-    <div class="alert alert-success">{{ message }}</div>
+<div class="alert alert-success" style="text-align: center;">{{ message }}</div>
 {% endflash %}
 <div class="row" style="margin-top: 40px;">
     <h2>Publication d'une maison</h2>
     <br>
-    <form class="col-md-12" id="form-create-publication" role="form" data-request="onCreatePublicationMaison" data-request-files>
+    <form class="col-md-12" id="form-create-publication" role="form" data-request="onCreatePublicationMaison"
+        data-request-files>
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="">Nom de la publication <span class="required">*</span></label>
-                <input
-                    type="text"
-                    class="form-control"
-                    name="libelle"
-                    placeholder="Libellé"
-                />
+                <input type="text" class="form-control" name="libelle" placeholder="Libellé" />
             </div>
-            
+
             <div class="form-group col-md-6">
                 <label for="">Ville <span class="required">*</span></label>
                 <select name="ville_id" id="" class="form-control">
                     <option value="">Sélectionnez une ville </option>
                     {% for ville in villes %}
-                        <option value="{{ ville.id }}">{{ ville.libelle }}</option>
+                    <option value="{{ ville.id }}">{{ ville.libelle }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -34,7 +53,7 @@
                 <select name="localisation_id" id="" class="form-control">
                     <option value="">Sélectionnez une localisation</option>
                     {% for localisation in localisations %}
-                        <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                    <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -43,7 +62,7 @@
                 <select name="commune_id" id="" class="form-control">
                     <option value="">Sélectionnez une commune</option>
                     {% for commune in communes %}
-                        <option value="{{ commune.id }}">{{ commune.libelle }}</option>
+                    <option value="{{ commune.id }}">{{ commune.libelle }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -51,39 +70,37 @@
         <div class="row">
             <div class="form-group col-md-6">
                 <label for="">Nombre de pièce <span class="required">*</span></label>
-                <input
-                    type="number"
-                    class="form-control"
-                    name="nbre_piece"
-                    placeholder="Entrer le nombre de pièce"
-                />
+                <input type="number" class="form-control" name="nbre_piece" placeholder="Entrer le nombre de pièce" />
             </div>
-            <div class="form-group col-md-6 required" data-request-files data-request-flash>
-                <div id="imageResult">  
-                    <img src="{{'assets/images/avatar.jpg'|theme}}"  class="img-responsive" width="150px"/>
+
+        </div>
+        <div class="row">
+            <div class="form-group col-md-offset-3 col-md-6 required" data-request-files data-request-flash>
+                <div id="imageResult">
+                    <img src="" class="img-responsive" />
                 </div>
                 <br><br>
-                <label class="control-label"for="registerPhoto">Cover </label>
-                <input type="file" name="cover" 
-                    id="registerPhoto"
-                    accept="image/*" data-request="onImageUpload" 
-                    data-request-files  />
+                <label class="control-label" for="registerPhoto" style="padding-left: 25%;">Ajouter un cover </label>
+                <input type="file" name="cover" id="registerPhoto" accept="image/*" data-request="onImageUpload"
+                    data-request-files style="padding-left: 25%;" />
             </div>
         </div>
         <div class="row">
+            <label class="control-label col-md-3">
+                <h3>Upload des images</h3>
+            </label>
             <div class="form-horizontal">
                 <div class="form-group">
-                    <label class="control-label col-md-3">Upload Image</label>
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <div class="row">
                             <div id="coba"></div>
                         </div>
                     </div>
                 </div>
-            </div>	
+            </div>
         </div>
-    </div>
+</div>
 
-        <button type="submit" class="btn btn-primary active" data-attach-loading>Publiez</button>
-      </form>      
+    <button type="submit" class="btn btn-primary active pull-right" data-attach-loading style="margin-top: 20px;">Publiez</button>
+</form>
 </div>

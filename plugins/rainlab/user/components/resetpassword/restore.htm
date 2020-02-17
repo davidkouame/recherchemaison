@@ -1,14 +1,23 @@
-<p class="lead">
-    <strong>Lost your password?</strong> No problem! Enter your email address to verify your account.
-</p>
-
-<form
-    data-request="{{ __SELF__ }}::onRestorePassword"
-    data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'">
-    <div class="form-group">
-        <label for="userRestoreEmail">Email</label>
-        <input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Enter your email">
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        <p class="lead" style="text-align: center;">
+            <strong>Vous avez oublier votre mot de passe?</strong> 
+            <br>
+            Pas de problème! Entrez votre email  pour vérifier votre compte.
+        </p>
+        
+        <div class="row">
+                <form
+                    data-request="{{ __SELF__ }}::onRestorePassword"
+                    data-request-update="'{{ __SELF__ }}::reset': '#partialUserResetForm'"
+                    class="col-md-12"
+                    style="margin-left: 15%;">
+                    <div class="form-group col-md-4">
+                        <input name="email" type="email" class="form-control" id="userRestoreEmail" placeholder="Entrez votre email">
+                    </div>
+                    <button type="submit" class="btn btn-default col-md-4">Restorer votre mot de passe</button>
+                </form>
+        </div>
+        
     </div>
-
-    <button type="submit" class="btn btn-default">Restore password</button>
-</form>
+</div>

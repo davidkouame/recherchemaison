@@ -154,6 +154,10 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         #layout-header {
             margin-top: 0px;
         }
+
+        .post-content{
+            padding-left: 14px;
+        }
     </style>
 </head>
 
@@ -161,94 +165,94 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     <!-- Header -->
     ";
-        // line 57
+        // line 61
         if (($context["user"] ?? null)) {
-            // line 58
+            // line 62
             echo "        ";
-            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 58)) {
-                // line 59
+            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 62)) {
+                // line 63
                 echo "        <header id=\"layout-header\">
             ";
-                // line 60
+                // line 64
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 61
+                // line 65
                 echo "        </header>
         ";
-            } elseif (twig_get_attribute($this->env, $this->source,             // line 62
-($context["user"] ?? null), "agence_id", [], "any", false, false, false, 62)) {
-                // line 63
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 66
+($context["user"] ?? null), "agence_id", [], "any", false, false, false, 66)) {
+                // line 67
                 echo "            <header id=\"layout-header\">
                 ";
-                // line 64
+                // line 68
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_agence"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 65
+                // line 69
                 echo "            </header>
         ";
             } else {
-                // line 67
+                // line 71
                 echo "        <header id=\"layout-header\">
             ";
-                // line 68
+                // line 72
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 69
+                // line 73
                 echo "        </header>
         ";
             }
-            // line 71
+            // line 75
             echo "    ";
         } else {
-            // line 72
+            // line 76
             echo "        <header id=\"layout-header\">
             ";
-            // line 73
+            // line 77
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 74
+            // line 78
             echo "        </header>
     ";
         }
-        // line 76
+        // line 80
         echo "
     <!-- Content -->
     <section id=\"layout-content\">
         ";
-        // line 79
+        // line 83
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 80
+        // line 84
         echo "    </section>
 
     <!-- Footer -->
     <footer id=\"layout-footer\">
         ";
-        // line 84
+        // line 88
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 85
+        // line 89
         echo "    </footer>
 
     <!-- Scripts -->
     <script src=\"";
-        // line 88
+        // line 92
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
     <script src=\"";
-        // line 89
+        // line 93
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
     <script src=\"";
-        // line 90
+        // line 94
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
     ";
-        // line 91
+        // line 95
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -259,11 +263,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 92
+        // line 96
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 93
+        // line 97
         echo "
     <script>
         \$(document).ready(function (e) {
@@ -325,11 +329,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     </script>
 
     ";
-        // line 153
+        // line 157
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 154
+        // line 158
         echo "</body>
 
 </html>";
@@ -347,7 +351,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  333 => 154,  329 => 153,  267 => 93,  263 => 92,  252 => 91,  248 => 90,  244 => 89,  240 => 88,  235 => 85,  231 => 84,  225 => 80,  223 => 79,  218 => 76,  214 => 74,  210 => 73,  207 => 72,  204 => 71,  200 => 69,  196 => 68,  193 => 67,  189 => 65,  185 => 64,  182 => 63,  180 => 62,  177 => 61,  173 => 60,  170 => 59,  167 => 58,  165 => 57,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  337 => 158,  333 => 157,  271 => 97,  267 => 96,  256 => 95,  252 => 94,  248 => 93,  244 => 92,  239 => 89,  235 => 88,  229 => 84,  227 => 83,  222 => 80,  218 => 78,  214 => 77,  211 => 76,  208 => 75,  204 => 73,  200 => 72,  197 => 71,  193 => 69,  189 => 68,  186 => 67,  184 => 66,  181 => 65,  177 => 64,  174 => 63,  171 => 62,  169 => 61,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -401,6 +405,10 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
         #layout-header {
             margin-top: 0px;
+        }
+
+        .post-content{
+            padding-left: 14px;
         }
     </style>
 </head>

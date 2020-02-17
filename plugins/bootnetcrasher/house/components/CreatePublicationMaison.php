@@ -18,6 +18,7 @@ use bootnetcrasher\House\Models\DemarcheurModel;
 use RainLab\User\Components\Account;
 use Input;
 use System\Models\File;
+use October\Rain\Exception\ApplicationException;
 
 class CreatePublicationMaison extends  Account{
 
@@ -44,6 +45,7 @@ class CreatePublicationMaison extends  Account{
 
     // Publication d'une annone 
     public function onCreatePublicationMaison(){
+        $this->checkConditionUploadFile();
         $rules = [
             "libelle" => "required",
             "ville_id" => "required",
@@ -94,11 +96,36 @@ class CreatePublicationMaison extends  Account{
 
     public function onImageUpload() {
         $image = Input::all();
-
         $file = (new File())->fromPost($image['cover']);
-
         return[
-            '#imageResult' => '<img src="' . $file->getThumb(100, 100, ['mode' => 'crop']) . '" >'
+            '#imageResult' => '<img src="' . $file->getThumb(100, 100, ['mode' => 'crop']) . '" class="img-responsive">'
         ];
+    }
+
+    // Check all conditions upload file
+    public function checkConditionUploadFile(){
+        $image = Input::all();
+        if(array_key_exists('cover', $image)){
+            if(!$this->checkUploadFile($image['cover'])){
+                throw new ApplicationException("Le format du fichier est incorrect ou la taille est supérieur a 500MB !");
+            };
+        }
+        if(array_key_exists('fileUpload', $image)){
+            foreach($image['fileUpload'] as $index => $photo){
+                if(!$this->checkUploadFile($photo)){
+                    throw new ApplicationException("Le format du fichier (".($index*1+1).") est incorrect ou la taille est supérieur a 500MB  !");
+                };
+            }
+        }
+    }
+
+    public function checkUploadFile($photo){
+        if($photo->getSize() > 512000){
+            return false;
+        }
+        if($photo->getMimeType() == 'image/vnd.adobe.photoshop'){
+            return false;
+        }
+        return true;
     }
 }

@@ -29,6 +29,21 @@ class Publications extends Account {
     }
 
     public function onRun() {
+        // On vérifie si nous avons un param succes-delete en get 
+        if(get('success-delete') == 1){
+            \Flash::success('Votre publication a été supprimé avec succèss !');
+            return Redirect::to('demarcheur/publications');
+        }
+        // On vérifie si nous avons un param succes-publisher en get 
+        if(get('success-publisher') == 1){
+            dd("gdg");
+            \Flash::success('Votre publication a été pris en compte !');
+            return Redirect::to('demarcheur/publications');
+        }
+        if(get('success-publisher') == 2){
+            \Flash::success('Votre publication a été retirée avec succès !');
+            return Redirect::to('demarcheur/publications');
+        }
         $this->prepareVars();
         if(!$this->user()){
             return Redirect::to('auth/login');

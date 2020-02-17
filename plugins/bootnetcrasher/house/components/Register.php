@@ -57,7 +57,7 @@ class Register extends Account {
             $user->agence_id = $agencemodel->id;
             $user->save();
         }
-        \Flash::success('Lagence a été enregistré avec succèss !');
+        \Flash::success("Bienvenue à ChapMaison, votre compte agence a été crée avec succèss !");
         return true;
     }
 
@@ -75,7 +75,7 @@ class Register extends Account {
             $user->demarcheur_id = $demarcheur->id;
             $user->save();
         }
-        \Flash::success('Le démarcheur a été enregistré avec succèss !');
+        \Flash::success('Bienvenue à ChapMaison, votre compte démarcheur a été crée avec succèss !');
         return true;
     }
 

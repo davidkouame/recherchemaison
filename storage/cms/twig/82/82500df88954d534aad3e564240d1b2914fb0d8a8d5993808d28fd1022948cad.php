@@ -99,8 +99,35 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
         }
     }
 
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
     
+    a:hover{
+        text-decoration: none;
+    }
 </style>
+
+";
+        $_type = isset($context["type"]) ? $context["type"] : null;        $_message = isset($context["message"]) ? $context["message"] : null;        // line 79
+        foreach (Flash::getMessages() as $type => $messages) {
+            foreach ($messages as $message) {
+                $context["type"] = $type;                $context["message"] = $message;                // line 80
+                echo "    <div class=\"alert alert-success\" style=\"text-align: center;\">
+        ";
+                // line 81
+                echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
+                echo "
+    </div>
+";
+            }
+        }
+        $context["type"] = $_type;        $context["message"] = $_message;        // line 84
+        echo "
 <div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
@@ -109,12 +136,12 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                 <p class=\"mb-5\"><h3 style=\"color: #fff\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>
                 <form class=\"row\" action=\"";
-        // line 75
+        // line 92
         echo url("/");
         echo "\" method=\"GET\">
                     <div class=\"col-xs-5 col-md-7\">
                         <input name=\"keys\" placeholder=\"Que recherchez vous ?\" type=\"text\" class=\"form-control\" value=\"";
-        // line 77
+        // line 94
         echo twig_escape_filter($this->env, ($context["keys"] ?? null), "html", null, true);
         echo "\" style=\"height: 58px;\">
                     </div>
@@ -122,36 +149,36 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                         <select name=\"localisation_id\" id=\"\" class=\"form-control\" style=\"height: 58px;\">
                             <option value=\"\">Choisir une localisation </option>
                             ";
-        // line 82
+        // line 99
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["localisations"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["localisation"]) {
-            // line 83
+            // line 100
             echo "                            ";
-            if ((($context["localisation_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 83))) {
-                // line 84
+            if ((($context["localisation_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 100))) {
+                // line 101
                 echo "                            <option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 84), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 101), "html", null, true);
                 echo "\" selected>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 84), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 101), "html", null, true);
                 echo "</option>
                             ";
             } else {
-                // line 86
+                // line 103
                 echo "                            <option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 86), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 103), "html", null, true);
                 echo "\" selected>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 86), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 103), "html", null, true);
                 echo "</option>
                             ";
             }
-            // line 88
+            // line 105
             echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['localisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 89
+        // line 106
         echo "                        </select>
                     </div>
                     <div class=\"col-xs-3 col-md-2 search\">
@@ -167,40 +194,40 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
 <div class=\"container\" style=\"margin-top: 12px\">
     <div class=\"row\" >
         ";
-        // line 103
+        // line 120
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["publications"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["publication"]) {
-            // line 104
+            // line 121
             echo "            <div class=\"col-lg-4 col-sm-6 col-xs-6 col-md-4 publication\">
                 <a href=\"";
-            // line 105
+            // line 122
             echo url("publications");
             echo "/";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "slot", [], "any", false, false, false, 105), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "slot", [], "any", false, false, false, 122), "html", null, true);
             echo "\">
                     <div class=\"polaroid\">
                         <img src=\"";
-            // line 107
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 107), "getpath", [], "any", false, false, false, 107), "html", null, true);
+            // line 124
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 124), "getpath", [], "any", false, false, false, 124), "html", null, true);
             echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                         <div class=\"container-p\">
                             <p>";
-            // line 109
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 109), "html", null, true);
+            // line 126
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 126), "html", null, true);
             echo "</p>
                             <p><span class=\"address\">";
-            // line 110
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 110), "libelle", [], "any", false, false, false, 110), "html", null, true);
+            // line 127
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 127), "libelle", [], "any", false, false, false, 127), "html", null, true);
             echo ",
                                 ";
-            // line 111
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 111), "libelle", [], "any", false, false, false, 111), "html", null, true);
+            // line 128
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 128), "libelle", [], "any", false, false, false, 128), "html", null, true);
             echo " </span></p>
                                 <div class=\"price-date\">
                                     <span class=\"price\">";
-            // line 113
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 113), "html", null, true);
+            // line 130
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 130), "html", null, true);
             echo "</span>
                                 </div>
                         </div>
@@ -212,12 +239,12 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['publication'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 120
+        // line 137
         echo "    </div>
     <div class=\"row\">
         <div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"text-align: center\">
             ";
-        // line 123
+        // line 140
         echo ($context["publications"] ?? null);
         echo "
         </div>
@@ -237,7 +264,7 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
 
     public function getDebugInfo()
     {
-        return array (  221 => 123,  216 => 120,  203 => 113,  198 => 111,  194 => 110,  190 => 109,  185 => 107,  178 => 105,  175 => 104,  171 => 103,  155 => 89,  149 => 88,  141 => 86,  133 => 84,  130 => 83,  126 => 82,  118 => 77,  113 => 75,  37 => 1,);
+        return array (  248 => 140,  243 => 137,  230 => 130,  225 => 128,  221 => 127,  217 => 126,  212 => 124,  205 => 122,  202 => 121,  198 => 120,  182 => 106,  176 => 105,  168 => 103,  160 => 101,  157 => 100,  153 => 99,  145 => 94,  140 => 92,  130 => 84,  123 => 81,  120 => 80,  117 => 79,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -307,8 +334,25 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
         }
     }
 
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
     
+    a:hover{
+        text-decoration: none;
+    }
 </style>
+
+{% flash %}
+    <div class=\"alert alert-success\" style=\"text-align: center;\">
+        {{ message }}
+    </div>
+{% endflash %}
+
 <div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')\">
     <div class=\"container\">
         <div class=\"row align-items-center\">

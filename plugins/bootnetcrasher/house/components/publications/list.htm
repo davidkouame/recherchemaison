@@ -1,4 +1,8 @@
-
+{% flash %}
+<div class="alert alert-success" style="text-align: center;">
+    {{ message }}
+</div>
+{% endflash %}
 <h2>Liste des publications</h2>
 <table class="table">
     <thead>
@@ -10,9 +14,9 @@
       </tr>
     </thead>
     <tbody>
-        {% for publication in publications %}
+        {% for key, publication in publications %}
             <tr>
-                <th scope="row">1</th>
+                <th scope="row">{{ key+1 }}</th>
                 <td>{{ publication.libelle }}</td>
                 <td>{{ publication.published_at }}</td>
                 <td>

@@ -4,11 +4,11 @@
         $query = bootnetcrasher\House\Models\PublicationModel::where('id', $publication_id);
         $redirect = null;
         if($query->first() and $query->first()->agence_id)
-            $redirect = \Redirect::to('agence/publications');
+            $redirect = \Redirect::to('agence/publications?success-delete=1');
         else
-            $redirect = \Redirect::to('demarcheur/publications');
+            $redirect = \Redirect::to('demarcheur/publications?success-delete=1');
         $query->delete();
-        return $redirect;
+        return $redirect->with('message', 'test');
     });
 
     Route::get('unpublisher-publication/{publication_id}', function ($publication_id){
@@ -18,9 +18,9 @@
             $publication->save();
         }
         if($publication->agence_id)
-            return \Redirect::to('agence/publications');
+            return \Redirect::to('agence/publications?success-publisher=1');
         else
-            return \Redirect::to('demarcheur/publications');
+            return \Redirect::to('demarcheur/publications?success-publisher=2');
     });
 
     Route::get('publisher-publication/{publication_id}', function ($publication_id){
@@ -30,9 +30,9 @@
             $publication->save();
         }
         if($publication->agence_id)
-            return \Redirect::to('agence/publications');
+            return \Redirect::to('agence/publications?success-publisher=1');
         else
-            return \Redirect::to('demarcheur/publications');
+            return \Redirect::to('demarcheur/publications?success-publisher=2');
     });
 
     Route::get('agence/logout', function(){

@@ -1,4 +1,4 @@
-1581810592a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:25266:"title = "Recherche maison"
+1581948431a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:25435:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
@@ -120,15 +120,27 @@ layout = "default"
             width: 100%
         }
     }
+
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
+    
+    a:hover{
+        text-decoration: none;
+    }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
     <div class="col-md-12">
-    <div class="card">
         {% flash %}
             <div class="alert alert-success" style="text-align: center;">
                 {{ message }}
             </div>
         {% endflash %}
+    <div class="card">
         <article class="singlepost ">
             <header class="heading-area">
                 <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
@@ -469,7 +481,7 @@ layout = "default"
 
     </div>
 </div>
-</div>";s:5:"mtime";i:1581769816;s:6:"markup";s:25147:"<style>
+</div>";s:5:"mtime";i:1581871158;s:6:"markup";s:25316:"<style>
     @media screen and (max-width: 990px) {
         .singlepost .post-content {
             width: 100%;
@@ -585,15 +597,27 @@ layout = "default"
             width: 100%
         }
     }
+
+    .container-p P{
+        margin-bottom: 0px;
+    }
+
+    .price-date .price{
+        margin-bottom: 0px;
+    }
+    
+    a:hover{
+        text-decoration: none;
+    }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
     <div class="col-md-12">
-    <div class="card">
         {% flash %}
             <div class="alert alert-success" style="text-align: center;">
                 {{ message }}
             </div>
         {% endflash %}
+    <div class="card">
         <article class="singlepost ">
             <header class="heading-area">
                 <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>

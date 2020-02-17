@@ -1,4 +1,4 @@
-1581810675a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6353:"description = "Default layout"
+1581948431a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6419:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -49,6 +49,10 @@
 
         #layout-header {
             margin-top: 0px;
+        }
+
+        .post-content{
+            padding-left: 14px;
         }
     </style>
 </head>
@@ -155,7 +159,7 @@
     {% partial 'site/footer_general' %}
 </body>
 
-</html>";s:5:"mtime";i:1581810017;s:6:"markup";s:6319:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1581872123;s:6:"markup";s:6385:"<!DOCTYPE html>
 <html>
 
 <head>
@@ -204,6 +208,10 @@
 
         #layout-header {
             margin-top: 0px;
+        }
+
+        .post-content{
+            padding-left: 14px;
         }
     </style>
 </head>
