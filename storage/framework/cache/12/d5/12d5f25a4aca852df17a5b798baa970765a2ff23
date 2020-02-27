@@ -1,4 +1,4 @@
-1581948431a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:25435:"title = "Recherche maison"
+1582763777a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:25071:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
@@ -408,10 +408,6 @@ layout = "default"
                 <div class="text-area" style="display: none;">
                     <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
                     <ul>
-                        <li>Vérifiez si l'agent a une Boutique officielle sur Jumia Deals. Si c'est le cas, nous avons
-                            déjà échangé avec ce professionnel.</li>
-                        <li>Toutes les annonces avec la mention "Jumia House" proviennent de partenaires spécialisés
-                            dans l'immobilier.</li>
                         <li>N'envoyez jamais d'argent pour "réserver" un logement, demandez combien payer pour une
                             visite</li>
                         <li>Evitez de transférer de l’argent via des services comme Mobile Money, Western Union …</li>
@@ -481,7 +477,7 @@ layout = "default"
 
     </div>
 </div>
-</div>";s:5:"mtime";i:1581871158;s:6:"markup";s:25316:"<style>
+</div>";s:5:"mtime";i:1582760835;s:6:"markup";s:24952:"<style>
     @media screen and (max-width: 990px) {
         .singlepost .post-content {
             width: 100%;
@@ -885,10 +881,6 @@ layout = "default"
                 <div class="text-area" style="display: none;">
                     <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
                     <ul>
-                        <li>Vérifiez si l'agent a une Boutique officielle sur Jumia Deals. Si c'est le cas, nous avons
-                            déjà échangé avec ce professionnel.</li>
-                        <li>Toutes les annonces avec la mention "Jumia House" proviennent de partenaires spécialisés
-                            dans l'immobilier.</li>
                         <li>N'envoyez jamais d'argent pour "réserver" un logement, demandez combien payer pour une
                             visite</li>
                         <li>Evitez de transférer de l’argent via des services comme Mobile Money, Western Union …</li>

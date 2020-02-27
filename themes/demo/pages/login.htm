@@ -13,6 +13,11 @@ layout = "default"
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-sm-offset-3 col-sm-6 col-md-4">
     <h3 style="margin: 0px;font-weight: bold;text-align: center;">Connexion</h3>
     <hr style="margin-top: 10px;">
+    {% flash %}
+    <div class="alert alert-danger">
+      {{ message }}
+    </div>
+    {% endflash %}
 </div>
   <form class="col-md-offset-4 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6 col-md-4" role="form" data-request="onSignin">
       <div class="form-group">

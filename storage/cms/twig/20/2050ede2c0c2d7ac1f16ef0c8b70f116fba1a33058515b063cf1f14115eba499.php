@@ -44,7 +44,22 @@ class __TwigTemplate_d786c5abcb04283efd267229ed2a66921a2849a7d71326cd770cdb482e7
   <div class=\"col-xs-offset-2 col-xs-8 col-md-offset-4 col-sm-offset-3 col-sm-6 col-md-4\">
     <h3 style=\"margin: 0px;font-weight: bold;text-align: center;\">Connexion</h3>
     <hr style=\"margin-top: 10px;\">
-</div>
+    ";
+        $_type = isset($context["type"]) ? $context["type"] : null;        $_message = isset($context["message"]) ? $context["message"] : null;        // line 11
+        foreach (Flash::getMessages() as $type => $messages) {
+            foreach ($messages as $message) {
+                $context["type"] = $type;                $context["message"] = $message;                // line 12
+                echo "    <div class=\"alert alert-danger\">
+      ";
+                // line 13
+                echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
+                echo "
+    </div>
+    ";
+            }
+        }
+        $context["type"] = $_type;        $context["message"] = $_message;        // line 16
+        echo "</div>
   <form class=\"col-md-offset-4 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6 col-md-4\" role=\"form\" data-request=\"onSignin\">
       <div class=\"form-group\">
         <input
@@ -63,14 +78,14 @@ class __TwigTemplate_d786c5abcb04283efd267229ed2a66921a2849a7d71326cd770cdb482e7
         />
       </div>
       <!--<a href=\"";
-        // line 29
+        // line 34
         echo $this->extensions['Cms\Twig\Extension']->pageFilter("register");
         echo "\">je n'ai pas de compte </a> </br>-->
       <div class=\"col-md-12\" style=\"text-align: center;\">
         <button type=\"submit\" class=\"btn btn-primary active\" data-attach-loading>Connectez vous</button>
         <br>
         <a href=\"";
-        // line 33
+        // line 38
         echo url("auth/forget-password");
         echo "\"> j'ai oublié mon mot de passe</a>
       </div>
@@ -90,7 +105,7 @@ class __TwigTemplate_d786c5abcb04283efd267229ed2a66921a2849a7d71326cd770cdb482e7
 
     public function getDebugInfo()
     {
-        return array (  74 => 33,  67 => 29,  37 => 1,);
+        return array (  89 => 38,  82 => 34,  62 => 16,  55 => 13,  52 => 12,  49 => 11,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -105,6 +120,11 @@ class __TwigTemplate_d786c5abcb04283efd267229ed2a66921a2849a7d71326cd770cdb482e7
   <div class=\"col-xs-offset-2 col-xs-8 col-md-offset-4 col-sm-offset-3 col-sm-6 col-md-4\">
     <h3 style=\"margin: 0px;font-weight: bold;text-align: center;\">Connexion</h3>
     <hr style=\"margin-top: 10px;\">
+    {% flash %}
+    <div class=\"alert alert-danger\">
+      {{ message }}
+    </div>
+    {% endflash %}
 </div>
   <form class=\"col-md-offset-4 col-sm-offset-3 col-xs-offset-2 col-xs-8 col-sm-6 col-md-4\" role=\"form\" data-request=\"onSignin\">
       <div class=\"form-group\">

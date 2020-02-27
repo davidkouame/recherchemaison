@@ -47,7 +47,7 @@ class Login extends Account {
                         // ->whereNotNull('agence_id')
                         ->first();
             if(!$user){
-                Flash::error("L'email ou le mot de passe invalide");
+                Flash::error("L'email ou le mot de passe est invalide");
                 return Redirect::back()->withInput(Request::except('password'));
             }
             
