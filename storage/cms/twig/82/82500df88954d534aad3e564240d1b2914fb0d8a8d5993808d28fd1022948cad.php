@@ -128,10 +128,10 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
         }
         $context["type"] = $_type;        $context["message"] = $_message;        // line 84
         echo "
-<div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')\">
+<div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg'); min-height: 350px; height: 260px;\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
-            <div class=\"col-lg-12\">
+            <div class=\"col-lg-12\" style=\"padding-top: 40px;\">
                 <h1>Choose Your Quality Delivery of Your Cargo</h1>
                 <p class=\"mb-5\"><h3 style=\"color: #fff\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>
@@ -353,10 +353,10 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
     </div>
 {% endflash %}
 
-<div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg')\">
+<div class=\"ftco-cover-1 overlay\" style=\"background-image: url('http://localhost:8888/images/photo-1527908147823-1.jpg.jpg'); min-height: 350px; height: 260px;\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
-            <div class=\"col-lg-12\">
+            <div class=\"col-lg-12\" style=\"padding-top: 40px;\">
                 <h1>Choose Your Quality Delivery of Your Cargo</h1>
                 <p class=\"mb-5\"><h3 style=\"color: #fff\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>
