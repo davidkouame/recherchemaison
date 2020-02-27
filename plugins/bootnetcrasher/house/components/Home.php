@@ -38,7 +38,7 @@ class Home extends Account {
         if(Input::get('localisation_id')){
             $query->where('localisation_id', Input::get('localisation_id'));
         }
-        $this->page['publications'] = $query->paginate(6);
+        $this->page['publications'] = $query->paginate(12);
         $this->page['keys'] = Input::get('keys');
         $this->page['localisation_id'] = Input::get('localisation_id');
     }
