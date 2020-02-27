@@ -47,7 +47,7 @@ class __TwigTemplate_b0224cbbac62caa0e3130265148070a68e21a6ef4866949f48beb542905
                         <span style=\"font-weight: bold;\">Localisation :</span> Abidjan,Côte d'Ivoire
                     </li>
                     <li class=\"col-md-3 mb-2 d-flex align-items-center\">
-                        <span style=\"font-weight: bold;\">Téléphone : </span> <a href=\"tel:+61283766284\"> <span>+225 47 88 69 05</span> <br>  <span style=\"padding-left: 88px;\">+225 56 67 78 78</span> </a></li>
+                        <span style=\"font-weight: bold;\">Téléphone : </span> <a href=\"tel:+61283766284\"> <span>+225 47 88 69 05</span> <br>  <span style=\"padding-left: 88px;\">+225 08 73 13 00</span> </a></li>
                     <li class=\"col-md-3 mb-2 d-flex align-items-center\">
                         <span style=\"font-weight: bold;\">Email : </span> <a href=\"mailto:support@chapmaison.com\"> support@chapmaison.com</a>
                     </li>
@@ -96,7 +96,7 @@ class __TwigTemplate_b0224cbbac62caa0e3130265148070a68e21a6ef4866949f48beb542905
                         <span style=\"font-weight: bold;\">Localisation :</span> Abidjan,Côte d'Ivoire
                     </li>
                     <li class=\"col-md-3 mb-2 d-flex align-items-center\">
-                        <span style=\"font-weight: bold;\">Téléphone : </span> <a href=\"tel:+61283766284\"> <span>+225 47 88 69 05</span> <br>  <span style=\"padding-left: 88px;\">+225 56 67 78 78</span> </a></li>
+                        <span style=\"font-weight: bold;\">Téléphone : </span> <a href=\"tel:+61283766284\"> <span>+225 47 88 69 05</span> <br>  <span style=\"padding-left: 88px;\">+225 08 73 13 00</span> </a></li>
                     <li class=\"col-md-3 mb-2 d-flex align-items-center\">
                         <span style=\"font-weight: bold;\">Email : </span> <a href=\"mailto:support@chapmaison.com\"> support@chapmaison.com</a>
                     </li>

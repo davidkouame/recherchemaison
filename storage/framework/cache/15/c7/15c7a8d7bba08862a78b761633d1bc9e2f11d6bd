@@ -1,4 +1,4 @@
-1582768213a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:4598:"title = "Recherche maison"
+1582773350a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5027:"title = "Recherche maison"
 url = "/"
 layout = "default"
 [HomeComponent]
@@ -92,9 +92,11 @@ layout = "default"
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12" style="padding-top: 40px;">
-                <h1>Choose Your Quality Delivery of Your Cargo</h1>
-                <p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
-                    fugit modi similique, suscipit, deserunt a iure.</h3></p>
+                <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
+                <h1>Trouvez une maison en vente ou en location</h1>
+                <br>
+                <!--<p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
+                    fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
                 <form class="row" action="{{ url('/') }}" method="GET">
                     <div class="col-xs-5 col-md-7">
                         <input name="keys" placeholder="Que recherchez vous ?" type="text" class="form-control" value="{{ keys }}" style="height: 58px;">
@@ -106,7 +108,7 @@ layout = "default"
                             {% if localisation_id == localisation.id %}
                             <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
                             {% else %}
-                            <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
                             {% endif %}
                             {% endfor %}
                         </select>
@@ -123,30 +125,36 @@ layout = "default"
 
 <div class="container" style="margin-top: 12px">
     <div class="row" >
-        {% for publication in publications %}
-            <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
-                <a href="{{ url('publications') }}/{{ publication.slot }}">
-                    <div class="polaroid">
-                        <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
-                        <div class="container-p">
-                            <p>{{ publication.libelle }}</p>
-                            <p><span class="address">{{ publication.typepublication.libelle }},
-                                {{ publication.localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publication.prix }}</span>
-                                </div>
+        {% if publications|length > 0 %}
+            {% for publication in publications %}
+                <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
+                    <a href="{{ url('publications') }}/{{ publication.slot }}">
+                        <div class="polaroid">
+                            <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            <div class="container-p">
+                                <p>{{ publication.libelle }}</p>
+                                <p><span class="address">{{ publication.typepublication.libelle }},
+                                    {{ publication.localisations.libelle}} </span></p>
+                                    <div class="price-date">
+                                        <span class="price">{{ publication.prix }}</span>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-md-12" style="text-align: center;"><h3>Désolé, aucune maison trouvée !</h3> </div>
+        {% endif %}
+    </div>
+    {% if publications|length > 0 %}
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
+                {{ publications | raw }}
             </div>
-        {% endfor %}
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
-            {{ publications | raw }}
         </div>
-    </div>
-</div>";s:5:"mtime";i:1582764342;s:6:"markup";s:4522:"<style>
+    {% endif %}
+</div>";s:5:"mtime";i:1582772745;s:6:"markup";s:4951:"<style>
     @media screen and (max-width: 500px) {
         .publication{
             margin-left: 6%;
@@ -234,9 +242,11 @@ layout = "default"
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12" style="padding-top: 40px;">
-                <h1>Choose Your Quality Delivery of Your Cargo</h1>
-                <p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
-                    fugit modi similique, suscipit, deserunt a iure.</h3></p>
+                <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
+                <h1>Trouvez une maison en vente ou en location</h1>
+                <br>
+                <!--<p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
+                    fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
                 <form class="row" action="{{ url('/') }}" method="GET">
                     <div class="col-xs-5 col-md-7">
                         <input name="keys" placeholder="Que recherchez vous ?" type="text" class="form-control" value="{{ keys }}" style="height: 58px;">
@@ -248,7 +258,7 @@ layout = "default"
                             {% if localisation_id == localisation.id %}
                             <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
                             {% else %}
-                            <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
+                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
                             {% endif %}
                             {% endfor %}
                         </select>
@@ -265,27 +275,33 @@ layout = "default"
 
 <div class="container" style="margin-top: 12px">
     <div class="row" >
-        {% for publication in publications %}
-            <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
-                <a href="{{ url('publications') }}/{{ publication.slot }}">
-                    <div class="polaroid">
-                        <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
-                        <div class="container-p">
-                            <p>{{ publication.libelle }}</p>
-                            <p><span class="address">{{ publication.typepublication.libelle }},
-                                {{ publication.localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publication.prix }}</span>
-                                </div>
+        {% if publications|length > 0 %}
+            {% for publication in publications %}
+                <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
+                    <a href="{{ url('publications') }}/{{ publication.slot }}">
+                        <div class="polaroid">
+                            <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            <div class="container-p">
+                                <p>{{ publication.libelle }}</p>
+                                <p><span class="address">{{ publication.typepublication.libelle }},
+                                    {{ publication.localisations.libelle}} </span></p>
+                                    <div class="price-date">
+                                        <span class="price">{{ publication.prix }}</span>
+                                    </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <div class="col-md-12" style="text-align: center;"><h3>Désolé, aucune maison trouvée !</h3> </div>
+        {% endif %}
+    </div>
+    {% if publications|length > 0 %}
+        <div class="row">
+            <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
+                {{ publications | raw }}
             </div>
-        {% endfor %}
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
-            {{ publications | raw }}
         </div>
-    </div>
+    {% endif %}
 </div>";s:4:"code";N;s:5:"title";s:16:"Recherche maison";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:13:"HomeComponent";a:0:{}}}
