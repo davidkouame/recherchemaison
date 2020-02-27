@@ -78,12 +78,12 @@ class Publications extends Account {
         if($user->agence_id){
             $agence = AgenceModel::find($user->agence_id);
             // recuperation de toutes les publications
-            $this->page['publications'] = $publications = PublicationModel::where('agence_id', $agence->id)->get();
+            $this->page['publications'] = $publications = PublicationModel::where('agence_id', $agence->id)->orderBy('created_at', 'desc')->get();
             $this->page['modelUser'] = 'agence';
         }else{
             $demarcheur = DemarcheurModel::find($user->demarcheur_id);
             // recuperation de toutes les publications
-            $this->page['publications'] = $publications = PublicationModel::where('demarcheur_id', $demarcheur->id)->get();
+            $this->page['publications'] = $publications = PublicationModel::where('demarcheur_id', $demarcheur->id)->orderBy('created_at', 'desc')->get();
             $this->page['modelUser'] = 'demarcheur';
         }
     }
