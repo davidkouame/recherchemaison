@@ -1,4 +1,4 @@
-1582773350a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5027:"title = "Recherche maison"
+1582935543a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5298:"title = "Recherche maison"
 url = "/"
 layout = "default"
 [HomeComponent]
@@ -130,7 +130,11 @@ layout = "default"
                 <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
                     <a href="{{ url('publications') }}/{{ publication.slot }}">
                         <div class="polaroid">
-                            <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% if publication.cover %}
+                                <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% else %}
+                            <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% endif %}
                             <div class="container-p">
                                 <p>{{ publication.libelle }}</p>
                                 <p><span class="address">{{ publication.typepublication.libelle }},
@@ -154,7 +158,7 @@ layout = "default"
             </div>
         </div>
     {% endif %}
-</div>";s:5:"mtime";i:1582772745;s:6:"markup";s:4951:"<style>
+</div>";s:5:"mtime";i:1582934942;s:6:"markup";s:5222:"<style>
     @media screen and (max-width: 500px) {
         .publication{
             margin-left: 6%;
@@ -280,7 +284,11 @@ layout = "default"
                 <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
                     <a href="{{ url('publications') }}/{{ publication.slot }}">
                         <div class="polaroid">
-                            <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% if publication.cover %}
+                                <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% else %}
+                            <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% endif %}
                             <div class="container-p">
                                 <p>{{ publication.libelle }}</p>
                                 <p><span class="address">{{ publication.typepublication.libelle }},

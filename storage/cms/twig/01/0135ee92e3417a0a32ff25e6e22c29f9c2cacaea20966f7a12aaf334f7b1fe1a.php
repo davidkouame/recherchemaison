@@ -315,7 +315,6 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 let indeximg = \$(this).data('imgptf');
                 // console.log(\$(this).data('imgptf'));
                 // console.log(\$(\".imggf-\"+indeximg).attr('src'));
-                // \$(\".slide.active img\").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
                 // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
                 // console.log();
                 \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);
@@ -329,11 +328,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     </script>
 
     ";
-        // line 157
+        // line 156
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 158
+        // line 157
         echo "</body>
 
 </html>";
@@ -351,7 +350,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  337 => 158,  333 => 157,  271 => 97,  267 => 96,  256 => 95,  252 => 94,  248 => 93,  244 => 92,  239 => 89,  235 => 88,  229 => 84,  227 => 83,  222 => 80,  218 => 78,  214 => 77,  211 => 76,  208 => 75,  204 => 73,  200 => 72,  197 => 71,  193 => 69,  189 => 68,  186 => 67,  184 => 66,  181 => 65,  177 => 64,  174 => 63,  171 => 62,  169 => 61,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  336 => 157,  332 => 156,  271 => 97,  267 => 96,  256 => 95,  252 => 94,  248 => 93,  244 => 92,  239 => 89,  235 => 88,  229 => 84,  227 => 83,  222 => 80,  218 => 78,  214 => 77,  211 => 76,  208 => 75,  204 => 73,  200 => 72,  197 => 71,  193 => 69,  189 => 68,  186 => 67,  184 => 66,  181 => 65,  177 => 64,  174 => 63,  171 => 62,  169 => 61,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -499,7 +498,6 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 let indeximg = \$(this).data('imgptf');
                 // console.log(\$(this).data('imgptf'));
                 // console.log(\$(\".imggf-\"+indeximg).attr('src'));
-                // \$(\".slide.active img\").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
                 // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
                 // console.log();
                 \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);

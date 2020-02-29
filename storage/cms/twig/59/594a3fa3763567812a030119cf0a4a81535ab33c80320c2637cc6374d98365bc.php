@@ -220,67 +220,66 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                 echo "\" src=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["photo"], "getPath", [], "any", false, false, false, 156), "html", null, true);
                 echo "\"
-                                            data-src=\"https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg\"
                                             alt=\"Belle Apparemment À Vendre  - Côte d’Ivoire\"></div>
                                     ";
             }
-            // line 160
+            // line 159
             echo "                                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['photo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 161
+        // line 160
         echo "                                </div>
                                 <span class=\"loader\" style=\"display: none;\"></span>
                             </div>
                             <ul class=\"pagination img-miniature\">
                                 ";
-        // line 165
+        // line 164
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "photos", [], "any", false, false, false, 165));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "photos", [], "any", false, false, false, 164));
         foreach ($context['_seq'] as $context["key"] => $context["photo"]) {
-            // line 166
+            // line 165
             echo "                                ";
             if (($context["key"] == 0)) {
-                // line 167
+                // line 166
                 echo "                                <li class=\"active\">
                                     <a href=\"javascript:void(0)\" class=\"imageminia\" data-imgptf=\"1\"><img
                                             style=\"width: 100px;height: 66px;\"
                                             src=\"";
-                // line 170
-                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, $context["photo"], "getPath", [], "any", false, false, false, 170), 100, 100]);
+                // line 169
+                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, $context["photo"], "getPath", [], "any", false, false, false, 169), 100, 100]);
                 echo "\"
                                             alt=\"";
-                // line 171
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "libelle", [], "any", false, false, false, 171), "html", null, true);
+                // line 170
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "libelle", [], "any", false, false, false, 170), "html", null, true);
                 echo "\">
                                     </a>
                                 </li>
                                 ";
             } else {
-                // line 175
+                // line 174
                 echo "                                <li><a href=\"javascript:void(0)\" class=\"imageminia\" data-imgptf=\"";
                 echo twig_escape_filter($this->env, ($context["key"] + 1), "html", null, true);
                 echo "\"><img
                                             style=\"width: 100px;height: 66px;\"
                                             src=\"";
-                // line 177
-                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, $context["photo"], "getPath", [], "any", false, false, false, 177), 100, 100]);
+                // line 176
+                echo call_user_func_array($this->env->getFilter('resize')->getCallable(), [twig_get_attribute($this->env, $this->source, $context["photo"], "getPath", [], "any", false, false, false, 176), 100, 100]);
                 echo "\"
                                             alt=\"";
-                // line 178
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "libelle", [], "any", false, false, false, 178), "html", null, true);
+                // line 177
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "libelle", [], "any", false, false, false, 177), "html", null, true);
                 echo "\"></a></li>
                                 ";
             }
-            // line 180
+            // line 179
             echo "                                ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['key'], $context['photo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 181
+        // line 180
         echo "    
     
                             </ul>
@@ -289,67 +288,67 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                         <div class=\"post-attributes\">
                             <div class=\"new-attr-style\">
                                 ";
-        // line 188
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "nbre_piece", [], "any", false, false, false, 188)) {
+        // line 187
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "nbre_piece", [], "any", false, false, false, 187)) {
             echo " <h3>Nombre de
                                     pièces<span>";
-            // line 189
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "nbre_piece", [], "any", false, false, false, 189), "html", null, true);
+            // line 188
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "nbre_piece", [], "any", false, false, false, 188), "html", null, true);
             echo "<span></span></span></h3> ";
         }
-        // line 190
+        // line 189
         echo "                                ";
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "commune", [], "any", false, false, false, 190)) {
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "commune", [], "any", false, false, false, 189)) {
             echo " <h3>
                                     Commune<span>";
-            // line 191
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "commune", [], "any", false, false, false, 191), "libelle", [], "any", false, false, false, 191), "html", null, true);
+            // line 190
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "commune", [], "any", false, false, false, 190), "libelle", [], "any", false, false, false, 190), "html", null, true);
             echo "<span></span></span></h3> ";
         }
-        // line 192
+        // line 191
         echo "                                ";
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "ville", [], "any", false, false, false, 192)) {
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "ville", [], "any", false, false, false, 191)) {
             echo " <h3>
                                     Ville<span>";
-            // line 193
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "ville", [], "any", false, false, false, 193), "libelle", [], "any", false, false, false, 193), "html", null, true);
+            // line 192
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "ville", [], "any", false, false, false, 192), "libelle", [], "any", false, false, false, 192), "html", null, true);
             echo "<span></span></span></h3> ";
         }
-        // line 194
+        // line 193
         echo "                                ";
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "Localisation", [], "any", false, false, false, 194)) {
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "Localisation", [], "any", false, false, false, 193)) {
             echo " <h3>
                                     Localisation<span>";
-            // line 195
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "Localisation", [], "any", false, false, false, 195), "libelle", [], "any", false, false, false, 195), "html", null, true);
+            // line 194
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "Localisation", [], "any", false, false, false, 194), "libelle", [], "any", false, false, false, 194), "html", null, true);
             echo "<span></span></span></h3>
                                 ";
         }
-        // line 197
+        // line 196
         echo "                                ";
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "typepublication", [], "any", false, false, false, 197)) {
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "typepublication", [], "any", false, false, false, 196)) {
             echo " <h3>Type de
                                     publication<span>";
-            // line 198
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "typepublication", [], "any", false, false, false, 198), "libelle", [], "any", false, false, false, 198), "html", null, true);
+            // line 197
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "typepublication", [], "any", false, false, false, 197), "libelle", [], "any", false, false, false, 197), "html", null, true);
             echo "<span></span></span></h3>
                                 ";
         }
-        // line 200
+        // line 199
         echo "                            </div>
                         </div>
                         <div class=\"post-text-content\" style=\"margin-top: 12px;\">
                             <div class=\"title\">Description :</div>
                             <p>
                                 ";
-        // line 205
-        echo twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "description", [], "any", false, false, false, 205);
+        // line 204
+        echo twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "description", [], "any", false, false, false, 204);
         echo "
                             </p>
                             <p>
                                 <b>Date de publication: ";
-        // line 208
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 208), "html", null, true);
+        // line 207
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 207), "html", null, true);
         echo "</b>
                             </p>
                         </div>
@@ -357,12 +356,12 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                         <div class=\"aside aside-description\" style=\"width: 100%;\">
                             <div class=\"aside-infos\" style=\"min-height: unset;\">
                                 <section id=\"priceSection\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">
-                                    <meta itemprop=\"url\" content=\"https://deals.jumia.ci/belle-apparemment-vendre--pid5443116\">
+                                    <meta itemprop=\"url\" >
                                     <meta itemprop=\"availability\" content=\"http://schema.org/InStock\">
                                     <span class=\"price\">
                                         <span itemprop=\"price\" content=\"95000000.00\">";
-        // line 218
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "prix", [], "any", false, false, false, 218), "html", null, true);
+        // line 217
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "prix", [], "any", false, false, false, 217), "html", null, true);
         echo "</span>
                                         <span itemprop=\"priceCurrency\" content=\"FCFA\">FCFA</span>
                                     </span>
@@ -371,47 +370,47 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                                         class=\"seller-details\">
                                         <dl>
                                             ";
-        // line 225
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 225)) {
-            // line 226
+        // line 224
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 224)) {
+            // line 225
             echo "                                            <dt>Agence</dt>
                                             <dd><span itemprop=\"name\">";
-            // line 227
-            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 227), "libelle", [], "any", false, false, false, 227), 0, 20);
+            // line 226
+            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 226), "libelle", [], "any", false, false, false, 226), 0, 20);
             echo "</span>
                                             </dd>
                                             <dt>Lieu</dt>
                                             <dd itemprop=\"address\" itemscope=\"\" itemtype=\"http://schema.org/PostalAddress\"><span
                                                     itemprop=\"addressLocality\">";
-            // line 231
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 231), "localisation", [], "any", false, false, false, 231), "libelle", [], "any", false, false, false, 231), "html", null, true);
+            // line 230
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 230), "localisation", [], "any", false, false, false, 230), "libelle", [], "any", false, false, false, 230), "html", null, true);
             echo "</span>
                                             </dd>
                                             <dt>Publiée</dt>
                                             <dd><time datetime=\"1.2.2020 19:02\">";
-            // line 234
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 234), "html", null, true);
+            // line 233
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 233), "html", null, true);
             echo "</time></dd>
                                             ";
         } else {
-            // line 236
+            // line 235
             echo "                                            <dt>Démarcheur</dt>
                                             <dd><span
                                                     itemprop=\"name\">";
-            // line 238
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 238), "nom", [], "any", false, false, false, 238), "html", null, true);
+            // line 237
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 237), "nom", [], "any", false, false, false, 237), "html", null, true);
             echo "&nbsp;";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 238), "prenom", [], "any", false, false, false, 238), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 237), "prenom", [], "any", false, false, false, 237), "html", null, true);
             echo "</span>
                                             </dd>
                                             <dt>Publiée</dt>
                                             <dd><time datetime=\"1.2.2020 19:02\">";
-            // line 241
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 241), "html", null, true);
+            // line 240
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 240), "html", null, true);
             echo "</time></dd>
                                             ";
         }
-        // line 243
+        // line 242
         echo "                                        </dl>
                                     </div>
                                 </section>
@@ -433,12 +432,12 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     <div class=\"aside aside-without-description\">
                         <div class=\"aside-infos\">
                             <section id=\"priceSection\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">
-                                <meta itemprop=\"url\" content=\"https://deals.jumia.ci/belle-apparemment-vendre--pid5443116\">
+                                <meta itemprop=\"url\">
                                 <meta itemprop=\"availability\" content=\"http://schema.org/InStock\">
                                 <span class=\"price\">
                                     <span itemprop=\"price\" content=\"95000000.00\">";
-        // line 267
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "prix", [], "any", false, false, false, 267), "html", null, true);
+        // line 266
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "prix", [], "any", false, false, false, 266), "html", null, true);
         echo "</span>
                                     <span itemprop=\"priceCurrency\" content=\"FCFA\">FCFA</span>
                                 </span>
@@ -447,47 +446,47 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                                     class=\"seller-details\">
                                     <dl>
                                         ";
-        // line 274
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 274)) {
-            // line 275
+        // line 273
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 273)) {
+            // line 274
             echo "                                        <dt>Agence</dt>
                                         <dd><span itemprop=\"name\">";
-            // line 276
-            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 276), "libelle", [], "any", false, false, false, 276), 0, 20);
+            // line 275
+            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 275), "libelle", [], "any", false, false, false, 275), 0, 20);
             echo "</span>
                                         </dd>
                                         <dt>Lieu</dt>
                                         <dd itemprop=\"address\" itemscope=\"\" itemtype=\"http://schema.org/PostalAddress\"><span
                                                 itemprop=\"addressLocality\">";
-            // line 280
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 280), "localisation", [], "any", false, false, false, 280), "libelle", [], "any", false, false, false, 280), "html", null, true);
+            // line 279
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 279), "localisation", [], "any", false, false, false, 279), "libelle", [], "any", false, false, false, 279), "html", null, true);
             echo "</span>
                                         </dd>
                                         <dt>Publiée</dt>
                                         <dd><time datetime=\"1.2.2020 19:02\">";
-            // line 283
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 283), "html", null, true);
+            // line 282
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 282), "html", null, true);
             echo "</time></dd>
                                         ";
         } else {
-            // line 285
+            // line 284
             echo "                                        <dt>Démarcheur</dt>
                                         <dd><span
                                                 itemprop=\"name\">";
-            // line 287
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 287), "nom", [], "any", false, false, false, 287), "html", null, true);
+            // line 286
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 286), "nom", [], "any", false, false, false, 286), "html", null, true);
             echo "&nbsp;";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 287), "prenom", [], "any", false, false, false, 287), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 286), "prenom", [], "any", false, false, false, 286), "html", null, true);
             echo "</span>
                                         </dd>
                                         <dt>Publiée</dt>
                                         <dd><time datetime=\"1.2.2020 19:02\">";
-            // line 290
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 290), "html", null, true);
+            // line 289
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "created_at", [], "any", false, false, false, 289), "html", null, true);
             echo "</time></dd>
                                         ";
         }
-        // line 292
+        // line 291
         echo "                                    </dl>
                                 </div>
     
@@ -518,30 +517,30 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                 <div class=\"form-area\" id=\"contactForm\" style=\"display: none\">
                     <form class=\"contact-form\" method=\"post\" role=\"form\" data-request=\"onSendMessage\">
                         <input type=\"text\" name=\"publication_id\" value=\"";
-        // line 321
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "id", [], "any", false, false, false, 321), "html", null, true);
+        // line 320
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "id", [], "any", false, false, false, 320), "html", null, true);
         echo "\" hidden>
                         <fieldset>
                             ";
-        // line 323
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 323)) {
-            // line 324
+        // line 322
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 322)) {
+            // line 323
             echo "                            <h2>Envoyer un message à ";
-            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 324), "libelle", [], "any", false, false, false, 324), 0, 20);
+            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 323), "libelle", [], "any", false, false, false, 323), 0, 20);
             echo "</h2>
                             ";
         } else {
-            // line 326
+            // line 325
             echo "                            <h2>Envoyer un message à ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 326), "nom", [], "any", false, false, false, 326), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 325), "nom", [], "any", false, false, false, 325), "html", null, true);
             echo "
                                 ";
-            // line 327
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 327), "prenom", [], "any", false, false, false, 327), "html", null, true);
+            // line 326
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 326), "prenom", [], "any", false, false, false, 326), "html", null, true);
             echo "</h2>
                             ";
         }
-        // line 329
+        // line 328
         echo "                            <div class=\"row\">
                                 <div class=\"column wide\">
                                     <input type=\"text\" id=\"name\" name=\"name\" placeholder=\"Votre nom\" required=\"required\"
@@ -591,53 +590,53 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                 <div id=\"contactPhone\" class=\"form-area\" style=\"display: none;\">
                     <div class=\"contactPhone\">
                         ";
-        // line 377
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 377)) {
-            // line 378
+        // line 376
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 376)) {
+            // line 377
             echo "                        <h2>Envoyer un message à ";
-            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 378), "libelle", [], "any", false, false, false, 378), 0, 20);
+            echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 377), "libelle", [], "any", false, false, false, 377), 0, 20);
             echo "</h2>
                         ";
         } else {
-            // line 380
+            // line 379
             echo "                        <h2>Envoyer un message à ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 380), "nom", [], "any", false, false, false, 380), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 379), "nom", [], "any", false, false, false, 379), "html", null, true);
             echo " ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 380), "prenom", [], "any", false, false, false, 380), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 379), "prenom", [], "any", false, false, false, 379), "html", null, true);
             echo "
                         </h2>
                         ";
         }
-        // line 383
+        // line 382
         echo "                        <div class=\"phone-box show\" style=\"margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;\">
                             <div class=\"icon-holder\">
                                 <span class=\"icon-phone\"></span>
                             </div>
                             ";
-        // line 387
-        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 387)) {
-            // line 388
+        // line 386
+        if (twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 386)) {
+            // line 387
             echo "                            <a href=\"tel:";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 388), "tel", [], "any", false, false, false, 388), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 387), "tel", [], "any", false, false, false, 387), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 388), "tel", [], "any", false, false, false, 388), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "agence", [], "any", false, false, false, 387), "tel", [], "any", false, false, false, 387), "html", null, true);
             echo "</a>
                             ";
         } else {
-            // line 390
+            // line 389
             echo "                            <a href=\"tel:";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 390), "tel", [], "any", false, false, false, 390), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 389), "tel", [], "any", false, false, false, 389), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 390), "tel", [], "any", false, false, false, 390), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["publication"] ?? null), "demarcheur", [], "any", false, false, false, 389), "tel", [], "any", false, false, false, 389), "html", null, true);
             echo "</a>
                             ";
         }
-        // line 392
+        // line 391
         echo "                            <i class=\"icon-whatsapp active \"> <span class=\"popover above\">Ce numéro de téléphone
                                     fonctionne avec WhatsApp</span></i>
                         </div>
                         <div class=\"phone-mention\">
-                            Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur Jumia Deals.
+                            Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur ChapMaison.
                         </div>
                     </div>
                 </div>
@@ -666,33 +665,33 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
             <section class=\"row\" style=\"margin-top: 20px\">
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"first-publication-recommande\">
                     <a href=\"";
-        // line 424
+        // line 423
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = ($context["publications"] ?? null)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144[0] ?? null) : null), "slot", [], "any", false, false, false, 424), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = ($context["publications"] ?? null)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144[0] ?? null) : null), "slot", [], "any", false, false, false, 423), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 426
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = twig_get_attribute($this->env, $this->source, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = ($context["publications"] ?? null)) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002[0] ?? null) : null), "photos", [], "any", false, false, false, 426)) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b[0] ?? null) : null), "getpath", [], "any", false, false, false, 426), "html", null, true);
+        // line 425
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = twig_get_attribute($this->env, $this->source, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = ($context["publications"] ?? null)) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002[0] ?? null) : null), "photos", [], "any", false, false, false, 425)) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b[0] ?? null) : null), "getpath", [], "any", false, false, false, 425), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
                             <div class=\"container-p\">
                                 <p>";
-        // line 428
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = ($context["publications"] ?? null)) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4[0] ?? null) : null), "libelle", [], "any", false, false, false, 428), "html", null, true);
+        // line 427
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = ($context["publications"] ?? null)) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4[0] ?? null) : null), "libelle", [], "any", false, false, false, 427), "html", null, true);
         echo "</p>
                                 <p><span class=\"address\">";
-        // line 429
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["publications"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666[0] ?? null) : null), "typepublication", [], "any", false, false, false, 429), "libelle", [], "any", false, false, false, 429), "html", null, true);
+        // line 428
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["publications"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666[0] ?? null) : null), "typepublication", [], "any", false, false, false, 428), "libelle", [], "any", false, false, false, 428), "html", null, true);
         echo ",
                                         ";
-        // line 430
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e = ($context["publications"] ?? null)) && is_array($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e) || $__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e instanceof ArrayAccess ? ($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e[0] ?? null) : null), "localisations", [], "any", false, false, false, 430), "libelle", [], "any", false, false, false, 430), "html", null, true);
+        // line 429
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e = ($context["publications"] ?? null)) && is_array($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e) || $__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e instanceof ArrayAccess ? ($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e[0] ?? null) : null), "localisations", [], "any", false, false, false, 429), "libelle", [], "any", false, false, false, 429), "html", null, true);
         echo " </span></p>
                                 <div class=\"price-date\">
                                     <span class=\"price\">";
-        // line 432
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 = ($context["publications"] ?? null)) && is_array($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52) || $__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 instanceof ArrayAccess ? ($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52[0] ?? null) : null), "prix", [], "any", false, false, false, 432), "html", null, true);
+        // line 431
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 = ($context["publications"] ?? null)) && is_array($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52) || $__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 instanceof ArrayAccess ? ($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52[0] ?? null) : null), "prix", [], "any", false, false, false, 431), "html", null, true);
         echo "</span>
                                 </div>
                             </div>
@@ -701,33 +700,33 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                 </div>
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"two-publication-recommande\">
                     <a href=\"";
-        // line 439
+        // line 438
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 = ($context["publications"] ?? null)) && is_array($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136) || $__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 instanceof ArrayAccess ? ($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136[1] ?? null) : null), "slot", [], "any", false, false, false, 439), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 = ($context["publications"] ?? null)) && is_array($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136) || $__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 instanceof ArrayAccess ? ($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136[1] ?? null) : null), "slot", [], "any", false, false, false, 438), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 441
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 = twig_get_attribute($this->env, $this->source, (($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 = ($context["publications"] ?? null)) && is_array($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9) || $__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 instanceof ArrayAccess ? ($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9[1] ?? null) : null), "photos", [], "any", false, false, false, 441)) && is_array($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386) || $__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 instanceof ArrayAccess ? ($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386[0] ?? null) : null), "getpath", [], "any", false, false, false, 441), "html", null, true);
+        // line 440
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 = twig_get_attribute($this->env, $this->source, (($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 = ($context["publications"] ?? null)) && is_array($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9) || $__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 instanceof ArrayAccess ? ($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9[1] ?? null) : null), "photos", [], "any", false, false, false, 440)) && is_array($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386) || $__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 instanceof ArrayAccess ? ($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386[0] ?? null) : null), "getpath", [], "any", false, false, false, 440), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
                             <div class=\"container-p\">
                                 <p>";
-        // line 443
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae = ($context["publications"] ?? null)) && is_array($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae) || $__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae instanceof ArrayAccess ? ($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae[1] ?? null) : null), "libelle", [], "any", false, false, false, 443), "html", null, true);
+        // line 442
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae = ($context["publications"] ?? null)) && is_array($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae) || $__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae instanceof ArrayAccess ? ($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae[1] ?? null) : null), "libelle", [], "any", false, false, false, 442), "html", null, true);
         echo "</p>
                                 <p><span class=\"address\">";
-        // line 444
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f = ($context["publications"] ?? null)) && is_array($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f) || $__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f instanceof ArrayAccess ? ($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f[1] ?? null) : null), "typepublication", [], "any", false, false, false, 444), "libelle", [], "any", false, false, false, 444), "html", null, true);
+        // line 443
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f = ($context["publications"] ?? null)) && is_array($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f) || $__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f instanceof ArrayAccess ? ($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f[1] ?? null) : null), "typepublication", [], "any", false, false, false, 443), "libelle", [], "any", false, false, false, 443), "html", null, true);
         echo ",
                                         ";
-        // line 445
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 = ($context["publications"] ?? null)) && is_array($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40) || $__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 instanceof ArrayAccess ? ($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40[1] ?? null) : null), "localisations", [], "any", false, false, false, 445), "libelle", [], "any", false, false, false, 445), "html", null, true);
+        // line 444
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 = ($context["publications"] ?? null)) && is_array($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40) || $__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 instanceof ArrayAccess ? ($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40[1] ?? null) : null), "localisations", [], "any", false, false, false, 444), "libelle", [], "any", false, false, false, 444), "html", null, true);
         echo " </span></p>
                                 <div class=\"price-date\">
                                     <span class=\"price\">";
-        // line 447
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f = ($context["publications"] ?? null)) && is_array($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f) || $__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f instanceof ArrayAccess ? ($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f[1] ?? null) : null), "prix", [], "any", false, false, false, 447), "html", null, true);
+        // line 446
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f = ($context["publications"] ?? null)) && is_array($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f) || $__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f instanceof ArrayAccess ? ($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f[1] ?? null) : null), "prix", [], "any", false, false, false, 446), "html", null, true);
         echo "</span>
                                 </div>
                             </div>
@@ -736,33 +735,33 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                 </div>
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"three-publication-recommande\">
                     <a href=\"";
-        // line 454
+        // line 453
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 = ($context["publications"] ?? null)) && is_array($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760) || $__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 instanceof ArrayAccess ? ($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760[2] ?? null) : null), "slot", [], "any", false, false, false, 454), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 = ($context["publications"] ?? null)) && is_array($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760) || $__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 instanceof ArrayAccess ? ($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760[2] ?? null) : null), "slot", [], "any", false, false, false, 453), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 456
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce = twig_get_attribute($this->env, $this->source, (($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b = ($context["publications"] ?? null)) && is_array($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b) || $__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b instanceof ArrayAccess ? ($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b[2] ?? null) : null), "photos", [], "any", false, false, false, 456)) && is_array($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce) || $__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce instanceof ArrayAccess ? ($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce[0] ?? null) : null), "getpath", [], "any", false, false, false, 456), "html", null, true);
+        // line 455
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce = twig_get_attribute($this->env, $this->source, (($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b = ($context["publications"] ?? null)) && is_array($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b) || $__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b instanceof ArrayAccess ? ($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b[2] ?? null) : null), "photos", [], "any", false, false, false, 455)) && is_array($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce) || $__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce instanceof ArrayAccess ? ($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce[0] ?? null) : null), "getpath", [], "any", false, false, false, 455), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
                             <div class=\"container-p\">
                                 <p>";
-        // line 458
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c = ($context["publications"] ?? null)) && is_array($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c) || $__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c instanceof ArrayAccess ? ($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c[2] ?? null) : null), "libelle", [], "any", false, false, false, 458), "html", null, true);
+        // line 457
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c = ($context["publications"] ?? null)) && is_array($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c) || $__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c instanceof ArrayAccess ? ($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c[2] ?? null) : null), "libelle", [], "any", false, false, false, 457), "html", null, true);
         echo "</p>
                                 <p><span class=\"address\">";
-        // line 459
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 = ($context["publications"] ?? null)) && is_array($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972) || $__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 instanceof ArrayAccess ? ($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972[2] ?? null) : null), "typepublication", [], "any", false, false, false, 459), "libelle", [], "any", false, false, false, 459), "html", null, true);
+        // line 458
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 = ($context["publications"] ?? null)) && is_array($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972) || $__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 instanceof ArrayAccess ? ($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972[2] ?? null) : null), "typepublication", [], "any", false, false, false, 458), "libelle", [], "any", false, false, false, 458), "html", null, true);
         echo ",
                                         ";
-        // line 460
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 = ($context["publications"] ?? null)) && is_array($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216) || $__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 instanceof ArrayAccess ? ($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216[2] ?? null) : null), "localisations", [], "any", false, false, false, 460), "libelle", [], "any", false, false, false, 460), "html", null, true);
+        // line 459
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 = ($context["publications"] ?? null)) && is_array($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216) || $__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 instanceof ArrayAccess ? ($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216[2] ?? null) : null), "localisations", [], "any", false, false, false, 459), "libelle", [], "any", false, false, false, 459), "html", null, true);
         echo " </span></p>
                                 <div class=\"price-date\">
                                     <span class=\"price\">";
-        // line 462
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 = ($context["publications"] ?? null)) && is_array($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0) || $__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 instanceof ArrayAccess ? ($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0[2] ?? null) : null), "prix", [], "any", false, false, false, 462), "html", null, true);
+        // line 461
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 = ($context["publications"] ?? null)) && is_array($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0) || $__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 instanceof ArrayAccess ? ($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0[2] ?? null) : null), "prix", [], "any", false, false, false, 461), "html", null, true);
         echo "</span>
                                 </div>
                             </div>
@@ -790,7 +789,7 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
 
     public function getDebugInfo()
     {
-        return array (  765 => 462,  760 => 460,  756 => 459,  752 => 458,  747 => 456,  740 => 454,  730 => 447,  725 => 445,  721 => 444,  717 => 443,  712 => 441,  705 => 439,  695 => 432,  690 => 430,  686 => 429,  682 => 428,  677 => 426,  670 => 424,  636 => 392,  628 => 390,  620 => 388,  618 => 387,  612 => 383,  603 => 380,  597 => 378,  595 => 377,  545 => 329,  540 => 327,  535 => 326,  529 => 324,  527 => 323,  522 => 321,  491 => 292,  486 => 290,  478 => 287,  474 => 285,  469 => 283,  463 => 280,  456 => 276,  453 => 275,  451 => 274,  441 => 267,  415 => 243,  410 => 241,  402 => 238,  398 => 236,  393 => 234,  387 => 231,  380 => 227,  377 => 226,  375 => 225,  365 => 218,  352 => 208,  346 => 205,  339 => 200,  334 => 198,  329 => 197,  324 => 195,  319 => 194,  315 => 193,  310 => 192,  306 => 191,  301 => 190,  297 => 189,  293 => 188,  284 => 181,  278 => 180,  273 => 178,  269 => 177,  263 => 175,  256 => 171,  252 => 170,  247 => 167,  244 => 166,  240 => 165,  234 => 161,  228 => 160,  219 => 156,  216 => 155,  210 => 152,  207 => 151,  204 => 150,  200 => 149,  188 => 140,  183 => 137,  176 => 134,  173 => 133,  170 => 132,  37 => 1,);
+        return array (  764 => 461,  759 => 459,  755 => 458,  751 => 457,  746 => 455,  739 => 453,  729 => 446,  724 => 444,  720 => 443,  716 => 442,  711 => 440,  704 => 438,  694 => 431,  689 => 429,  685 => 428,  681 => 427,  676 => 425,  669 => 423,  635 => 391,  627 => 389,  619 => 387,  617 => 386,  611 => 382,  602 => 379,  596 => 377,  594 => 376,  544 => 328,  539 => 326,  534 => 325,  528 => 323,  526 => 322,  521 => 320,  490 => 291,  485 => 289,  477 => 286,  473 => 284,  468 => 282,  462 => 279,  455 => 275,  452 => 274,  450 => 273,  440 => 266,  414 => 242,  409 => 240,  401 => 237,  397 => 235,  392 => 233,  386 => 230,  379 => 226,  376 => 225,  374 => 224,  364 => 217,  351 => 207,  345 => 204,  338 => 199,  333 => 197,  328 => 196,  323 => 194,  318 => 193,  314 => 192,  309 => 191,  305 => 190,  300 => 189,  296 => 188,  292 => 187,  283 => 180,  277 => 179,  272 => 177,  268 => 176,  262 => 174,  255 => 170,  251 => 169,  246 => 166,  243 => 165,  239 => 164,  233 => 160,  227 => 159,  219 => 156,  216 => 155,  210 => 152,  207 => 151,  204 => 150,  200 => 149,  188 => 140,  183 => 137,  176 => 134,  173 => 133,  170 => 132,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -951,7 +950,6 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                                     {% else %}
                                     <div class=\"slide\" style=\"display: block; opacity: 0;\">
                                         <img itemprop=\"image\" class=\"imggf-{{ key+1 }}\" src=\"{{ photo.getPath }}\"
-                                            data-src=\"https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-gallery-large.jpg\"
                                             alt=\"Belle Apparemment À Vendre  - Côte d’Ivoire\"></div>
                                     {% endif %}
                                     {% endfor %}
@@ -1009,7 +1007,7 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                         <div class=\"aside aside-description\" style=\"width: 100%;\">
                             <div class=\"aside-infos\" style=\"min-height: unset;\">
                                 <section id=\"priceSection\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">
-                                    <meta itemprop=\"url\" content=\"https://deals.jumia.ci/belle-apparemment-vendre--pid5443116\">
+                                    <meta itemprop=\"url\" >
                                     <meta itemprop=\"availability\" content=\"http://schema.org/InStock\">
                                     <span class=\"price\">
                                         <span itemprop=\"price\" content=\"95000000.00\">{{ publication.prix }}</span>
@@ -1058,7 +1056,7 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     <div class=\"aside aside-without-description\">
                         <div class=\"aside-infos\">
                             <section id=\"priceSection\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\">
-                                <meta itemprop=\"url\" content=\"https://deals.jumia.ci/belle-apparemment-vendre--pid5443116\">
+                                <meta itemprop=\"url\">
                                 <meta itemprop=\"availability\" content=\"http://schema.org/InStock\">
                                 <span class=\"price\">
                                     <span itemprop=\"price\" content=\"95000000.00\">{{ publication.prix }}</span>
@@ -1190,7 +1188,7 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                                     fonctionne avec WhatsApp</span></i>
                         </div>
                         <div class=\"phone-mention\">
-                            Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur Jumia Deals.
+                            Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur ChapMaison.
                         </div>
                     </div>
                 </div>

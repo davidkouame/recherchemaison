@@ -212,27 +212,39 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "slot", [], "any", false, false, false, 125), "html", null, true);
                 echo "\">
                         <div class=\"polaroid\">
-                            <img src=\"";
+                            ";
                 // line 127
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 127), "getpath", [], "any", false, false, false, 127), "html", null, true);
-                echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
-                            <div class=\"container-p\">
+                if (twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 127)) {
+                    // line 128
+                    echo "                                <img src=\"";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 128), "getpath", [], "any", false, false, false, 128), "html", null, true);
+                    echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            ";
+                } else {
+                    // line 130
+                    echo "                            <img src=\"";
+                    echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/withoutimage.jpg");
+                    echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            ";
+                }
+                // line 132
+                echo "                            <div class=\"container-p\">
                                 <p>";
-                // line 129
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 129), "html", null, true);
+                // line 133
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 133), "html", null, true);
                 echo "</p>
                                 <p><span class=\"address\">";
-                // line 130
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 130), "libelle", [], "any", false, false, false, 130), "html", null, true);
+                // line 134
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 134), "libelle", [], "any", false, false, false, 134), "html", null, true);
                 echo ",
                                     ";
-                // line 131
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 131), "libelle", [], "any", false, false, false, 131), "html", null, true);
+                // line 135
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 135), "libelle", [], "any", false, false, false, 135), "html", null, true);
                 echo " </span></p>
                                     <div class=\"price-date\">
                                         <span class=\"price\">";
-                // line 133
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 133), "html", null, true);
+                // line 137
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 137), "html", null, true);
                 echo "</span>
                                     </div>
                             </div>
@@ -244,30 +256,30 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['publication'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 140
+            // line 144
             echo "        ";
         } else {
-            // line 141
+            // line 145
             echo "            <div class=\"col-md-12\" style=\"text-align: center;\"><h3>Désolé, aucune maison trouvée !</h3> </div>
         ";
         }
-        // line 143
+        // line 147
         echo "    </div>
     ";
-        // line 144
+        // line 148
         if ((twig_length_filter($this->env, ($context["publications"] ?? null)) > 0)) {
-            // line 145
+            // line 149
             echo "        <div class=\"row\">
             <div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"text-align: center\">
                 ";
-            // line 147
+            // line 151
             echo ($context["publications"] ?? null);
             echo "
             </div>
         </div>
     ";
         }
-        // line 151
+        // line 155
         echo "</div>";
     }
 
@@ -283,7 +295,7 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
 
     public function getDebugInfo()
     {
-        return array (  271 => 151,  264 => 147,  260 => 145,  258 => 144,  255 => 143,  251 => 141,  248 => 140,  235 => 133,  230 => 131,  226 => 130,  222 => 129,  217 => 127,  210 => 125,  207 => 124,  202 => 123,  200 => 122,  184 => 108,  178 => 107,  170 => 105,  162 => 103,  159 => 102,  155 => 101,  147 => 96,  142 => 94,  130 => 84,  123 => 81,  120 => 80,  117 => 79,  37 => 1,);
+        return array (  283 => 155,  276 => 151,  272 => 149,  270 => 148,  267 => 147,  263 => 145,  260 => 144,  247 => 137,  242 => 135,  238 => 134,  234 => 133,  231 => 132,  225 => 130,  219 => 128,  217 => 127,  210 => 125,  207 => 124,  202 => 123,  200 => 122,  184 => 108,  178 => 107,  170 => 105,  162 => 103,  159 => 102,  155 => 101,  147 => 96,  142 => 94,  130 => 84,  123 => 81,  120 => 80,  117 => 79,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -414,7 +426,11 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                 <div class=\"col-lg-4 col-sm-6 col-xs-6 col-md-4 publication\">
                     <a href=\"{{ url('publications') }}/{{ publication.slot }}\">
                         <div class=\"polaroid\">
-                            <img src=\"{{ publication.cover.getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            {% if publication.cover %}
+                                <img src=\"{{ publication.cover.getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            {% else %}
+                            <img src=\"{{ 'assets/images/withoutimage.jpg'|theme }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            {% endif %}
                             <div class=\"container-p\">
                                 <p>{{ publication.libelle }}</p>
                                 <p><span class=\"address\">{{ publication.typepublication.libelle }},

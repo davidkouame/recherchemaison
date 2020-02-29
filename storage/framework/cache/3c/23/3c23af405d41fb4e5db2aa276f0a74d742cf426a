@@ -1,4 +1,4 @@
-1582773218a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6419:"description = "Default layout"
+1582935384a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:6283:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -143,7 +143,6 @@
                 let indeximg = $(this).data('imgptf');
                 // console.log($(this).data('imgptf'));
                 // console.log($(".imggf-"+indeximg).attr('src'));
-                // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
                 // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
                 // console.log();
                 $(".slide.active").removeClass("active").css("opacity", 0);
@@ -159,7 +158,7 @@
     {% partial 'site/footer_general' %}
 </body>
 
-</html>";s:5:"mtime";i:1581872123;s:6:"markup";s:6385:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1582773371;s:6:"markup";s:6249:"<!DOCTYPE html>
 <html>
 
 <head>
@@ -302,7 +301,6 @@
                 let indeximg = $(this).data('imgptf');
                 // console.log($(this).data('imgptf'));
                 // console.log($(".imggf-"+indeximg).attr('src'));
-                // $(".slide.active img").attr('src', 'https://media.jumiadeals.com/ci_live/66531c68775e35c47f5a69a.desktop-small.jpg')
                 // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
                 // console.log();
                 $(".slide.active").removeClass("active").css("opacity", 0);
