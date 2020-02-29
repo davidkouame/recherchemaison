@@ -1,4 +1,4 @@
-1582935384a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:24789:"title = "Recherche maison"
+1582981718a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:24653:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
@@ -256,8 +256,7 @@ layout = "default"
                         <div class="btn-holder"  style="margin-bottom: 12px;">
                             <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
                                 data-lead-type="Phone" class="button button-phone2 transaction-click"
-                                title="Afficher le téléphone">
-                                <span class="icon-phone"></span> Afficher le téléphone </a>
+                                title="Afficher le téléphone">Afficher le téléphone </a>
                             <a href="#contactForm>" data-scroll-to="#contactForm"
                                 class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
                                 <span class="icon-mail"></span> Contacter par email </a>
@@ -303,8 +302,7 @@ layout = "default"
                                 <a href="#contactPhone" data-scroll-to="#contactPhone"
                                     data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
                                     data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
-                                    class="button transaction-click clicked" title="Afficher le téléphone">
-                                    <span class="icon-phone"></span> Afficher le téléphone </a>
+                                    class="button transaction-click clicked" title="Afficher le téléphone">Afficher le téléphone </a>
     
                                 <a href="#contactForm" data-scroll-to="#contactForm"
                                     class="button button-email2 reply-by-email-click contactForm"
@@ -476,7 +474,7 @@ layout = "default"
 
     </div>
 </div>
-</div>";s:5:"mtime";i:1582773460;s:6:"markup";s:24670:"<style>
+</div>";s:5:"mtime";i:1582981117;s:6:"markup";s:24534:"<style>
     @media screen and (max-width: 990px) {
         .singlepost .post-content {
             width: 100%;
@@ -728,8 +726,7 @@ layout = "default"
                         <div class="btn-holder"  style="margin-bottom: 12px;">
                             <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
                                 data-lead-type="Phone" class="button button-phone2 transaction-click"
-                                title="Afficher le téléphone">
-                                <span class="icon-phone"></span> Afficher le téléphone </a>
+                                title="Afficher le téléphone">Afficher le téléphone </a>
                             <a href="#contactForm>" data-scroll-to="#contactForm"
                                 class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
                                 <span class="icon-mail"></span> Contacter par email </a>
@@ -775,8 +772,7 @@ layout = "default"
                                 <a href="#contactPhone" data-scroll-to="#contactPhone"
                                     data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
                                     data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
-                                    class="button transaction-click clicked" title="Afficher le téléphone">
-                                    <span class="icon-phone"></span> Afficher le téléphone </a>
+                                    class="button transaction-click clicked" title="Afficher le téléphone">Afficher le téléphone </a>
     
                                 <a href="#contactForm" data-scroll-to="#contactForm"
                                     class="button button-email2 reply-by-email-click contactForm"

@@ -130,8 +130,8 @@ layout = "default"
                 <div class="col-lg-4 col-sm-6 col-xs-6 col-md-4 publication">
                     <a href="{{ url('publications') }}/{{ publication.slot }}">
                         <div class="polaroid">
-                            {% if publication.cover %}
-                                <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
+                            {% if publication.cover and publication.cover.getpath%}
+                            <img src="{{ publication.cover.getpath }}" alt="5 Terre" style="width:100%;height: 240px;">
                             {% else %}
                             <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
                             {% endif %}

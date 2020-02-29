@@ -214,9 +214,9 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                         <div class=\"polaroid\">
                             ";
                 // line 127
-                if (twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 127)) {
+                if ((twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 127) && twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 127), "getpath", [], "any", false, false, false, 127))) {
                     // line 128
-                    echo "                                <img src=\"";
+                    echo "                            <img src=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 128), "getpath", [], "any", false, false, false, 128), "html", null, true);
                     echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                             ";
@@ -426,8 +426,8 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                 <div class=\"col-lg-4 col-sm-6 col-xs-6 col-md-4 publication\">
                     <a href=\"{{ url('publications') }}/{{ publication.slot }}\">
                         <div class=\"polaroid\">
-                            {% if publication.cover %}
-                                <img src=\"{{ publication.cover.getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
+                            {% if publication.cover and publication.cover.getpath%}
+                            <img src=\"{{ publication.cover.getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                             {% else %}
                             <img src=\"{{ 'assets/images/withoutimage.jpg'|theme }}\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                             {% endif %}
