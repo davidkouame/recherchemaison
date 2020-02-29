@@ -123,4 +123,5 @@
   'ToughDeveloper\\ImageResizer\\Models\\Settings' => 'plugins/toughdeveloper/imageresizer/models/Settings.php',
   'backend\\Controllers\\users' => 'modules/backend/controllers/users.php',
   'system\\Controllers\\mailbrandsettings' => 'modules/system/controllers/mailbrandsettings.php',
+  'cms\\Controllers\\themes' => 'modules/cms/controllers/themes.php',
 );

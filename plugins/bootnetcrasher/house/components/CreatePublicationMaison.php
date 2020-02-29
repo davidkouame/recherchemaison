@@ -63,9 +63,10 @@ class CreatePublicationMaison extends  Account{
         $publication->ville_id = post('ville_id');
         $publication->localisation_id = post('localisation_id');
         $publication->libelle = post('libelle');
-        $publication->nbre_piece = post('nbre_piece');
+        $publication->nbre_piece = post('nbre_piece'); 
         $publication->published_at = now();
         $publication->cover = Input::file('cover');
+        $publication->description = post('description'); 
         /*foreach(Input::file('fileUpload') as $photo){
             $publication->photos[] = $photo;
         }*/

@@ -54,6 +54,12 @@
             </div>
             {% endif %}
         </div>
+        <div class="row">
+            <div class="form-group col-md-12">
+                <label for="">Description</label>
+                <textarea class="form-control" cols="30" rows="10" disabled>{{ publication.description }}</textarea>
+            </div>
+        </div>
 </div>
 {% if publication.photos | length > 0%}
     <div class="row">

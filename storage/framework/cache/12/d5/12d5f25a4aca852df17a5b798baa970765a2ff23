@@ -1,4 +1,4 @@
-1582981718a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:24653:"title = "Recherche maison"
+1582999756a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:24653:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
