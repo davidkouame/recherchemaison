@@ -1,4 +1,4 @@
-1582999756a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5323:"title = "Recherche maison"
+1583067410a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:5670:"title = "Recherche maison"
 url = "/"
 layout = "default"
 [HomeComponent]
@@ -135,13 +135,19 @@ layout = "default"
                             {% else %}
                             <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
                             {% endif %}
-                            <div class="container-p">
-                                <p>{{ publication.libelle }}</p>
-                                <p><span class="address">{{ publication.typepublication.libelle }},
-                                    {{ publication.localisations.libelle}} </span></p>
-                                    <div class="price-date">
-                                        <span class="price">{{ publication.prix }}</span>
-                                    </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publication.libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class="address">{{ publication.typepublication.libelle|slice(0,20)|raw  }},
+                                    {{ publication.localisations.libelle|slice(0,20)|raw }} </span>
+                                </p>
+                                <p>
+                                    {% if publication.prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publication.prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -158,7 +164,7 @@ layout = "default"
             </div>
         </div>
     {% endif %}
-</div>";s:5:"mtime";i:1582935343;s:6:"markup";s:5247:"<style>
+</div>";s:5:"mtime";i:1583065710;s:6:"markup";s:5594:"<style>
     @media screen and (max-width: 500px) {
         .publication{
             margin-left: 6%;
@@ -289,13 +295,19 @@ layout = "default"
                             {% else %}
                             <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
                             {% endif %}
-                            <div class="container-p">
-                                <p>{{ publication.libelle }}</p>
-                                <p><span class="address">{{ publication.typepublication.libelle }},
-                                    {{ publication.localisations.libelle}} </span></p>
-                                    <div class="price-date">
-                                        <span class="price">{{ publication.prix }}</span>
-                                    </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publication.libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class="address">{{ publication.typepublication.libelle|slice(0,20)|raw  }},
+                                    {{ publication.localisations.libelle|slice(0,20)|raw }} </span>
+                                </p>
+                                <p>
+                                    {% if publication.prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publication.prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>

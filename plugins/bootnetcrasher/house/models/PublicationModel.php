@@ -50,10 +50,21 @@ class PublicationModel extends Model
         }*/
     }
 
-    public function beforeSave(){
+    /*public function beforeSave(){
         $this->slot = strtolower(str_replace(' ', '-', $this->libelle));
-        /*if (BackendAuth::check()) {
+        if (BackendAuth::check()) {
             $this->agence_id = BackendAuth::getUser()->id;
-        }*/
+        }
+    }*/
+
+    public function afterCreate(){
+        $this->generateReference();
+        $this->slot = $this->reference;
+        //+strtolower(str_replace(' ', '-', $this->libelle));
+        $this->save();
+    }
+
+    public function generateReference(){
+        $this->reference = strtoupper(base_convert($this->id+1000000000, 10, 16)) ;
     }
 }

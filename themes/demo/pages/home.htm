@@ -135,13 +135,19 @@ layout = "default"
                             {% else %}
                             <img src="{{ 'assets/images/withoutimage.jpg'|theme }}" alt="5 Terre" style="width:100%;height: 240px;">
                             {% endif %}
-                            <div class="container-p">
-                                <p>{{ publication.libelle }}</p>
-                                <p><span class="address">{{ publication.typepublication.libelle }},
-                                    {{ publication.localisations.libelle}} </span></p>
-                                    <div class="price-date">
-                                        <span class="price">{{ publication.prix }}</span>
-                                    </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publication.libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class="address">{{ publication.typepublication.libelle|slice(0,20)|raw  }},
+                                    {{ publication.localisations.libelle|slice(0,20)|raw }} </span>
+                                </p>
+                                <p>
+                                    {% if publication.prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publication.prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>

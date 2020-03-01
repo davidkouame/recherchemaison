@@ -60,6 +60,7 @@ class CreatePublicationMaison extends  Account{
         }
         $publication = new PublicationModel;
         $publication->commune_id = post('commune_id');
+        $publication->prix = post('prix');
         $publication->ville_id = post('ville_id');
         $publication->localisation_id = post('localisation_id');
         $publication->libelle = post('libelle');

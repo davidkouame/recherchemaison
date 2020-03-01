@@ -1,4 +1,4 @@
-1582999756a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:24653:"title = "Recherche maison"
+1583067894a:1:{s:22:"detail_publication.htm";a:9:{s:8:"fileName";s:22:"detail_publication.htm";s:7:"content";s:25722:"title = "Recherche maison"
 url = "/publications/:publication_slot"
 layout = "default"
 [DetailPublicationComponent]
@@ -421,19 +421,24 @@ layout = "default"
                     </ul>
                 </div>
             </section>
-
             <section class="row" style="margin-top: 20px">
                 <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
                     <a href="{{ url('publications') }}/{{ publications[0].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[0].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[0].libelle }}</p>
-                                <p><span class="address">{{ publications[0].typepublication.libelle }},
-                                        {{ publications[0].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[0].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[0].libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class="address">{{ publications[0].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[0].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[0].prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publications[0].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -442,13 +447,18 @@ layout = "default"
                     <a href="{{ url('publications') }}/{{ publications[1].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[1].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[1].libelle }}</p>
-                                <p><span class="address">{{ publications[1].typepublication.libelle }},
-                                        {{ publications[1].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[1].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[1].libelle|slice(0,40)|raw }}</p>
+                                <p><span class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                        <p>
+                                            {% if publications[1].prix %}
+                                                <div class="price-date">
+                                                    <span class="price">{{ publications[1].prix }} FCFA</span>
+                                                </div>
+                                            {% endif %}
+                                        </p>
                             </div>
                         </div>
                     </a>
@@ -457,13 +467,18 @@ layout = "default"
                     <a href="{{ url('publications') }}/{{ publications[2].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[2].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[2].libelle }}</p>
-                                <p><span class="address">{{ publications[2].typepublication.libelle }},
-                                        {{ publications[2].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[2].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[2].libelle|slice(0,40)|raw  }}</p>
+                                <p><span class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[2].prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publications[2].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -474,7 +489,7 @@ layout = "default"
 
     </div>
 </div>
-</div>";s:5:"mtime";i:1582981117;s:6:"markup";s:24534:"<style>
+</div>";s:5:"mtime";i:1583067292;s:6:"markup";s:25603:"<style>
     @media screen and (max-width: 990px) {
         .singlepost .post-content {
             width: 100%;
@@ -891,19 +906,24 @@ layout = "default"
                     </ul>
                 </div>
             </section>
-
             <section class="row" style="margin-top: 20px">
                 <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
                     <a href="{{ url('publications') }}/{{ publications[0].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[0].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[0].libelle }}</p>
-                                <p><span class="address">{{ publications[0].typepublication.libelle }},
-                                        {{ publications[0].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[0].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[0].libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class="address">{{ publications[0].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[0].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[0].prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publications[0].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -912,13 +932,18 @@ layout = "default"
                     <a href="{{ url('publications') }}/{{ publications[1].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[1].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[1].libelle }}</p>
-                                <p><span class="address">{{ publications[1].typepublication.libelle }},
-                                        {{ publications[1].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[1].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[1].libelle|slice(0,40)|raw }}</p>
+                                <p><span class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                        <p>
+                                            {% if publications[1].prix %}
+                                                <div class="price-date">
+                                                    <span class="price">{{ publications[1].prix }} FCFA</span>
+                                                </div>
+                                            {% endif %}
+                                        </p>
                             </div>
                         </div>
                     </a>
@@ -927,13 +952,18 @@ layout = "default"
                     <a href="{{ url('publications') }}/{{ publications[2].slot }}">
                         <div class="polaroid">
                             <img src="{{ publications[2].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p">
-                                <p>{{ publications[2].libelle }}</p>
-                                <p><span class="address">{{ publications[2].typepublication.libelle }},
-                                        {{ publications[2].localisations.libelle}} </span></p>
-                                <div class="price-date">
-                                    <span class="price">{{ publications[2].prix }}</span>
-                                </div>
+                            <div class="container-p" style="min-height: 100px;">
+                                <p>{{ publications[2].libelle|slice(0,40)|raw  }}</p>
+                                <p><span class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[2].prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publications[2].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>

@@ -659,109 +659,139 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     </ul>
                 </div>
             </section>
-
             <section class=\"row\" style=\"margin-top: 20px\">
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"first-publication-recommande\">
                     <a href=\"";
-        // line 421
+        // line 420
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = ($context["publications"] ?? null)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144[0] ?? null) : null), "slot", [], "any", false, false, false, 421), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 = ($context["publications"] ?? null)) && is_array($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144) || $__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144 instanceof ArrayAccess ? ($__internal_62824350bc4502ee19dbc2e99fc6bdd3bd90e7d8dd6e72f42c35efd048542144[0] ?? null) : null), "slot", [], "any", false, false, false, 420), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 423
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = twig_get_attribute($this->env, $this->source, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = ($context["publications"] ?? null)) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002[0] ?? null) : null), "photos", [], "any", false, false, false, 423)) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b[0] ?? null) : null), "getpath", [], "any", false, false, false, 423), "html", null, true);
+        // line 422
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b = twig_get_attribute($this->env, $this->source, (($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 = ($context["publications"] ?? null)) && is_array($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002) || $__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002 instanceof ArrayAccess ? ($__internal_68aa442c1d43d3410ea8f958ba9090f3eaa9a76f8de8fc9be4d6c7389ba28002[0] ?? null) : null), "photos", [], "any", false, false, false, 422)) && is_array($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b) || $__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b instanceof ArrayAccess ? ($__internal_1cfccaec8dd2e8578ccb026fbe7f2e7e29ac2ed5deb976639c5fc99a6ea8583b[0] ?? null) : null), "getpath", [], "any", false, false, false, 422), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
                                 <p>";
-        // line 425
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = ($context["publications"] ?? null)) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4[0] ?? null) : null), "libelle", [], "any", false, false, false, 425), "html", null, true);
+        // line 424
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, (($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 = ($context["publications"] ?? null)) && is_array($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4) || $__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4 instanceof ArrayAccess ? ($__internal_d7fc55f1a54b629533d60b43063289db62e68921ee7a5f8de562bd9d4a2b7ad4[0] ?? null) : null), "libelle", [], "any", false, false, false, 424), 0, 40);
         echo "</p>
-                                <p><span class=\"address\">";
+                                <p>
+                                    <span class=\"address\">";
         // line 426
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["publications"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666[0] ?? null) : null), "typepublication", [], "any", false, false, false, 426), "libelle", [], "any", false, false, false, 426), "html", null, true);
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 = ($context["publications"] ?? null)) && is_array($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666) || $__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666 instanceof ArrayAccess ? ($__internal_01476f8db28655ee4ee02ea2d17dd5a92599be76304f08cd8bc0e05aced30666[0] ?? null) : null), "typepublication", [], "any", false, false, false, 426), "libelle", [], "any", false, false, false, 426), 0, 20);
         echo ",
                                         ";
         // line 427
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e = ($context["publications"] ?? null)) && is_array($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e) || $__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e instanceof ArrayAccess ? ($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e[0] ?? null) : null), "localisations", [], "any", false, false, false, 427), "libelle", [], "any", false, false, false, 427), "html", null, true);
-        echo " </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">";
-        // line 429
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 = ($context["publications"] ?? null)) && is_array($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52) || $__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 instanceof ArrayAccess ? ($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52[0] ?? null) : null), "prix", [], "any", false, false, false, 429), "html", null, true);
-        echo "</span>
-                                </div>
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e = ($context["publications"] ?? null)) && is_array($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e) || $__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e instanceof ArrayAccess ? ($__internal_01c35b74bd85735098add188b3f8372ba465b232ab8298cb582c60f493d3c22e[0] ?? null) : null), "localisations", [], "any", false, false, false, 427), "libelle", [], "any", false, false, false, 427), 0, 20);
+        echo " </span>
+                                </p>
+                                <p>
+                                    ";
+        // line 430
+        if (twig_get_attribute($this->env, $this->source, (($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 = ($context["publications"] ?? null)) && is_array($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52) || $__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52 instanceof ArrayAccess ? ($__internal_63ad1f9a2bf4db4af64b010785e9665558fdcac0e8db8b5b413ed986c62dbb52[0] ?? null) : null), "prix", [], "any", false, false, false, 430)) {
+            // line 431
+            echo "                                        <div class=\"price-date\">
+                                            <span class=\"price\">";
+            // line 432
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 = ($context["publications"] ?? null)) && is_array($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136) || $__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 instanceof ArrayAccess ? ($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136[0] ?? null) : null), "prix", [], "any", false, false, false, 432), "html", null, true);
+            echo " FCFA</span>
+                                        </div>
+                                    ";
+        }
+        // line 435
+        echo "                                </p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"two-publication-recommande\">
                     <a href=\"";
-        // line 436
+        // line 441
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 = ($context["publications"] ?? null)) && is_array($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136) || $__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136 instanceof ArrayAccess ? ($__internal_f10a4cc339617934220127f034125576ed229e948660ebac906a15846d52f136[1] ?? null) : null), "slot", [], "any", false, false, false, 436), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 = ($context["publications"] ?? null)) && is_array($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386) || $__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 instanceof ArrayAccess ? ($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386[1] ?? null) : null), "slot", [], "any", false, false, false, 441), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 438
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 = twig_get_attribute($this->env, $this->source, (($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 = ($context["publications"] ?? null)) && is_array($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9) || $__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 instanceof ArrayAccess ? ($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9[1] ?? null) : null), "photos", [], "any", false, false, false, 438)) && is_array($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386) || $__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386 instanceof ArrayAccess ? ($__internal_887a873a4dc3cf8bd4f99c487b4c7727999c350cc3a772414714e49a195e4386[0] ?? null) : null), "getpath", [], "any", false, false, false, 438), "html", null, true);
+        // line 443
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 = twig_get_attribute($this->env, $this->source, (($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae = ($context["publications"] ?? null)) && is_array($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae) || $__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae instanceof ArrayAccess ? ($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae[1] ?? null) : null), "photos", [], "any", false, false, false, 443)) && is_array($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9) || $__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9 instanceof ArrayAccess ? ($__internal_d527c24a729d38501d770b40a0d25e1ce8a7f0bff897cc4f8f449ba71fcff3d9[0] ?? null) : null), "getpath", [], "any", false, false, false, 443), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
                                 <p>";
-        // line 440
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae = ($context["publications"] ?? null)) && is_array($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae) || $__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae instanceof ArrayAccess ? ($__internal_f6dde3a1020453fdf35e718e94f93ce8eb8803b28cc77a665308e14bbe8572ae[1] ?? null) : null), "libelle", [], "any", false, false, false, 440), "html", null, true);
+        // line 445
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, (($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f = ($context["publications"] ?? null)) && is_array($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f) || $__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f instanceof ArrayAccess ? ($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f[1] ?? null) : null), "libelle", [], "any", false, false, false, 445), 0, 40);
         echo "</p>
                                 <p><span class=\"address\">";
-        // line 441
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f = ($context["publications"] ?? null)) && is_array($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f) || $__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f instanceof ArrayAccess ? ($__internal_25c0fab8152b8dd6b90603159c0f2e8a936a09ab76edb5e4d7bc95d9a8d2dc8f[1] ?? null) : null), "typepublication", [], "any", false, false, false, 441), "libelle", [], "any", false, false, false, 441), "html", null, true);
+        // line 446
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 = ($context["publications"] ?? null)) && is_array($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40) || $__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 instanceof ArrayAccess ? ($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40[1] ?? null) : null), "typepublication", [], "any", false, false, false, 446), "libelle", [], "any", false, false, false, 446), 0, 20);
         echo ",
                                         ";
-        // line 442
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 = ($context["publications"] ?? null)) && is_array($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40) || $__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40 instanceof ArrayAccess ? ($__internal_f769f712f3484f00110c86425acea59f5af2752239e2e8596bcb6effeb425b40[1] ?? null) : null), "localisations", [], "any", false, false, false, 442), "libelle", [], "any", false, false, false, 442), "html", null, true);
-        echo " </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">";
-        // line 444
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f = ($context["publications"] ?? null)) && is_array($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f) || $__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f instanceof ArrayAccess ? ($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f[1] ?? null) : null), "prix", [], "any", false, false, false, 444), "html", null, true);
-        echo "</span>
-                                </div>
+        // line 447
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f = ($context["publications"] ?? null)) && is_array($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f) || $__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f instanceof ArrayAccess ? ($__internal_98e944456c0f58b2585e4aa36e3a7e43f4b7c9038088f0f056004af41f4a007f[1] ?? null) : null), "localisations", [], "any", false, false, false, 447), "libelle", [], "any", false, false, false, 447), 0, 20);
+        echo " </span>
+                                    </p>
+                                        <p>
+                                            ";
+        // line 450
+        if (twig_get_attribute($this->env, $this->source, (($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 = ($context["publications"] ?? null)) && is_array($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760) || $__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 instanceof ArrayAccess ? ($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760[1] ?? null) : null), "prix", [], "any", false, false, false, 450)) {
+            // line 451
+            echo "                                                <div class=\"price-date\">
+                                                    <span class=\"price\">";
+            // line 452
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce = ($context["publications"] ?? null)) && is_array($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce) || $__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce instanceof ArrayAccess ? ($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce[1] ?? null) : null), "prix", [], "any", false, false, false, 452), "html", null, true);
+            echo " FCFA</span>
+                                                </div>
+                                            ";
+        }
+        // line 455
+        echo "                                        </p>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"three-publication-recommande\">
                     <a href=\"";
-        // line 451
+        // line 461
         echo url("publications");
         echo "/";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 = ($context["publications"] ?? null)) && is_array($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760) || $__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760 instanceof ArrayAccess ? ($__internal_a06a70691a7ca361709a372174fa669f5ee1c1e4ed302b3a5b61c10c80c02760[2] ?? null) : null), "slot", [], "any", false, false, false, 451), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b = ($context["publications"] ?? null)) && is_array($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b) || $__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b instanceof ArrayAccess ? ($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b[2] ?? null) : null), "slot", [], "any", false, false, false, 461), "html", null, true);
         echo "\">
                         <div class=\"polaroid\">
                             <img src=\"";
-        // line 453
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce = twig_get_attribute($this->env, $this->source, (($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b = ($context["publications"] ?? null)) && is_array($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b) || $__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b instanceof ArrayAccess ? ($__internal_ba9f0a3bb95c082f61c9fbf892a05514d732703d52edc77b51f2e6284135900b[2] ?? null) : null), "photos", [], "any", false, false, false, 453)) && is_array($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce) || $__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce instanceof ArrayAccess ? ($__internal_653499042eb14fd8415489ba6fa87c1e85cff03392e9f57b26d0da09b9be82ce[0] ?? null) : null), "getpath", [], "any", false, false, false, 453), "html", null, true);
+        // line 463
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c = twig_get_attribute($this->env, $this->source, (($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 = ($context["publications"] ?? null)) && is_array($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972) || $__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 instanceof ArrayAccess ? ($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972[2] ?? null) : null), "photos", [], "any", false, false, false, 463)) && is_array($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c) || $__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c instanceof ArrayAccess ? ($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c[0] ?? null) : null), "getpath", [], "any", false, false, false, 463), "html", null, true);
         echo "\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
                                 <p>";
-        // line 455
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c = ($context["publications"] ?? null)) && is_array($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c) || $__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c instanceof ArrayAccess ? ($__internal_73db8eef4d2582468dab79a6b09c77ce3b48675a610afd65a1f325b68804a60c[2] ?? null) : null), "libelle", [], "any", false, false, false, 455), "html", null, true);
+        // line 465
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, (($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 = ($context["publications"] ?? null)) && is_array($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216) || $__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 instanceof ArrayAccess ? ($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216[2] ?? null) : null), "libelle", [], "any", false, false, false, 465), 0, 40);
         echo "</p>
                                 <p><span class=\"address\">";
-        // line 456
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 = ($context["publications"] ?? null)) && is_array($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972) || $__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972 instanceof ArrayAccess ? ($__internal_d8ad5934f1874c52fa2ac9a4dfae52038b39b8b03cfc82eeb53de6151d883972[2] ?? null) : null), "typepublication", [], "any", false, false, false, 456), "libelle", [], "any", false, false, false, 456), "html", null, true);
+        // line 466
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 = ($context["publications"] ?? null)) && is_array($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0) || $__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 instanceof ArrayAccess ? ($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0[2] ?? null) : null), "typepublication", [], "any", false, false, false, 466), "libelle", [], "any", false, false, false, 466), 0, 20);
         echo ",
                                         ";
-        // line 457
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 = ($context["publications"] ?? null)) && is_array($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216) || $__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216 instanceof ArrayAccess ? ($__internal_df39c71428eaf37baa1ea2198679e0077f3699bdd31bb5ba10d084710b9da216[2] ?? null) : null), "localisations", [], "any", false, false, false, 457), "libelle", [], "any", false, false, false, 457), "html", null, true);
-        echo " </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">";
-        // line 459
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 = ($context["publications"] ?? null)) && is_array($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0) || $__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0 instanceof ArrayAccess ? ($__internal_bf0e189d688dc2ad611b50a437a32d3692fb6b8be90d2228617cfa6db44e75c0[2] ?? null) : null), "prix", [], "any", false, false, false, 459), "html", null, true);
-        echo "</span>
-                                </div>
+        // line 467
+        echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (($__internal_674c0abf302105af78b0a38907d86c5dd0028bdc3ee5f24bf52771a16487760c = ($context["publications"] ?? null)) && is_array($__internal_674c0abf302105af78b0a38907d86c5dd0028bdc3ee5f24bf52771a16487760c) || $__internal_674c0abf302105af78b0a38907d86c5dd0028bdc3ee5f24bf52771a16487760c instanceof ArrayAccess ? ($__internal_674c0abf302105af78b0a38907d86c5dd0028bdc3ee5f24bf52771a16487760c[2] ?? null) : null), "localisations", [], "any", false, false, false, 467), "libelle", [], "any", false, false, false, 467), 0, 20);
+        echo " </span>
+                                </p>
+                                <p>
+                                    ";
+        // line 470
+        if (twig_get_attribute($this->env, $this->source, (($__internal_dd839fbfcab68823c49af471c7df7659a500fe72e71b58d6b80d896bdb55e75f = ($context["publications"] ?? null)) && is_array($__internal_dd839fbfcab68823c49af471c7df7659a500fe72e71b58d6b80d896bdb55e75f) || $__internal_dd839fbfcab68823c49af471c7df7659a500fe72e71b58d6b80d896bdb55e75f instanceof ArrayAccess ? ($__internal_dd839fbfcab68823c49af471c7df7659a500fe72e71b58d6b80d896bdb55e75f[2] ?? null) : null), "prix", [], "any", false, false, false, 470)) {
+            // line 471
+            echo "                                        <div class=\"price-date\">
+                                            <span class=\"price\">";
+            // line 472
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (($__internal_a7ed47878554bdc32b70e1ba5ccc67d2302196876fbf62b4c853b20cb9e029fc = ($context["publications"] ?? null)) && is_array($__internal_a7ed47878554bdc32b70e1ba5ccc67d2302196876fbf62b4c853b20cb9e029fc) || $__internal_a7ed47878554bdc32b70e1ba5ccc67d2302196876fbf62b4c853b20cb9e029fc instanceof ArrayAccess ? ($__internal_a7ed47878554bdc32b70e1ba5ccc67d2302196876fbf62b4c853b20cb9e029fc[2] ?? null) : null), "prix", [], "any", false, false, false, 472), "html", null, true);
+            echo " FCFA</span>
+                                        </div>
+                                    ";
+        }
+        // line 475
+        echo "                                </p>
                             </div>
                         </div>
                     </a>
@@ -787,7 +817,7 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
 
     public function getDebugInfo()
     {
-        return array (  762 => 459,  757 => 457,  753 => 456,  749 => 455,  744 => 453,  737 => 451,  727 => 444,  722 => 442,  718 => 441,  714 => 440,  709 => 438,  702 => 436,  692 => 429,  687 => 427,  683 => 426,  679 => 425,  674 => 423,  667 => 421,  633 => 389,  625 => 387,  617 => 385,  615 => 384,  609 => 380,  600 => 377,  594 => 375,  592 => 374,  542 => 326,  537 => 324,  532 => 323,  526 => 321,  524 => 320,  519 => 318,  489 => 290,  484 => 288,  476 => 285,  472 => 283,  467 => 281,  461 => 278,  454 => 274,  451 => 273,  449 => 272,  439 => 265,  414 => 242,  409 => 240,  401 => 237,  397 => 235,  392 => 233,  386 => 230,  379 => 226,  376 => 225,  374 => 224,  364 => 217,  351 => 207,  345 => 204,  338 => 199,  333 => 197,  328 => 196,  323 => 194,  318 => 193,  314 => 192,  309 => 191,  305 => 190,  300 => 189,  296 => 188,  292 => 187,  283 => 180,  277 => 179,  272 => 177,  268 => 176,  262 => 174,  255 => 170,  251 => 169,  246 => 166,  243 => 165,  239 => 164,  233 => 160,  227 => 159,  219 => 156,  216 => 155,  210 => 152,  207 => 151,  204 => 150,  200 => 149,  188 => 140,  183 => 137,  176 => 134,  173 => 133,  170 => 132,  37 => 1,);
+        return array (  794 => 475,  788 => 472,  785 => 471,  783 => 470,  777 => 467,  773 => 466,  769 => 465,  764 => 463,  757 => 461,  749 => 455,  743 => 452,  740 => 451,  738 => 450,  732 => 447,  728 => 446,  724 => 445,  719 => 443,  712 => 441,  704 => 435,  698 => 432,  695 => 431,  693 => 430,  687 => 427,  683 => 426,  678 => 424,  673 => 422,  666 => 420,  633 => 389,  625 => 387,  617 => 385,  615 => 384,  609 => 380,  600 => 377,  594 => 375,  592 => 374,  542 => 326,  537 => 324,  532 => 323,  526 => 321,  524 => 320,  519 => 318,  489 => 290,  484 => 288,  476 => 285,  472 => 283,  467 => 281,  461 => 278,  454 => 274,  451 => 273,  449 => 272,  439 => 265,  414 => 242,  409 => 240,  401 => 237,  397 => 235,  392 => 233,  386 => 230,  379 => 226,  376 => 225,  374 => 224,  364 => 217,  351 => 207,  345 => 204,  338 => 199,  333 => 197,  328 => 196,  323 => 194,  318 => 193,  314 => 192,  309 => 191,  305 => 190,  300 => 189,  296 => 188,  292 => 187,  283 => 180,  277 => 179,  272 => 177,  268 => 176,  262 => 174,  255 => 170,  251 => 169,  246 => 166,  243 => 165,  239 => 164,  233 => 160,  227 => 159,  219 => 156,  216 => 155,  210 => 152,  207 => 151,  204 => 150,  200 => 149,  188 => 140,  183 => 137,  176 => 134,  173 => 133,  170 => 132,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -1209,19 +1239,24 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     </ul>
                 </div>
             </section>
-
             <section class=\"row\" style=\"margin-top: 20px\">
                 <div class=\"col-lg-4 col-sm-4 col-xs-6 col-md-4\" id=\"first-publication-recommande\">
                     <a href=\"{{ url('publications') }}/{{ publications[0].slot }}\">
                         <div class=\"polaroid\">
                             <img src=\"{{ publications[0].photos[0].getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
-                                <p>{{ publications[0].libelle }}</p>
-                                <p><span class=\"address\">{{ publications[0].typepublication.libelle }},
-                                        {{ publications[0].localisations.libelle}} </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">{{ publications[0].prix }}</span>
-                                </div>
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
+                                <p>{{ publications[0].libelle|slice(0,40)|raw }}</p>
+                                <p>
+                                    <span class=\"address\">{{ publications[0].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[0].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[0].prix %}
+                                        <div class=\"price-date\">
+                                            <span class=\"price\">{{ publications[0].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>
@@ -1230,13 +1265,18 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     <a href=\"{{ url('publications') }}/{{ publications[1].slot }}\">
                         <div class=\"polaroid\">
                             <img src=\"{{ publications[1].photos[0].getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
-                                <p>{{ publications[1].libelle }}</p>
-                                <p><span class=\"address\">{{ publications[1].typepublication.libelle }},
-                                        {{ publications[1].localisations.libelle}} </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">{{ publications[1].prix }}</span>
-                                </div>
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
+                                <p>{{ publications[1].libelle|slice(0,40)|raw }}</p>
+                                <p><span class=\"address\">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                        <p>
+                                            {% if publications[1].prix %}
+                                                <div class=\"price-date\">
+                                                    <span class=\"price\">{{ publications[1].prix }} FCFA</span>
+                                                </div>
+                                            {% endif %}
+                                        </p>
                             </div>
                         </div>
                     </a>
@@ -1245,13 +1285,18 @@ class __TwigTemplate_3c799046bec2bfa8f40e80197c874958dd12557858180047153ebba2e8a
                     <a href=\"{{ url('publications') }}/{{ publications[2].slot }}\">
                         <div class=\"polaroid\">
                             <img src=\"{{ publications[2].photos[0].getpath }}\" alt=\"5 Terre\" style=\"width:100%;height: 200px;\">
-                            <div class=\"container-p\">
-                                <p>{{ publications[2].libelle }}</p>
-                                <p><span class=\"address\">{{ publications[2].typepublication.libelle }},
-                                        {{ publications[2].localisations.libelle}} </span></p>
-                                <div class=\"price-date\">
-                                    <span class=\"price\">{{ publications[2].prix }}</span>
-                                </div>
+                            <div class=\"container-p\" style=\"min-height: 100px;\">
+                                <p>{{ publications[2].libelle|slice(0,40)|raw  }}</p>
+                                <p><span class=\"address\">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
+                                        {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
+                                </p>
+                                <p>
+                                    {% if publications[2].prix %}
+                                        <div class=\"price-date\">
+                                            <span class=\"price\">{{ publications[2].prix }} FCFA</span>
+                                        </div>
+                                    {% endif %}
+                                </p>
                             </div>
                         </div>
                     </a>

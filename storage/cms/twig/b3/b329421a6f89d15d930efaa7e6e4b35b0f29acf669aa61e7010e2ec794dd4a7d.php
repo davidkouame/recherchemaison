@@ -160,19 +160,25 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
                     <label for=\"\">Nombre de pièce <span class=\"required\">*</span></label>
                     <input type=\"number\" class=\"form-control\" name=\"nbre_piece\" placeholder=\"Entrer le nombre de pièce\" />
                 </div>
-                <div class=\"form-group col-md-12 required\" data-request-files data-request-flash>
-                    <div id=\"imageResult\">
-                        <img src=\"\" class=\"img-responsive\" />
-                    </div>
-                    <br><br>
-                    <label class=\"control-label\" for=\"registerPhoto\" style=\"padding-left: 25%;\">Ajouter un cover </label>
-                    <input type=\"file\" name=\"cover\" id=\"registerPhoto\" accept=\"image/*\" data-request=\"onImageUpload\"
-                        data-request-files style=\"padding-left: 25%;\" />
+                <div class=\"form-group col-md-12\" style=\"padding: 0px;\">
+                    <label for=\"prix\">Prix <span class=\"required\">*</span></label>
+                    <input type=\"number\" class=\"form-control\" name=\"prix\" placeholder=\"Entrez le prix\" />
                 </div>
             </div>
-            <div class=\"form-group col-md-6\">
+            <div class=\"form-group col-md-6 required\" data-request-files data-request-flash>
+                <div id=\"imageResult\">
+                    <img src=\"\" class=\"img-responsive\" />
+                </div>
+                <br><br>
+                <label class=\"control-label\" for=\"registerPhoto\" style=\"padding-left: 25%;\">Ajouter un cover </label>
+                <input type=\"file\" name=\"cover\" id=\"registerPhoto\" accept=\"image/*\" data-request=\"onImageUpload\"
+                    data-request-files style=\"padding-left: 25%;\" />
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"form-group col-md-12\">
                 <label for=\"\">Description <span class=\"required\">*</span></label>
-                <textarea name=\"description\" class=\"form-control\" cols=\"30\" rows=\"20\"></textarea>
+                <textarea name=\"description\" class=\"form-control\" cols=\"30\" rows=\"10\"></textarea>
             </div>
         </div>
         <div class=\"row\">
@@ -288,19 +294,25 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
                     <label for=\"\">Nombre de pièce <span class=\"required\">*</span></label>
                     <input type=\"number\" class=\"form-control\" name=\"nbre_piece\" placeholder=\"Entrer le nombre de pièce\" />
                 </div>
-                <div class=\"form-group col-md-12 required\" data-request-files data-request-flash>
-                    <div id=\"imageResult\">
-                        <img src=\"\" class=\"img-responsive\" />
-                    </div>
-                    <br><br>
-                    <label class=\"control-label\" for=\"registerPhoto\" style=\"padding-left: 25%;\">Ajouter un cover </label>
-                    <input type=\"file\" name=\"cover\" id=\"registerPhoto\" accept=\"image/*\" data-request=\"onImageUpload\"
-                        data-request-files style=\"padding-left: 25%;\" />
+                <div class=\"form-group col-md-12\" style=\"padding: 0px;\">
+                    <label for=\"prix\">Prix <span class=\"required\">*</span></label>
+                    <input type=\"number\" class=\"form-control\" name=\"prix\" placeholder=\"Entrez le prix\" />
                 </div>
             </div>
-            <div class=\"form-group col-md-6\">
+            <div class=\"form-group col-md-6 required\" data-request-files data-request-flash>
+                <div id=\"imageResult\">
+                    <img src=\"\" class=\"img-responsive\" />
+                </div>
+                <br><br>
+                <label class=\"control-label\" for=\"registerPhoto\" style=\"padding-left: 25%;\">Ajouter un cover </label>
+                <input type=\"file\" name=\"cover\" id=\"registerPhoto\" accept=\"image/*\" data-request=\"onImageUpload\"
+                    data-request-files style=\"padding-left: 25%;\" />
+            </div>
+        </div>
+        <div class=\"row\">
+            <div class=\"form-group col-md-12\">
                 <label for=\"\">Description <span class=\"required\">*</span></label>
-                <textarea name=\"description\" class=\"form-control\" cols=\"30\" rows=\"20\"></textarea>
+                <textarea name=\"description\" class=\"form-control\" cols=\"30\" rows=\"10\"></textarea>
             </div>
         </div>
         <div class=\"row\">
