@@ -1,5 +1,12 @@
 fields:
+    commune:
+        label: Commune
+        nameFrom: libelle
+        descriptionFrom: description
+        span: auto
+        type: relation
+        placeholder: 'Sélectionnez une commune'
     libelle:
-        label: Libellé
+        label: Nom du secteur
         span: auto
         type: text

@@ -15,11 +15,11 @@ navigation:
                 url: bootnetcrasher/parametre/ville
                 icon: icon-arrow-right
             communes:
-                label: Communes
+                label: 'Villes / Communes'
                 url: bootnetcrasher/parametre/commune
                 icon: icon-arrow-right
             localisations:
-                label: Localisations
+                label: Quartiers
                 url: bootnetcrasher/parametre/localisation
                 icon: icon-arrow-right
             categoriesmaisons:

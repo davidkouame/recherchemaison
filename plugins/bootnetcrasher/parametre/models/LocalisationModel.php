@@ -24,4 +24,8 @@ class LocalisationModel extends Model
      */
     public $rules = [
     ];
+    
+    public $belongsTo = [
+        "commune" => ["bootnetcrasher\Parametre\Models\CommuneModel", "key" => "commune_id", "otherKey" => "id"]
+    ];
 }

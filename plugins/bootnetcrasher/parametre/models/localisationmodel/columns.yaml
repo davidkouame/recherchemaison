@@ -1,5 +1,13 @@
 columns:
+    r_commune:
+        label: "Commune"
+        type: text
+        searchable: true
+        sortable: true
+        invisible: false
+        relation: commune
+        select: libelle 
     libelle:
-        label: Libellé
+        label: Nom quartier
         type: text
         searchable: true
