@@ -1,0 +1,5 @@
+fields:
+    libelle:
+        label: Nom du quartier
+        span: auto
+        type: text

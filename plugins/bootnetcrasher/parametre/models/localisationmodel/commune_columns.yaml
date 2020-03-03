@@ -1,0 +1,5 @@
+columns:
+    libelle:
+        label: nom du quartier
+        type: text
+        searchable: true

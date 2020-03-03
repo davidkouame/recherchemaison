@@ -24,4 +24,11 @@ class CommuneModel extends Model
      */
     public $rules = [
     ];
+    
+    public $hasMany = [
+        'quartiers' => [
+            'bootnetcrasher\Parametre\Models\LocalisationModel',
+            'key' => 'commune_id',
+        ]
+    ];
 }

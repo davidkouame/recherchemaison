@@ -1,0 +1,10 @@
+quartiers:
+    label: "Quartier"
+    view:
+        list: $/bootnetcrasher/parametre/models/localisationmodel/commune_columns.yaml
+        toolbarButtons:
+    manage:
+        form: $/bootnetcrasher/parametre/models/localisationmodel/commune_fields.yaml
+        title: 'Ajouter un quartier'
+        list: $/bootnetcrasher/parametre/models/localisationmodel/commune_columns.yaml
+        

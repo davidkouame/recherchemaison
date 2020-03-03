@@ -3,3 +3,7 @@ fields:
         label: Libelle
         span: auto
         type: text
+    quartiers:
+            span: full
+            path: quartiers
+            type: partial
