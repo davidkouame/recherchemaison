@@ -1,4 +1,4 @@
-1583067410a:1:{s:12:"register.htm";a:9:{s:8:"fileName";s:12:"register.htm";s:7:"content";s:122:"title = "Inscription"
+1583230226a:1:{s:12:"register.htm";a:9:{s:8:"fileName";s:12:"register.htm";s:7:"content";s:122:"title = "Inscription"
 url = "/auth/register"
 layout = "default"
 [RegisterComponent]
