@@ -1,7 +1,10 @@
-1583758906a:1:{s:23:"site/footer_general.htm";a:5:{s:8:"fileName";s:23:"site/footer_general.htm";s:7:"content";s:687:"<script>
+1583760596a:1:{s:23:"site/footer_general.htm";a:5:{s:8:"fileName";s:23:"site/footer_general.htm";s:7:"content";s:869:"<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
     // $("#collapse-navbar").css({'display' :'none !important'});
     // $("#collapse-navbar .navbar-nav").css('display', 'none');
-
+    $(document).ready(function() {
+                $('.select2').select2();
+            });
     $("#btnResponsive").click(function (e) {
         if ($("#layout-header").hasClass("responsive")) {
             $("#layout-header").removeClass("responsive");
@@ -13,10 +16,13 @@
             $("#collapse-navbar .navbar-nav").css('display', 'block');
         }
     });
-</script>";s:5:"mtime";i:1581770825;s:6:"markup";s:687:"<script>
+</script>";s:5:"mtime";i:1583759932;s:6:"markup";s:869:"<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+<script>
     // $("#collapse-navbar").css({'display' :'none !important'});
     // $("#collapse-navbar .navbar-nav").css('display', 'none');
-
+    $(document).ready(function() {
+                $('.select2').select2();
+            });
     $("#btnResponsive").click(function (e) {
         if ($("#layout-header").hasClass("responsive")) {
             $("#layout-header").removeClass("responsive");

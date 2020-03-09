@@ -80,6 +80,14 @@ layout = "default"
     a:hover{
         text-decoration: none;
     }
+
+    .select2-selection.select2-selection--single{
+        height: 58px;
+        padding-top: 14px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 16px;
+    }
 </style>
 
 {% flash %}
@@ -114,7 +122,7 @@ layout = "default"
                         </select>
                     </div>
                     <div class="col-xs-4 col-md-3 search-top">
-                        <select name="localisation_id" id="" class="form-control" style="height: 58px;">
+                        <select name="localisation_id" id="" class="form-control select2" style="height: 58px;">
                             <option value="">Choisir une localisation </option>
                             {% for localisation in localisations %}
                             {% if localisation_id == localisation.id %}

@@ -1,4 +1,4 @@
-1583759311a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:6469:"title = "Recherche maison"
+1583760361a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:6694:"title = "Recherche maison"
 url = "/"
 layout = "default"
 [HomeComponent]
@@ -80,6 +80,14 @@ layout = "default"
     a:hover{
         text-decoration: none;
     }
+
+    .select2-selection.select2-selection--single{
+        height: 58px;
+        padding-top: 14px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 16px;
+    }
 </style>
 
 {% flash %}
@@ -114,7 +122,7 @@ layout = "default"
                         </select>
                     </div>
                     <div class="col-xs-4 col-md-3 search-top">
-                        <select name="localisation_id" id="" class="form-control" style="height: 58px;">
+                        <select name="localisation_id" id="" class="form-control select2" style="height: 58px;">
                             <option value="">Choisir une localisation </option>
                             {% for localisation in localisations %}
                             {% if localisation_id == localisation.id %}
@@ -176,7 +184,7 @@ layout = "default"
             </div>
         </div>
     {% endif %}
-</div>";s:5:"mtime";i:1583758708;s:6:"markup";s:6393:"<style>
+</div>";s:5:"mtime";i:1583759759;s:6:"markup";s:6618:"<style>
     @media screen and (max-width: 500px) {
         .publication{
             margin-left: 6%;
@@ -252,6 +260,14 @@ layout = "default"
     a:hover{
         text-decoration: none;
     }
+
+    .select2-selection.select2-selection--single{
+        height: 58px;
+        padding-top: 14px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 16px;
+    }
 </style>
 
 {% flash %}
@@ -286,7 +302,7 @@ layout = "default"
                         </select>
                     </div>
                     <div class="col-xs-4 col-md-3 search-top">
-                        <select name="localisation_id" id="" class="form-control" style="height: 58px;">
+                        <select name="localisation_id" id="" class="form-control select2" style="height: 58px;">
                             <option value="">Choisir une localisation </option>
                             {% for localisation in localisations %}
                             {% if localisation_id == localisation.id %}

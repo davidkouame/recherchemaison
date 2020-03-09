@@ -34,7 +34,8 @@ class __TwigTemplate_586affd7e218726e41e7fc268c130910e49201815ff4cd4776c80fa7f4f
     {
         $macros = $this->macros;
         // line 1
-        echo "<style>
+        echo "<link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
+<style>
     .responsive {
         height: 160px;
     }
@@ -158,7 +159,8 @@ class __TwigTemplate_586affd7e218726e41e7fc268c130910e49201815ff4cd4776c80fa7f4f
 
     public function getSourceContext()
     {
-        return new Source("<style>
+        return new Source("<link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
+<style>
     .responsive {
         height: 160px;
     }

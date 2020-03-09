@@ -135,12 +135,14 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/theme.css");
         echo "\" rel=\"stylesheet\">
+    <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
+
     
     ";
-        // line 37
+        // line 39
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 38
+        // line 40
         echo "
     <style>
         .responsive {
@@ -165,94 +167,95 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     <!-- Header -->
     ";
-        // line 61
+        // line 63
         if (($context["user"] ?? null)) {
-            // line 62
+            // line 64
             echo "        ";
-            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 62)) {
-                // line 63
+            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 64)) {
+                // line 65
                 echo "        <header id=\"layout-header\">
             ";
-                // line 64
+                // line 66
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 65
+                // line 67
                 echo "        </header>
         ";
-            } elseif (twig_get_attribute($this->env, $this->source,             // line 66
-($context["user"] ?? null), "agence_id", [], "any", false, false, false, 66)) {
-                // line 67
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 68
+($context["user"] ?? null), "agence_id", [], "any", false, false, false, 68)) {
+                // line 69
                 echo "            <header id=\"layout-header\">
                 ";
-                // line 68
+                // line 70
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_agence"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 69
+                // line 71
                 echo "            </header>
         ";
             } else {
-                // line 71
+                // line 73
                 echo "        <header id=\"layout-header\">
             ";
-                // line 72
+                // line 74
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 73
+                // line 75
                 echo "        </header>
         ";
             }
-            // line 75
+            // line 77
             echo "    ";
         } else {
-            // line 76
+            // line 78
             echo "        <header id=\"layout-header\">
             ";
-            // line 77
+            // line 79
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 78
+            // line 80
             echo "        </header>
     ";
         }
-        // line 80
+        // line 82
         echo "
     <!-- Content -->
     <section id=\"layout-content\">
         ";
-        // line 83
+        // line 85
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 84
+        // line 86
         echo "    </section>
 
     <!-- Footer -->
     <footer id=\"layout-footer\">
         ";
-        // line 88
+        // line 90
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 89
+        // line 91
         echo "    </footer>
 
     <!-- Scripts -->
     <script src=\"";
-        // line 92
+        // line 94
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
     <script src=\"";
-        // line 93
+        // line 95
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
     <script src=\"";
-        // line 94
+        // line 96
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
+    
     ";
-        // line 95
+        // line 98
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -263,11 +266,11 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 96
+        // line 99
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 97
+        // line 100
         echo "
     <script>
         \$(document).ready(function (e) {
@@ -321,18 +324,20 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 \$(\".imggf-\" + indeximg).parent().addClass(\"active\").css(\"opacity\", '');
                 \$(\".img-miniature li.active\").removeClass(\"active\");
                 \$(this).parent().addClass('active');
-            })
+            });
+
+           
 
             
         });
     </script>
 
     ";
-        // line 156
+        // line 161
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 157
+        // line 162
         echo "</body>
 
 </html>";
@@ -350,7 +355,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  336 => 157,  332 => 156,  271 => 97,  267 => 96,  256 => 95,  252 => 94,  248 => 93,  244 => 92,  239 => 89,  235 => 88,  229 => 84,  227 => 83,  222 => 80,  218 => 78,  214 => 77,  211 => 76,  208 => 75,  204 => 73,  200 => 72,  197 => 71,  193 => 69,  189 => 68,  186 => 67,  184 => 66,  181 => 65,  177 => 64,  174 => 63,  171 => 62,  169 => 61,  144 => 38,  141 => 37,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  341 => 162,  337 => 161,  274 => 100,  270 => 99,  259 => 98,  254 => 96,  250 => 95,  246 => 94,  241 => 91,  237 => 90,  231 => 86,  229 => 85,  224 => 82,  220 => 80,  216 => 79,  213 => 78,  210 => 77,  206 => 75,  202 => 74,  199 => 73,  195 => 71,  191 => 70,  188 => 69,  186 => 68,  183 => 67,  179 => 66,  176 => 65,  173 => 64,  171 => 63,  146 => 40,  143 => 39,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -390,6 +395,8 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     <link href=\"{{ 'assets/css/vendor.css'|theme }}\" rel=\"stylesheet\">
     <link href=\"{{ 'assets/css/home.css'|theme }}\" rel=\"stylesheet\">
     <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
+    <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
+
     
     {% styles %}
 
@@ -449,6 +456,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
     <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
     <script src=\"{{ 'assets/javascript/app.js'|theme }}\"></script>
+    
     {% framework extras %}
     {% scripts %}
 
@@ -504,7 +512,9 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
                 \$(\".imggf-\" + indeximg).parent().addClass(\"active\").css(\"opacity\", '');
                 \$(\".img-miniature li.active\").removeClass(\"active\");
                 \$(this).parent().addClass('active');
-            })
+            });
+
+           
 
             
         });
