@@ -41,5 +41,6 @@ class Home extends Account {
         $this->page['publications'] = $query->orderBy('created_at', 'desc')->paginate(12);
         $this->page['keys'] = Input::get('keys');
         $this->page['localisation_id'] = Input::get('localisation_id');
+        $user = \Auth::getUser();
     }
 }

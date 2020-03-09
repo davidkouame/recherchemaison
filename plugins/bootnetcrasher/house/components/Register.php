@@ -13,6 +13,7 @@ use bootnetcrasher\House\Models\AgenceModel;
 use bootnetcrasher\House\Models\DemarcheurModel;
 use RainLab\User\Components\Account;
 use bootnetcrasher\Parametre\Models\LocalisationModel;
+use Input;
 
 class Register extends Account {
 
@@ -47,6 +48,7 @@ class Register extends Account {
         $agencemodel->libelle = post('libelle');
         $agencemodel->email = $user->email;
         $agencemodel->tel = $user->tel;
+        $agencemodel->agrement = Input::file('agrement');
         // $agencemodel->tel2 = post('tel2');
         $agencemodel->nom = $user->name;
         $agencemodel->prenom = $user->surname;
@@ -65,6 +67,7 @@ class Register extends Account {
         $user = Auth::getUser();
         $demarcheur = new DemarcheurModel;
         $demarcheur->email = $user->email;
+        $demarcheur->piece = Input::file('piece');
         $demarcheur->tel = $user->tel;
         // $demarcheur->tel2 = post('tel2');
         $demarcheur->nom = $user->name;
@@ -123,8 +126,23 @@ class Register extends Account {
             if ($validation->fails()) {
                 throw new ValidationException($validation);
             }
-            if($this->onCreateAgence());
-                return \Redirect::to('auth/login');
+            $validation = Validator::make(post(), $rules);
+            if ($validation->fails()) {
+                throw new ValidationException($validation);
+            }
+            if(!Input::file('agrement')){
+                throw new ValidationException(["error" => "Veillez uploader votre agrément !.", 'message' => 'bdsqvgdvqsg']);
+            }
+            if($this->onCreateAgence()){
+                // return \Redirect::to('auth/login');
+                $user = Auth::getUser();
+                if($user){
+                    $user->is_activated = 0;
+                    $user->activated_at = null;
+                    \Auth::logout();
+                }
+                return \Redirect::to('sucessful-register');
+            }
         }else{
             $rules = [
                 "localisation_id" => "required"
@@ -133,8 +151,19 @@ class Register extends Account {
             if ($validation->fails()) {
                 throw new ValidationException($validation);
             }
-            if($this->onCreateDemarcheur())
-                return \Redirect::to('auth/login'); 
+            if(!Input::file('piece')){
+                throw new ValidationException(["error" => "Veillez uploader une pièce d'identité .", 'message' => 'bdsqvgdvqsg']);
+            }
+            if($this->onCreateDemarcheur()){
+                // return \Redirect::to('auth/login');
+                $user = Auth::getUser();
+                if($user){
+                    $user->is_activated = 0;
+                    $user->activated_at = null;
+                    \Auth::logout();
+                }
+                return \Redirect::to('sucessful-register');
+            }
         }
     }
 }

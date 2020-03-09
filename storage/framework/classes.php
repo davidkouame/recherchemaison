@@ -124,4 +124,11 @@
   'backend\\Controllers\\users' => 'modules/backend/controllers/users.php',
   'system\\Controllers\\mailbrandsettings' => 'modules/system/controllers/mailbrandsettings.php',
   'cms\\Controllers\\themes' => 'modules/cms/controllers/themes.php',
+  'bootnetcrasher\\house\\Controllers\\DemarcheurEnAttente' => 'plugins/bootnetcrasher/house/controllers/DemarcheurEnAttente.php',
+  'Rainlab\\User\\Models\\User' => 'plugins/rainlab/user/models/User.php',
+  'bootnetcrasher\\house\\Controllers\\DemarcheurRefuse' => 'plugins/bootnetcrasher/house/controllers/DemarcheurRefuse.php',
+  'bootnetcrasher\\house\\Controllers\\demarcheurenattente' => 'plugins/bootnetcrasher/house/controllers/demarcheurenattente.php',
+  'bootnetcrasher\\house\\Controllers\\demarcheurrefuse' => 'plugins/bootnetcrasher/house/controllers/demarcheurrefuse.php',
+  'bootnetcrasher\\house\\Controllers\\agenceenattente' => 'plugins/bootnetcrasher/house/controllers/agenceenattente.php',
+  'bootnetcrasher\\house\\Controllers\\agencerefusee' => 'plugins/bootnetcrasher/house/controllers/agencerefusee.php',
 );

@@ -1,0 +1,10 @@
+name: AgenceRefusee
+form: $/bootnetcrasher/house/models/agencemodel/fields.yaml
+modelClass: bootnetcrasher\House\Models\AgenceModel
+defaultRedirect: bootnetcrasher/house/agencerefusee
+create:
+    redirect: 'bootnetcrasher/house/agencerefusee/update/:id'
+    redirectClose: bootnetcrasher/house/agencerefusee
+update:
+    redirect: bootnetcrasher/house/agencerefusee
+    redirectClose: bootnetcrasher/house/agencerefusee

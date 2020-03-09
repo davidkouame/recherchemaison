@@ -13,7 +13,25 @@ navigation:
         label: Agences
         url: bootnetcrasher/house/agence
         icon: icon-life-ring
-    main-menu-item3:
+        sideMenu:
+            agencesenattentes:
+                label: 'Agences en attentes'
+                url: bootnetcrasher/house/agenceenattente
+                icon: icon-arrow-right
+            agencesrefusees:
+                label: 'Agences refusées'
+                url: bootnetcrasher/house/agencerefusee
+                icon: icon-arrow-right
+    demarcheurs:
         label: Démarcheurs
         url: bootnetcrasher/house/demarcheur
         icon: icon-life-ring
+        sideMenu:
+            demarcheursenattentes:
+                label: 'Démarcheurs en attentes'
+                url: bootnetcrasher/house/demarcheurenattente
+                icon: icon-arrow-right
+            demarcheursrefuses:
+                label: 'Démarcheurs refusés'
+                url: bootnetcrasher/house/demarcheurrefuse
+                icon: icon-arrow-right

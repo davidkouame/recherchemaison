@@ -13,5 +13,10 @@ class Demarcheur extends Controller
     public function __construct()
     {
         parent::__construct();
+        BackendMenu::setContext('Bootnetcrasher.House', 'demarcheurs');
+    }
+
+    public function listExtendQuery($query) {
+       $query->orderBy('created_at','desc');
     }
 }
