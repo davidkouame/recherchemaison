@@ -29,7 +29,7 @@ class Home extends Account {
         }
         $this->prepareVars();
         // recuperation de toutes les localisations
-        $this->page['localisations'] = LocalisationModel::orderBy('libelle','asc')->get();
+        $this->page['localisations'] = LocalisationModel::orderBy('commune_id','asc')->orderBy('libelle','asc')->get();
         // recuperation de toutes les publications
         $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){

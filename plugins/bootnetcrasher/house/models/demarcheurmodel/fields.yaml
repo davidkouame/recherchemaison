@@ -14,7 +14,7 @@ fields:
     tel:
         label: 'Télphone 1'
         span: auto
-        type: number
+        type: text
     tel2:
         label: 'Téléphone 2'
         span: auto
