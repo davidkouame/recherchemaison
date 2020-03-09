@@ -1,4 +1,4 @@
-1583758394a:1:{s:26:"welcome_after_register.htm";a:9:{s:8:"fileName";s:26:"welcome_after_register.htm";s:7:"content";s:385:"title = "Connexion"
+1583759255a:1:{s:26:"welcome_after_register.htm";a:9:{s:8:"fileName";s:26:"welcome_after_register.htm";s:7:"content";s:385:"title = "Connexion"
 url = "/sucessful-register"
 layout = "default"
 [resetPassword]

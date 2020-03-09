@@ -131,4 +131,5 @@
   'bootnetcrasher\\house\\Controllers\\demarcheurrefuse' => 'plugins/bootnetcrasher/house/controllers/demarcheurrefuse.php',
   'bootnetcrasher\\house\\Controllers\\agenceenattente' => 'plugins/bootnetcrasher/house/controllers/agenceenattente.php',
   'bootnetcrasher\\house\\Controllers\\agencerefusee' => 'plugins/bootnetcrasher/house/controllers/agencerefusee.php',
+  'Bootnetcrasher\\Parametre\\Models\\TypePublicationModel' => 'plugins/bootnetcrasher/parametre/models/TypePublicationModel.php',
 );
