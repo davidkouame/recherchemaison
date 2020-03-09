@@ -54,27 +54,41 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
         flex-direction: column;
 
     }
+<<<<<<< HEAD
 
     .select2-selection.select2-selection--single{
         height: 34px;
     }
+=======
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
 </style>
 
 <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"
     integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
 
 ";
+<<<<<<< HEAD
         $_type = isset($context["type"]) ? $context["type"] : null;        $_message = isset($context["message"]) ? $context["message"] : null;        // line 30
         foreach (Flash::getMessages() as $type => $messages) {
             foreach ($messages as $message) {
                 $context["type"] = $type;                $context["message"] = $message;                // line 31
+=======
+        $_type = isset($context["type"]) ? $context["type"] : null;        $_message = isset($context["message"]) ? $context["message"] : null;        // line 26
+        foreach (Flash::getMessages() as $type => $messages) {
+            foreach ($messages as $message) {
+                $context["type"] = $type;                $context["message"] = $message;                // line 27
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
                 echo "<div class=\"alert alert-success\" style=\"text-align: center;\">";
                 echo twig_escape_filter($this->env, ($context["message"] ?? null), "html", null, true);
                 echo "</div>
 ";
             }
         }
+<<<<<<< HEAD
         $context["type"] = $_type;        $context["message"] = $_message;        // line 33
+=======
+        $context["type"] = $_type;        $context["message"] = $_message;        // line 29
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "<div class=\"row\" style=\"margin-top: 40px;\">
     <h2>Publication d'une maison</h2>
     <br>
@@ -91,6 +105,7 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
                 <select name=\"ville_id\" id=\"\" class=\"form-control\">
                     <option value=\"\">Sélectionnez une ville </option>
                     ";
+<<<<<<< HEAD
         // line 48
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["villes"] ?? null));
@@ -100,19 +115,35 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ville"], "id", [], "any", false, false, false, 49), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ville"], "libelle", [], "any", false, false, false, 49), "html", null, true);
+=======
+        // line 44
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["villes"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["ville"]) {
+            // line 45
+            echo "                    <option value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ville"], "id", [], "any", false, false, false, 45), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ville"], "libelle", [], "any", false, false, false, 45), "html", null, true);
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
             echo "</option>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ville'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+<<<<<<< HEAD
         // line 51
+=======
+        // line 47
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "                </select>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"form-group col-md-6\">
                 <label for=\"\">Localisation <span class=\"required\">*</span></label>
+<<<<<<< HEAD
                 <select name=\"localisation_id\" id=\"\" class=\"form-control select2\">
                     <option value=\"\">Sélectionnez une localisation</option>
                     ";
@@ -125,13 +156,31 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 60), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 60), "html", null, true);
+=======
+                <select name=\"localisation_id\" id=\"\" class=\"form-control\">
+                    <option value=\"\">Sélectionnez une localisation</option>
+                    ";
+        // line 55
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["localisations"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["localisation"]) {
+            // line 56
+            echo "                    <option value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 56), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 56), "html", null, true);
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
             echo "</option>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['localisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+<<<<<<< HEAD
         // line 62
+=======
+        // line 58
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "                </select>
             </div>
             <div class=\"form-group col-md-6\">
@@ -139,6 +188,7 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
                 <select name=\"commune_id\" id=\"\" class=\"form-control\">
                     <option value=\"\">Sélectionnez une commune</option>
                     ";
+<<<<<<< HEAD
         // line 68
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["communes"] ?? null));
@@ -148,13 +198,28 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commune"], "id", [], "any", false, false, false, 69), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commune"], "libelle", [], "any", false, false, false, 69), "html", null, true);
+=======
+        // line 64
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["communes"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["commune"]) {
+            // line 65
+            echo "                    <option value=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commune"], "id", [], "any", false, false, false, 65), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["commune"], "libelle", [], "any", false, false, false, 65), "html", null, true);
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
             echo "</option>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['commune'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
+<<<<<<< HEAD
         // line 71
+=======
+        // line 67
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "                </select>
             </div>
         </div>
@@ -218,7 +283,11 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  158 => 71,  147 => 69,  143 => 68,  135 => 62,  124 => 60,  120 => 59,  110 => 51,  99 => 49,  95 => 48,  78 => 33,  71 => 31,  68 => 30,  37 => 1,);
+=======
+        return array (  154 => 67,  143 => 65,  139 => 64,  131 => 58,  120 => 56,  116 => 55,  106 => 47,  95 => 45,  91 => 44,  74 => 29,  67 => 27,  64 => 26,  37 => 1,);
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
     }
 
     public function getSourceContext()
@@ -243,10 +312,13 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
         flex-direction: column;
 
     }
+<<<<<<< HEAD
 
     .select2-selection.select2-selection--single{
         height: 34px;
     }
+=======
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
 </style>
 
 <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\"
@@ -279,7 +351,11 @@ class __TwigTemplate_1d9b324f68375d96cba103bd892541dc0d841bf4de9ece94450516cfc70
         <div class=\"row\">
             <div class=\"form-group col-md-6\">
                 <label for=\"\">Localisation <span class=\"required\">*</span></label>
+<<<<<<< HEAD
                 <select name=\"localisation_id\" id=\"\" class=\"form-control select2\">
+=======
+                <select name=\"localisation_id\" id=\"\" class=\"form-control\">
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
                     <option value=\"\">Sélectionnez une localisation</option>
                     {% for localisation in localisations %}
                     <option value=\"{{ localisation.id }}\">{{ localisation.libelle }}</option>

@@ -126,9 +126,9 @@ layout = "default"
                             <option value="">Choisir une localisation </option>
                             {% for localisation in localisations %}
                             {% if localisation_id == localisation.id %}
-                            <option value="{{ localisation.id }}" selected>{{ localisation.libelle }}</option>
+                            <option value="{{ localisation.id }}" selected> {{ localisation.commune.libelle }} - {{ localisation.libelle }}</option>
                             {% else %}
-                            <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
+                            <option value="{{ localisation.id }}">{{ localisation.commune.libelle }} - {{ localisation.libelle }}</option>
                             {% endif %}
                             {% endfor %}
                         </select>

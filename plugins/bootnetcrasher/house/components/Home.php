@@ -30,9 +30,13 @@ class Home extends Account {
         }
         $this->prepareVars();
         // recuperation de toutes les localisations
+<<<<<<< HEAD
+        $this->page['localisations'] = LocalisationModel::orderBy('commune_id','asc')->orderBy('libelle','asc')->get();
+=======
         $this->page['localisations'] = LocalisationModel::orderBy('libelle','asc')->get();
         // Recuperation de tous les types de publications
         $this->page['typepublications'] = TypePublicationModel::orderBy('libelle','asc')->get();
+>>>>>>> 38b234bf833040b4605a23ef3a7774c1d5208395
         // recuperation de toutes les publications
         $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){

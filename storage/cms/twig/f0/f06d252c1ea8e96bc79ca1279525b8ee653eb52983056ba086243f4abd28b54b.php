@@ -158,12 +158,20 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
 
         <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.13/css/all.css\" integrity=\"sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp\" crossorigin=\"anonymous\">
+<<<<<<< HEAD
         <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
         ";
         // line 45
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
         // line 46
+=======
+        ";
+        // line 44
+        echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
+        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
+        // line 45
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "
         <style>
             .responsive {
@@ -189,33 +197,56 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         <!-- Header -->
         <header id=\"layout-header\">
             ";
+<<<<<<< HEAD
         // line 70
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 71
+=======
+        // line 69
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 70
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "        </header>
 
         <!-- Content -->
         <section id=\"layout-content\" class=\"container\">
             ";
+<<<<<<< HEAD
         // line 75
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 76
+=======
+        // line 74
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 75
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "        </section>
 
         <!-- Footer -->
         <footer id=\"layout-footer\">
             ";
+<<<<<<< HEAD
         // line 80
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 81
+=======
+        // line 79
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 80
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "        </footer>
 
         <!-- Scripts -->
         <script src=\"";
+<<<<<<< HEAD
         // line 84
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
@@ -225,11 +256,26 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         echo "\"></script>
         <script src=\"";
         // line 86
+=======
+        // line 83
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
+        echo "\"></script>
+        <script src=\"";
+        // line 84
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
+        echo "\"></script>
+        <script src=\"";
+        // line 85
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/dropzone.js\"></script>
         ";
+<<<<<<< HEAD
         // line 88
+=======
+        // line 87
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -240,6 +286,7 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
+<<<<<<< HEAD
         // line 89
         echo "        ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
@@ -248,6 +295,16 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
         echo "
         <script type=\"text/javascript\" src=\"";
         // line 91
+=======
+        // line 88
+        echo "        ";
+        echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
+        echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
+        // line 89
+        echo "
+        <script type=\"text/javascript\" src=\"";
+        // line 90
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/bower_components/spartan-multi-image-picker/dist/js/spartan-multi-image-picker.js");
         echo "\"></script>
 
@@ -310,11 +367,19 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
     });
 </script>
         ";
+<<<<<<< HEAD
         // line 151
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 152
+=======
+        // line 150
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 151
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         echo "
     </body>
 </html>";
@@ -332,7 +397,11 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  318 => 152,  314 => 151,  251 => 91,  248 => 90,  244 => 89,  233 => 88,  228 => 86,  224 => 85,  220 => 84,  215 => 81,  211 => 80,  205 => 76,  203 => 75,  197 => 71,  193 => 70,  167 => 46,  164 => 45,  156 => 40,  152 => 39,  148 => 38,  144 => 37,  140 => 36,  135 => 34,  131 => 33,  127 => 32,  123 => 31,  116 => 27,  111 => 25,  107 => 24,  103 => 23,  99 => 22,  95 => 21,  91 => 20,  87 => 19,  83 => 18,  79 => 17,  75 => 16,  71 => 15,  67 => 14,  63 => 13,  59 => 12,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+=======
+        return array (  317 => 151,  313 => 150,  250 => 90,  247 => 89,  243 => 88,  232 => 87,  227 => 85,  223 => 84,  219 => 83,  214 => 80,  210 => 79,  204 => 75,  202 => 74,  196 => 70,  192 => 69,  166 => 45,  163 => 44,  156 => 40,  152 => 39,  148 => 38,  144 => 37,  140 => 36,  135 => 34,  131 => 33,  127 => 32,  123 => 31,  116 => 27,  111 => 25,  107 => 24,  103 => 23,  99 => 22,  95 => 21,  91 => 20,  87 => 19,  83 => 18,  79 => 17,  75 => 16,  71 => 15,  67 => 14,  63 => 13,  59 => 12,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
     }
 
     public function getSourceContext()
@@ -380,7 +449,10 @@ class __TwigTemplate_d05f8953f919dc3fe8c38085874967546bdfbf49c4334300d9c1954a058
 
         <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">
         <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.0.13/css/all.css\" integrity=\"sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp\" crossorigin=\"anonymous\">
+<<<<<<< HEAD
         <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
+=======
+>>>>>>> b156bfa84157680b6f78d00a6d840529d4919e8e
         {% styles %}
 
         <style>
