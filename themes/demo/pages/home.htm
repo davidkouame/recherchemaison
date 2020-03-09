@@ -98,8 +98,20 @@ layout = "default"
                 <!--<p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
                 <form class="row" action="{{ url('/') }}" method="GET">
-                    <div class="col-xs-5 col-md-7">
+                    <div class="col-xs-5 col-md-4">
                         <input name="keys" placeholder="Que recherchez vous ?" type="text" class="form-control" value="{{ keys }}" style="height: 58px;">
+                    </div>
+                    <div class="col-xs-5 col-md-3">
+                        <select name="typepublication_id" id="" class="form-control" style="height: 58px;">
+                            <option value="">Choisir un type de maison </option>
+                            {% for typepublication in typepublications %}
+                            {% if typepublication_id == typepublication.id %}
+                            <option value="{{ typepublication.id }}" selected>{{ typepublication.libelle }}</option>
+                            {% else %}
+                            <option value="{{ typepublication.id }}">{{ typepublication.libelle }}</option>
+                            {% endif %}
+                            {% endfor %}
+                        </select>
                     </div>
                     <div class="col-xs-4 col-md-3 search-top">
                         <select name="localisation_id" id="" class="form-control" style="height: 58px;">

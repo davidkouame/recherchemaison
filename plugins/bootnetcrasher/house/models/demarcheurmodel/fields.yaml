@@ -19,3 +19,12 @@ fields:
         label: 'Téléphone 2'
         span: auto
         type: number
+    piece:
+        label: Pièce
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

@@ -52,6 +52,20 @@ return [
             'prefix'   => '',
         ],
 
+        /*'mysql' => [
+            'driver' => 'mysql',
+            'engine' => 'InnoDB',
+            'host' => 'localhost',
+            'port' => 3306,
+            'database' => 'bvendre_db',
+            'username' => 'bv_user',
+            'password' => 'pWsde4fsz4',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'varcharmax' => 191,
+        ],*/
+
         'mysql' => [
             'driver'     => 'mysql',
             'engine'     => 'InnoDB',

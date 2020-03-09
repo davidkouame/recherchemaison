@@ -11,3 +11,7 @@ columns:
         label: Email
         type: text
         searchable: true
+    created_at:
+        label: 'Date de création'
+        type: text
+        invisible: true

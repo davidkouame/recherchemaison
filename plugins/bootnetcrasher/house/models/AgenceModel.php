@@ -32,4 +32,8 @@ class AgenceModel extends Model
     public $belongsTo = [
         "localisation" => ["bootnetcrasher\Parametre\Models\LocalisationModel", "key" => "localisation_id", "otherKey" => "id"],
     ];
+
+    public $attachOne = [
+        'agrement' => 'System\Models\File'
+    ];
 }

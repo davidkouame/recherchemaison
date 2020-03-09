@@ -4,7 +4,7 @@
     }
 </style>
 <div class="container" >
-    <form class="row" role="form" data-request="onCreateUserTwoStep">
+    <form class="row" role="form" data-request="onCreateUserTwoStep" data-request-files>
         <div class="col-xs-offset-4 col-sm-6 col-xs-offset-4 col-sm-6 col-md-offset-4 col-md-6">
             <div class="radio"  style="display: inline-block;">
             <label><input type="radio" name="typeuser" value="2" checked>Je suis un démarcheur</label>
@@ -45,6 +45,10 @@
                     </select>
                 </div>
                 <div class="form-group col-md-6">
+                    <label for="">Ajouter votre agrémént <span class="required">*</span></label>
+                    <input type="file" name="agrement" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
                     <label for="">Site internet de l'agence</label>
                     <input
                         type="text"
@@ -57,10 +61,10 @@
             <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
         </div>
         <!-- Démarcheur -->
-        <div class="col-md-offset-2 col-md-8" id="demarcheur_first_login">
-            <h3 style="text-align: center;">Information du démarcheur</h3>
+        <div class="col-md-offset-3 col-md-8" id="demarcheur_first_login">
+            <h3 style="padding-left: 14%;">Information du démarcheur</h3>
             <div class="row">
-                <div class="form-group col-md-6">
+                <div class="form-group col-md-8">
                     <label for="">Localisation</label>
                     <select name="localisation_id" id="" class="form-control">
                         <option value="">Choisir une localisation</option>
@@ -68,6 +72,10 @@
                             <option value="{{ localisation.id }}">{{ localisation.libelle }}</option>
                         {% endfor %}
                     </select>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="">Ajouter une pièce d'identité (CNI ou une attestation)</label>
+                    <input type="file" name="piece" class="form-control">
                 </div>
                 <!--<div class="form-group col-md-6">
                     <label for="">Téléphone 1</label>
@@ -88,7 +96,7 @@
                     />
                 </div>-->
             </div>
-            <button type="submit" class="btn btn-primary active" data-attach-loading>Terminez l'inscription</button>
+            <button type="submit" class="btn btn-primary active" style="margin-left: 24%">Terminez l'inscription</button>
         </div>
     </form>
 </div>

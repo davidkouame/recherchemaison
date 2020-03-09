@@ -28,4 +28,8 @@ class DemarcheurModel extends Model
     public $hasOne = [
         'user' => ['Rainlab\User\Models\User', 'key' => 'demarcheur_id']
     ];
+
+    public $attachOne = [
+        'piece' => 'System\Models\File'
+    ];
 }

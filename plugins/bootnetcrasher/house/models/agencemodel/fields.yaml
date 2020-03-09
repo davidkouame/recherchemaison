@@ -16,10 +16,19 @@ fields:
         span: auto
         type: number
     localisation:
-        label: 'Localisation'
+        label: Localisation
         nameFrom: localisation
         descriptionFrom: description
         span: auto
         type: relation
         select: libelle
         placeholder: 'Sélectionner une localisation'
+    agrement:
+        label: Agrément
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

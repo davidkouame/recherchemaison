@@ -1,0 +1,10 @@
+name: DemarcheurEnAttente
+form: $/bootnetcrasher/house/models/demarcheurmodel/fields.yaml
+modelClass: bootnetcrasher\House\Models\DemarcheurModel
+defaultRedirect: bootnetcrasher/house/demarcheurenattente
+create:
+    redirect: 'bootnetcrasher/house/demarcheurenattente/update/:id'
+    redirectClose: bootnetcrasher/house/demarcheurenattente
+update:
+    redirect: bootnetcrasher/house/demarcheurenattente
+    redirectClose: bootnetcrasher/house/demarcheurenattente

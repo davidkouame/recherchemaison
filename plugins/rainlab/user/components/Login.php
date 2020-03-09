@@ -9,6 +9,7 @@ use BackendAuth;
 use RainLab\User\Models\User;
 use Event;
 use Request;
+use RainLab\User\Models\Throttle;
 
 class Login extends Account {
 
@@ -47,9 +48,24 @@ class Login extends Account {
                         // ->whereNotNull('agence_id')
                         ->first();
             if(!$user){
+                trace_log("L'email ou le password est invalide ");
                 Flash::error("L'email ou le mot de passe est invalide");
                 return Redirect::back()->withInput(Request::except('password'));
             }
+
+            $throttle = Throttle::where('user_id', $user->id)->first();
+            if($throttle){
+                trace_log("Le user a été bloqué ");
+                Flash::error("L'email ou le mot de passe est invalide");
+                return Redirect::back()->withInput(Request::except('password'));
+            }
+
+            if($user->is_activated != 1){
+                trace_log("Le user n'est pas actif ");
+                Flash::error("Désolé, votre compté n'a pas été encore activé !");
+                return Redirect::back()->withInput(Request::except('password'));
+            }
+            
             
             // $agence = $demarcheur = null;
             $redirect = null;

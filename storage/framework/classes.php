@@ -124,6 +124,7 @@
   'backend\\Controllers\\users' => 'modules/backend/controllers/users.php',
   'system\\Controllers\\mailbrandsettings' => 'modules/system/controllers/mailbrandsettings.php',
   'cms\\Controllers\\themes' => 'modules/cms/controllers/themes.php',
+<<<<<<< HEAD
   'System\\Classes\\PluginManager' => 'modules/system/classes/PluginManager.php',
   'System\\Classes\\PluginBase' => 'modules/system/classes/PluginBase.php',
   'System\\Classes\\ComposerManager' => 'modules/system/classes/ComposerManager.php',
@@ -240,4 +241,14 @@
   'Cms\\Helpers\\Cms' => 'modules/cms/helpers/Cms.php',
   'Cms\\Classes\\MediaViewHelper' => 'modules/cms/classes/MediaViewHelper.php',
   'Cms\\Twig\\FlashNode' => 'modules/cms/twig/FlashNode.php',
+=======
+  'bootnetcrasher\\house\\Controllers\\DemarcheurEnAttente' => 'plugins/bootnetcrasher/house/controllers/DemarcheurEnAttente.php',
+  'Rainlab\\User\\Models\\User' => 'plugins/rainlab/user/models/User.php',
+  'bootnetcrasher\\house\\Controllers\\DemarcheurRefuse' => 'plugins/bootnetcrasher/house/controllers/DemarcheurRefuse.php',
+  'bootnetcrasher\\house\\Controllers\\demarcheurenattente' => 'plugins/bootnetcrasher/house/controllers/demarcheurenattente.php',
+  'bootnetcrasher\\house\\Controllers\\demarcheurrefuse' => 'plugins/bootnetcrasher/house/controllers/demarcheurrefuse.php',
+  'bootnetcrasher\\house\\Controllers\\agenceenattente' => 'plugins/bootnetcrasher/house/controllers/agenceenattente.php',
+  'bootnetcrasher\\house\\Controllers\\agencerefusee' => 'plugins/bootnetcrasher/house/controllers/agencerefusee.php',
+  'Bootnetcrasher\\Parametre\\Models\\TypePublicationModel' => 'plugins/bootnetcrasher/parametre/models/TypePublicationModel.php',
+>>>>>>> 38b234bf833040b4605a23ef3a7774c1d5208395
 );

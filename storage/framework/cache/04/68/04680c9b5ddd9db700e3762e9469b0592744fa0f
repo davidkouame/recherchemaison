@@ -1,0 +1,18 @@
+1583759255a:1:{s:26:"welcome_after_register.htm";a:9:{s:8:"fileName";s:26:"welcome_after_register.htm";s:7:"content";s:385:"title = "Connexion"
+url = "/sucessful-register"
+layout = "default"
+[resetPassword]
+==
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 alert alert-success" style="text-align: center;">
+            Votre demande d'inscription a été prise en compte avec success . Merci de patienter pendant que nous analysons votre demande .
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1583566714;s:6:"markup";s:299:"<div class="container">
+    <div class="row">
+        <div class="col-md-12 alert alert-success" style="text-align: center;">
+            Votre demande d'inscription a été prise en compte avec success . Merci de patienter pendant que nous analysons votre demande .
+        </div>
+    </div>
+</div>";s:4:"code";N;s:5:"title";s:9:"Connexion";s:3:"url";s:19:"/sucessful-register";s:6:"layout";s:7:"default";s:13:"resetPassword";a:0:{}}}
