@@ -60,6 +60,7 @@ class PublicationModel extends Model
     public function afterCreate(){
         $this->generateReference();
         $this->slot = $this->reference;
+        $this->published_at = now();
         //+strtolower(str_replace(' ', '-', $this->libelle));
         $this->save();
     }

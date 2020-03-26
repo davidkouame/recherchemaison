@@ -10,11 +10,11 @@ fields:
     tel:
         label: 'Téléphone 1'
         span: auto
-        type: number
+        type: text
     tel2:
         label: 'Téléphone 2'
         span: auto
-        type: number
+        type: text
     localisation:
         label: Localisation
         nameFrom: localisation

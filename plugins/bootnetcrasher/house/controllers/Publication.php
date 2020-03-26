@@ -14,8 +14,4 @@ class Publication extends Controller
     {
         parent::__construct();
     }
-
-    public function listExtendQuery($query){
-        $query->orderBy('id', 'desc');
-    }
 }

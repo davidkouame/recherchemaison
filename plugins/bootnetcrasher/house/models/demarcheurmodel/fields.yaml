@@ -18,7 +18,7 @@ fields:
     tel2:
         label: 'Téléphone 2'
         span: auto
-        type: number
+        type: text
     piece:
         label: Pièce
         mode: file

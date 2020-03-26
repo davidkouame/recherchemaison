@@ -750,4 +750,8 @@ class Controller extends ControllerBase
         $hiddenHints = UserPreference::forUser()->get('backend::hints.hidden', []);
         return array_key_exists($name, $hiddenHints);
     }
+
+    public function listExtendQuery($query){
+        $query->orderBy('created_at', 'desc');
+    }
 }

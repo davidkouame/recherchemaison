@@ -3,3 +3,10 @@ columns:
         label: Libellé
         type: text
         searchable: true
+    reference:
+        label: Reférence
+        type: text
+        searchable: true
+    created_at:
+        label: Date de création
+        type: text
