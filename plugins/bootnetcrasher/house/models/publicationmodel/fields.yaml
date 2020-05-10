@@ -72,7 +72,7 @@ fields:
     prix:
         label: Prix
         span: auto
-        type: text
+        type: number
     description:
         label: Description
         size: ''

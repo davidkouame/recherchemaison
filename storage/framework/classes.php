@@ -75,4 +75,5 @@
   'system\\Controllers\\mailtemplates' => 'modules/system/controllers/mailtemplates.php',
   'RainLab\\User\\Models\\MailBlocker' => 'plugins/rainlab/user/models/MailBlocker.php',
   'bootnetcrasher\\House\\Components\\SendSms' => 'plugins/bootnetcrasher/house/components/SendSms.php',
+  'bootnetcrasher\\House\\Components\\Publications' => 'plugins/bootnetcrasher/house/components/Publications.php',
 );
