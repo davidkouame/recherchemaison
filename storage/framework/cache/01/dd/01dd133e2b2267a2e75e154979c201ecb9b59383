@@ -1,0 +1,16 @@
+1589092505a:1:{s:10:"logout.htm";a:8:{s:8:"fileName";s:10:"logout.htm";s:7:"content";s:374:"title = "Connexion"
+url = "/logout"
+layout = "default"
+==
+<?php
+    function onStart(){
+        \Auth::logout();
+        return \Redirect::to("auth/login");
+    }
+?>
+==
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iusto nisi vitae dicta unde illo officiis sit, at quasi dolore, quaerat atque mollitia! Odio ullam officia velit, hic fugiat repellendus.
+";s:5:"mtime";i:1580941358;s:6:"markup";s:204:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iusto nisi vitae dicta unde illo officiis sit, at quasi dolore, quaerat atque mollitia! Odio ullam officia velit, hic fugiat repellendus.";s:4:"code";s:98:"    function onStart(){
+        \Auth::logout();
+        return \Redirect::to("auth/login");
+    }";s:5:"title";s:9:"Connexion";s:3:"url";s:7:"/logout";s:6:"layout";s:7:"default";}}

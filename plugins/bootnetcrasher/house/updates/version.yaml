@@ -24,3 +24,6 @@
 1.0.9:
     - 'Updated table bootnetcrasher_house_publication'
     - builder_table_update_bootnetcrasher_house_publication_3.php
+1.0.10:
+    - 'Created table bootnetcrasher_house_subscriber'
+    - builder_table_create_bootnetcrasher_house_subscriber.php

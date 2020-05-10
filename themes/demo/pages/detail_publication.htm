@@ -9,230 +9,347 @@ layout = "default"
         .singlepost .post-content {
             width: 100%;
         }
-        .singlepost .aside-without-description{
+
+        .singlepost .aside-without-description {
             display: none;
         }
     }
 
     @media screen and (max-width: 950px) {
-        .singlepost .super-form-container .form-area{
+        .singlepost .super-form-container .form-area {
             width: 100%
         }
     }
 
     @media screen and (max-width: 600px) {
-        .singlepost .super-form-container .form-area .contact-form .column.wide{
+        .singlepost .super-form-container .form-area .contact-form .column.wide {
             width: 100%
         }
 
-        .phoneNumberWide{
+        .phoneNumberWide {
             margin-top: 10px;
             width: 100%
         }
     }
 
     @media screen and (min-width: 990px) {
-        .singlepost .aside-description{
+        .singlepost .aside-description {
             display: none;
         }
     }
 
     @media screen and (min-width: 950px) {
-        .warning-large{
+        .warning-large {
             margin-bottom: 20px;
             width: 100% !important;
         }
 
-        .warning-small{
+        .warning-small {
             margin-bottom: 20px;
             width: 48% !important;
         }
 
-        form.contact-form, .contact-form form, .contact-form fieldset {
+        form.contact-form,
+        .contact-form form,
+        .contact-form fieldset {
             float: left;
             width: 100%;
         }
 
-        .contactPhone{
+        .contactPhone {
             width: 100%;
         }
     }
 
     @media screen and (min-width: 600px) {
-        .phoneNumberWide{
+        .phoneNumberWide {
             width: 47.864% !important;
         }
     }
 
     @media screen and (max-width: 1000px) {
-        .detail-publication{
+        .detail-publication {
             padding-left: 15px !important;
             padding-right: 15px;
         }
     }
 
     @media screen and (min-width: 1000px) {
-        .detail-publication{
+        .detail-publication {
             padding-left: 80px !important;
             padding-right: 80px !important;
         }
     }
 
     @media screen and (max-width: 453px) {
+
         /*.button.button-phone2{
             margin-bottom: 10px;
         }
         .singlepost .btn-holder .button{
             width: 100%;
         }*/
-        .button.button-phone2{
+        .button.button-phone2 {
             width: 40% !important;
             float: left !important;
         }
 
-        .button.button-email2{
+        .button.button-email2 {
             width: 40% !important;
             float: right !important;
         }
     }
 
     @media screen and (max-width: 375px) {
-        .button.button-phone2{
+        .button.button-phone2 {
             margin-bottom: 10px !important;
         }
-        .singlepost .btn-holder .button{
+
+        .singlepost .btn-holder .button {
             width: 100% !important;
         }
 
-        .button.button-email2{
+        .button.button-email2 {
             float: unset !important;
         }
     }
 
     @media screen and (max-width: 767px) {
-        #three-publication-recommande{
+        #three-publication-recommande {
             display: none;
         }
     }
 
     @media screen and (max-width: 500px) {
-        .col-xs-6{
+        .col-xs-6 {
             width: 100%
         }
     }
 
-    .container-p P{
+    .container-p P {
         margin-bottom: 0px;
     }
 
-    .price-date .price{
+    .price-date .price {
         margin-bottom: 0px;
     }
-    
-    a:hover{
+
+    a:hover {
         text-decoration: none;
+    }
+
+    #search {
+        border-radius: 8px;
+        background-color: rgb(224, 0, 52);
+        border-color: rgb(224, 0, 52);
+    }
+
+    a.contactPhone,
+    a.contactForm,
+    .send-message {
+        background-color: rgb(224, 0, 52);
+        border-color: rgb(224, 0, 52);
+    }
+
+    #search:hover,
+    a.contactPhone:hover,
+    a.contactForm:hover,
+    .send-message:hover {
+        background-color: rgb(255, 60, 84);
+        border-color: rgb(255, 60, 84);
+    }
+
+    a.contactPhone {
+        width: unset;
+    }
+
+    .contactForm.top {
+        margin-top: 5%;
+    }
+
+    .contactForm.top,
+    .contactPhone.top {
+        width: 55%;
+    }
+
+    #super-form-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .pagination>.active>a,
+    .pagination>.active>span,
+    .pagination>.active>a:hover,
+    .pagination>.active>span:hover,
+    .pagination>.active>a:focus,
+    .pagination>.active>span:focus {
+        background-color: #e2e2e2;
+        border-color: #e2e2e2;
     }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
     <div class="col-md-12">
         {% flash %}
-            <div class="alert alert-success" style="text-align: center;">
-                {{ message }}
-            </div>
+        <div class="alert alert-success" style="text-align: center;">
+            {{ message }}
+        </div>
         {% endflash %}
-    <div class="card">
-        <article class="singlepost ">
-            <header class="heading-area">
-                <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
-            </header>
-            <div class="row">
-                <div class="col-md-12 twocolumn">
-                    <div class="post-content">
-                        <!-- slideshow -->
-                        <div class="slideshow gallery-js-ready autorotation-disabled">
-                            <div class="mask">
-                                <div class="slideset" style="height: 420px;">
+        <div class="card">
+            <article class="singlepost ">
+                <header class="heading-area">
+                    <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
+                </header>
+                <div class="row">
+                    <div class="col-md-12 twocolumn">
+                        <div class="post-content">
+                            <!-- slideshow -->
+                            <div class="slideshow gallery-js-ready autorotation-disabled">
+                                <div class="mask">
+                                    <div class="slideset" style="height: 420px;">
+                                        {% for key,photo in publication.photos %}
+                                        {% if key == 0 %}
+                                        <div class="slide active" style="display: block;"><img itemprop="image"
+                                                class="imggf-1" src="{{ publication.photos[0].getPath }}"
+                                                alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                        {% else %}
+                                        <div class="slide" style="display: block; opacity: 0;">
+                                            <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
+                                                alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <span class="loader" style="display: none;"></span>
+                                </div>
+                                <ul class="pagination img-miniature">
                                     {% for key,photo in publication.photos %}
                                     {% if key == 0 %}
-                                    <div class="slide active" style="display: block;"><img itemprop="image" class="imggf-1"
-                                            src="{{ publication.photos[0].getPath }}"
-                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    <li class="active">
+                                        <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
+                                                style="width: 100px;height: 66px;"
+                                                src="{{ photo.getPath | resize(100,100)}}"
+                                                alt="{{ publication.libelle }}">
+                                        </a>
+                                    </li>
                                     {% else %}
-                                    <div class="slide" style="display: block; opacity: 0;">
-                                        <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
-                                            alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                    <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
+                                                style="width: 100px;height: 66px;"
+                                                src="{{ photo.getPath| resize(100,100) }}"
+                                                alt="{{ publication.libelle }}"></a></li>
                                     {% endif %}
                                     {% endfor %}
-                                </div>
-                                <span class="loader" style="display: none;"></span>
-                            </div>
-                            <ul class="pagination img-miniature">
-                                {% for key,photo in publication.photos %}
-                                {% if key == 0 %}
-                                <li class="active">
-                                    <a href="javascript:void(0)" class="imageminia" data-imgptf="1"><img
-                                            style="width: 100px;height: 66px;"
-                                            src="{{ photo.getPath | resize(100,100)}}"
-                                            alt="{{ publication.libelle }}">
-                                    </a>
-                                </li>
-                                {% else %}
-                                <li><a href="javascript:void(0)" class="imageminia" data-imgptf="{{ key +1}}"><img
-                                            style="width: 100px;height: 66px;"
-                                            src="{{ photo.getPath| resize(100,100) }}"
-                                            alt="{{ publication.libelle }}"></a></li>
-                                {% endif %}
-                                {% endfor %}
-    
-    
-                            </ul>
-                        </div>
-    
-                        <div class="post-attributes">
-                            <div class="new-attr-style">
-                                {% if publication.nbre_piece %} <h3>Nombre de
-                                    pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
-                                {% if publication.commune %} <h3>
-                                    Commune<span>{{ publication.commune.libelle }}<span></span></span></h3> {% endif %}
-                                {% if publication.ville %} <h3>
-                                    Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
-                                {% if publication.Localisation %} <h3>
-                                    Localisation<span>{{ publication.Localisation.libelle }}<span></span></span></h3>
-                                {% endif %}
-                                {% if publication.typepublication %} <h3>Type de
-                                    publication<span>{{ publication.typepublication.libelle }}<span></span></span></h3>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="post-text-content" style="margin-top: 12px;">
-                            <div class="title">Description :</div>
-                            <p>
-                                {{ publication.description | raw}}
-                            </p>
-                            <p>
-                                <b>Date de publication: {{ publication.created_at }}</b>
-                            </p>
-                        </div>
 
-                        <div class="aside aside-description" style="width: 100%;">
-                            <div class="aside-infos" style="min-height: unset;">
-                                <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                    <meta itemprop="url" >
+
+                                </ul>
+                            </div>
+
+                            <div class="post-attributes">
+                                <div class="new-attr-style">
+                                    {% if publication.nbre_piece %} <h3>Nombre de
+                                        pièces<span>{{ publication.nbre_piece }}<span></span></span></h3> {% endif %}
+                                    {% if publication.commune %} <h3>
+                                        Commune<span>{{ publication.commune.libelle }}<span></span></span></h3>
+                                    {% endif %}
+                                    {% if publication.ville %} <h3>
+                                        Ville<span>{{ publication.ville.libelle }}<span></span></span></h3> {% endif %}
+                                    {% if publication.Localisation %} <h3>
+                                        Localisation<span>{{ publication.Localisation.libelle }}<span></span></span>
+                                    </h3>
+                                    {% endif %}
+                                    {% if publication.typepublication %} <h3>Type de
+                                        publication<span>{{ publication.typepublication.libelle }}<span></span></span>
+                                    </h3>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="post-text-content" style="margin-top: 12px;">
+                                <div class="title">Description :</div>
+                                <p>
+                                    {{ publication.description | raw}}
+                                </p>
+                                <p>
+                                    <b>Date de publication: {{ publication.created_at }}</b>
+                                </p>
+                            </div>
+
+                            <div class="aside aside-description" style="width: 100%;">
+                                <div class="aside-infos" style="min-height: unset;">
+                                    <section id="priceSection" itemprop="offers" itemscope=""
+                                        itemtype="http://schema.org/Offer">
+                                        <meta itemprop="url">
+                                        <meta itemprop="availability" content="http://schema.org/InStock">
+                                        <span class="price">
+                                            <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                            <span itemprop="priceCurrency" content="FCFA">FCFA</span>
+                                        </span>
+
+                                        <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
+                                            class="seller-details">
+                                            <dl>
+                                                {% if publication.agence %}
+                                                <dt>Agence</dt>
+                                                <dd><span
+                                                        itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                                </dd>
+                                                <dt>Lieu</dt>
+                                                <dd itemprop="address" itemscope=""
+                                                    itemtype="http://schema.org/PostalAddress"><span
+                                                        itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
+                                                </dd>
+                                                <dt>Publiée</dt>
+                                                <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time>
+                                                </dd>
+                                                {% else %}
+                                                <dt>Démarcheur</dt>
+                                                <dd><span
+                                                        itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                                </dd>
+                                                <dt>Publiée</dt>
+                                                <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time>
+                                                </dd>
+                                                {% endif %}
+                                            </dl>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+
+
+
+                            <div class="btn-holder" style="margin-bottom: 12px;">
+                                <!--<a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
+                                data-lead-type="Phone" class="button button-phone2 transaction-click"
+                                title="Afficher le téléphone">Afficher le téléphone </a>-->
+                                <a href="#contactPhone" data-scroll-to="#contactPhone"
+                                    class="btn btn-danger contactPhone">Afficher le téléphone</a>
+                                <!--<a href="#contactForm" data-scroll-to="#contactForm"
+                                class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
+                                <span class="icon-mail"></span> Contacter par email </a>-->
+                                <a href="#contactForm" data-scroll-to="#contactForm"
+                                    class="btn btn-danger contactForm">Contacter par email</a>
+                            </div>
+                        </div>
+                        <div class="aside aside-without-description">
+                            <div class="aside-infos">
+                                <section id="priceSection" itemprop="offers" itemscope=""
+                                    itemtype="http://schema.org/Offer">
+                                    <meta itemprop="url">
                                     <meta itemprop="availability" content="http://schema.org/InStock">
                                     <span class="price">
                                         <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
                                         <span itemprop="priceCurrency" content="FCFA">FCFA</span>
                                     </span>
-        
+
                                     <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
                                         class="seller-details">
                                         <dl>
                                             {% if publication.agence %}
                                             <dt>Agence</dt>
-                                            <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
+                                            <dd><span
+                                                    itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
                                             </dd>
                                             <dt>Lieu</dt>
-                                            <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
+                                            <dd itemprop="address" itemscope=""
+                                                itemtype="http://schema.org/PostalAddress"><span
                                                     itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
                                             </dd>
                                             <dt>Publiée</dt>
@@ -247,58 +364,10 @@ layout = "default"
                                             {% endif %}
                                         </dl>
                                     </div>
+
+
                                 </section>
-                            </div>
-                        </div>
-    
-    
-    
-                        <div class="btn-holder"  style="margin-bottom: 12px;">
-                            <a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
-                                data-lead-type="Phone" class="button button-phone2 transaction-click"
-                                title="Afficher le téléphone">Afficher le téléphone </a>
-                            <a href="#contactForm" data-scroll-to="#contactForm"
-                                class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
-                                <span class="icon-mail"></span> Contacter par email </a>
-                        </div>
-                    </div>
-                    <div class="aside aside-without-description">
-                        <div class="aside-infos">
-                            <section id="priceSection" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                                <meta itemprop="url">
-                                <meta itemprop="availability" content="http://schema.org/InStock">
-                                <span class="price">
-                                    <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
-                                    <span itemprop="priceCurrency" content="FCFA">FCFA</span>
-                                </span>
-    
-                                <div itemprop="seller" itemscope="" itemtype="http://schema.org/Person"
-                                    class="seller-details">
-                                    <dl>
-                                        {% if publication.agence %}
-                                        <dt>Agence</dt>
-                                        <dd><span itemprop="name">{{ publication.agence.libelle|slice(0, 20)|raw }}</span>
-                                        </dd>
-                                        <dt>Lieu</dt>
-                                        <dd itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span
-                                                itemprop="addressLocality">{{ publication.agence.localisation.libelle }}</span>
-                                        </dd>
-                                        <dt>Publiée</dt>
-                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                        {% else %}
-                                        <dt>Démarcheur</dt>
-                                        <dd><span
-                                                itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
-                                        </dd>
-                                        <dt>Publiée</dt>
-                                        <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
-                                        {% endif %}
-                                    </dl>
-                                </div>
-    
-    
-                            </section>
-                            <div class="btn-holder">
+                                <!--<div class="btn-holder">
                                 <a href="#contactPhone" data-scroll-to="#contactPhone"
                                     data-event="{&quot;id&quot;:&quot;5443116&quot;,&quot;title&quot;:&quot;Belle Apparemment \u00c0 Vendre &quot;,&quot;price&quot;:&quot;95000000.00&quot;,&quot;category&quot;:&quot;Immobilier\/Appartements \u00e0 vendre&quot;}"
                                     data-transaction-id="Phone_5443116_guest" data-lead-type="Phone"
@@ -309,184 +378,222 @@ layout = "default"
                                     title="Contacter par email">
                                     <span class="icon-mail"></span> Contacter par email </a>
     
+                            </div>-->
+
+                                <div class="btn-holder">
+                                    <!--<a href="#contactPhone" data-scroll-to="#contactPhone" data-transaction-id="Phone_5443116_guest"
+                                    data-lead-type="Phone" class="button button-phone2 transaction-click"
+                                    title="Afficher le téléphone">Afficher le téléphone </a>-->
+                                    <a href="#contactPhone" data-scroll-to="#contactPhone"
+                                        class="btn btn-danger contactPhone top">Afficher le téléphone</a>
+                                    <!--<a href="#contactForm" data-scroll-to="#contactForm"
+                                    class="button button-email2 reply-by-email-click contactForm" title="Contacter par email">
+                                    <span class="icon-mail"></span> Contacter par email </a>-->
+                                    <a href="#contactForm" data-scroll-to="#contactForm"
+                                        class="btn btn-danger contactForm top">Contacter par email</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <section class="super-form-container row" id="super-form-container">
+                <section class="super-form-container row" id="super-form-container">
 
 
-                <!-- Mail Contact Form  -->
-                <div class="form-area" id="contactForm" style="display: none">
-                    <form class="contact-form" method="post" role="form" data-request="onSendMessage">
-                        <input type="text" name="publication_id" value="{{ publication.id }}" hidden>
-                        <fieldset>
+                    <!-- Mail Contact Form  -->
+                    <div class="form-area" id="contactForm" style="display: none">
+                        <form class="contact-form" method="post" role="form" data-request="onSendMessage">
+                            <input type="text" name="publication_id" value="{{ publication.id }}" hidden>
+                            <fieldset>
+                                {% if publication.agence %}
+                                <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw}}</h2>
+                                {% else %}
+                                <h2>Envoyer un message à {{ publication.demarcheur.nom }}
+                                    {{ publication.demarcheur.prenom }}</h2>
+                                {% endif %}
+                                <div class="row">
+                                    <div class="column wide">
+                                        <input type="text" id="name" name="name" placeholder="Votre nom"
+                                            required="required"
+                                            data-parsley-required-message="Veuillez entrer votre nom."
+                                            data-parsley-id="6654">
+                                        <ul class="parsley-errors-list" id="parsley-id-6654"></ul>
+                                    </div>
+                                    <div class="column wide phoneNumberWide">
+                                        <input type="text" id="phoneNumber" name="phoneNumber" class="authentic_phone"
+                                            placeholder="Votre numéro de téléphone"
+                                            data-js-attr="{&quot;type&quot;:&quot;tel&quot;}" data-parsley-id="2097">
+                                        <ul class="parsley-errors-list" id="parsley-id-2097"></ul>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="column wide" style="width: 100%;">
+                                        <input type="email" id="email" name="email" placeholder="Votre email"
+                                            required="required" data-js-attr="{&quot;type&quot;:&quot;email&quot;}"
+                                            data-parsley-required-message="Veuillez entrer votre adresse mail."
+                                            data-parsley-id="1753">
+                                        <ul class="parsley-errors-list" id="parsley-id-1753"></ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column wide" style="width: 100%;">
+                                        <textarea id="message" name="message" placeholder="Message" required="required"
+                                            data-parsley-required-message="Message requis" data-parsley-id="7776"
+                                            rows="4"></textarea>
+                                        <ul class="parsley-errors-list" id="parsley-id-7776"></ul>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="column wide" style="float: right;margin-right: 0px;">
+                                        <button class="btn btn-danger submit_message send-message" type="submit"
+                                            style="float: right">Envoyer un
+                                            message</button>
+                                    </div>
+                                </div>
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <div id="contactPhone" class="form-area" style="display: none;">
+                        <div class="contactPhone">
                             {% if publication.agence %}
-                            <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw}}</h2>
+                            <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw }}</h2>
                             {% else %}
                             <h2>Envoyer un message à {{ publication.demarcheur.nom }}
-                                {{ publication.demarcheur.prenom }}</h2>
+                                {{ publication.demarcheur.prenom }}
+                            </h2>
                             {% endif %}
-                            <div class="row">
-                                <div class="column wide">
-                                    <input type="text" id="name" name="name" placeholder="Votre nom" required="required"
-                                        data-parsley-required-message="Veuillez entrer votre nom."
-                                        data-parsley-id="6654">
-                                    <ul class="parsley-errors-list" id="parsley-id-6654"></ul>
+                            <div class="phone-box show"
+                                style="margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;">
+                                <div class="icon-holder">
+                                    <i class="fas fa-phone-volume"></i>
                                 </div>
-                                <div class="column wide phoneNumberWide">
-                                    <input type="text" id="phoneNumber" name="phoneNumber" class="authentic_phone"
-                                        placeholder="Votre numéro de téléphone"
-                                        data-js-attr="{&quot;type&quot;:&quot;tel&quot;}" data-parsley-id="2097">
-                                    <ul class="parsley-errors-list" id="parsley-id-2097"></ul>
-                                </div>
+                                {% if publication.agence %}
+                                <a href="tel:{{ publication.agence.tel }}">{{ publication.agence.tel }}</a>
+                                {% else %}
+                                <a href="tel:{{ publication.demarcheur.tel }}">{{ publication.demarcheur.tel }}</a>
+                                {% endif %}
+                                <i class="icon-whatsapp active "> <span class="popover above">Ce numéro de téléphone
+                                        fonctionne avec WhatsApp</span></i>
                             </div>
-
-
-                            <div class="row">
-                                <div class="column wide" style="width: 100%;">
-                                    <input type="email" id="email" name="email" placeholder="Votre email"
-                                        required="required" data-js-attr="{&quot;type&quot;:&quot;email&quot;}"
-                                        data-parsley-required-message="Veuillez entrer votre adresse mail."
-                                        data-parsley-id="1753">
-                                    <ul class="parsley-errors-list" id="parsley-id-1753"></ul>
-                                </div>
+                            <div class="phone-mention">
+                                Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur
+                                ChapMaison.
                             </div>
-                            <div class="row">
-                                <div class="column wide" style="width: 100%;">
-                                    <textarea id="message" name="message" placeholder="Message" required="required"
-                                        data-parsley-required-message="Message requis" data-parsley-id="7776"
-                                        rows="4"></textarea>
-                                    <ul class="parsley-errors-list" id="parsley-id-7776"></ul>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="column wide" style="float: right;margin-right: 0px;">
-                                    <button class="yellow-button submit_message" type="submit">Envoyer un
-                                        message</button>
-                                </div>
-                            </div>
-
-
-                        </fieldset>
-                    </form>
-                </div>
-
-                <div id="contactPhone" class="form-area" style="display: none;">
-                    <div class="contactPhone">
-                        {% if publication.agence %}
-                        <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw }}</h2>
-                        {% else %}
-                        <h2>Envoyer un message à {{ publication.demarcheur.nom }} {{ publication.demarcheur.prenom }}
-                        </h2>
-                        {% endif %}
-                        <div class="phone-box show" style="margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;">
-                            <div class="icon-holder">
-                                <span class="icon-phone"></span>
-                            </div>
-                            {% if publication.agence %}
-                            <a href="tel:{{ publication.agence.tel }}">{{ publication.agence.tel }}</a>
-                            {% else %}
-                            <a href="tel:{{ publication.demarcheur.tel }}">{{ publication.demarcheur.tel }}</a>
-                            {% endif %}
-                            <i class="icon-whatsapp active "> <span class="popover above">Ce numéro de téléphone
-                                    fonctionne avec WhatsApp</span></i>
-                        </div>
-                        <div class="phone-mention">
-                            Veuillez s'il vous plait mentionner au vendeur que vous avez vu son annonce sur ChapMaison.
                         </div>
                     </div>
-                </div>
 
-                <!--Warning Message-->
-                <div class="text-area" style="display: none;">
-                    <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
-                    <ul>
-                        <li>N'envoyez jamais d'argent pour "réserver" un logement, demandez combien payer pour une
-                            visite</li>
-                        <li>Evitez de transférer de l’argent via des services comme Mobile Money, Western Union …</li>
-                        <li>Vérifiez la qualité du logement: attention aux traces d'humidité, électricité, etc. Faites
-                            vous accompagner par un expert si besoin.</li>
-                        <li>Assurez -vous que votre interlocuteur est un représentant officiel du propriétaire &amp;
-                            qu'il dispose des documents nécessaires.</li>
-                        <li>Méfiez vous des pseudo-propriétaires qui sont absents ou trop occupés pour vous rencontrer:
-                            si vous avez affaire à un professionnel, il se déplacera.</li>
-                        <li>Vérifiez que tous les papiers du bien immobilier sont légitimes. De même pour le contrat de
-                            bail. Faites vous accompagner par un expert si besoin.</li>
-                        <li>Ne donnez pas d’informations personnelles avant la visite.</li>
-                        <li>Méfiez-vous des offres trop interessantes.</li>
-                    </ul>
-                </div>
-            </section>
-            <section class="row" style="margin-top: 20px">
-                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
-                    <a href="{{ url('publications') }}/{{ publications[0].slot }}">
-                        <div class="polaroid">
-                            <img src="{{ publications[0].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p" style="min-height: 100px;">
-                                <p>{{ publications[0].libelle|slice(0,40)|raw }}</p>
-                                <p>
-                                    <span class="address">{{ publications[0].typepublication.libelle|slice(0,20)|raw }},
-                                        {{ publications[0].localisations.libelle|slice(0,20)|raw}} </span>
-                                </p>
-                                <p>
-                                    {% if publications[0].prix %}
+                    <!--Warning Message-->
+                    <div class="text-area" style="display: none;">
+                        <h2><span class="icons-intlist-warning"></span>Nos Conseils de Sécurité</h2>
+                        <ul>
+                            <li>N'envoyez jamais d'argent pour "réserver" un logement, demandez combien payer pour une
+                                visite</li>
+                            <li>Evitez de transférer de l’argent via des services comme Mobile Money, Western Union …
+                            </li>
+                            <li>Vérifiez la qualité du logement: attention aux traces d'humidité, électricité, etc.
+                                Faites
+                                vous accompagner par un expert si besoin.</li>
+                            <li>Assurez -vous que votre interlocuteur est un représentant officiel du propriétaire &amp;
+                                qu'il dispose des documents nécessaires.</li>
+                            <li>Méfiez vous des pseudo-propriétaires qui sont absents ou trop occupés pour vous
+                                rencontrer:
+                                si vous avez affaire à un professionnel, il se déplacera.</li>
+                            <li>Vérifiez que tous les papiers du bien immobilier sont légitimes. De même pour le contrat
+                                de
+                                bail. Faites vous accompagner par un expert si besoin.</li>
+                            <li>Ne donnez pas d’informations personnelles avant la visite.</li>
+                            <li>Méfiez-vous des offres trop interessantes.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="row" style="margin-top: 20px; padding-left: 30px; padding-right: 30px;">
+                    <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
+                        <a href="{{ url('publications') }}/{{ publications[0].slot }}">
+                            <div class="polaroid">
+                                <img src="{{ publications[0].photos[0].getpath }}" alt="5 Terre"
+                                    style="width:100%;height: 200px;">
+                                <div class="container-p" style="min-height: 100px;">
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;">{{ publications[0].libelle|slice(0,40)|raw }}</p>
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;">
+                                        <span
+                                            class="address">{{ publications[0].typepublication.libelle|slice(0,20)|raw }},
+                                            {{ publications[0].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                    <p>
+                                        {% if publications[0].prix %}
                                         <div class="price-date">
                                             <span class="price">{{ publications[0].prix }} FCFA</span>
                                         </div>
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="two-publication-recommande">
-                    <a href="{{ url('publications') }}/{{ publications[1].slot }}">
-                        <div class="polaroid">
-                            <img src="{{ publications[1].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p" style="min-height: 100px;">
-                                <p>{{ publications[1].libelle|slice(0,40)|raw }}</p>
-                                <p><span class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
-                                        {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
+                                        {% endif %}
                                     </p>
-                                        <p>
-                                            {% if publications[1].prix %}
-                                                <div class="price-date">
-                                                    <span class="price">{{ publications[1].prix }} FCFA</span>
-                                                </div>
-                                            {% endif %}
-                                        </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="three-publication-recommande">
-                    <a href="{{ url('publications') }}/{{ publications[2].slot }}">
-                        <div class="polaroid">
-                            <img src="{{ publications[2].photos[0].getpath }}" alt="5 Terre" style="width:100%;height: 200px;">
-                            <div class="container-p" style="min-height: 100px;">
-                                <p>{{ publications[2].libelle|slice(0,40)|raw  }}</p>
-                                <p><span class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
-                                        {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
-                                </p>
-                                <p>
-                                    {% if publications[2].prix %}
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="two-publication-recommande">
+                        <a href="{{ url('publications') }}/{{ publications[1].slot }}">
+                            <div class="polaroid">
+                                <img src="{{ publications[1].photos[0].getpath }}" alt="5 Terre"
+                                    style="width:100%;height: 200px;">
+                                <div class="container-p" style="min-height: 100px;">
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;">{{ publications[1].libelle|slice(0,40)|raw }}</p>
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;"><span class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
+                                            {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                    <p >
+                                        {% if publications[1].prix %}
+                                        <div class="price-date">
+                                            <span class="price">{{ publications[1].prix }} FCFA</span>
+                                        </div>
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="three-publication-recommande">
+                        <a href="{{ url('publications') }}/{{ publications[2].slot }}">
+                            <div class="polaroid">
+                                <img src="{{ publications[2].photos[0].getpath }}" alt="5 Terre"
+                                    style="width:100%;height: 200px;">
+                                <div class="container-p" style="min-height: 100px;">
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;">{{ publications[2].libelle|slice(0,40)|raw  }}</p>
+                                    <p style="text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                    overflow: hidden;"><span class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
+                                            {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
+                                    </p>
+                                    <p>
+                                        {% if publications[2].prix %}
                                         <div class="price-date">
                                             <span class="price">{{ publications[2].prix }} FCFA</span>
                                         </div>
-                                    {% endif %}
-                                </p>
+                                        {% endif %}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            </section>
+                        </a>
+                    </div>
+                </section>
 
-        </article>
+            </article>
 
+        </div>
     </div>
-</div>
 </div>

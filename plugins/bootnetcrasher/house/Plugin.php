@@ -22,6 +22,7 @@ class Plugin extends PluginBase
             "bootnetcrasher\House\Components\DetailPublication" => "DetailPublicationComponent",
             // "bootnetcrasher\House\Components\Login" => "LoginComponent",
             "bootnetcrasher\House\Components\Register" => "RegisterComponent",
+            "bootnetcrasher\House\Components\SendSms" => "SendSmsComponent",
         ];
     }
 

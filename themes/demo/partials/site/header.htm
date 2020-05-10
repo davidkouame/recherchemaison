@@ -8,7 +8,8 @@
     }
 
     .text-primary {
-        color: #ff8b00 !important;
+        /*color: #ff8b00 !important;*/
+        color: #fa2d37 !important;
         font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     }
 
@@ -62,6 +63,21 @@
             left: 18%
         }
     }
+
+    /*.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+        background-color: #fa2d37;
+        border-color: #fa2d37;
+    }*/
+
+
+
+    .pagination > li > a, .pagination > li > span{
+        color: #fa2d37
+    }
+
+    .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{
+        color: #fa2d37
+    }
 </style>
 
 <!-- Nav -->
@@ -79,14 +95,14 @@ border: 0px aliceblue;border: 0px aliceblue;height: 1px;">
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ 'register'|page }}">S'inscrire</a></li>
-                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}">Se connecter</a></li>
+                <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ 'register'|page }}" style="color: #fa2d37 !important; font-weight: bold">S'inscrire</a></li>
+                <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}" style="color: #fa2d37 !important; font-weight: bold">Se connecter</a></li>
             </ul>
         </div>
         <ul class="nav navbar-nav connection-xs">
             <li class="separator hidden-xs"></li>
-            <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ 'register'|page }}">S'inscrire</a></li>
-            <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}">Se connecter</a></li>
+            <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ 'register'|page }}" style="color: #fa2d37 !important; font-weight: bold">S'inscrire</a></li>
+            <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ 'login'|page }}" style="color: #fa2d37 !important; font-weight: bold">Se connecter</a></li>
         </ul>
     </div>
 </nav>
