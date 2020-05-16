@@ -40,4 +40,16 @@ class Plugin extends PluginBase
         //$this->app['Illuminate\Contracts\Http\Kernel']
           // ->pushMiddleware('RainLab\User\Classes\AuthMiddleware');
     }
+
+    public function registerSchedule($schedule)
+    {      
+        exec("ps ax | grep -i 'queue:work' | grep -v 'grep'
+        ", $pids);
+        if(empty($pids)) {
+            // $schedule->command("queue:work --daemon --sleep=5 --tries=3 > storage/logs/system.log")->everyMinute();
+            $schedule->command("queue:work")->everyMinute();
+        }else{
+            trace_log((int)$pids[0]);
+        }
+    }
 }

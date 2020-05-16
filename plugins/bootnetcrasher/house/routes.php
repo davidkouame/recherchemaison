@@ -45,6 +45,15 @@
         return Redirect::to('demarcheur/login');;
     });
 
+    Route::get('kill-process-cron', function(){
+        exec("ps ax | grep -i 'queue:work' | grep -v 'grep'
+        ", $pids);
+        if($pids){
+            exec("kill -9 ".(int)$pids[0]);
+        }
+        echo "Le process de cron s'est coupé avec succès !";
+    });
+
     /*Route::get('logout', function(){
         \Auth::logout();
         return Redirect::to('auth/login');;
