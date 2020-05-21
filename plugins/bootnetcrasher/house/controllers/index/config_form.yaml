@@ -1,0 +1,10 @@
+name: Index
+form: $/bootnetcrasher/house/models/demarcheurmodel/fields.yaml
+modelClass: bootnetcrasher\House\Models\DemarcheurModel
+defaultRedirect: bootnetcrasher/house/index
+create:
+    redirect: 'bootnetcrasher/house/index/update/:id'
+    redirectClose: bootnetcrasher/house/index
+update:
+    redirect: bootnetcrasher/house/index
+    redirectClose: bootnetcrasher/house/index

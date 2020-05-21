@@ -3,7 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class Demarcheur extends Controller
+class DemarcheurAccepte extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
@@ -13,10 +13,12 @@ class Demarcheur extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('bootnetcrasher.House', 'demarcheurs', 'demarcheurs');
+        BackendMenu::setContext('bootnetcrasher.House', 'demarcheurs');
     }
 
     public function listExtendQuery($query) {
-       $query->orderBy('created_at','desc');
+        $query->whereHas('user', function($query){
+            $query->where('is_activated', 1);
+        })->orderBy('created_at','desc');
     }
 }

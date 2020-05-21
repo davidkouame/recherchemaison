@@ -14,7 +14,7 @@ class DemarcheurEnAttente extends Controller
     public function __construct()
     {
         parent::__construct();
-        BackendMenu::setContext('Bootnetcrasher.House', 'demarcheurs', 'demarcheursenattentes');
+        BackendMenu::setContext('bootnetcrasher.House', 'demarcheurs', 'demarcheursenattentes');
     }
 
     public function listExtendQuery($query) {

@@ -24,9 +24,17 @@ navigation:
                 icon: icon-arrow-right
     demarcheurs:
         label: Démarcheurs
-        url: bootnetcrasher/house/demarcheur
+        url: bootnetcrasher/house/index
         icon: icon-life-ring
         sideMenu:
+            alldemarcheurs:
+                label: 'Démarcheurs'
+                url: bootnetcrasher/house/demarcheur
+                icon: icon-arrow-right
+            demarcheursacceptes:
+                label: 'Démarcheurs accpetés'
+                url: bootnetcrasher/house/demarcheuraccepte
+                icon: icon-arrow-right
             demarcheursenattentes:
                 label: 'Démarcheurs en attentes'
                 url: bootnetcrasher/house/demarcheurenattente
