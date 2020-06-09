@@ -9,11 +9,19 @@ navigation:
         label: Publications
         url: bootnetcrasher/house/publication
         icon: icon-life-ring
-    main-menu-item2:
+    agences:
         label: Agences
-        url: bootnetcrasher/house/agence
+        url: bootnetcrasher/house/agenceindex
         icon: icon-life-ring
         sideMenu:
+            allagences:
+                label: 'Toutes les agences'
+                url: bootnetcrasher/house/agence
+                icon: icon-arrow-right
+            agencesacceptes:
+                label: 'Agences acceptées'
+                url: bootnetcrasher/house/agenceacceptee
+                icon: icon-arrow-right
             agencesenattentes:
                 label: 'Agences en attentes'
                 url: bootnetcrasher/house/agenceenattente

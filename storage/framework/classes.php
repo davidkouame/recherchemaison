@@ -93,4 +93,10 @@
   'RainLab\\Builder\\FormWidgets\\ControllerBuilder' => 'plugins/rainlab/builder/formwidgets/ControllerBuilder.php',
   'bootnetcrasher\\house\\Controllers\\index' => 'plugins/bootnetcrasher/house/controllers/index.php',
   'bootnetcrasher\\house\\Controllers\\demarcheuraccepte' => 'plugins/bootnetcrasher/house/controllers/demarcheuraccepte.php',
+  'RainLab\\Builder\\FormWidgets\\MenuEditor' => 'plugins/rainlab/builder/formwidgets/MenuEditor.php',
+  'RainLab\\Builder\\Classes\\IconList' => 'plugins/rainlab/builder/classes/IconList.php',
+  'bootnetcrasher\\house\\Controllers\\agenceindex' => 'plugins/bootnetcrasher/house/controllers/agenceindex.php',
+  'bootnetcrasher\\house\\Controllers\\agenceenattente' => 'plugins/bootnetcrasher/house/controllers/agenceenattente.php',
+  'bootnetcrasher\\house\\Controllers\\agenceacceptee' => 'plugins/bootnetcrasher/house/controllers/agenceacceptee.php',
+  'bootnetcrasher\\house\\Controllers\\agencerefusee' => 'plugins/bootnetcrasher/house/controllers/agencerefusee.php',
 );

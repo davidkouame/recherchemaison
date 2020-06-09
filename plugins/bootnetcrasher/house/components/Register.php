@@ -14,6 +14,7 @@ use bootnetcrasher\House\Models\DemarcheurModel;
 use RainLab\User\Components\Account;
 use bootnetcrasher\Parametre\Models\LocalisationModel;
 use Input;
+use Mail;
 
 class Register extends Account {
 
@@ -60,6 +61,11 @@ class Register extends Account {
             $user->save();
         }
         \Flash::success("Bienvenue à ChapMaison, votre compte agence a été crée avec succèss !");
+        // Send email
+        Mail::send('Demarcheur::create', [], function($message){
+            $message->to("bootnetcrasher@gmail.com", 'Admin');
+            $message->subject('Recherche de maison');
+        });
         return true;
     }
 
@@ -79,6 +85,11 @@ class Register extends Account {
             $user->save();
         }
         \Flash::success('Bienvenue à ChapMaison, votre compte démarcheur a été crée avec succèss !');
+        // Send email
+        Mail::send('Demarcheur::create', [], function($message){
+            $message->to("bootnetcrasher@gmail.com", 'Admin');
+            $message->subject('Recherche de maison');
+        });
         return true;
     }
 

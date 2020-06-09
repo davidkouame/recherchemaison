@@ -13,6 +13,7 @@ class AgenceRefusee extends Controller
     public function __construct()
     {
         parent::__construct();
+        BackendMenu::setContext('bootnetcrasher.House', 'agences', 'agencesrefusees');
     }
 
     public function listExtendQuery($query) {

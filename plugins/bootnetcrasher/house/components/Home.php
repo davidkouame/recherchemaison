@@ -34,6 +34,15 @@ class Home extends Account {
         // Recuperation de tous les types de publications
         $this->page['typepublications'] = TypePublicationModel::orderBy('libelle','asc')->get();
         // recuperation de toutes les publications
+        // 2020-01-08 00:00:00
+
+
+$date = new \DateTime(date("Y-m-d H:m:s"));
+$date->modify('-30 day');
+$tomorrowDATE = $date->format('Y-m-d H:m:s');
+//dd($tomorrowDATE);
+
+
         $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){
             $query->where('libelle', 'like', '%'.Input::get('keys').'%');

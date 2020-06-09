@@ -1,6 +1,7 @@
 <?php namespace bootnetcrasher\House\Models;
 
 use Model;
+use Mail;
 
 /**
  * Model

@@ -3,7 +3,7 @@
 use Backend\Classes\Controller;
 use BackendMenu;
 
-class Agence extends Controller
+class AgenceIndex extends Controller
 {
     public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController'    ];
     
@@ -15,8 +15,4 @@ class Agence extends Controller
         parent::__construct();
         BackendMenu::setContext('bootnetcrasher.House', 'agences');
     }
-
-    public function listExtendQuery($query) {
-        $query->orderBy('created_at','desc');
-     }
 }

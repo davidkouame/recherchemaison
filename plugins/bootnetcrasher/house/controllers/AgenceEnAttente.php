@@ -14,6 +14,7 @@ class AgenceEnAttente extends Controller
     public function __construct()
     {
         parent::__construct();
+        BackendMenu::setContext('bootnetcrasher.House', 'agences', 'agencesenattentes');
     }
 
     public function listExtendQuery($query) {
