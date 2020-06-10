@@ -1,0 +1,381 @@
+1591785335a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:7098:"description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ChapMaison - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="ChapMaison">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ChapMaison">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ 'assets/images/apple-icon-57x57.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ 'assets/images/apple-icon-60x60.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/images/apple-icon-72x72.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/apple-icon-76x76.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/images/apple-icon-114x114.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/apple-icon-120x120.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ 'assets/images/apple-icon-144x144.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/apple-icon-152x152.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/apple-icon-180x180.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ 'assets/images/android-icon-192x192.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon-32x32.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ 'assets/images/favicon-96x96.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicon-16x16.png'|theme }}">
+    <link rel="manifest" href="{{ 'assets/images/manifest.json'|theme }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ 'assets/images/ms-icon-144x144.png'|theme }}">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="icon" type="image/png" href="{{ 'assets/images/chapmaison.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    {% styles %}
+
+    <style>
+        .responsive {
+            height: 160px;
+        }
+
+        .responsive-collapse {
+            display: block !important;
+        }
+
+        #layout-header {
+            margin-top: 0px;
+        }
+
+        .post-content {
+            padding-left: 14px;
+        }
+
+        .polaroid .container-p p,
+        .polaroid .container-p .price {
+            color: black !important;
+        }
+
+        .list-unstyled li,
+        .list-unstyled a {
+            color: black !important;
+        }
+
+        .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover::after {
+            background: unset;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    {% if user %}
+    {% if user.demarcheur_id %}
+    <header id="layout-header">
+        {% partial 'site/header_demarcheur' %}
+    </header>
+    {% elseif user.agence_id %}
+    <header id="layout-header">
+        {% partial 'site/header_agence' %}
+    </header>
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+    {% framework extras %}
+    {% scripts %}
+
+    <script>
+        $(document).ready(function (e) {
+            $("input[name='typeuser']").click(function (e) {
+                if (e.target.value == 1) {
+                    $("#agence_first_login").css('display', 'block');
+                    $("#demarcheur_first_login").css('display', 'none');
+                } else {
+                    $("#agence_first_login").css('display', 'none');
+                    $("#demarcheur_first_login").css('display', 'block');
+                }
+            });
+
+            // afficher les informations (mail, tel) du demarcheur ou de l'agence
+            let contact = 0;
+            $("a[href='#contactPhone'").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactPhone").css('display', 'flex');
+                contact += 1;
+                displayTextArea(2);
+            });
+            $(".contactForm").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactForm").css('display', 'flex');
+                contact += 1;
+                displayTextArea(1);
+            });
+
+            let displayTextArea = function (form) {
+                if (contact > 1) {
+                    $(".text-area").removeClass('warning-small').addClass('warning-large');
+                } else {
+                    if (form == 2) {
+                        $("#contactPhone").css('float', 'left');
+                    }
+                    $(".text-area").addClass('warning-small');
+                }
+            }
+
+            // chargement des images
+            $(".imageminia").click(function (e) {
+                e.preventDefault();
+                // alert("chargement d'image");
+                // console.log(e.target.attr('imgptf'));
+                let indeximg = $(this).data('imgptf');
+                // console.log($(this).data('imgptf'));
+                // console.log($(".imggf-"+indeximg).attr('src'));
+                // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                // console.log();
+                $(".slide.active").removeClass("active").css("opacity", 0);
+                $(".imggf-" + indeximg).parent().addClass("active").css("opacity", '');
+                $(".img-miniature li.active").removeClass("active");
+                $(this).parent().addClass('active');
+            });
+
+
+
+
+        });
+    </script>
+
+    {% partial 'site/footer_general' %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164713787-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164713787-1');
+    </script>
+
+</body>
+
+</html>";s:5:"mtime";i:1588000592;s:6:"markup";s:7064:"<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ChapMaison - {{ this.page.title }}</title>
+    <meta name="description" content="{{ this.page.meta_description }}">
+    <meta name="title" content="{{ this.page.meta_title }}">
+    <meta name="author" content="ChapMaison">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ChapMaison">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ 'assets/images/apple-icon-57x57.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ 'assets/images/apple-icon-60x60.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ 'assets/images/apple-icon-72x72.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ 'assets/images/apple-icon-76x76.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ 'assets/images/apple-icon-114x114.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ 'assets/images/apple-icon-120x120.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ 'assets/images/apple-icon-144x144.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ 'assets/images/apple-icon-152x152.png'|theme }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/images/apple-icon-180x180.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ 'assets/images/android-icon-192x192.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/images/favicon-32x32.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{ 'assets/images/favicon-96x96.png'|theme }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/images/favicon-16x16.png'|theme }}">
+    <link rel="manifest" href="{{ 'assets/images/manifest.json'|theme }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{ 'assets/images/ms-icon-144x144.png'|theme }}">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <link rel="icon" type="image/png" href="{{ 'assets/images/chapmaison.png'|theme }}">
+    <link href="{{ 'assets/css/vendor.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/home.css'|theme }}" rel="stylesheet">
+    <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    {% styles %}
+
+    <style>
+        .responsive {
+            height: 160px;
+        }
+
+        .responsive-collapse {
+            display: block !important;
+        }
+
+        #layout-header {
+            margin-top: 0px;
+        }
+
+        .post-content {
+            padding-left: 14px;
+        }
+
+        .polaroid .container-p p,
+        .polaroid .container-p .price {
+            color: black !important;
+        }
+
+        .list-unstyled li,
+        .list-unstyled a {
+            color: black !important;
+        }
+
+        .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover::after {
+            background: unset;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    {% if user %}
+    {% if user.demarcheur_id %}
+    <header id="layout-header">
+        {% partial 'site/header_demarcheur' %}
+    </header>
+    {% elseif user.agence_id %}
+    <header id="layout-header">
+        {% partial 'site/header_agence' %}
+    </header>
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+    {% else %}
+    <header id="layout-header">
+        {% partial 'site/header' %}
+    </header>
+    {% endif %}
+
+    <!-- Content -->
+    <section id="layout-content">
+        {% page %}
+    </section>
+
+    <!-- Footer -->
+    <footer id="layout-footer">
+        {% partial 'site/footer' %}
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+    <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+    <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+    {% framework extras %}
+    {% scripts %}
+
+    <script>
+        $(document).ready(function (e) {
+            $("input[name='typeuser']").click(function (e) {
+                if (e.target.value == 1) {
+                    $("#agence_first_login").css('display', 'block');
+                    $("#demarcheur_first_login").css('display', 'none');
+                } else {
+                    $("#agence_first_login").css('display', 'none');
+                    $("#demarcheur_first_login").css('display', 'block');
+                }
+            });
+
+            // afficher les informations (mail, tel) du demarcheur ou de l'agence
+            let contact = 0;
+            $("a[href='#contactPhone'").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactPhone").css('display', 'flex');
+                contact += 1;
+                displayTextArea(2);
+            });
+            $(".contactForm").click(function () {
+                $(".text-area").css('display', 'block');
+                $("#contactForm").css('display', 'flex');
+                contact += 1;
+                displayTextArea(1);
+            });
+
+            let displayTextArea = function (form) {
+                if (contact > 1) {
+                    $(".text-area").removeClass('warning-small').addClass('warning-large');
+                } else {
+                    if (form == 2) {
+                        $("#contactPhone").css('float', 'left');
+                    }
+                    $(".text-area").addClass('warning-small');
+                }
+            }
+
+            // chargement des images
+            $(".imageminia").click(function (e) {
+                e.preventDefault();
+                // alert("chargement d'image");
+                // console.log(e.target.attr('imgptf'));
+                let indeximg = $(this).data('imgptf');
+                // console.log($(this).data('imgptf'));
+                // console.log($(".imggf-"+indeximg).attr('src'));
+                // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
+                // console.log();
+                $(".slide.active").removeClass("active").css("opacity", 0);
+                $(".imggf-" + indeximg).parent().addClass("active").css("opacity", '');
+                $(".img-miniature li.active").removeClass("active");
+                $(this).parent().addClass('active');
+            });
+
+
+
+
+        });
+    </script>
+
+    {% partial 'site/footer_general' %}
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164713787-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-164713787-1');
+    </script>
+
+</body>
+
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}

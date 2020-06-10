@@ -37,11 +37,11 @@ class Home extends Account {
         // 2020-01-08 00:00:00
 
 
-$date = new \DateTime(date("Y-m-d H:m:s"));
-$date->modify('-30 day');
-$tomorrowDATE = $date->format('Y-m-d H:m:s');
-//dd($tomorrowDATE);
-
+        $date = new \DateTime(date("Y-m-d H:m:s"));
+        $date->modify('-30 day');
+        $tomorrowDATE = $date->format('Y-m-d H:m:s');
+        // dd($tomorrowDATE);
+        $query = PublicationModel::with('typepublication')->where('published_at', '>', $tomorrowDATE)->get();
 
         $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){

@@ -51,5 +51,19 @@ class Plugin extends PluginBase
         }else{
             trace_log((int)$pids[0]);
         }
+
+        $schedule->call(function () {
+            $date = new \DateTime(date("Y-m-d H:m:s"));
+            $date->modify('-30 day');
+            $tomorrowDATE = $date->format('Y-m-d H:m:s');
+            $publications = \DB::table('bootnetcrasher_house_publication')->where('published_at', '<', $tomorrowDATE)
+            ->whereNull('expired_at')->get();
+            foreach($publications as $publication){
+                \DB::table('bootnetcrasher_house_publication')
+                ->where('id', $publication->id)
+                ->update(['expired_at' => now()]);
+            }
+            // trace_log("Mise à jour de la table !");
+        })->everyMinute();
     }
 }

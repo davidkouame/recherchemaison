@@ -1,0 +1,6 @@
+1591785334a:1:{s:23:"agence/publications.htm";a:9:{s:8:"fileName";s:23:"agence/publications.htm";s:7:"content";s:169:"title = "Connexion"
+url = "/agence/publications/:publication_id?"
+layout = "layout_agence"
+[PublicationsMaisonComponent]
+==
+{% component 'PublicationsMaisonComponent' %}";s:5:"mtime";i:1579624446;s:6:"markup";s:45:"{% component 'PublicationsMaisonComponent' %}";s:4:"code";N;s:5:"title";s:9:"Connexion";s:3:"url";s:37:"/agence/publications/:publication_id?";s:6:"layout";s:13:"layout_agence";s:27:"PublicationsMaisonComponent";a:0:{}}}

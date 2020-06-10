@@ -186,6 +186,12 @@ layout = "default"
         background-color: #e2e2e2;
         border-color: #e2e2e2;
     }
+
+    .expire{
+        background-color: #fa2d37;
+        color: #fff;
+        text-align: center;
+    }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
     <div class="col-md-12">
@@ -196,8 +202,9 @@ layout = "default"
         {% endflash %}
         <div class="card">
             <article class="singlepost ">
-                <header class="heading-area">
-                    <h1 class=""><span itemprop="name">{{ publication.libelle }}</span></h1>
+                <header class="heading-area row">
+                    <h1 class="col-md-4"><span itemprop="name">{{ publication.libelle }}</span></h1>
+                    {% if publication.expired_at %} <span class="col-md-offset-3 col-md-1 expire">Expiré</span>  {% endif %}
                 </header>
                 <div class="row">
                     <div class="col-md-12 twocolumn">
