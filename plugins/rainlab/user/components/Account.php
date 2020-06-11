@@ -300,10 +300,10 @@ class Account extends ComponentBase
                 $rules['username'] = 'required|between:2,255';
             }
 
-            $validation = Validator::make($data, $rules);
+            /*$validation = Validator::make($data, $rules);
             if ($validation->fails()) {
                 throw new ValidationException($validation);
-            }
+            }*/
 
             /*
              * Register user

@@ -364,6 +364,14 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         gtag('config', 'UA-164713787-1');
     </script>
 
+    <script>
+        \$(document).ready(function(){
+            \$(\"#registerUser\").submit(function(){
+                \$(\"input[name='password_confirmation'\").val(\$(\"input[name='password'\").val());
+            })
+        })
+    </script>
+
 </body>
 
 </html>";
@@ -571,6 +579,14 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         gtag('js', new Date());
 
         gtag('config', 'UA-164713787-1');
+    </script>
+
+    <script>
+        \$(document).ready(function(){
+            \$(\"#registerUser\").submit(function(){
+                \$(\"input[name='password_confirmation'\").val(\$(\"input[name='password'\").val());
+            })
+        })
     </script>
 
 </body>

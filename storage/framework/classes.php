@@ -99,4 +99,6 @@
   'bootnetcrasher\\house\\Controllers\\agenceenattente' => 'plugins/bootnetcrasher/house/controllers/agenceenattente.php',
   'bootnetcrasher\\house\\Controllers\\agenceacceptee' => 'plugins/bootnetcrasher/house/controllers/agenceacceptee.php',
   'bootnetcrasher\\house\\Controllers\\agencerefusee' => 'plugins/bootnetcrasher/house/controllers/agencerefusee.php',
+  'bootnetcrasher\\House\\Components\\AccountDemarcheur' => 'plugins/bootnetcrasher/house/components/AccountDemarcheur.php',
+  'bootnetcrasher\\House\\Components\\CreatePublicationMaison' => 'plugins/bootnetcrasher/house/components/CreatePublicationMaison.php',
 );

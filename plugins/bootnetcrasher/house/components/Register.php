@@ -35,12 +35,12 @@ class Register extends Account {
             return \Redirect::to($this->getUrlStep());
         }
         dd($this->isRightUser());*/
-        $user = Auth::getUser();
+        /*$user = Auth::getUser();
         if($user){
             $this->page['view'] = "first_step";
         }
         // Chargement des localisations
-        $this->page['localisations'] = LocalisationModel::all();
+        $this->page['localisations'] = LocalisationModel::all();*/
     }
 
     public function onCreateAgence(){
@@ -96,13 +96,18 @@ class Register extends Account {
     public function onCreateUserFirstStep(){
         
         $rules = [
+            "type_user" => "required",
             "nom" => "required",
+            "email" => "required|unique:users",
             "prenom" => "required",
             "tel1" => "required",
             'password' => 'required|between:8,255|confirmed'
         ];
         $messages =[
+            "type_user.required" => "Le type d'utilisateur est requis",
             "nom.required" => "Le nom est requis",
+            "email.required" => "L'email est requis",
+            "email.unique" => "L'email doit être unique",
             "prenom.required" => "Le prénom est requis",
             "tel1.required" => "Le téléphone est requis",
             "password" => [
@@ -121,9 +126,42 @@ class Register extends Account {
         $user->name = post('nom');
         $user->surname = post('prenom');
         $user->tel = post('tel1');
+        $user->email = post('email');
         $user->save();
-        \Flash::success("L'utilisateur a été enregistré avec succèss !");
-        return \Redirect::to('first-step');
+
+        // Mise à jour du type de l'utilisateur
+        if(post('type_user') && post('type_user') == 1){
+            $demarcheur = new DemarcheurModel;
+            $demarcheur->email = $user->email;
+            // $demarcheur->piece = Input::file('piece');
+            $demarcheur->tel = $user->tel;
+            // $demarcheur->tel2 = post('tel2');
+            $demarcheur->nom = $user->name;
+            $demarcheur->prenom = $user->surname;
+            $demarcheur->save();
+            $user->demarcheur_id = $demarcheur->id;
+            $user->save();
+        }
+
+        if(post('type_user') && post('type_user') == 2){
+            $user = Auth::getUser();
+            $agencemodel = new AgenceModel;
+            $agencemodel->libelle = post('libelle');
+            $agencemodel->email = $user->email;
+            $agencemodel->tel = $user->tel;
+            $agencemodel->agrement = Input::file('agrement');
+            // $agencemodel->tel2 = post('tel2');
+            $agencemodel->nom = $user->name;
+            $agencemodel->prenom = $user->surname;
+            // $agencemodel->email_agence = post('email_agence');
+            $agencemodel->save();
+            if($user){
+                $user->agence_id = $agencemodel->id;
+                $user->save();
+            }
+        }
+        \Flash::success("Votre compte a été crée avec succès !");
+        return \Redirect::to('/');
     }
 
     public function onCreateUserTwoStep(){

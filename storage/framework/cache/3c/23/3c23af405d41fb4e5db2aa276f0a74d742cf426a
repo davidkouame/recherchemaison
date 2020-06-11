@@ -1,4 +1,4 @@
-1591785335a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:7098:"description = "Default layout"
+1591821075a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:7335:"description = "Default layout"
 ==
 <!DOCTYPE html>
 <html>
@@ -187,9 +187,17 @@
         gtag('config', 'UA-164713787-1');
     </script>
 
+    <script>
+        $(document).ready(function(){
+            $("#registerUser").submit(function(){
+                $("input[name='password_confirmation'").val($("input[name='password'").val());
+            })
+        })
+    </script>
+
 </body>
 
-</html>";s:5:"mtime";i:1588000592;s:6:"markup";s:7064:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1591804040;s:6:"markup";s:7301:"<!DOCTYPE html>
 <html>
 
 <head>
@@ -374,6 +382,14 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-164713787-1');
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#registerUser").submit(function(){
+                $("input[name='password_confirmation'").val($("input[name='password'").val());
+            })
+        })
     </script>
 
 </body>
