@@ -39,3 +39,14 @@
         </li>
     </ul>
 </div>
+
+{% if user.demarcheur.publications|length >= 1 and (user.name is empty or user.surname is empty) %}
+    <div class="container">
+        <div class="row">
+            <h4 class="col-md-12 alert alert-warning" style="text-align: center;margin-bottom: 10px;">Renseigner votre nom et prénoms pour que vos publications soient visible sur le site Chapmaison.com</h4>
+            <div class="col-md-12" style="text-align: center;margin-bottom: 10px;">
+                <a href="{{ url('demarcheur/account') }}" class="btn btn-primary">Je termine mon inscription</a>
+            </div>
+        </div>
+    </div>
+{% endif %}

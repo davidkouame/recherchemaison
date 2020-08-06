@@ -10,6 +10,7 @@ use RainLab\User\Models\User;
 use Event;
 use Request;
 use RainLab\User\Models\Throttle;
+use Illuminate\Support\Facades\Hash;
 
 class Login extends Account {
 
@@ -48,21 +49,28 @@ class Login extends Account {
                         // ->whereNotNull('agence_id')
                         ->first();
             if(!$user){
+                $user = User::where('tel', '=', $data['email'])
+                        ->first();
+            }
+            if(!$user){
                 trace_log("L'email ou le password est invalide ");
-                Flash::error("L'email ou le mot de passe est invalide");
+                Flash::error("Désolé , les données que vous utilisez sont invalides !");
                 return Redirect::back()->withInput(Request::except('password'));
             }
 
             $throttle = Throttle::where('user_id', $user->id)->first();
+            if($throttle)
+                $throttle->delete();
+            /*$throttle = Throttle::where('user_id', $user->id)->first();
             if($throttle){
                 trace_log("Le user a été bloqué ");
-                Flash::error("L'email ou le mot de passe est invalide");
+                Flash::error("Désolé , les données que vous utilisez sont invalides !");
                 return Redirect::back()->withInput(Request::except('password'));
-            }
+            }*/
 
             if($user->is_activated != 1){
                 trace_log("Le user n'est pas actif ");
-                Flash::error("Désolé, votre compté n'a pas été encore activé !");
+                Flash::error("Désolé, votre compte n'a pas été encore activé !");
                 return Redirect::back()->withInput(Request::except('password'));
             }
             
@@ -78,12 +86,18 @@ class Login extends Account {
                 // $demarcheur = DemarcheurModel::where('id', '=', $user->demarcheur_id)->first();
                 $redirect = "/";
             }
-    
+            
             Event::fire('rainlab.user.beforeAuthenticate', [$this, $credentials]);
-            $user = Auth::authenticate($credentials, true);
-            return Redirect::to($redirect);
+            if(Hash::check($credentials['password'], $user->password)){
+                $user = Auth::login($user);
+                return Redirect::to($redirect);
+            }else{
+                trace_log("Désolé, votre compte n'a pas été encore activé !");
+                Flash::error("Désolé, votre compte n'a pas été encore activé !");
+                return Redirect::back()->withInput(Request::except('password'));
+            }
           } catch (Exception $e) {
-              Flash::error("L'email ou le mot de passe invalide");
+              Flash::error("Désolé , les données que vous utilisez sont invalides !");
               trace_log("une erreur est survenue lors de l'authentification du compte cabinet, message=>".$e->getMessage());
           }
     }

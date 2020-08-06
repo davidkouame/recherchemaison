@@ -48,7 +48,6 @@ class CreatePublicationMaison extends  Account{
         $this->checkConditionUploadFile();
         $rules = [
             "libelle" => "required",
-            "ville_id" => "required",
             "localisation_id" => "required",
             "commune_id" => "required",
             "nbre_piece" => "required",
@@ -61,13 +60,15 @@ class CreatePublicationMaison extends  Account{
         $publication = new PublicationModel;
         $publication->commune_id = post('commune_id');
         $publication->prix = post('prix');
-        $publication->ville_id = post('ville_id');
+        // $publication->ville_id = post('ville_id');
         $publication->localisation_id = post('localisation_id');
         $publication->libelle = post('libelle');
         $publication->nbre_piece = post('nbre_piece'); 
-        $publication->published_at = now();
+        // $publication->published_at = now();
         $publication->cover = Input::file('cover');
         $publication->description = post('description'); 
+        // Publication en attente 
+        $publication->statut_publication = 1;
         /*foreach(Input::file('fileUpload') as $photo){
             $publication->photos[] = $photo;
         }*/
@@ -83,7 +84,7 @@ class CreatePublicationMaison extends  Account{
             }
         }
         $publication->save();
-        Flash::success('La publication a été enregistré avec succèss !');
+        Flash::success('La publication a été enregistré avec succès , notre équipe analysera votre publication afin de la publier sur le site !');
         // return Redirect::to('agence/create-publication');
         return Redirect::to($this->redirect());
     }

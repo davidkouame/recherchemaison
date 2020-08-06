@@ -1,4 +1,4 @@
-1591821073a:1:{s:18:"agence/account.htm";a:9:{s:8:"fileName";s:18:"agence/account.htm";s:7:"content";s:3451:"title = "Espace agence"
+1596726838a:1:{s:18:"agence/account.htm";a:9:{s:8:"fileName";s:18:"agence/account.htm";s:7:"content";s:3451:"title = "Espace agence"
 url = "/agence/account"
 layout = "layout_agence"
 [AccountAgenceComponent]
@@ -100,7 +100,7 @@ layout = "layout_agence"
         </div>
         <button type="submit" class="btn btn-primary active" data-attach-loading>Modifier</button>
       </form>
-</div>";s:5:"mtime";i:1579649864;s:6:"markup";s:3349:"<div class="row" style="margin-top: 40px;">
+</div>";s:5:"mtime";i:1596726139;s:6:"markup";s:3349:"<div class="row" style="margin-top: 40px;">
     <form class="col-md-12" role="form" data-request="onUpdateAgence">
         <label for="">Information sur l'agence</label>
         <div class="row">

@@ -38,9 +38,17 @@ class __TwigTemplate_8a4014da0cfd8c55084b761b4fca881d05380245dd054637218db2f43cf
 <script>
     // \$(\"#collapse-navbar\").css({'display' :'none !important'});
     // \$(\"#collapse-navbar .navbar-nav\").css('display', 'none');
-    \$(document).ready(function() {
-                \$('.select2').select2();
-            });
+    \$(document).ready(function () {
+        \$('.select2').select2();
+
+        \$(\"#statutPublication\").change(function(){
+            // onsole.log(\$(this).val());
+            // console.log(\" le lien est \"+window.location.pathname);
+            window.location.replace(window.location.pathname+\"?statut_publication=\"+\$(this).val());
+        });
+    });
+
+
     \$(\"#btnResponsive\").click(function (e) {
         if (\$(\"#layout-header\").hasClass(\"responsive\")) {
             \$(\"#layout-header\").removeClass(\"responsive\");
@@ -52,6 +60,9 @@ class __TwigTemplate_8a4014da0cfd8c55084b761b4fca881d05380245dd054637218db2f43cf
             \$(\"#collapse-navbar .navbar-nav\").css('display', 'block');
         }
     });
+
+
+
 </script>";
     }
 
@@ -71,9 +82,17 @@ class __TwigTemplate_8a4014da0cfd8c55084b761b4fca881d05380245dd054637218db2f43cf
 <script>
     // \$(\"#collapse-navbar\").css({'display' :'none !important'});
     // \$(\"#collapse-navbar .navbar-nav\").css('display', 'none');
-    \$(document).ready(function() {
-                \$('.select2').select2();
-            });
+    \$(document).ready(function () {
+        \$('.select2').select2();
+
+        \$(\"#statutPublication\").change(function(){
+            // onsole.log(\$(this).val());
+            // console.log(\" le lien est \"+window.location.pathname);
+            window.location.replace(window.location.pathname+\"?statut_publication=\"+\$(this).val());
+        });
+    });
+
+
     \$(\"#btnResponsive\").click(function (e) {
         if (\$(\"#layout-header\").hasClass(\"responsive\")) {
             \$(\"#layout-header\").removeClass(\"responsive\");
@@ -85,6 +104,9 @@ class __TwigTemplate_8a4014da0cfd8c55084b761b4fca881d05380245dd054637218db2f43cf
             \$(\"#collapse-navbar .navbar-nav\").css('display', 'block');
         }
     });
+
+
+
 </script>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/partials/site/footer_general.htm", "");
     }
 }

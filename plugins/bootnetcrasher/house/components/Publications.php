@@ -82,9 +82,31 @@ class Publications extends Account {
             $this->page['modelUser'] = 'agence';
         }else{
             $demarcheur = DemarcheurModel::find($user->demarcheur_id);
-            // recuperation de toutes les publications
-            $this->page['publications'] = $publications = PublicationModel::where('demarcheur_id', $demarcheur->id)->orderBy('created_at', 'desc')->get();
+            // Recuperation du statut de la publication 
+            $statutPublication = get("statut_publication");
+            if($statutPublication && $statutPublication != "all"){
+                // recuperation de toutes les publications
+                $this->page['publications'] = $publications = PublicationModel::where('demarcheur_id', $demarcheur->id)
+                ->where('statut_publication', '=', $this->getIdStatutPublication($statutPublication))
+                ->orderBy('created_at', 'desc')->get();
+            }else{
+               // recuperation de toutes les publications
+               $this->page['publications'] = $publications = PublicationModel::where('demarcheur_id', $demarcheur->id)
+               ->orderBy('created_at', 'desc')->get(); 
+            }
             $this->page['modelUser'] = 'demarcheur';
+            $this->page['statutPublication'] = $statutPublication;
+        }
+    }
+
+    // Recuperation de l'id du statut
+    public function getIdStatutPublication($letter){
+        if($letter == "en"){
+            return 1;
+        }else if($letter == "acc"){
+            return 2;
+        }else{
+            return 3;
         }
     }
 }

@@ -36,9 +36,9 @@ class DetailPublication extends Account {
         $this->page['publication'] = $publication = PublicationModel::with(array('communes', 
         'villes', 'localisations', 'typepublication', 'agence', 'demarcheur'))
         ->where('slot', $publication_key)->first();
-        // dd($this->page['publication']->photos);
-        $this->page['publications'] = PublicationModel::with('typepublication')->where('id', '<>', $publication->id)
-        ->take(3)->get();
+        $this->page['publications'] = $this->recherchePublicationSimilaire($publication);
+        /*$this->page['publications'] = PublicationModel::with('typepublication')->where('id', '<>', $publication->id)
+        ->take(3)->get();*/
     }
 
     public function onSendMessage(){
@@ -71,5 +71,31 @@ class DetailPublication extends Account {
             $email = $publication->demarcheur->email;
         }
         return $email;
+    }
+
+    // Recherche des maisons similaires à la maison
+    private function recherchePublicationSimilaire($publication){
+        $data = [];
+        $publications = PublicationModel::where('commune_id', $publication->commune_id)
+        ->where('id', '<>', $publication->id)
+        ->whereNull('expired_at')
+        ->whereNotNull('published_at')
+        ->get();
+        foreach($publications as $element){ $data[] = $element;}
+        try{
+            if(count($data) < 3){
+                $prixmin = $publication->prix - 20000;
+                $prixmax = $publication->prix + 20000;
+                $publications = PublicationModel::whereBetween('prix', array($prixmin, $prixmax))
+                ->where('id', '<>', $publication->id)
+                ->whereNull('expired_at')
+                ->whereNotNull('published_at')
+                ->get();
+                foreach($publications as $publication){ $data[] = $publication;}
+            }
+        }catch(\Exception $e){
+            trace_log("Une erreur est survenue lors de la recuperation des publications similaires ");
+        }
+        return $data;
     }
 }

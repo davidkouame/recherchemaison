@@ -1,0 +1,20 @@
+# ===================================
+# Filter Scope Definitions
+# ===================================
+
+scopes:
+    publications:
+        label: Statut publication
+        type: group
+        scope: filterPublication
+        options:
+            encours: En attente
+            refusees: Refusées
+            acceptees: Acceptées
+            acceptees: Scrapping house
+            scrapping: Scrapping house
+    
+    
+    
+
+   

@@ -1,4 +1,4 @@
-1591821074a:1:{s:14:"home_old-1.htm";a:9:{s:8:"fileName";s:14:"home_old-1.htm";s:7:"content";s:7930:"title = "Recherche maison"
+1596726839a:1:{s:14:"home_old-1.htm";a:9:{s:8:"fileName";s:14:"home_old-1.htm";s:7:"content";s:7930:"title = "Recherche maison"
 url = "/home-old"
 layout = "default"
 [HomeComponent]
@@ -216,7 +216,7 @@ layout = "default"
             </div>
         </div>
     {% endif %}
-</div>";s:5:"mtime";i:1589092126;s:6:"markup";s:7846:"<style>
+</div>";s:5:"mtime";i:1596726115;s:6:"markup";s:7846:"<style>
     @media screen and (max-width: 500px) {
         .publication{
             margin-left: 6%;

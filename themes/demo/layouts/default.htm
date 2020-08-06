@@ -37,6 +37,10 @@ description = "Default layout"
     <link href="{{ 'assets/css/theme.css'|theme }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="{{ 'assets/css/venobox.css'|theme }}" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="{{ 'assets/baguetteBox/baguetteBox.min.css'|theme }}">
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     {% styles %}
@@ -70,6 +74,20 @@ description = "Default layout"
 
         .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover::after {
             background: unset;
+        }
+
+        /* Css gallerie */
+        .thumb {
+            text-align: center;
+        }
+
+        .img-thumb {
+            display: inline-block;
+        }
+
+        .thumbs img {
+            width: 120px;
+            height: auto;
         }
     </style>
 </head>
@@ -107,13 +125,20 @@ description = "Default layout"
         {% partial 'site/footer' %}
     </footer>
 
+
+
     <!-- Scripts -->
     <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
     <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
     <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
 
+
+    <!-- Require js for test gallerie1-->
+    <script src="{{ 'assets/baguetteBox/baguetteBox.min.js'|theme }}"></script>
     {% framework extras %}
     {% scripts %}
+
+
 
     <script>
         $(document).ready(function (e) {
@@ -156,21 +181,12 @@ description = "Default layout"
             // chargement des images
             $(".imageminia").click(function (e) {
                 e.preventDefault();
-                // alert("chargement d'image");
-                // console.log(e.target.attr('imgptf'));
                 let indeximg = $(this).data('imgptf');
-                // console.log($(this).data('imgptf'));
-                // console.log($(".imggf-"+indeximg).attr('src'));
-                // $(".slide.active img").attr('src', $(".imggf-"+indeximg).attr('src'));
-                // console.log();
                 $(".slide.active").removeClass("active").css("opacity", 0);
-                $(".imggf-" + indeximg).parent().addClass("active").css("opacity", '');
+                $(".imggf-" + indeximg).parent().parent().addClass("active").css("opacity", '');
                 $(".img-miniature li.active").removeClass("active");
-                $(this).parent().addClass('active');
+                $(this).parent().parent().addClass('active');
             });
-
-
-
 
         });
     </script>
@@ -188,13 +204,172 @@ description = "Default layout"
     </script>
 
     <script>
-        $(document).ready(function(){
-            $("#registerUser").submit(function(){
+        $(document).ready(function () {
+            $("#registerUser").submit(function () {
                 $("input[name='password_confirmation'").val($("input[name='password'").val());
             })
         })
     </script>
 
+
+    <!-- Js gallerie -->
+<!--
+    <script>
+        // function afterPageLoad() {
+            // alert("load page ");
+
+            $('.venoboxvid').venobox({
+                bgcolor: '#000',
+                spinner: 'cube-grid',
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log(thenext);
+                // },
+            });
+            $('.venoboxframe').venobox({
+                border: '6px',
+                overlayColor: 'rgba(255,255,255,0.85)',
+                titlePosition: 'bottom',
+                titleColor: '#333',
+                titleBackground: 'transparent',
+                closeColor: '#333',
+                closeBackground: 'transparent',
+                spinner: 'wave'
+            });
+
+            $('.venoboxajax').venobox({
+                border: '30px;',
+                // frameheight: '220px'
+            });
+            var venoOptions = {
+                numeratio: true,
+                infinigall: true,
+                border: '20px',
+                titleattr: 'data-title',
+                // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                //     console.log(thenext);
+
+                // },
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                // },
+            }
+            $('.venobox').venobox(venoOptions);
+        // }
+
+
+        $(document).on('click', '.calldownload', function (e) {
+            setupButton();
+        });
+
+        function setupButton() {
+            $('.downlink').addClass('disabled');
+            $('.wrapannoy').html(button);
+            selected = 0;
+            $('.annoyed').html(steps[selected]);
+        }
+
+        /*function activateD(action) {
+            $.ajax({
+                url: 'stat/count.php',
+                cache: false,
+                method: "POST",
+                data: { whatcount: action },
+    
+            }).done(function (msg) {
+                // console.log(msg);
+            });
+            $('.downlink').removeClass('disabled');
+        }*/
+
+        $(document).on('click', '.annoyed', function (e) {
+            selected++;
+            if (selected < steps.length) {
+                $(this).html(steps[selected]);
+            } else {
+                activateD('meh');
+                $(this).parent().html('Meh <i class="fa fa-meh-o"></i>');
+            }
+        });
+
+
+        // $('.venoboxinline').venobox({
+        //     framewidth: '400px',
+        //     frameheight: 'auto',
+        //     border: '10px',
+        //     bgcolor: '#f46f00',
+        //     titleattr: 'data-title'
+        // });
+
+
+        // init plugin.
+        var test = $('.venoboxinline').venobox({
+            numeratio: true,
+            framewidth: '400px',
+            frameheight: 'auto',
+            border: '10px',
+            bgcolor: '#f46f00',
+            titleattr: 'data-title',
+            infinigall: true,
+            // cb_init : function(plugin){
+            //     console.log('INIT');
+            //     console.log(plugin);
+            // },
+            // cb_pre_open : function(obj){
+            //     console.log('link obj');
+            //     console.log(obj.data());
+            // },
+            // cb_post_open : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            //     console.log('next - prev lenght');
+            //     console.log(thenext.length);
+            //     console.log(theprev.length);
+            // },
+            // cb_pre_close : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            // },
+            // cb_post_close : function(){
+            //     console.log('CLOSED');
+            // },
+            // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+            //     console.log('after nav');
+            //     console.log(gallIndex);
+            // }
+
+        })
+        //test.venobox('foo_public_method');
+        // call a method from within the plugin outside of the plugin.
+        $(document).on('click', '.closeme', function (e) {
+            e.preventDefault();
+            // console.log('called');
+            // test.VBprev();
+            // test.VBnext();
+            test.VBclose();
+
+        });
+
+    </script>
+-->
+
+    <script>
+         window.onload = function () {
+            baguetteBox.run('.baguetteBoxThree', {
+                animation: 'fadeIn',
+                noScrollbars: true
+            });
+
+            // if (typeof oldIE === 'undefined' && Object.keys) {
+            //    hljs.initHighlighting();
+            // }
+
+            // var year = document.getElementById('year');
+            // year.innerText = new Date().getFullYear();
+        };
+    </script>
+
+<script data-ad-client="ca-pub-5530719623202694" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </body>
 
 </html>

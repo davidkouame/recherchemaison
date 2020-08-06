@@ -10,6 +10,7 @@ use Auth;
 use RainLab\User\Components\Account;
 use BackendAuth;
 use bootnetcrasher\House\Models\PublicationModel;
+use bootnetcrasher\House\Models\DemarcheurModel;
 use bootnetcrasher\Parametre\Models\LocalisationModel;
 use Input;
 use Bootnetcrasher\Parametre\Models\TypePublicationModel;
@@ -24,6 +25,12 @@ class Home extends Account {
     }
 
     public function onRun() {
+        /*$user = Auth::getUser();
+        if($user){
+            $demarcheur = DemarcheurModel::find($user->demarcheur_id);
+            dd($user->demarcheur->publications);
+            // dd($demarcheur);
+        }*/
         if(!$this->isRightUser()){
             if($this->getUrlStep() != "auth/login")
                 return \Redirect::to($this->getUrlStep());
@@ -41,7 +48,7 @@ class Home extends Account {
         $date->modify('-30 day');
         $tomorrowDATE = $date->format('Y-m-d H:m:s');
         // dd($tomorrowDATE);
-        $query = PublicationModel::with('typepublication')->where('published_at', '>', $tomorrowDATE)->get();
+        // $query = PublicationModel::with('typepublication')->where('published_at', '>', $tomorrowDATE)->get();
 
         $query = PublicationModel::with('typepublication')->whereNotNull('published_at');
         if(Input::get('keys')){
@@ -53,7 +60,7 @@ class Home extends Account {
         if(Input::get('typepublication_id')){
             $query->where('type_publication_id', Input::get('typepublication_id'));
         }
-        $this->page['publications'] = $query->orderBy('created_at', 'desc')->paginate(12);
+        $this->page['publications'] = $query->orderBy('published_at', 'desc')->paginate(12);
         $this->page['keys'] = Input::get('keys');
         $this->page['localisation_id'] = Input::get('localisation_id');
         $this->page['typepublication_id'] = Input::get('typepublication_id');

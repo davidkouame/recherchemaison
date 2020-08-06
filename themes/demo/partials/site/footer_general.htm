@@ -2,9 +2,17 @@
 <script>
     // $("#collapse-navbar").css({'display' :'none !important'});
     // $("#collapse-navbar .navbar-nav").css('display', 'none');
-    $(document).ready(function() {
-                $('.select2').select2();
-            });
+    $(document).ready(function () {
+        $('.select2').select2();
+
+        $("#statutPublication").change(function(){
+            // onsole.log($(this).val());
+            // console.log(" le lien est "+window.location.pathname);
+            window.location.replace(window.location.pathname+"?statut_publication="+$(this).val());
+        });
+    });
+
+
     $("#btnResponsive").click(function (e) {
         if ($("#layout-header").hasClass("responsive")) {
             $("#layout-header").removeClass("responsive");
@@ -16,4 +24,7 @@
             $("#collapse-navbar .navbar-nav").css('display', 'block');
         }
     });
+
+
+
 </script>

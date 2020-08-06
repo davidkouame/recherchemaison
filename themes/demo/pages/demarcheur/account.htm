@@ -10,8 +10,8 @@ layout = "layout_demarcheur"
         {{ message }}
     </div>
     {% endflash %}
-    <form class="col-md-12" role="form" data-request="onUpdateDemarcheur">
-        <label for="">Information sur le démarcheur</label>
+    <form class="col-md-12" role="form" data-request="onUpdateDemarcheur" data-request-files>
+        <label for="">Informations personnelles</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input
@@ -20,6 +20,7 @@ layout = "layout_demarcheur"
                     name="tel1"
                     placeholder="Entrer un tel 1"
                     value="{{ demarcheur.tel }}"
+                    disabled
                 />
             </div>
             <div class="form-group col-md-6">
@@ -32,7 +33,6 @@ layout = "layout_demarcheur"
                 />
             </div>
         </div>
-        <label for="">Information sur l'utilisateur du  compte</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input
@@ -61,17 +61,30 @@ layout = "layout_demarcheur"
                     name="email"
                     placeholder="Entrer un email"
                     value="{{ demarcheur.user.email }}"
-                    disabled
+                    {% if user.email  %} disabled {% endif %}
                 />
             </div>
         </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                {% if demarcheur.piece and demarcheur.piece.getpath %}
+                    <label for="">Modifier votre pièce d'identité (CNI ou une attestation)</label>
+                    <input type="file" name="piece" class="form-control " style="margin-bottom: 10px;">
+                    <img src="{{ demarcheur.piece.getpath }}" alt="">
+                {% else %}
+                    <label for="">Ajouter une pièce d'identité (CNI ou une attestation)</label>
+                    <input type="file" name="piece" class="form-control ">
+                {% endif %}
+            </div>
+        </div>
+        <label for="">Sécurité</label>
         <div class="row">
             <div class="form-group col-md-6">
                 <input
                     type="password"
                     class="form-control"
                     name="password"
-                    placeholder="Entrer un password"
+                    placeholder="Entrer un mot de passe"
                 />
             </div>
             <div class="form-group col-md-6">
@@ -79,10 +92,11 @@ layout = "layout_demarcheur"
                     type="password"
                     class="form-control"
                     name="password_confirmation"
-                    placeholder="Retaper le password"
+                    placeholder="Retaper le mot de passe"
                 />
             </div>
         </div>
+        
         <button type="submit" class="btn btn-primary active" data-attach-loading>Modifier</button>
       </form>
 </div>

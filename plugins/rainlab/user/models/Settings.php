@@ -20,6 +20,7 @@ class Settings extends Model
     const ACTIVATE_ADMIN = 'admin';
 
     const LOGIN_EMAIL = 'email';
+    const LOGIN_TEL = 'tel';
     const LOGIN_USERNAME = 'username';
 
     const REMEMBER_ALWAYS = 'always';

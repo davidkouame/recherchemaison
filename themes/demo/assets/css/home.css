@@ -139,11 +139,11 @@ post-holder a.post-link {
     border-radius: 5px;
 }
 
-.logo img, .singlepost .slideshow .slide img, .singlepost .slideshow .pagination li img, .related-posts .post-image img, .form-area .ad-image img, .form-horizontal .ad-image img, .post-holder .alignleft img {
+/*.logo img, .singlepost .slideshow .slide img, .singlepost .slideshow .pagination li img, .related-posts .post-image img, .form-area .ad-image img, .form-horizontal .ad-image img, .post-holder .alignleft img {
     max-width: 100%;
     height: auto;
     display: block;
-}
+}*/
 
 .singlepost {
     overflow: inherit;

@@ -4,9 +4,19 @@ columns:
         type: text
         searchable: true
     reference:
+        label: Référence
+        type: text
+        searchable: true
+    reference:
         label: Reférence
         type: text
         searchable: true
     created_at:
         label: Date de création
+        type: text
+    date_scrapping:
+        label: 'Date scrapping'
+        type: text
+    prix:
+        label: Prix
         type: text

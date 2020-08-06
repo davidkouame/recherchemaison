@@ -187,13 +187,14 @@ layout = "default"
         border-color: #e2e2e2;
     }
 
-    .expire{
+    .expire {
         background-color: #fa2d37;
         color: #fff;
         text-align: center;
     }
 </style>
 <div class="container-fluid detail-publication" style="margin-top: 20px;">
+
     <div class="col-md-12">
         {% flash %}
         <div class="alert alert-success" style="text-align: center;">
@@ -204,7 +205,8 @@ layout = "default"
             <article class="singlepost ">
                 <header class="heading-area row">
                     <h1 class="col-md-4"><span itemprop="name">{{ publication.libelle }}</span></h1>
-                    {% if publication.expired_at %} <span class="col-md-offset-3 col-md-1 expire">Expiré</span>  {% endif %}
+                    {% if publication.expired_at %} <span class="col-md-offset-3 col-md-1 expire">Expiré</span>
+                    {% endif %}
                 </header>
                 <div class="row">
                     <div class="col-md-12 twocolumn">
@@ -212,16 +214,24 @@ layout = "default"
                             <!-- slideshow -->
                             <div class="slideshow gallery-js-ready autorotation-disabled">
                                 <div class="mask">
-                                    <div class="slideset" style="height: 420px;">
+                                    <div class="slideset baguetteBoxThree gallery" style="height: 600px;">
                                         {% for key,photo in publication.photos %}
                                         {% if key == 0 %}
-                                        <div class="slide active" style="display: block;"><img itemprop="image"
-                                                class="imggf-1" src="{{ publication.photos[0].getPath }}"
-                                                alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                        <div class="slide active" style="display: block;">
+                                            <a href="{{ photo.getPath|resize(700,500) }}">
+                                                <img itemprop="image" class="imggf-1"
+                                                    src="{{ publication.photos[0].getPath }}"
+                                                    alt="Belle Apparemment À Vendre  - Côte d’Ivoire">
+                                            </a>
+                                        </div>
                                         {% else %}
                                         <div class="slide" style="display: block; opacity: 0;">
-                                            <img itemprop="image" class="imggf-{{ key+1 }}" src="{{ photo.getPath }}"
-                                                alt="Belle Apparemment À Vendre  - Côte d’Ivoire"></div>
+                                            <a href="{{ photo.getPath }}">
+                                                <img itemprop="image" class="imggf-{{ key+1 }}"
+                                                    src="{{ photo.getPath|resize(700,500) }}"
+                                                    alt="Belle Apparemment À Vendre  - Côte d’Ivoire">
+                                            </a>
+                                        </div>
                                         {% endif %}
                                         {% endfor %}
                                     </div>
@@ -285,7 +295,7 @@ layout = "default"
                                         <meta itemprop="url">
                                         <meta itemprop="availability" content="http://schema.org/InStock">
                                         <span class="price">
-                                            <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                            <span itemprop="price" content="95000000.00">{{ publication.prix|number_format(2) }}</span>
                                             <span itemprop="priceCurrency" content="FCFA">FCFA</span>
                                         </span>
 
@@ -307,8 +317,12 @@ layout = "default"
                                                 </dd>
                                                 {% else %}
                                                 <dt>Démarcheur</dt>
-                                                <dd><span
-                                                        itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                                <dd>
+                                                    {% if publication.other_demarcheur %}
+                                                        <span itemprop="name">{{ publication.other_name_surname }}</span>
+                                                    {% else %}
+                                                        <span itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                                    {% endif %}
                                                 </dd>
                                                 <dt>Publiée</dt>
                                                 <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time>
@@ -342,7 +356,7 @@ layout = "default"
                                     <meta itemprop="url">
                                     <meta itemprop="availability" content="http://schema.org/InStock">
                                     <span class="price">
-                                        <span itemprop="price" content="95000000.00">{{ publication.prix }}</span>
+                                        <span itemprop="price" content="95000000.00">{{ publication.prix|number_format(0, '.') }}</span>
                                         <span itemprop="priceCurrency" content="FCFA">FCFA</span>
                                     </span>
 
@@ -363,8 +377,15 @@ layout = "default"
                                             <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
                                             {% else %}
                                             <dt>Démarcheur</dt>
-                                            <dd><span
+                                            <!--<dd><span
                                                     itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                            </dd>-->
+                                            <dd>
+                                                {% if publication.other_demarcheur %}
+                                                    <span itemprop="name">{{ publication.other_name_surname }}</span>
+                                                {% else %}
+                                                    <span itemprop="name">{{ publication.demarcheur.nom }}&nbsp;{{ publication.demarcheur.prenom }}</span>
+                                                {% endif %}
                                             </dd>
                                             <dt>Publiée</dt>
                                             <dd><time datetime="1.2.2020 19:02">{{ publication.created_at }}</time></dd>
@@ -415,8 +436,12 @@ layout = "default"
                                 {% if publication.agence %}
                                 <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw}}</h2>
                                 {% else %}
-                                <h2>Envoyer un message à {{ publication.demarcheur.nom }}
-                                    {{ publication.demarcheur.prenom }}</h2>
+                                {% if publication.other_demarcheur %}
+                                <h2>Envoyer un message à {{ publication.other_name_surname }}</h2>
+                                {% else %}
+                                <h2>Envoyer un message à
+                                    {{ publication.demarcheur.nom }}{{ publication.demarcheur.prenom }}</h2>
+                                {% endif %}
                                 {% endif %}
                                 <div class="row">
                                     <div class="column wide">
@@ -471,9 +496,12 @@ layout = "default"
                             {% if publication.agence %}
                             <h2>Envoyer un message à {{ publication.agence.libelle|slice(0, 20)|raw }}</h2>
                             {% else %}
-                            <h2>Envoyer un message à {{ publication.demarcheur.nom }}
-                                {{ publication.demarcheur.prenom }}
+                            {% if publication.other_demarcheur %}
+                            <h2>Envoyer un message à {{ publication.other_name_surname }}</h2>
+                            {% else %}
+                            <h2>Envoyer un message à {{ publication.demarcheur.nom }}{{ publication.demarcheur.prenom }}
                             </h2>
+                            {% endif %}
                             {% endif %}
                             <div class="phone-box show"
                                 style="margin-bottom: 0px;padding-top: 0px;padding-bottom: 0px;">
@@ -483,7 +511,11 @@ layout = "default"
                                 {% if publication.agence %}
                                 <a href="tel:{{ publication.agence.tel }}">{{ publication.agence.tel }}</a>
                                 {% else %}
+                                {% if publication.other_demarcheur %}
+                                <a href="tel:{{ publication.other_tel1}}">{{ publication.other_tel1 }}</a>
+                                {% else %}
                                 <a href="tel:{{ publication.demarcheur.tel }}">{{ publication.demarcheur.tel }}</a>
+                                {% endif %}
                                 {% endif %}
                                 <i class="icon-whatsapp active "> <span class="popover above">Ce numéro de téléphone
                                         fonctionne avec WhatsApp</span></i>
@@ -519,6 +551,8 @@ layout = "default"
                         </ul>
                     </div>
                 </section>
+                <h3 style="font-weight: bold;text-align: center;">Publications similaires</h3>
+                <!-- Les articles similaires -->
                 <section class="row" style="margin-top: 20px; padding-left: 30px; padding-right: 30px;">
                     <div class="col-lg-4 col-sm-4 col-xs-6 col-md-4" id="first-publication-recommande">
                         <a href="{{ url('publications') }}/{{ publications[0].slot }}">
@@ -538,10 +572,10 @@ layout = "default"
                                     </p>
                                     <p>
                                         {% if publications[0].prix %}
-                                        <div class="price-date">
-                                            <span class="price">{{ publications[0].prix }} FCFA</span>
-                                        </div>
-                                        {% endif %}
+                                    <div class="price-date">
+                                        <span class="price">{{ publications[0].prix|number_format(0, '.') }} FCFA</span>
+                                    </div>
+                                    {% endif %}
                                     </p>
                                 </div>
                             </div>
@@ -558,15 +592,16 @@ layout = "default"
                                     overflow: hidden;">{{ publications[1].libelle|slice(0,40)|raw }}</p>
                                     <p style="text-overflow: ellipsis;
                                     white-space: nowrap;
-                                    overflow: hidden;"><span class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
+                                    overflow: hidden;"><span
+                                            class="address">{{ publications[1].typepublication.libelle|slice(0,20)|raw }},
                                             {{ publications[1].localisations.libelle|slice(0,20)|raw}} </span>
                                     </p>
-                                    <p >
+                                    <p>
                                         {% if publications[1].prix %}
-                                        <div class="price-date">
-                                            <span class="price">{{ publications[1].prix }} FCFA</span>
-                                        </div>
-                                        {% endif %}
+                                    <div class="price-date">
+                                        <span class="price">{{ publications[1].prix|number_format(0, '.') }} FCFA</span>
+                                    </div>
+                                    {% endif %}
                                     </p>
                                 </div>
                             </div>
@@ -583,15 +618,16 @@ layout = "default"
                                     overflow: hidden;">{{ publications[2].libelle|slice(0,40)|raw  }}</p>
                                     <p style="text-overflow: ellipsis;
                                     white-space: nowrap;
-                                    overflow: hidden;"><span class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
+                                    overflow: hidden;"><span
+                                            class="address">{{ publications[2].typepublication.libelle|slice(0,20)|raw }},
                                             {{ publications[2].localisations.libelle|slice(0,20)|raw}} </span>
                                     </p>
                                     <p>
                                         {% if publications[2].prix %}
-                                        <div class="price-date">
-                                            <span class="price">{{ publications[2].prix }} FCFA</span>
-                                        </div>
-                                        {% endif %}
+                                    <div class="price-date">
+                                        <span class="price">{{ publications[2].prix|number_format(0, '.') }} FCFA</span>
+                                    </div>
+                                    {% endif %}
                                     </p>
                                 </div>
                             </div>

@@ -1,0 +1,7 @@
+// Les requetes sql
+ALTER TABLE `bootnetcrasher_house_publication`  ADD `statut_publication` INT NULL  AFTER `expired_at`;
+ALTER TABLE `users` CHANGE `email` `email` VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
+ALTER TABLE `bootnetcrasher_house_demarcheur` CHANGE `email` `email` VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `nom` `nom` VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL, CHANGE `prenom` `prenom` VARCHAR(191) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL;
+ALTER TABLE `users` ADD UNIQUE( `tel`);
+ALTER TABLE `bootnetcrasher_house_publication` CHANGE `nbre_piece` `nbre_piece` INT(11) NULL;
+ALTER TABLE `bootnetcrasher_house_publication`  ADD `other_name_surname` VARCHAR(255) NULL  AFTER `url_scrapping`,  ADD `other_email` VARCHAR(255) NULL  AFTER `other_name_surname`,  ADD `other_tel1` VARCHAR(20) NULL  AFTER `other_email`,  ADD `other_tel2` VARCHAR(20) NULL  AFTER `other_tel1`;

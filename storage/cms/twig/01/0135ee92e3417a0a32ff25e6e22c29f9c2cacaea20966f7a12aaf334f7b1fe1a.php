@@ -137,13 +137,23 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         echo "\" rel=\"stylesheet\">
     <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
 
+    <link rel=\"stylesheet\" href=\"";
+        // line 38
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/venobox.css");
+        echo "\" type=\"text/css\" media=\"screen\" />
+
+    <link rel=\"stylesheet\" href=\"";
+        // line 40
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/baguetteBox/baguetteBox.min.css");
+        echo "\">
+
     <script src=\"https://kit.fontawesome.com/a076d05399.js\"></script>
 
     ";
-        // line 40
+        // line 44
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 41
+        // line 45
         echo "
     <style>
         .responsive {
@@ -175,6 +185,20 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover::after {
             background: unset;
         }
+
+        /* Css gallerie */
+        .thumb {
+            text-align: center;
+        }
+
+        .img-thumb {
+            display: inline-block;
+        }
+
+        .thumbs img {
+            width: 120px;
+            height: auto;
+        }
     </style>
 </head>
 
@@ -182,95 +206,103 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     <!-- Header -->
     ";
-        // line 78
+        // line 96
         if (($context["user"] ?? null)) {
-            // line 79
+            // line 97
             echo "    ";
-            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 79)) {
-                // line 80
+            if (twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "demarcheur_id", [], "any", false, false, false, 97)) {
+                // line 98
                 echo "    <header id=\"layout-header\">
         ";
-                // line 81
+                // line 99
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_demarcheur"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 82
+                // line 100
                 echo "    </header>
     ";
-            } elseif (twig_get_attribute($this->env, $this->source,             // line 83
-($context["user"] ?? null), "agence_id", [], "any", false, false, false, 83)) {
-                // line 84
+            } elseif (twig_get_attribute($this->env, $this->source,             // line 101
+($context["user"] ?? null), "agence_id", [], "any", false, false, false, 101)) {
+                // line 102
                 echo "    <header id=\"layout-header\">
         ";
-                // line 85
+                // line 103
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header_agence"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 86
+                // line 104
                 echo "    </header>
     ";
             } else {
-                // line 88
+                // line 106
                 echo "    <header id=\"layout-header\">
         ";
-                // line 89
+                // line 107
                 $context['__cms_partial_params'] = [];
                 echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"                , $context['__cms_partial_params']                , true                );
                 unset($context['__cms_partial_params']);
-                // line 90
+                // line 108
                 echo "    </header>
     ";
             }
-            // line 92
+            // line 110
             echo "    ";
         } else {
-            // line 93
+            // line 111
             echo "    <header id=\"layout-header\">
         ";
-            // line 94
+            // line 112
             $context['__cms_partial_params'] = [];
             echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/header"            , $context['__cms_partial_params']            , true            );
             unset($context['__cms_partial_params']);
-            // line 95
+            // line 113
             echo "    </header>
     ";
         }
-        // line 97
+        // line 115
         echo "
     <!-- Content -->
     <section id=\"layout-content\">
         ";
-        // line 100
+        // line 118
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 101
+        // line 119
         echo "    </section>
 
     <!-- Footer -->
     <footer id=\"layout-footer\">
         ";
-        // line 105
+        // line 123
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 106
+        // line 124
         echo "    </footer>
+
+
 
     <!-- Scripts -->
     <script src=\"";
-        // line 109
+        // line 129
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/jquery.js");
         echo "\"></script>
     <script src=\"";
-        // line 110
+        // line 130
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/vendor/bootstrap.js");
         echo "\"></script>
     <script src=\"";
-        // line 111
+        // line 131
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/javascript/app.js");
         echo "\"></script>
 
+
+    <!-- Require js for test gallerie1-->
+    <script src=\"";
+        // line 135
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/baguetteBox/baguetteBox.min.js");
+        echo "\"></script>
     ";
-        // line 113
+        // line 136
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -281,12 +313,14 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 114
+        // line 137
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 115
+        // line 138
         echo "
+
+
     <script>
         \$(document).ready(function (e) {
             \$(\"input[name='typeuser']\").click(function (e) {
@@ -328,31 +362,22 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
             // chargement des images
             \$(\".imageminia\").click(function (e) {
                 e.preventDefault();
-                // alert(\"chargement d'image\");
-                // console.log(e.target.attr('imgptf'));
                 let indeximg = \$(this).data('imgptf');
-                // console.log(\$(this).data('imgptf'));
-                // console.log(\$(\".imggf-\"+indeximg).attr('src'));
-                // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
-                // console.log();
                 \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);
-                \$(\".imggf-\" + indeximg).parent().addClass(\"active\").css(\"opacity\", '');
+                \$(\".imggf-\" + indeximg).parent().parent().addClass(\"active\").css(\"opacity\", '');
                 \$(\".img-miniature li.active\").removeClass(\"active\");
-                \$(this).parent().addClass('active');
+                \$(this).parent().parent().addClass('active');
             });
-
-
-
 
         });
     </script>
 
     ";
-        // line 176
+        // line 192
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("site/footer_general"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 177
+        // line 193
         echo "
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-164713787-1\"></script>
@@ -365,13 +390,172 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     </script>
 
     <script>
-        \$(document).ready(function(){
-            \$(\"#registerUser\").submit(function(){
+        \$(document).ready(function () {
+            \$(\"#registerUser\").submit(function () {
                 \$(\"input[name='password_confirmation'\").val(\$(\"input[name='password'\").val());
             })
         })
     </script>
 
+
+    <!-- Js gallerie -->
+<!--
+    <script>
+        // function afterPageLoad() {
+            // alert(\"load page \");
+
+            \$('.venoboxvid').venobox({
+                bgcolor: '#000',
+                spinner: 'cube-grid',
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log(thenext);
+                // },
+            });
+            \$('.venoboxframe').venobox({
+                border: '6px',
+                overlayColor: 'rgba(255,255,255,0.85)',
+                titlePosition: 'bottom',
+                titleColor: '#333',
+                titleBackground: 'transparent',
+                closeColor: '#333',
+                closeBackground: 'transparent',
+                spinner: 'wave'
+            });
+
+            \$('.venoboxajax').venobox({
+                border: '30px;',
+                // frameheight: '220px'
+            });
+            var venoOptions = {
+                numeratio: true,
+                infinigall: true,
+                border: '20px',
+                titleattr: 'data-title',
+                // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                //     console.log(thenext);
+
+                // },
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                // },
+            }
+            \$('.venobox').venobox(venoOptions);
+        // }
+
+
+        \$(document).on('click', '.calldownload', function (e) {
+            setupButton();
+        });
+
+        function setupButton() {
+            \$('.downlink').addClass('disabled');
+            \$('.wrapannoy').html(button);
+            selected = 0;
+            \$('.annoyed').html(steps[selected]);
+        }
+
+        /*function activateD(action) {
+            \$.ajax({
+                url: 'stat/count.php',
+                cache: false,
+                method: \"POST\",
+                data: { whatcount: action },
+    
+            }).done(function (msg) {
+                // console.log(msg);
+            });
+            \$('.downlink').removeClass('disabled');
+        }*/
+
+        \$(document).on('click', '.annoyed', function (e) {
+            selected++;
+            if (selected < steps.length) {
+                \$(this).html(steps[selected]);
+            } else {
+                activateD('meh');
+                \$(this).parent().html('Meh <i class=\"fa fa-meh-o\"></i>');
+            }
+        });
+
+
+        // \$('.venoboxinline').venobox({
+        //     framewidth: '400px',
+        //     frameheight: 'auto',
+        //     border: '10px',
+        //     bgcolor: '#f46f00',
+        //     titleattr: 'data-title'
+        // });
+
+
+        // init plugin.
+        var test = \$('.venoboxinline').venobox({
+            numeratio: true,
+            framewidth: '400px',
+            frameheight: 'auto',
+            border: '10px',
+            bgcolor: '#f46f00',
+            titleattr: 'data-title',
+            infinigall: true,
+            // cb_init : function(plugin){
+            //     console.log('INIT');
+            //     console.log(plugin);
+            // },
+            // cb_pre_open : function(obj){
+            //     console.log('link obj');
+            //     console.log(obj.data());
+            // },
+            // cb_post_open : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            //     console.log('next - prev lenght');
+            //     console.log(thenext.length);
+            //     console.log(theprev.length);
+            // },
+            // cb_pre_close : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            // },
+            // cb_post_close : function(){
+            //     console.log('CLOSED');
+            // },
+            // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+            //     console.log('after nav');
+            //     console.log(gallIndex);
+            // }
+
+        })
+        //test.venobox('foo_public_method');
+        // call a method from within the plugin outside of the plugin.
+        \$(document).on('click', '.closeme', function (e) {
+            e.preventDefault();
+            // console.log('called');
+            // test.VBprev();
+            // test.VBnext();
+            test.VBclose();
+
+        });
+
+    </script>
+-->
+
+    <script>
+         window.onload = function () {
+            baguetteBox.run('.baguetteBoxThree', {
+                animation: 'fadeIn',
+                noScrollbars: true
+            });
+
+            // if (typeof oldIE === 'undefined' && Object.keys) {
+            //    hljs.initHighlighting();
+            // }
+
+            // var year = document.getElementById('year');
+            // year.innerText = new Date().getFullYear();
+        };
+    </script>
+
+<script data-ad-client=\"ca-pub-5530719623202694\" async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>
 </body>
 
 </html>";
@@ -389,7 +573,7 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
     public function getDebugInfo()
     {
-        return array (  356 => 177,  352 => 176,  289 => 115,  285 => 114,  274 => 113,  269 => 111,  265 => 110,  261 => 109,  256 => 106,  252 => 105,  246 => 101,  244 => 100,  239 => 97,  235 => 95,  231 => 94,  228 => 93,  225 => 92,  221 => 90,  217 => 89,  214 => 88,  210 => 86,  206 => 85,  203 => 84,  201 => 83,  198 => 82,  194 => 81,  191 => 80,  188 => 79,  186 => 78,  147 => 41,  144 => 40,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
+        return array (  381 => 193,  377 => 192,  321 => 138,  317 => 137,  306 => 136,  302 => 135,  295 => 131,  291 => 130,  287 => 129,  280 => 124,  276 => 123,  270 => 119,  268 => 118,  263 => 115,  259 => 113,  255 => 112,  252 => 111,  249 => 110,  245 => 108,  241 => 107,  238 => 106,  234 => 104,  230 => 103,  227 => 102,  225 => 101,  222 => 100,  218 => 99,  215 => 98,  212 => 97,  210 => 96,  157 => 45,  154 => 44,  147 => 40,  142 => 38,  136 => 35,  132 => 34,  128 => 33,  124 => 32,  117 => 28,  112 => 26,  108 => 25,  104 => 24,  100 => 23,  96 => 22,  92 => 21,  88 => 20,  84 => 19,  80 => 18,  76 => 17,  72 => 16,  68 => 15,  64 => 14,  60 => 13,  52 => 8,  48 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -431,6 +615,10 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     <link href=\"{{ 'assets/css/theme.css'|theme }}\" rel=\"stylesheet\">
     <link href=\"https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css\" rel=\"stylesheet\" />
 
+    <link rel=\"stylesheet\" href=\"{{ 'assets/css/venobox.css'|theme }}\" type=\"text/css\" media=\"screen\" />
+
+    <link rel=\"stylesheet\" href=\"{{ 'assets/baguetteBox/baguetteBox.min.css'|theme }}\">
+
     <script src=\"https://kit.fontawesome.com/a076d05399.js\"></script>
 
     {% styles %}
@@ -464,6 +652,20 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
 
         .navbar-inverse .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li>a:hover::after {
             background: unset;
+        }
+
+        /* Css gallerie */
+        .thumb {
+            text-align: center;
+        }
+
+        .img-thumb {
+            display: inline-block;
+        }
+
+        .thumbs img {
+            width: 120px;
+            height: auto;
         }
     </style>
 </head>
@@ -501,13 +703,20 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
         {% partial 'site/footer' %}
     </footer>
 
+
+
     <!-- Scripts -->
     <script src=\"{{ 'assets/vendor/jquery.js'|theme }}\"></script>
     <script src=\"{{ 'assets/vendor/bootstrap.js'|theme }}\"></script>
     <script src=\"{{ 'assets/javascript/app.js'|theme }}\"></script>
 
+
+    <!-- Require js for test gallerie1-->
+    <script src=\"{{ 'assets/baguetteBox/baguetteBox.min.js'|theme }}\"></script>
     {% framework extras %}
     {% scripts %}
+
+
 
     <script>
         \$(document).ready(function (e) {
@@ -550,21 +759,12 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
             // chargement des images
             \$(\".imageminia\").click(function (e) {
                 e.preventDefault();
-                // alert(\"chargement d'image\");
-                // console.log(e.target.attr('imgptf'));
                 let indeximg = \$(this).data('imgptf');
-                // console.log(\$(this).data('imgptf'));
-                // console.log(\$(\".imggf-\"+indeximg).attr('src'));
-                // \$(\".slide.active img\").attr('src', \$(\".imggf-\"+indeximg).attr('src'));
-                // console.log();
                 \$(\".slide.active\").removeClass(\"active\").css(\"opacity\", 0);
-                \$(\".imggf-\" + indeximg).parent().addClass(\"active\").css(\"opacity\", '');
+                \$(\".imggf-\" + indeximg).parent().parent().addClass(\"active\").css(\"opacity\", '');
                 \$(\".img-miniature li.active\").removeClass(\"active\");
-                \$(this).parent().addClass('active');
+                \$(this).parent().parent().addClass('active');
             });
-
-
-
 
         });
     </script>
@@ -582,13 +782,172 @@ class __TwigTemplate_99b258e8ca14ebe712f8334b02289582cba5dadb054f59820b77c062f01
     </script>
 
     <script>
-        \$(document).ready(function(){
-            \$(\"#registerUser\").submit(function(){
+        \$(document).ready(function () {
+            \$(\"#registerUser\").submit(function () {
                 \$(\"input[name='password_confirmation'\").val(\$(\"input[name='password'\").val());
             })
         })
     </script>
 
+
+    <!-- Js gallerie -->
+<!--
+    <script>
+        // function afterPageLoad() {
+            // alert(\"load page \");
+
+            \$('.venoboxvid').venobox({
+                bgcolor: '#000',
+                spinner: 'cube-grid',
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log(thenext);
+                // },
+            });
+            \$('.venoboxframe').venobox({
+                border: '6px',
+                overlayColor: 'rgba(255,255,255,0.85)',
+                titlePosition: 'bottom',
+                titleColor: '#333',
+                titleBackground: 'transparent',
+                closeColor: '#333',
+                closeBackground: 'transparent',
+                spinner: 'wave'
+            });
+
+            \$('.venoboxajax').venobox({
+                border: '30px;',
+                // frameheight: '220px'
+            });
+            var venoOptions = {
+                numeratio: true,
+                infinigall: true,
+                border: '20px',
+                titleattr: 'data-title',
+                // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                //     console.log(thenext);
+
+                // },
+                // cb_post_open : function(obj, gallIndex, thenext, theprev){
+                //     console.log('item index '+ gallIndex);
+                // },
+            }
+            \$('.venobox').venobox(venoOptions);
+        // }
+
+
+        \$(document).on('click', '.calldownload', function (e) {
+            setupButton();
+        });
+
+        function setupButton() {
+            \$('.downlink').addClass('disabled');
+            \$('.wrapannoy').html(button);
+            selected = 0;
+            \$('.annoyed').html(steps[selected]);
+        }
+
+        /*function activateD(action) {
+            \$.ajax({
+                url: 'stat/count.php',
+                cache: false,
+                method: \"POST\",
+                data: { whatcount: action },
+    
+            }).done(function (msg) {
+                // console.log(msg);
+            });
+            \$('.downlink').removeClass('disabled');
+        }*/
+
+        \$(document).on('click', '.annoyed', function (e) {
+            selected++;
+            if (selected < steps.length) {
+                \$(this).html(steps[selected]);
+            } else {
+                activateD('meh');
+                \$(this).parent().html('Meh <i class=\"fa fa-meh-o\"></i>');
+            }
+        });
+
+
+        // \$('.venoboxinline').venobox({
+        //     framewidth: '400px',
+        //     frameheight: 'auto',
+        //     border: '10px',
+        //     bgcolor: '#f46f00',
+        //     titleattr: 'data-title'
+        // });
+
+
+        // init plugin.
+        var test = \$('.venoboxinline').venobox({
+            numeratio: true,
+            framewidth: '400px',
+            frameheight: 'auto',
+            border: '10px',
+            bgcolor: '#f46f00',
+            titleattr: 'data-title',
+            infinigall: true,
+            // cb_init : function(plugin){
+            //     console.log('INIT');
+            //     console.log(plugin);
+            // },
+            // cb_pre_open : function(obj){
+            //     console.log('link obj');
+            //     console.log(obj.data());
+            // },
+            // cb_post_open : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            //     console.log('next - prev lenght');
+            //     console.log(thenext.length);
+            //     console.log(theprev.length);
+            // },
+            // cb_pre_close : function(obj, gallIndex, thenext, theprev){
+            //     console.log('item index');
+            //     console.log(gallIndex);
+            // },
+            // cb_post_close : function(){
+            //     console.log('CLOSED');
+            // },
+            // cb_after_nav : function(obj, gallIndex, thenext, theprev){
+            //     console.log('after nav');
+            //     console.log(gallIndex);
+            // }
+
+        })
+        //test.venobox('foo_public_method');
+        // call a method from within the plugin outside of the plugin.
+        \$(document).on('click', '.closeme', function (e) {
+            e.preventDefault();
+            // console.log('called');
+            // test.VBprev();
+            // test.VBnext();
+            test.VBclose();
+
+        });
+
+    </script>
+-->
+
+    <script>
+         window.onload = function () {
+            baguetteBox.run('.baguetteBoxThree', {
+                animation: 'fadeIn',
+                noScrollbars: true
+            });
+
+            // if (typeof oldIE === 'undefined' && Object.keys) {
+            //    hljs.initHighlighting();
+            // }
+
+            // var year = document.getElementById('year');
+            // year.innerText = new Date().getFullYear();
+        };
+    </script>
+
+<script data-ad-client=\"ca-pub-5530719623202694\" async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>
 </body>
 
 </html>", "/Applications/MAMP/htdocs/recherchemaison/themes/demo/layouts/default.htm", "");

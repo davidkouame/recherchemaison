@@ -60,12 +60,31 @@ class PublicationModel extends Model
     public function afterCreate(){
         $this->generateReference();
         $this->slot = $this->reference;
-        $this->published_at = now();
+        // $this->published_at = now();
         //+strtolower(str_replace(' ', '-', $this->libelle));
         $this->save();
     }
 
     public function generateReference(){
         $this->reference = strtoupper(base_convert($this->id+1000000000, 10, 16)) ;
+    }
+
+    // Scope de filtre de la liste des publications 
+    public function scopeFilterPublication($query, $filter) {
+        // Les publications en attente de validation
+        if ($filter == ['encours'])
+            return $query->where('statut_publication', '=', 1)->whereNull('scrapping');
+
+        // Les publications refusées 
+        if ($filter == ['refusees'])
+            return $query->where('statut_publication', '=', 3);
+        
+        // Les publications accecptées
+        if ($filter == ['acceptees'])
+            return $query->where('statut_publication', '=', 2);
+        
+        // Les publications proposées par le scrapping
+        if ($filter == ['scrapping'])
+            return $query->whereNotNull('scrapping')->where('statut_publication', '=', 1);
     }
 }

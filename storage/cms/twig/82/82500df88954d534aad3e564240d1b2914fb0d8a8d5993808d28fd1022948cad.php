@@ -249,25 +249,27 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
         }
         $context["type"] = $_type;        $context["message"] = $_message;        // line 205
         echo "
+
+
 <div class=\"ftco-cover-1 overlay\" style=\"background-image: url(";
-        // line 206
+        // line 208
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/1568858897-8005-full_size_3x2-t1571293366.jpg");
         echo "); min-height: 350px; height: 260px;\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
             <div class=\"col-lg-12\" style=\"padding-top: 40px;\">
                 <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
-                <h1 id=\"header-title\">Trouvez une maison en vente ou en location</h1>
+                <h1 id=\"header-title\" style=\"text-align: center;\">Trouvez une maison en location</h1>
                 <br>
                 <!--<p class=\"mb-5\"><h3 style=\"color: #fff\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
                 <form class=\"row\" action=\"";
-        // line 215
+        // line 217
         echo url("/");
         echo "\" method=\"GET\">
                     <div class=\"col-md-offset-2 col-xs-5 col-md-4\">
                         <input name=\"keys\" placeholder=\"Que recherchez vous ?\" type=\"text\" class=\"form-control\" value=\"";
-        // line 217
+        // line 219
         echo twig_escape_filter($this->env, ($context["keys"] ?? null), "html", null, true);
         echo "\" style=\"height: 58px;\">
                     </div>
@@ -275,76 +277,76 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                         <select name=\"typepublication_id\" id=\"\" class=\"form-control\" style=\"height: 58px;\">
                             <option value=\"\">Choisir un type de maison </option>
                             ";
-        // line 222
+        // line 224
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["typepublications"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["typepublication"]) {
-            // line 223
+            // line 225
             echo "                            ";
-            if ((($context["typepublication_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["typepublication"], "id", [], "any", false, false, false, 223))) {
-                // line 224
-                echo "                            <option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "id", [], "any", false, false, false, 224), "html", null, true);
-                echo "\" selected>";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "libelle", [], "any", false, false, false, 224), "html", null, true);
-                echo "</option>
-                            ";
-            } else {
+            if ((($context["typepublication_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["typepublication"], "id", [], "any", false, false, false, 225))) {
                 // line 226
                 echo "                            <option value=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "id", [], "any", false, false, false, 226), "html", null, true);
-                echo "\">";
+                echo "\" selected>";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "libelle", [], "any", false, false, false, 226), "html", null, true);
                 echo "</option>
                             ";
+            } else {
+                // line 228
+                echo "                            <option value=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "id", [], "any", false, false, false, 228), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["typepublication"], "libelle", [], "any", false, false, false, 228), "html", null, true);
+                echo "</option>
+                            ";
             }
-            // line 228
+            // line 230
             echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['typepublication'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 229
+        // line 231
         echo "                        </select>
                     </div>-->
                     <div class=\"col-xs-4 col-md-3 search-top\">
                         <select name=\"localisation_id\" id=\"\" class=\"form-control select2\" style=\"height: 58px;\">
                             <option value=\"\">Choisir une localisation </option>
                             ";
-        // line 234
+        // line 236
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["localisations"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["localisation"]) {
-            // line 235
+            // line 237
             echo "                            ";
-            if ((($context["localisation_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 235))) {
-                // line 236
-                echo "                            <option value=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 236), "html", null, true);
-                echo "\" selected> ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["localisation"], "commune", [], "any", false, false, false, 236), "libelle", [], "any", false, false, false, 236), "html", null, true);
-                echo " - ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 236), "html", null, true);
-                echo "</option>
-                            ";
-            } else {
+            if ((($context["localisation_id"] ?? null) == twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 237))) {
                 // line 238
                 echo "                            <option value=\"";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 238), "html", null, true);
-                echo "\">";
+                echo "\" selected> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["localisation"], "commune", [], "any", false, false, false, 238), "libelle", [], "any", false, false, false, 238), "html", null, true);
                 echo " - ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 238), "html", null, true);
                 echo "</option>
                             ";
+            } else {
+                // line 240
+                echo "                            <option value=\"";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "id", [], "any", false, false, false, 240), "html", null, true);
+                echo "\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["localisation"], "commune", [], "any", false, false, false, 240), "libelle", [], "any", false, false, false, 240), "html", null, true);
+                echo " - ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["localisation"], "libelle", [], "any", false, false, false, 240), "html", null, true);
+                echo "</option>
+                            ";
             }
-            // line 240
+            // line 242
             echo "                            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['localisation'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 241
+        // line 243
         echo "                        </select>
                     </div>
                     <div class=\"col-xs-3 col-md-2 search\">
@@ -360,76 +362,76 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
 <div class=\"container padding-container\">
     <div class=\"row\" style=\"margin-top: 65px;\">
         ";
-        // line 255
+        // line 257
         if ((twig_length_filter($this->env, ($context["publications"] ?? null)) > 0)) {
-            // line 256
+            // line 258
             echo "            ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["publications"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["publication"]) {
-                // line 257
+                // line 259
                 echo "                <div class=\"col-lg-4 col-sm-6 col-xs-6 col-md-4 publication\">
                     <a href=\"";
-                // line 258
+                // line 260
                 echo url("publications");
                 echo "/";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "slot", [], "any", false, false, false, 258), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "slot", [], "any", false, false, false, 260), "html", null, true);
                 echo "\">
                         <div class=\"polaroid\">
                             ";
-                // line 260
-                if (twig_get_attribute($this->env, $this->source, $context["publication"], "expired_at", [], "any", false, false, false, 260)) {
+                // line 262
+                if (twig_get_attribute($this->env, $this->source, $context["publication"], "expired_at", [], "any", false, false, false, 262)) {
                     echo " <span class=\"expire\">Expiré</span> ";
                 }
-                // line 261
+                // line 263
                 echo "                            ";
-                if ((twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 261) && twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 261), "getpath", [], "any", false, false, false, 261))) {
-                    // line 262
+                if ((twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 263) && twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 263), "getpath", [], "any", false, false, false, 263))) {
+                    // line 264
                     echo "                            <img src=\"";
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 262), "getpath", [], "any", false, false, false, 262), "html", null, true);
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "cover", [], "any", false, false, false, 264), "getpath", [], "any", false, false, false, 264), "html", null, true);
                     echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                             ";
                 } else {
-                    // line 264
+                    // line 266
                     echo "                            <img src=\"";
                     echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/withoutimage.jpg");
                     echo "\" alt=\"5 Terre\" style=\"width:100%;height: 240px;\">
                             ";
                 }
-                // line 266
+                // line 268
                 echo "                            <div class=\"container-p\" style=\"min-height: 100px;\">
                                 <p style=\"text-overflow: ellipsis;
                                 white-space: nowrap;
                                 overflow: hidden;\">";
-                // line 269
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 269), "html", null, true);
+                // line 271
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "libelle", [], "any", false, false, false, 271), "html", null, true);
                 echo "</p>
                                 <p style=\"text-overflow: ellipsis;
                                 white-space: nowrap;
                                 overflow: hidden;\">
                                     <span class=\"address\">";
-                // line 273
-                echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 273), "libelle", [], "any", false, false, false, 273), 0, 20);
+                // line 275
+                echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "typepublication", [], "any", false, false, false, 275), "libelle", [], "any", false, false, false, 275), 0, 20);
                 echo ",
                                     ";
-                // line 274
-                echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 274), "libelle", [], "any", false, false, false, 274), 0, 20);
+                // line 276
+                echo twig_slice($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["publication"], "localisations", [], "any", false, false, false, 276), "libelle", [], "any", false, false, false, 276), 0, 20);
                 echo " </span>
                                 </p>
                                 <p>
                                     ";
-                // line 277
-                if (twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 277)) {
-                    // line 278
+                // line 279
+                if (twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 279)) {
+                    // line 280
                     echo "                                        <div class=\"price-date\">
                                             <span class=\"price\">";
-                    // line 279
-                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 279), "html", null, true);
+                    // line 281
+                    echo twig_escape_filter($this->env, twig_number_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["publication"], "prix", [], "any", false, false, false, 281), 0, "."), "html", null, true);
                     echo " FCFA</span>
                                         </div>
                                     ";
                 }
-                // line 282
+                // line 284
                 echo "                                </p>
                             </div>
                         </div>
@@ -440,30 +442,38 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['publication'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 288
+            // line 290
             echo "        ";
         } else {
-            // line 289
+            // line 291
             echo "            <div class=\"col-md-12\" style=\"text-align: center;\"><h3>Désolé, aucune maison trouvée !</h3> </div>
         ";
         }
-        // line 291
+        // line 293
         echo "    </div>
+    
     ";
-        // line 292
+        // line 295
         if ((twig_length_filter($this->env, ($context["publications"] ?? null)) > 0)) {
-            // line 293
+            // line 296
             echo "        <div class=\"row\">
             <div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"text-align: center\">
                 ";
-            // line 295
+            // line 298
             echo ($context["publications"] ?? null);
             echo "
             </div>
         </div>
     ";
         }
-        // line 299
+        // line 302
+        echo "
+    ";
+        // line 303
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("newsSubscribe"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 304
         echo "</div>
 
 <script>
@@ -485,7 +495,7 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
 
     public function getDebugInfo()
     {
-        return array (  467 => 299,  460 => 295,  456 => 293,  454 => 292,  451 => 291,  447 => 289,  444 => 288,  433 => 282,  427 => 279,  424 => 278,  422 => 277,  416 => 274,  412 => 273,  405 => 269,  400 => 266,  394 => 264,  388 => 262,  385 => 261,  381 => 260,  374 => 258,  371 => 257,  366 => 256,  364 => 255,  348 => 241,  342 => 240,  332 => 238,  322 => 236,  319 => 235,  315 => 234,  308 => 229,  302 => 228,  294 => 226,  286 => 224,  283 => 223,  279 => 222,  271 => 217,  266 => 215,  254 => 206,  251 => 205,  244 => 202,  241 => 201,  238 => 200,  37 => 1,);
+        return array (  477 => 304,  473 => 303,  470 => 302,  463 => 298,  459 => 296,  457 => 295,  453 => 293,  449 => 291,  446 => 290,  435 => 284,  429 => 281,  426 => 280,  424 => 279,  418 => 276,  414 => 275,  407 => 271,  402 => 268,  396 => 266,  390 => 264,  387 => 263,  383 => 262,  376 => 260,  373 => 259,  368 => 258,  366 => 257,  350 => 243,  344 => 242,  334 => 240,  324 => 238,  321 => 237,  317 => 236,  310 => 231,  304 => 230,  296 => 228,  288 => 226,  285 => 225,  281 => 224,  273 => 219,  268 => 217,  256 => 208,  251 => 205,  244 => 202,  241 => 201,  238 => 200,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -695,12 +705,14 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
     </div>
 {% endflash %}
 
+
+
 <div class=\"ftco-cover-1 overlay\" style=\"background-image: url({{ 'assets/images/1568858897-8005-full_size_3x2-t1571293366.jpg'|theme }}); min-height: 350px; height: 260px;\">
     <div class=\"container\">
         <div class=\"row align-items-center\">
             <div class=\"col-lg-12\" style=\"padding-top: 40px;\">
                 <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
-                <h1 id=\"header-title\">Trouvez une maison en vente ou en location</h1>
+                <h1 id=\"header-title\" style=\"text-align: center;\">Trouvez une maison en location</h1>
                 <br>
                 <!--<p class=\"mb-5\"><h3 style=\"color: #fff\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
@@ -768,7 +780,7 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
                                 <p>
                                     {% if publication.prix %}
                                         <div class=\"price-date\">
-                                            <span class=\"price\">{{ publication.prix }} FCFA</span>
+                                            <span class=\"price\">{{ publication.prix|number_format(0, '.') }} FCFA</span>
                                         </div>
                                     {% endif %}
                                 </p>
@@ -781,6 +793,7 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
             <div class=\"col-md-12\" style=\"text-align: center;\"><h3>Désolé, aucune maison trouvée !</h3> </div>
         {% endif %}
     </div>
+    
     {% if publications|length > 0 %}
         <div class=\"row\">
             <div class=\"col-md-12 col-xs-12 col-sm-12\" style=\"text-align: center\">
@@ -788,6 +801,8 @@ class __TwigTemplate_c2624ae1e708c13c447fb2707a5cb8dcbf137e4b4392a3fc0345cea4948
             </div>
         </div>
     {% endif %}
+
+    {% component 'newsSubscribe' %}
 </div>
 
 <script>

@@ -159,7 +159,7 @@ class Account extends ComponentBase
      */
     public function loginAttribute()
     {
-        return UserSettings::get('login_attribute', UserSettings::LOGIN_EMAIL);
+        return UserSettings::get('login_attribute', UserSettings::LOGIN_TEL);
     }
 
     /**
@@ -167,7 +167,7 @@ class Account extends ComponentBase
      */
     public function loginAttributeLabel()
     {
-        return Lang::get($this->loginAttribute() == UserSettings::LOGIN_EMAIL
+        return Lang::get($this->loginAttribute() == UserSettings::LOGIN_TEL
             ? /*Email*/'rainlab.user::lang.login.attribute_email'
             : /*Username*/'rainlab.user::lang.login.attribute_username'
         );
@@ -292,9 +292,11 @@ class Account extends ComponentBase
             }
 
             $rules = [
-                'email'    => 'required|email|between:6,255',
+                // 'email'    => 'required|email|between:6,255',
+                'tel'    => 'required',
                 'password' => 'required|between:4,255|confirmed'
             ];
+
 
             if ($this->loginAttribute() == UserSettings::LOGIN_USERNAME) {
                 $rules['username'] = 'required|between:2,255';
@@ -313,18 +315,21 @@ class Account extends ComponentBase
             $requireActivation = UserSettings::get('require_activation', true);
             $automaticActivation = UserSettings::get('activate_mode') == UserSettings::ACTIVATE_AUTO;
             $userActivation = UserSettings::get('activate_mode') == UserSettings::ACTIVATE_USER;
+            // $data["email"] = "tddeddsddt@gmail.com";
+            // dd($data);
             $user = Auth::register($data, $automaticActivation);
+            // dd("dd");
 
             Event::fire('rainlab.user.register', [$user, $data]);
 
             /*
              * Activation is by the user, send the email
              */
-            if ($userActivation) {
-                $this->sendActivationEmail($user);
+            // if ($userActivation) {
+            //    $this->sendActivationEmail($user);
 
-                Flash::success(Lang::get(/*An activation email has been sent to your email address.*/'rainlab.user::lang.account.activation_email_sent'));
-            }
+            //    Flash::success(Lang::get(/*An activation email has been sent to your email address.*/'rainlab.user::lang.account.activation_email_sent'));
+            //}
 
             /*
              * Automatically activated or not required, log the user in
@@ -332,6 +337,8 @@ class Account extends ComponentBase
             if ($automaticActivation || !$requireActivation) {
                 Auth::login($user);
             }
+            // $user->email = null;
+            // $user->save();
 
             /*
              * Redirect to the intended page after successful sign in

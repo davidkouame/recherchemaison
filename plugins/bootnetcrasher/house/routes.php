@@ -58,3 +58,6 @@
         \Auth::logout();
         return Redirect::to('auth/login');;
     });*/
+
+    Route::resource('api/v1/communes', 'AhmadFatoni\ApiGenerator\Controllers\API\communeController', ['except' => ['destroy', 'create', 'edit']]);
+    Route::get('api/v1/communes/{id}/delete', ['as' => 'api/v1/communes.delete', 'uses' => 'AhmadFatoni\ApiGenerator\Controllers\API\communeController@destroy']);

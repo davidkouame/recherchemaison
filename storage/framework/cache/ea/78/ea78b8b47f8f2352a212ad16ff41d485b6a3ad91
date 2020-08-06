@@ -1,4 +1,4 @@
-1591821076a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:2294:"<style>
+1596726842a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:2294:"<style>
     @media screen and (max-width: 548px){
         .footer-two, .footer-four{
             text-align: left !important;
@@ -44,7 +44,7 @@
         <p class="muted credit" style="text-align: center;">&copy; {{ "now"|date("Y") }} all rights reserved &copy; by ChapMaison.</p>
     </div>
 </div>
-";s:5:"mtime";i:1589803777;s:6:"markup";s:2293:"<style>
+";s:5:"mtime";i:1596726176;s:6:"markup";s:2293:"<style>
     @media screen and (max-width: 548px){
         .footer-two, .footer-four{
             text-align: left !important;

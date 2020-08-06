@@ -97,47 +97,53 @@ class Register extends Account {
         
         $rules = [
             "type_user" => "required",
-            "nom" => "required",
-            "email" => "required|unique:users",
-            "prenom" => "required",
-            "tel1" => "required",
+            // "nom" => "required",
+            // "email" => "required|unique:users",
+            // "prenom" => "required",
+            "tel" => "required|max:8|min:8|unique:users|digits:8",
             'password' => 'required|between:8,255|confirmed'
         ];
         $messages =[
             "type_user.required" => "Le type d'utilisateur est requis",
-            "nom.required" => "Le nom est requis",
-            "email.required" => "L'email est requis",
-            "email.unique" => "L'email doit être unique",
-            "prenom.required" => "Le prénom est requis",
-            "tel1.required" => "Le téléphone est requis",
-            "password" => [
-                "required" => "Le password est requis",
-                "between" => "Le password doit être supérieur à 8 caractères"
-            ]
-            
+            "tel.required" => "Le téléphone est requis",
+            "tel.min" => "Le téléphone doit être de 8 caractères (Exemple: 67988990)",
+            "tel.max" => "Le téléphone doit être de 8 caractères (Exemple: 67988990)",
+            "tel.digits" => "Le téléphone doit être numérique",
+            // "nom.required" => "Le nom est requis",
+            // "email.required" => "L'email est requis",
+            // "email.unique" => "L'email doit être unique",
+            // "prenom.required" => "Le prénom est requis",
+            /*"tel" => [
+                "required" => "Le téléphone est requis",
+                "max" => "Le téléphone doit être de 8 caractères (Exemple: 67988990)",
+                "min" => "Le téléphone doit être de 8 caractères (Exemple: 67988990)"
+            ],*/
+            "password.required" => "Le password est requis",
+            "password.between" => "Le password doit être supérieur à 8 caractères"
         ];
         $validation = Validator::make(post(), $rules, $messages);
         if ($validation->fails()) {
             throw new ValidationException($validation);
         }
+
         // creation d'un compte user
         $this->onRegister();
         $user = Auth::getUser();
-        $user->name = post('nom');
-        $user->surname = post('prenom');
-        $user->tel = post('tel1');
-        $user->email = post('email');
+        // $user->name = post('nom');
+        // $user->surname = post('prenom');
+        $user->tel = post('tel');
+        // $user->email = post('email');
         $user->save();
 
         // Mise à jour du type de l'utilisateur
         if(post('type_user') && post('type_user') == 1){
             $demarcheur = new DemarcheurModel;
-            $demarcheur->email = $user->email;
+            // $demarcheur->email = $user->email;
             // $demarcheur->piece = Input::file('piece');
             $demarcheur->tel = $user->tel;
             // $demarcheur->tel2 = post('tel2');
-            $demarcheur->nom = $user->name;
-            $demarcheur->prenom = $user->surname;
+            // $demarcheur->nom = $user->name;
+            // $demarcheur->prenom = $user->surname;
             $demarcheur->save();
             $user->demarcheur_id = $demarcheur->id;
             $user->save();
@@ -146,13 +152,13 @@ class Register extends Account {
         if(post('type_user') && post('type_user') == 2){
             $user = Auth::getUser();
             $agencemodel = new AgenceModel;
-            $agencemodel->libelle = post('libelle');
-            $agencemodel->email = $user->email;
+            // $agencemodel->libelle = post('libelle');
+            // $agencemodel->email = $user->email;
             $agencemodel->tel = $user->tel;
-            $agencemodel->agrement = Input::file('agrement');
+            // $agencemodel->agrement = Input::file('agrement');
             // $agencemodel->tel2 = post('tel2');
-            $agencemodel->nom = $user->name;
-            $agencemodel->prenom = $user->surname;
+            // $agencemodel->nom = $user->name;
+            // $agencemodel->prenom = $user->surname;
             // $agencemodel->email_agence = post('email_agence');
             $agencemodel->save();
             if($user){

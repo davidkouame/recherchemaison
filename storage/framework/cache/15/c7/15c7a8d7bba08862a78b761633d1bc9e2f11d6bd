@@ -1,9 +1,14 @@
-1591821074a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:10060:"title = "Recherche maison"
+1596726839a:1:{s:8:"home.htm";a:11:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:10208:"title = "Recherche maison"
 url = "/"
 layout = "default"
-[HomeComponent]
-==
+is_hidden = 0
 
+[HomeComponent]
+paramCode = "code"
+forceSecure = 0
+
+[newsSubscribe]
+==
 <style>
 
     @media screen and (max-width: 360px){
@@ -209,12 +214,14 @@ layout = "default"
     </div>
 {% endflash %}
 
+
+
 <div class="ftco-cover-1 overlay" style="background-image: url({{ 'assets/images/1568858897-8005-full_size_3x2-t1571293366.jpg'|theme }}); min-height: 350px; height: 260px;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12" style="padding-top: 40px;">
                 <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
-                <h1 id="header-title">Trouvez une maison en vente ou en location</h1>
+                <h1 id="header-title" style="text-align: center;">Trouvez une maison en location</h1>
                 <br>
                 <!--<p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
@@ -282,7 +289,7 @@ layout = "default"
                                 <p>
                                     {% if publication.prix %}
                                         <div class="price-date">
-                                            <span class="price">{{ publication.prix }} FCFA</span>
+                                            <span class="price">{{ publication.prix|number_format(0, '.') }} FCFA</span>
                                         </div>
                                     {% endif %}
                                 </p>
@@ -295,6 +302,7 @@ layout = "default"
             <div class="col-md-12" style="text-align: center;"><h3>Désolé, aucune maison trouvée !</h3> </div>
         {% endif %}
     </div>
+    
     {% if publications|length > 0 %}
         <div class="row">
             <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
@@ -302,13 +310,15 @@ layout = "default"
             </div>
         </div>
     {% endif %}
+
+    {% component 'newsSubscribe' %}
 </div>
 
 <script>
     // alert("la largeur de l'ecran est "+ window.screen.width);
     window.screen.height;
     window.screen.width;
-</script>";s:5:"mtime";i:1591779457;s:6:"markup";s:9984:"<style>
+</script>";s:5:"mtime";i:1596726120;s:6:"markup";s:10066:"<style>
 
     @media screen and (max-width: 360px){
         .publication{
@@ -513,12 +523,14 @@ layout = "default"
     </div>
 {% endflash %}
 
+
+
 <div class="ftco-cover-1 overlay" style="background-image: url({{ 'assets/images/1568858897-8005-full_size_3x2-t1571293366.jpg'|theme }}); min-height: 350px; height: 260px;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-12" style="padding-top: 40px;">
                 <!--<h1>Choose Your Quality Delivery of Your Cargo</h1>-->
-                <h1 id="header-title">Trouvez une maison en vente ou en location</h1>
+                <h1 id="header-title" style="text-align: center;">Trouvez une maison en location</h1>
                 <br>
                 <!--<p class="mb-5"><h3 style="color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est magni perferendis
                     fugit modi similique, suscipit, deserunt a iure.</h3></p>-->
@@ -586,7 +598,7 @@ layout = "default"
                                 <p>
                                     {% if publication.prix %}
                                         <div class="price-date">
-                                            <span class="price">{{ publication.prix }} FCFA</span>
+                                            <span class="price">{{ publication.prix|number_format(0, '.') }} FCFA</span>
                                         </div>
                                     {% endif %}
                                 </p>
@@ -599,6 +611,7 @@ layout = "default"
             <div class="col-md-12" style="text-align: center;"><h3>Désolé, aucune maison trouvée !</h3> </div>
         {% endif %}
     </div>
+    
     {% if publications|length > 0 %}
         <div class="row">
             <div class="col-md-12 col-xs-12 col-sm-12" style="text-align: center">
@@ -606,10 +619,12 @@ layout = "default"
             </div>
         </div>
     {% endif %}
+
+    {% component 'newsSubscribe' %}
 </div>
 
 <script>
     // alert("la largeur de l'ecran est "+ window.screen.width);
     window.screen.height;
     window.screen.width;
-</script>";s:4:"code";N;s:5:"title";s:16:"Recherche maison";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:13:"HomeComponent";a:0:{}}}
+</script>";s:4:"code";N;s:5:"title";s:16:"Recherche maison";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:13:"HomeComponent";a:2:{s:9:"paramCode";s:4:"code";s:11:"forceSecure";s:1:"0";}s:13:"newsSubscribe";a:0:{}}}

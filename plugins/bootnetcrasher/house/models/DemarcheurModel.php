@@ -33,4 +33,8 @@ class DemarcheurModel extends Model
     public $attachOne = [
         'piece' => 'System\Models\File'
     ];
+
+    public $hasMany = [
+        "publications" => ['bootnetcrasher\House\Models\PublicationModel', 'key' => 'demarcheur_id', 'otherKey' => 'id']
+    ];
 }

@@ -53,6 +53,7 @@ class Plugin extends PluginBase
         }
 
         $schedule->call(function () {
+            trace_log("Début du traitement: Les publications expirées seront mis à jour ");
             $date = new \DateTime(date("Y-m-d H:m:s"));
             $date->modify('-30 day');
             $tomorrowDATE = $date->format('Y-m-d H:m:s');
@@ -63,7 +64,7 @@ class Plugin extends PluginBase
                 ->where('id', $publication->id)
                 ->update(['expired_at' => now()]);
             }
-            // trace_log("Mise à jour de la table !");
+            trace_log("Fin du traitement: Les publications expirées seront mis à jour ");
         })->everyMinute();
     }
 }

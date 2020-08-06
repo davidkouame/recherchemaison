@@ -22,7 +22,7 @@ fields:
         descriptionFrom: description
         span: auto
         type: relation
-        select: concat(nom,' ',prenom)
+        select: 'concat(nom,'' '',prenom)'
         placeholder: 'Sélectionner un démarcheur'
     agence:
         label: Agence
@@ -72,9 +72,47 @@ fields:
     prix:
         label: Prix
         span: auto
-        type: number
+        type: text
     description:
         label: Description
         size: ''
         span: full
         type: richeditor
+tabs:
+    fields:
+        other_name_surname:
+            label: 'Nom et prénom'
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        other_email:
+            label: Email
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        other_tel1:
+            label: 'Téléphone 1'
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        other_tel2:
+            label: 'Téléphone 2'
+            span: auto
+            type: text
+            tab: 'Tab 1'
+        other_demarcheur:
+            label: 'Autre démarcheur'
+            span: auto
+            type: switch
+            tab: 'Tab 1'
+        date_scrapping:
+            label: 'Date scrapping'
+            span: auto
+            disabled: 1
+            type: text
+            tab: 'Tab 2'
+        url_scrapping:
+            label: 'Url scrapping'
+            span: auto
+            type: text
+            tab: 'Tab 2'

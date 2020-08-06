@@ -30,7 +30,7 @@
 {% flash %}
 <div class="alert alert-success" style="text-align: center;">{{ message }}</div>
 {% endflash %}
-<div class="row" style="margin-top: 40px;">
+<div class="row">
     <h2>Publication d'une maison</h2>
     <br>
     <form class="col-md-12" id="form-create-publication" role="form" data-request="onCreatePublicationMaison"
@@ -41,7 +41,7 @@
                 <input type="text" class="form-control" name="libelle" placeholder="Libellé" />
             </div>
 
-            <div class="form-group col-md-6">
+            <!--<div class="form-group col-md-6">
                 <label for="">Ville <span class="required">*</span></label>
                 <select name="ville_id" id="" class="form-control">
                     <option value="">Sélectionnez une ville </option>
@@ -49,9 +49,7 @@
                     <option value="{{ ville.id }}">{{ ville.libelle }}</option>
                     {% endfor %}
                 </select>
-            </div>
-        </div>
-        <div class="row">
+            </div>-->
             <div class="form-group col-md-6">
                 <label for="">Localisation <span class="required">*</span></label>
                 <select name="localisation_id" id="" class="form-control select2">
@@ -61,6 +59,9 @@
                     {% endfor %}
                 </select>
             </div>
+        </div>
+        <div class="row">
+            
             <div class="form-group col-md-6">
                 <label for="">Commune <span class="required">*</span></label>
                 <select name="commune_id" id="" class="form-control">
