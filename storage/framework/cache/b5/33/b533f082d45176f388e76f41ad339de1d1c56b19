@@ -1,4 +1,4 @@
-1596726839a:1:{s:9:"login.htm";a:9:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:1395:"title = "Connexion"
+1596810029a:1:{s:9:"login.htm";a:9:{s:8:"fileName";s:9:"login.htm";s:7:"content";s:1395:"title = "Connexion"
 url = "/auth/login"
 layout = "default"
 [LoginComponent]

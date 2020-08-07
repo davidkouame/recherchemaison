@@ -1,0 +1,103 @@
+1596810030a:1:{s:26:"site/header_demarcheur.htm";a:5:{s:8:"fileName";s:26:"site/header_demarcheur.htm";s:7:"content";s:2606:"{% partial 'site/header_general' %}
+
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide responsive" role="navigation"
+    style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;height: 1px; min-height: 52px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 navbar-header pull-left">
+                <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+                        font-weight: 900;
+                        line-height: 0;
+                        height: 1px;">
+                    </span>ChapMaison</span>
+                </a>
+            </div>
+            <div class="col-md-2 pull-right" style="padding-top: 14px;">
+                <ul class="nav navbar-nav connection-xs">
+                    <li>
+                        <a href="javascript:void(0);" class="icon" id="btnResponsive">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="collapse navbar-collapse navbar-main-collapse" id="collapse-navbar">
+    <ul class="nav navbar-nav">
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('/') }}">Home</a></li>
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a
+                href="{{ url('demarcheur/create-publication') }}">Créez une publiation</a></li>
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a
+                href="{{ url('demarcheur/publications') }}">Mes publications</a></li>
+        <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('demarcheur/account') }}">Mon
+                compte</a></li>
+        <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('logout') }}">Se déconnectez</a>
+        </li>
+    </ul>
+</div>
+
+{% if user.demarcheur.publications|length >= 1 and (user.name is empty or user.surname is empty) %}
+    <div class="container">
+        <div class="row">
+            <h4 class="col-md-12 alert alert-warning" style="text-align: center;margin-bottom: 10px;">Renseigner votre nom et prénoms pour que vos publications soient visible sur le site Chapmaison.com</h4>
+            <div class="col-md-12" style="text-align: center;margin-bottom: 10px;">
+                <a href="{{ url('demarcheur/account') }}" class="btn btn-primary">Je termine mon inscription</a>
+            </div>
+        </div>
+    </div>
+{% endif %}";s:5:"mtime";i:1596726171;s:6:"markup";s:2606:"{% partial 'site/header_general' %}
+
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-inverse navbar-fixed-top navbar-autohide responsive" role="navigation"
+    style="background-color: #fff;border: 0px aliceblue;border: 0px aliceblue;height: 1px; min-height: 52px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 navbar-header pull-left">
+                <a class="navbar-brand text-primary" href="{{ 'home'|page }}" style="font-size: 2rem;
+                        font-weight: 900;
+                        line-height: 0;
+                        height: 1px;">
+                    </span>ChapMaison</span>
+                </a>
+            </div>
+            <div class="col-md-2 pull-right" style="padding-top: 14px;">
+                <ul class="nav navbar-nav connection-xs">
+                    <li>
+                        <a href="javascript:void(0);" class="icon" id="btnResponsive">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="collapse navbar-collapse navbar-main-collapse" id="collapse-navbar">
+    <ul class="nav navbar-nav">
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a href="{{ url('/') }}">Home</a></li>
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a
+                href="{{ url('demarcheur/create-publication') }}">Créez une publiation</a></li>
+        <li class="{% if this.page.id == 'demarcheur' %}active{% endif %}"><a
+                href="{{ url('demarcheur/publications') }}">Mes publications</a></li>
+        <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('demarcheur/account') }}">Mon
+                compte</a></li>
+        <li class="{% if this.page.id == 'agence' %}active{% endif %}"><a href="{{ url('logout') }}">Se déconnectez</a>
+        </li>
+    </ul>
+</div>
+
+{% if user.demarcheur.publications|length >= 1 and (user.name is empty or user.surname is empty) %}
+    <div class="container">
+        <div class="row">
+            <h4 class="col-md-12 alert alert-warning" style="text-align: center;margin-bottom: 10px;">Renseigner votre nom et prénoms pour que vos publications soient visible sur le site Chapmaison.com</h4>
+            <div class="col-md-12" style="text-align: center;margin-bottom: 10px;">
+                <a href="{{ url('demarcheur/account') }}" class="btn btn-primary">Je termine mon inscription</a>
+            </div>
+        </div>
+    </div>
+{% endif %}";s:4:"code";N;}}
